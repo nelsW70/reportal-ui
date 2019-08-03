@@ -3,31 +3,30 @@
         The actual rendered columns are set as a property on the row definition" -->
 
   <!-- Item Id Column -->
-  <!-- Position Column -->
   <ng-container matColumnDef="itemId">
     <mat-header-cell *matHeaderCellDef> Item Id </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{ element.itemId }} </mat-cell>
+    <mat-cell *matCellDef="let data"> {{ data.itemId }} </mat-cell>
   </ng-container>
 
   <!-- Current Price Column -->
   <!-- Position Column -->
   <ng-container matColumnDef="name">
     <mat-header-cell *matHeaderCellDef> Current Price </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
+    <mat-cell *matCellDef="let data"> {{ data.name }} </mat-cell>
   </ng-container>
 
   <!-- Price Source Column -->
   <!-- Position Column -->
   <ng-container matColumnDef="weight">
     <mat-header-cell *matHeaderCellDef> Price Source </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{ element.weight }} </mat-cell>
+    <mat-cell *matCellDef="let data"> {{ data.weight }} </mat-cell>
   </ng-container>
 
   <!-- Expanded Content Column - The detail row is made up of this one column -->
   <!-- Position Column -->
   <ng-container matColumnDef="expandedDetail">
     <mat-cell *matCellDef="let detail">
-      The symbol for {{ detail.element.name }} is {{ detail.element.symbol }}
+      The symbol for {{ detail.data.name }} is {{ detail.data.symbol }}
     </mat-cell>
   </ng-container>
 
@@ -35,12 +34,10 @@
   <mat-row
     *matRowDef="let row; columns: displayedColumns"
     matRipple
-    class="element-row"
-    [class.expanded]="expandedElement == row"
+    class="data-row"
+    [class.expanded]="expandedData == row"
     (click)="
-      expandedElement === row
-        ? (expandedElement = null)
-        : (expandedElement = row)
+      expandedData === row ? (expandedData = null) : (expandedData = row)
     "
   ></mat-row>
   <mat-row
@@ -49,7 +46,7 @@
       columns: ['expandedDetail'];
       when: isExpansionDetailRow
     "
-    [@detailExpand]="row.element == expandedElement ? 'expanded' : 'collapsed'"
+    [@detailExpand]="row.data == expandedData ? 'expanded' : 'collapsed'"
     style="overflow: hidden"
   >
   </mat-row>

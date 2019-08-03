@@ -28,7 +28,7 @@ import {
   ]
 })
 export class PricingLookupComponent implements OnInit {
-  expandedElement: any;
+  expandedData: any;
   displayedColumns = ['itemId', 'name', 'weight'];
   dataSource = new ExampleDataSource();
 
@@ -40,14 +40,14 @@ export class PricingLookupComponent implements OnInit {
   ngOnInit() {}
 }
 
-export interface Element {
+export interface Data {
   name: string;
   itemId: string;
   weight: number;
   symbol: string;
 }
 
-const data: Element[] = [
+const data: Data[] = [
   { itemId: '6-411/01', name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
   { itemId: 'AK2LV-B/55', name: 'Helium', weight: 4.0026, symbol: 'He' },
   { itemId: 'AK2-T1/01', name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -78,9 +78,9 @@ const data: Element[] = [
  */
 export class ExampleDataSource extends DataSource<any> {
   /** Connect function called by the table to retrieve one stream containing the data to render. */
-  connect(): Observable<Element[]> {
+  connect(): Observable<Data[]> {
     const rows = [];
-    data.forEach(element => rows.push(element, { detailRow: true, element }));
+    data.forEach(data => rows.push(data, { detailRow: true, data }));
     console.log(rows);
     return of(rows);
   }
