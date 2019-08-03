@@ -29,7 +29,7 @@ import {
 })
 export class PricingLookupComponent implements OnInit {
   expandedElement: any;
-  displayedColumns = ['position', 'name', 'weight'];
+  displayedColumns = ['itemId', 'name', 'weight'];
   dataSource = new ExampleDataSource();
 
   isExpansionDetailRow = (i: number, row: object) =>
@@ -42,32 +42,32 @@ export class PricingLookupComponent implements OnInit {
 
 export interface Element {
   name: string;
-  position: number;
+  itemId: string;
   weight: number;
   symbol: string;
 }
 
 const data: Element[] = [
-  { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-  { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-  { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-  { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-  { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-  { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-  { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-  { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-  { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-  { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-  { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
-  { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
-  { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
-  { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
-  { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
-  { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
-  { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
-  { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
-  { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
-  { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' }
+  { itemId: '6-411/01', name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+  { itemId: 'AK2LV-B/55', name: 'Helium', weight: 4.0026, symbol: 'He' },
+  { itemId: 'AK2-T1/01', name: 'Lithium', weight: 6.941, symbol: 'Li' },
+  { itemId: '6-411/01', name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+  { itemId: '6-411/01', name: 'Boron', weight: 10.811, symbol: 'B' },
+  { itemId: '6-411/01', name: 'Carbon', weight: 12.0107, symbol: 'C' },
+  { itemId: '6-411/01', name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+  { itemId: '6-411/01', name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+  { itemId: 'AK2LV-B/55', name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+  { itemId: 'AK2LV-B/55', name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+  { itemId: 'AK2LV-B/55', name: 'Sodium', weight: 22.9897, symbol: 'Na' },
+  { itemId: 'AK2LV-B/55', name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
+  { itemId: 'AK2LV-B/55', name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
+  { itemId: 'AK2LV-B/55', name: 'Silicon', weight: 28.0855, symbol: 'Si' },
+  { itemId: 'AK2LV-B/55', name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
+  { itemId: 'AK2LV-B/55', name: 'Sulfur', weight: 32.065, symbol: 'S' },
+  { itemId: 'AK2LV-B/55', name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
+  { itemId: 'AK2LV-B/55', name: 'Argon', weight: 39.948, symbol: 'Ar' },
+  { itemId: 'AK2LV-B/55', name: 'Potassium', weight: 39.0983, symbol: 'K' },
+  { itemId: 'AK2LV-B/55', name: 'Calcium', weight: 40.078, symbol: 'Ca' }
 ];
 
 /**
