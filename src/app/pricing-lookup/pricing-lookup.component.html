@@ -26,8 +26,20 @@
   <!-- Position Column -->
   <ng-container matColumnDef="expandedDetail">
     <mat-cell *matCellDef="let detail">
-      The symbol for {{ detail.data.itemDescription }} is
-      {{ detail.data.itemDescription }}
+      <div>
+        <div>
+          Item Description:
+          <div>
+            {{ detail.data.itemDescription }}
+          </div>
+        </div>
+        <div>Final: {{ detail.data.final }}</div>
+        <div>
+          MGPL Price:
+          {{ detail.data.mgplPrice }}
+        </div>
+        <div>Matrix Price: {{ detail.data.matrixPrice }}</div>
+      </div>
     </mat-cell>
   </ng-container>
 
