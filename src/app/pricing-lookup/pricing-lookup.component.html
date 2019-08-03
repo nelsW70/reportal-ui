@@ -2,25 +2,29 @@
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
 
+  <!-- Item Id Column -->
   <!-- Position Column -->
   <ng-container matColumnDef="position">
-    <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef> Item Id </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{ element.position }} </mat-cell>
   </ng-container>
 
-  <!-- Name Column -->
+  <!-- Current Price Column -->
+  <!-- Position Column -->
   <ng-container matColumnDef="name">
-    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef> Current Price </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
   </ng-container>
 
-  <!-- Weight Column -->
+  <!-- Price Source Column -->
+  <!-- Position Column -->
   <ng-container matColumnDef="weight">
-    <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef> Price Source </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{ element.weight }} </mat-cell>
   </ng-container>
 
   <!-- Expanded Content Column - The detail row is made up of this one column -->
+  <!-- Position Column -->
   <ng-container matColumnDef="expandedDetail">
     <mat-cell *matCellDef="let detail">
       The symbol for {{ detail.element.name }} is {{ detail.element.symbol }}

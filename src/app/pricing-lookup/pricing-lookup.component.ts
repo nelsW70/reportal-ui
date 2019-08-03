@@ -32,7 +32,7 @@ export class PricingLookupComponent implements OnInit {
   displayedColumns = ['position', 'name', 'weight'];
   dataSource = new ExampleDataSource();
 
-  isExpansionDetailRow = (i: number, row: Object) =>
+  isExpansionDetailRow = (i: number, row: object) =>
     row.hasOwnProperty('detailRow');
 
   constructor() {}
