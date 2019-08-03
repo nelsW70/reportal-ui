@@ -29,7 +29,7 @@ import {
 })
 export class PricingLookupComponent implements OnInit {
   expandedData: any;
-  displayedColumns = ['itemId', 'name', 'weight'];
+  displayedColumns = ['itemId', 'currentPrice', 'priceSource'];
   dataSource = new ExampleDataSource();
 
   isExpansionDetailRow = (i: number, row: object) =>
@@ -43,18 +43,11 @@ export class PricingLookupComponent implements OnInit {
 export interface Data {
   itemId: string;
   itemDescription: string;
-  currentPrice?: string;
-  priceSource?: string;
-  final?: string;
-  mgplPrice?: string;
-  matrixPrice?: string;
-
-  // change
-  name?: string;
-  // change
-  weight?: number;
-  // change
-  symbol?: string;
+  currentPrice: string;
+  priceSource: string;
+  final: string;
+  mgplPrice: string;
+  matrixPrice: string;
 }
 
 const data: Data[] = [
@@ -62,81 +55,91 @@ const data: Data[] = [
     itemId: '6-411/01',
     itemDescription: 'S-Hide INT LX EGG WHPB 6-411 B100',
     currentPrice: '$18.85',
-    name: 'Hydrogen',
-    weight: 1.0079,
-    symbol: 'H'
+    priceSource: 'GPQ',
+    final: 'N',
+    mgplPrice: '$18.85',
+    matrixPrice: '$25.75'
   },
   {
     itemId: 'AK2LV-B/55',
     itemDescription: 'AMERLOCK 2 LV CUBE',
     currentPrice: '$18.85',
-    name: 'Helium',
-    weight: 4.0026,
-    symbol: 'He'
+    priceSource: 'GPQ',
+    final: '-',
+    mgplPrice: '$18.85',
+    matrixPrice: '$25.75'
   },
   {
     itemId: 'AK2-T1/01',
     itemDescription: 'AMERLOCK 2/400 DEEP TINT RESIN',
     currentPrice: '$18.85',
-    name: 'Lithium',
-    weight: 6.941,
-    symbol: 'Li'
+    priceSource: '-',
+    final: 'Y',
+    mgplPrice: '-',
+    matrixPrice: '$25.75'
   },
   {
     itemId: '6-411/01',
     itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
     currentPrice: '$18.85',
-    name: 'Beryllium',
-    weight: 9.0122,
-    symbol: 'Be'
+    priceSource: 'GPQ',
+    final: 'N',
+    mgplPrice: '$18.85',
+    matrixPrice: '$25.75'
   },
   {
     itemId: '6-411/01',
     itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
     currentPrice: '$18.85',
-    name: 'Boron',
-    weight: 10.811,
-    symbol: 'B'
+    priceSource: 'MGPL',
+    final: 'N',
+    mgplPrice: '$18.85',
+    matrixPrice: '$25.75'
   },
   {
     itemId: '6-411/01',
     itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
     currentPrice: 'NOT FOUND',
-    name: 'Carbon',
-    weight: 12.0107,
-    symbol: 'C'
+    priceSource: 'GPQ',
+    final: 'N',
+    mgplPrice: 'NOT FOUND',
+    matrixPrice: '$25.75'
   },
   {
     itemId: '6-411/01',
     itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
     currentPrice: '$18.85',
-    name: 'Nitrogen',
-    weight: 14.0067,
-    symbol: 'N'
+    priceSource: '-',
+    final: '-',
+    mgplPrice: '$18.85',
+    matrixPrice: '$25.75'
   },
   {
     itemId: '6-411/01',
     itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
     currentPrice: '$18.85',
-    name: 'Oxygen',
-    weight: 15.9994,
-    symbol: 'O'
+    priceSource: 'GPQ',
+    final: 'Y',
+    mgplPrice: '$18.85',
+    matrixPrice: '$25.75'
   },
   {
     itemId: 'AK2LV-B/55',
     itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
     currentPrice: '$18.85',
-    name: 'Fluorine',
-    weight: 18.9984,
-    symbol: 'F'
+    priceSource: 'GPQ',
+    final: 'N',
+    mgplPrice: '$18.85',
+    matrixPrice: 'NOT FOUND'
   },
   {
     itemId: 'AK2LV-B/55',
     itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
     currentPrice: '$18.85',
-    name: 'Neon',
-    weight: 20.1797,
-    symbol: 'Ne'
+    priceSource: 'GPQ',
+    final: 'N',
+    mgplPrice: 'NOT FOUND',
+    matrixPrice: '$25.75'
   }
 ];
 
