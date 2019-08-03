@@ -41,36 +41,103 @@ export class PricingLookupComponent implements OnInit {
 }
 
 export interface Data {
-  // change
-  name: string;
   itemId: string;
+  itemDescription: string;
+  currentPrice?: string;
+  priceSource?: string;
+  final?: string;
+  mgplPrice?: string;
+  matrixPrice?: string;
+
   // change
-  weight: number;
+  name?: string;
   // change
-  symbol: string;
+  weight?: number;
+  // change
+  symbol?: string;
 }
 
 const data: Data[] = [
-  { itemId: '6-411/01', name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-  { itemId: 'AK2LV-B/55', name: 'Helium', weight: 4.0026, symbol: 'He' },
-  { itemId: 'AK2-T1/01', name: 'Lithium', weight: 6.941, symbol: 'Li' },
-  { itemId: '6-411/01', name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-  { itemId: '6-411/01', name: 'Boron', weight: 10.811, symbol: 'B' },
-  { itemId: '6-411/01', name: 'Carbon', weight: 12.0107, symbol: 'C' },
-  { itemId: '6-411/01', name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-  { itemId: '6-411/01', name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-  { itemId: 'AK2LV-B/55', name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-  { itemId: 'AK2LV-B/55', name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-  { itemId: 'AK2LV-B/55', name: 'Sodium', weight: 22.9897, symbol: 'Na' },
-  { itemId: 'AK2LV-B/55', name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
-  { itemId: 'AK2LV-B/55', name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
-  { itemId: 'AK2LV-B/55', name: 'Silicon', weight: 28.0855, symbol: 'Si' },
-  { itemId: 'AK2LV-B/55', name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
-  { itemId: 'AK2LV-B/55', name: 'Sulfur', weight: 32.065, symbol: 'S' },
-  { itemId: 'AK2LV-B/55', name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
-  { itemId: 'AK2LV-B/55', name: 'Argon', weight: 39.948, symbol: 'Ar' },
-  { itemId: 'AK2LV-B/55', name: 'Potassium', weight: 39.0983, symbol: 'K' },
-  { itemId: 'AK2LV-B/55', name: 'Calcium', weight: 40.078, symbol: 'Ca' }
+  {
+    itemId: '6-411/01',
+    itemDescription: 'S-Hide INT LX EGG WHPB 6-411 B100',
+    currentPrice: '$18.85',
+    name: 'Hydrogen',
+    weight: 1.0079,
+    symbol: 'H'
+  },
+  {
+    itemId: 'AK2LV-B/55',
+    itemDescription: 'AMERLOCK 2 LV CUBE',
+    currentPrice: '$18.85',
+    name: 'Helium',
+    weight: 4.0026,
+    symbol: 'He'
+  },
+  {
+    itemId: 'AK2-T1/01',
+    itemDescription: 'AMERLOCK 2/400 DEEP TINT RESIN',
+    currentPrice: '$18.85',
+    name: 'Lithium',
+    weight: 6.941,
+    symbol: 'Li'
+  },
+  {
+    itemId: '6-411/01',
+    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
+    currentPrice: '$18.85',
+    name: 'Beryllium',
+    weight: 9.0122,
+    symbol: 'Be'
+  },
+  {
+    itemId: '6-411/01',
+    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
+    currentPrice: '$18.85',
+    name: 'Boron',
+    weight: 10.811,
+    symbol: 'B'
+  },
+  {
+    itemId: '6-411/01',
+    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
+    currentPrice: 'NOT FOUND',
+    name: 'Carbon',
+    weight: 12.0107,
+    symbol: 'C'
+  },
+  {
+    itemId: '6-411/01',
+    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
+    currentPrice: '$18.85',
+    name: 'Nitrogen',
+    weight: 14.0067,
+    symbol: 'N'
+  },
+  {
+    itemId: '6-411/01',
+    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
+    currentPrice: '$18.85',
+    name: 'Oxygen',
+    weight: 15.9994,
+    symbol: 'O'
+  },
+  {
+    itemId: 'AK2LV-B/55',
+    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
+    currentPrice: '$18.85',
+    name: 'Fluorine',
+    weight: 18.9984,
+    symbol: 'F'
+  },
+  {
+    itemId: 'AK2LV-B/55',
+    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
+    currentPrice: '$18.85',
+    name: 'Neon',
+    weight: 20.1797,
+    symbol: 'Ne'
+  }
 ];
 
 /**
