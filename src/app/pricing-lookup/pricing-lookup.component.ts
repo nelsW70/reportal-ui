@@ -41,9 +41,12 @@ export class PricingLookupComponent implements OnInit {
 }
 
 export interface Data {
+  // change
   name: string;
   itemId: string;
+  // change
   weight: number;
+  // change
   symbol: string;
 }
 
