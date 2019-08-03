@@ -8,9 +8,10 @@ import { FundamentalNgxModule } from 'fundamental-ngx';
 import { TableCdkExampleComponent } from './table-cdk-example/table-cdk-example.component';
 import { MatTableModule } from '@angular/material';
 import { CdkTableModule } from '@angular/cdk/table';
+import { PricingLookupComponent } from './pricing-lookup/pricing-lookup.component';
 
 @NgModule({
-  declarations: [AppComponent, TableCdkExampleComponent],
+  declarations: [AppComponent, TableCdkExampleComponent, PricingLookupComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
