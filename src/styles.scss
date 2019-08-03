@@ -1,0 +1,16 @@
+// not using this but the console gets angry if there isn't a theme
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.mat-table {
+  .element-row:not(.expanded) {
+    cursor: pointer;
+  }
+
+  .element-row:not(.expanded):hover {
+    background: #f5f5f5;
+  }
+
+  .element-row.expanded {
+    border-bottom-color: transparent;
+  }
+}
