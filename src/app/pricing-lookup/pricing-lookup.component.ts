@@ -9,37 +9,6 @@ import {
   trigger
 } from '@angular/animations';
 
-@Component({
-  selector: 'app-pricing-lookup',
-  templateUrl: './pricing-lookup.component.html',
-  styleUrls: ['./pricing-lookup.component.scss'],
-  animations: [
-    trigger('detailExpand', [
-      state(
-        'collapsed',
-        style({ height: '0px', minHeight: '0', visibility: 'hidden' })
-      ),
-      state('expanded', style({ height: '*', visibility: 'visible' })),
-      transition(
-        'expanded <=> collapsed',
-        animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')
-      )
-    ])
-  ]
-})
-export class PricingLookupComponent implements OnInit {
-  expandedData: any;
-  displayedColumns = ['itemId', 'currentPrice', 'priceSource'];
-  dataSource = new ExampleDataSource();
-
-  isExpansionDetailRow = (i: number, row: object) =>
-    row.hasOwnProperty('detailRow');
-
-  constructor() {}
-
-  ngOnInit() {}
-}
-
 export interface Data {
   itemId: string;
   itemDescription: string;
@@ -149,14 +118,44 @@ const data: Data[] = [
  * altered, the observable should emit that new set of data on the stream. In our case here,
  * we return a stream that contains only one set of data that doesn't change.
  */
-export class ExampleDataSource extends DataSource<any> {
+export class MobileDataSource extends DataSource<any> {
   /** Connect function called by the table to retrieve one stream containing the data to render. */
   connect(): Observable<Data[]> {
     const rows = [];
     data.forEach(data => rows.push(data, { detailRow: true, data }));
-    console.log(rows);
     return of(rows);
   }
 
   disconnect() {}
+}
+
+@Component({
+  selector: 'app-pricing-lookup',
+  templateUrl: './pricing-lookup.component.html',
+  styleUrls: ['./pricing-lookup.component.scss'],
+  animations: [
+    trigger('detailExpand', [
+      state(
+        'collapsed',
+        style({ height: '0px', minHeight: '0', visibility: 'hidden' })
+      ),
+      state('expanded', style({ height: '*', visibility: 'visible' })),
+      transition(
+        'expanded <=> collapsed',
+        animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')
+      )
+    ])
+  ]
+})
+export class PricingLookupComponent implements OnInit {
+  expandedData: any;
+  displayedColumns = ['itemId', 'currentPrice', 'priceSource'];
+  dataSource = new MobileDataSource();
+
+  isExpansionDetailRow = (i: number, row: object) =>
+    row.hasOwnProperty('detailRow');
+
+  constructor() {}
+
+  ngOnInit() {}
 }

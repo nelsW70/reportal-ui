@@ -9,21 +9,18 @@
   </ng-container>
 
   <!-- Current Price Column -->
-  <!-- Position Column -->
   <ng-container matColumnDef="currentPrice">
     <mat-header-cell *matHeaderCellDef> Current Price </mat-header-cell>
     <mat-cell *matCellDef="let data"> {{ data.currentPrice }} </mat-cell>
   </ng-container>
 
   <!-- Price Source Column -->
-  <!-- Position Column -->
   <ng-container matColumnDef="priceSource">
     <mat-header-cell *matHeaderCellDef> Price Source </mat-header-cell>
     <mat-cell *matCellDef="let data"> {{ data.priceSource }} </mat-cell>
   </ng-container>
 
   <!-- Expanded Content Column - The detail row is made up of this one column -->
-  <!-- Position Column -->
   <ng-container matColumnDef="expandedDetail">
     <mat-cell *matCellDef="let detail">
       <div>
