@@ -131,9 +131,11 @@
                 </div>
               </div>
             </mat-header-cell>
-            <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">{{
-              product.itemId
-            }}</mat-cell>
+            <mat-cell
+              *matCellDef="let product"
+              class="fd-has-type-minus-1 fd-has-text-align-right"
+              >{{ product.itemId }}</mat-cell
+            >
           </ng-container>
 
           <!-- Current Price Column -->
@@ -153,7 +155,7 @@
             ></mat-header-cell>
             <mat-cell
               *matCellDef="let product"
-              class="col-2 fd-has-type-minus-1"
+              class="col-2 fd-has-type-minus-1 fd-has-text-align-right"
               >{{ product.currentPrice }}</mat-cell
             >
           </ng-container>
@@ -175,7 +177,7 @@
             ></mat-header-cell>
             <mat-cell
               *matCellDef="let product"
-              class="col-3 fd-has-type-minus-1"
+              class="col-3 fd-has-type-minus-1 fd-has-text-align-right"
               >{{ product.priceSource }}</mat-cell
             >
           </ng-container>
@@ -183,19 +185,31 @@
           <!-- Expanded Content Column - The detail row is made up of this one column -->
           <ng-container matColumnDef="expandedDetail">
             <mat-cell *matCellDef="let detail">
-              <div>
+              <div class="fd-has-type-0 expanded-details">
                 <div>
                   Item Description:
-                  <div>
+                  <div class="expanded-details-info">
                     {{ detail.product.itemDescription }}
                   </div>
                 </div>
-                <div>Final: {{ detail.product.final }}</div>
+                <div>
+                  Final:
+                  <span class="expanded-details-info">
+                    {{ detail.product.final }}
+                  </span>
+                </div>
                 <div>
                   MGPL Price:
-                  {{ detail.product.mgplPrice }}
+                  <span class="expanded-details-info">
+                    {{ detail.product.mgplPrice }}
+                  </span>
                 </div>
-                <div>Matrix Price: {{ detail.product.matrixPrice }}</div>
+                <div>
+                  Matrix Price:
+                  <span class="expanded-details-info">
+                    {{ detail.product.matrixPrice }}
+                  </span>
+                </div>
               </div>
             </mat-cell>
           </ng-container>

@@ -9,6 +9,18 @@
 
 // FONTS
 
+mat-table {
+  mat-header-cell,
+  mat-cell {
+    font-family: '72';
+  }
+
+  mat-cell.fd-has-type-minus-1.fd-has-text-align-right {
+    font-size: 12px;
+    color: var(--fd-color-text-2);
+  }
+}
+
 .panel-body {
   & .fd-has-type-minus-1 {
     color: var(--fd-color-text-3);
@@ -80,27 +92,18 @@ mat-table {
     }
   }
   & mat-header-row {
-    // align-items: baseline;
-    // height: fit-content;
     background-color: var(--fd-color-background-7);
-    // border-bottom: none;
   }
   & mat-header-cell.fd-has-type-minus-1 {
-    // align-items: flex-start;
     justify-content: flex-end;
     color: var(--fd-color-text-4);
     text-transform: uppercase;
     font-weight: 400;
-    // padding-top: 1rem;
-    // padding-left: 12px;
+
     &:first-of-type {
       justify-content: flex-start;
       padding-left: 12px;
     }
-    // @media only screen and (min-width: 420px) {
-    //   align-items: center;
-    //   padding-top: unset;
-    // }
   }
   & mat-cell {
     padding-left: 12px;
@@ -111,7 +114,19 @@ mat-table {
     &.col-3 {
       justify-content: flex-end;
     }
+    &.cdk-column-expandedDetail {
+      background-color: var(--fd-color-neutral-1);
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      & .expanded-details {
+        color: var(--fd-color-text-3);
+      }
+      & .expanded-details-info {
+        color: var(--fd-color-text-2);
+      }
+    }
   }
+
   .product-row:not(.expanded) {
     cursor: pointer;
   }
@@ -121,8 +136,8 @@ mat-table {
   }
   &.pricing-lookup {
     & mat-header-cell:first-of-type {
-      @media only screen and (max-width: 370px) {
-        padding-bottom: 1rem;
+      @media only screen and (max-width: 380px) {
+        padding-bottom: 0.85rem;
       }
     }
   }
