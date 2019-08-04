@@ -134,7 +134,7 @@
               class="fd-has-type-minus-1 fd-has-text-align-right"
               >Current Price</mat-header-cell
             >
-            <mat-cell *matCellDef="let product">{{
+            <mat-cell *matCellDef="let product" class="col-2">{{
               product.currentPrice
             }}</mat-cell>
           </ng-container>
@@ -147,7 +147,7 @@
               class="fd-has-type-minus-1 fd-has-text-align-right"
               >Price Source</mat-header-cell
             >
-            <mat-cell *matCellDef="let product">{{
+            <mat-cell *matCellDef="let product" class="col-3">{{
               product.priceSource
             }}</mat-cell>
           </ng-container>

@@ -10,19 +10,32 @@
 // FONTS
 
 mat-table {
+  & mat-header-row {
+    height: 5rem;
+  }
   & mat-header-cell.fd-has-type-minus-1 {
+    align-items: flex-start;
     color: var(--fd-color-text-4);
     text-transform: uppercase;
     font-weight: 400;
+    padding-top: 1rem;
     padding-left: 12px;
     &:first-of-type {
       padding-left: 12px;
+    }
+    @media only screen and (min-width: 420px) {
+      align-items: center;
+      padding-top: unset;
     }
   }
   & mat-cell {
     padding-left: 12px;
     &:first-of-type {
       padding-left: 12px;
+    }
+    &.col-2,
+    &.col-3 {
+      justify-content: flex-end;
     }
   }
 }
