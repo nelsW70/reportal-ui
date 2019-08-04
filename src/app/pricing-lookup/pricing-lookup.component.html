@@ -111,7 +111,7 @@
         </div>
       </div>
       <div>
-        <mat-table #table [dataSource]="dataSource">
+        <mat-table #table [dataSource]="dataSource" class="pricing-lookup">
           <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 
@@ -121,8 +121,16 @@
               fdColumnSortable
               *matHeaderCellDef
               class="fd-has-type-minus-1 th-1"
-              >Item Id</mat-header-cell
             >
+              <div class="th-container">
+                <div class="fd-has-text-align-right">
+                  Item Id
+                </div>
+                <div>
+                  <span class="sap-icon--sorting-ranking sap-icon--s"></span>
+                </div>
+              </div>
+            </mat-header-cell>
             <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">{{
               product.itemId
             }}</mat-cell>
@@ -134,8 +142,15 @@
               fdColumnSortable
               *matHeaderCellDef
               class="fd-has-type-minus-1"
-              >Current Price</mat-header-cell
             >
+              <div class="th-container">
+                <div class="fd-has-text-align-right">
+                  Current Price
+                </div>
+                <div>
+                  <span class="sap-icon--sorting-ranking sap-icon--s"></span>
+                </div></div
+            ></mat-header-cell>
             <mat-cell
               *matCellDef="let product"
               class="col-2 fd-has-type-minus-1"
@@ -149,8 +164,15 @@
               fdColumnSortable
               *matHeaderCellDef
               class="fd-has-type-minus-1"
-              >Price Source</mat-header-cell
             >
+              <div class="th-container">
+                <div class="fd-has-text-align-right">
+                  Price Source
+                </div>
+                <div>
+                  <span class="sap-icon--sorting-ranking sap-icon--s"></span>
+                </div></div
+            ></mat-header-cell>
             <mat-cell
               *matCellDef="let product"
               class="col-3 fd-has-type-minus-1"
