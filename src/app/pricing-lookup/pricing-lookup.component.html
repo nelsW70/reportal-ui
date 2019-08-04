@@ -110,14 +110,17 @@
           05/02/2020
         </div>
       </div>
-      <div class="pricing-table">
+      <div>
         <mat-table #table [dataSource]="dataSource">
           <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 
           <!-- Item Id Column -->
           <ng-container matColumnDef="itemId">
-            <mat-header-cell fdColumnSortable *matHeaderCellDef
+            <mat-header-cell
+              fdColumnSortable
+              *matHeaderCellDef
+              class="fd-has-type-minus-1"
               >Item Id</mat-header-cell
             >
             <mat-cell *matCellDef="let product">{{ product.itemId }}</mat-cell>
@@ -125,7 +128,10 @@
 
           <!-- Current Price Column -->
           <ng-container matColumnDef="currentPrice">
-            <mat-header-cell fdColumnSortable *matHeaderCellDef
+            <mat-header-cell
+              fdColumnSortable
+              *matHeaderCellDef
+              class="fd-has-type-minus-1 fd-has-text-align-right"
               >Current Price</mat-header-cell
             >
             <mat-cell *matCellDef="let product">{{
@@ -135,7 +141,10 @@
 
           <!-- Price Source Column -->
           <ng-container matColumnDef="priceSource">
-            <mat-header-cell fdColumnSortable *matHeaderCellDef
+            <mat-header-cell
+              fdColumnSortable
+              *matHeaderCellDef
+              class="fd-has-type-minus-1 fd-has-text-align-right"
               >Price Source</mat-header-cell
             >
             <mat-cell *matCellDef="let product">{{
@@ -214,5 +223,5 @@
 </div>
 
 <div *ngIf="currentWindowWidth >= 768">
-  <p>I'm the desktop version and don't exist yet</p>
+  <p>I'm the desktop version...coming soon.</p>
 </div>
