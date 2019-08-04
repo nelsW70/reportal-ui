@@ -120,10 +120,12 @@
             <mat-header-cell
               fdColumnSortable
               *matHeaderCellDef
-              class="fd-has-type-minus-1"
+              class="fd-has-type-minus-1 th-1"
               >Item Id</mat-header-cell
             >
-            <mat-cell *matCellDef="let product">{{ product.itemId }}</mat-cell>
+            <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">{{
+              product.itemId
+            }}</mat-cell>
           </ng-container>
 
           <!-- Current Price Column -->
@@ -131,12 +133,14 @@
             <mat-header-cell
               fdColumnSortable
               *matHeaderCellDef
-              class="fd-has-type-minus-1 fd-has-text-align-right"
+              class="fd-has-type-minus-1"
               >Current Price</mat-header-cell
             >
-            <mat-cell *matCellDef="let product" class="col-2">{{
-              product.currentPrice
-            }}</mat-cell>
+            <mat-cell
+              *matCellDef="let product"
+              class="col-2 fd-has-type-minus-1"
+              >{{ product.currentPrice }}</mat-cell
+            >
           </ng-container>
 
           <!-- Price Source Column -->
@@ -144,12 +148,14 @@
             <mat-header-cell
               fdColumnSortable
               *matHeaderCellDef
-              class="fd-has-type-minus-1 fd-has-text-align-right"
+              class="fd-has-type-minus-1"
               >Price Source</mat-header-cell
             >
-            <mat-cell *matCellDef="let product" class="col-3">{{
-              product.priceSource
-            }}</mat-cell>
+            <mat-cell
+              *matCellDef="let product"
+              class="col-3 fd-has-type-minus-1"
+              >{{ product.priceSource }}</mat-cell
+            >
           </ng-container>
 
           <!-- Expanded Content Column - The detail row is made up of this one column -->
