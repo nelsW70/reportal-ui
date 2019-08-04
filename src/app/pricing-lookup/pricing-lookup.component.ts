@@ -9,7 +9,7 @@ import {
   trigger
 } from '@angular/animations';
 
-export interface Data {
+export interface ProductInfo {
   itemId: string;
   itemDescription: string;
   currentPrice: string;
@@ -19,7 +19,7 @@ export interface Data {
   matrixPrice: string;
 }
 
-const data: Data[] = [
+const data: ProductInfo[] = [
   {
     itemId: '6-411/01',
     itemDescription: 'S-Hide INT LX EGG WHPB 6-411 B100',
@@ -113,9 +113,9 @@ const data: Data[] = [
 ];
 
 export class MobileDataSource extends DataSource<any> {
-  connect(): Observable<Data[]> {
+  connect(): Observable<ProductInfo[]> {
     const rows = [];
-    data.forEach(data => rows.push(data, { detailRow: true, data }));
+    data.forEach(product => rows.push(product, { detailRow: true, product }));
     return of(rows);
   }
 

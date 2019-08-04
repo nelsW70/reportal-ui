@@ -5,19 +5,19 @@
   <!-- Item Id Column -->
   <ng-container matColumnDef="itemId">
     <mat-header-cell *matHeaderCellDef> Item Id </mat-header-cell>
-    <mat-cell *matCellDef="let data"> {{ data.itemId }} </mat-cell>
+    <mat-cell *matCellDef="let product"> {{ product.itemId }} </mat-cell>
   </ng-container>
 
   <!-- Current Price Column -->
   <ng-container matColumnDef="currentPrice">
     <mat-header-cell *matHeaderCellDef> Current Price </mat-header-cell>
-    <mat-cell *matCellDef="let data"> {{ data.currentPrice }} </mat-cell>
+    <mat-cell *matCellDef="let product"> {{ product.currentPrice }} </mat-cell>
   </ng-container>
 
   <!-- Price Source Column -->
   <ng-container matColumnDef="priceSource">
     <mat-header-cell *matHeaderCellDef> Price Source </mat-header-cell>
-    <mat-cell *matCellDef="let data"> {{ data.priceSource }} </mat-cell>
+    <mat-cell *matCellDef="let product"> {{ product.priceSource }} </mat-cell>
   </ng-container>
 
   <!-- Expanded Content Column - The detail row is made up of this one column -->
@@ -27,15 +27,15 @@
         <div>
           Item Description:
           <div>
-            {{ detail.data.itemDescription }}
+            {{ detail.product.itemDescription }}
           </div>
         </div>
-        <div>Final: {{ detail.data.final }}</div>
+        <div>Final: {{ detail.product.final }}</div>
         <div>
           MGPL Price:
-          {{ detail.data.mgplPrice }}
+          {{ detail.product.mgplPrice }}
         </div>
-        <div>Matrix Price: {{ detail.data.matrixPrice }}</div>
+        <div>Matrix Price: {{ detail.product.matrixPrice }}</div>
       </div>
     </mat-cell>
   </ng-container>
@@ -44,7 +44,7 @@
   <mat-row
     *matRowDef="let row; columns: displayedColumns"
     matRipple
-    class="data-row"
+    class="product-row"
     [class.expanded]="expandedData == row"
     (click)="
       expandedData === row ? (expandedData = null) : (expandedData = row)
@@ -56,7 +56,7 @@
       columns: ['expandedDetail'];
       when: isExpansionDetailRow
     "
-    [@detailExpand]="row.data == expandedData ? 'expanded' : 'collapsed'"
+    [@detailExpand]="row.product == expandedData ? 'expanded' : 'collapsed'"
     style="overflow: hidden"
   >
   </mat-row>

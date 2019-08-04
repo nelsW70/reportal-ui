@@ -2,15 +2,15 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 .mat-table {
-  .element-row:not(.expanded) {
+  .product-row:not(.expanded) {
     cursor: pointer;
   }
 
-  .element-row:not(.expanded):hover {
+  .product-row:not(.expanded):hover {
     background: #f5f5f5;
   }
 
-  // .element-row.expanded {
+  // .product-row.expanded {
   //   border-bottom-color: transparent;
   // }
 }
