@@ -1,63 +1,212 @@
-<mat-table #table [dataSource]="dataSource">
-  <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
-
-  <!-- Item Id Column -->
-  <ng-container matColumnDef="itemId">
-    <mat-header-cell *matHeaderCellDef>Item Id</mat-header-cell>
-    <mat-cell *matCellDef="let product">{{ product.itemId }}</mat-cell>
-  </ng-container>
-
-  <!-- Current Price Column -->
-  <ng-container matColumnDef="currentPrice">
-    <mat-header-cell *matHeaderCellDef>Current Price</mat-header-cell>
-    <mat-cell *matCellDef="let product">{{ product.currentPrice }}</mat-cell>
-  </ng-container>
-
-  <!-- Price Source Column -->
-  <ng-container matColumnDef="priceSource">
-    <mat-header-cell *matHeaderCellDef>Price Source</mat-header-cell>
-    <mat-cell *matCellDef="let product">{{ product.priceSource }}</mat-cell>
-  </ng-container>
-
-  <!-- Expanded Content Column - The detail row is made up of this one column -->
-  <ng-container matColumnDef="expandedDetail">
-    <mat-cell *matCellDef="let detail">
-      <div>
-        <div>
-          Item Description:
-          <div>
-            {{ detail.product.itemDescription }}
+<div *ngIf="currentWindowWidth < 768">
+  <h4 class="fd-has-type-4">Pricing Lookup</h4>
+  <fd-panel>
+    <fd-panel-header>
+      <fd-panel-head>
+        <h2 fd-panel-title>Pricing Lookup</h2>
+      </fd-panel-head>
+    </fd-panel-header>
+    <fd-panel-body>
+      <div fd-form-set>
+        <div fd-form-item>
+          <label fd-form-label for="input-1">Customer Name*</label>
+          <input
+            fd-form-control
+            type="text"
+            id="input-1"
+            placeholder="Fake placeholder text"
+            aria-required="true"
+          />
+        </div>
+        <div class="inline-form-inputs">
+          <div fd-form-item>
+            <label fd-form-label for="input-2">Customer Number*</label>
+            <input
+              fd-form-control
+              type="text"
+              id="input-2"
+              placeholder="Fake placeholder text"
+              aria-required="true"
+            />
+          </div>
+          <div fd-form-item>
+            <label fd-form-label for="combobox-1">PPG Store Number*</label>
+            <!-- fake ngModel for demo -->
+            <fd-combobox
+              id="combobox-1"
+              [(ngModel)]="searchTermOne"
+              [dropdownValues]="dropdownValues1"
+              [placeholder]="'Fake placeholder text'"
+              [maxHeight]="'250px'"
+              aria-required="true"
+            >
+            </fd-combobox>
           </div>
         </div>
-        <div>Final: {{ detail.product.final }}</div>
-        <div>
-          MGPL Price:
-          {{ detail.product.mgplPrice }}
+        <!-- <div fd-form-item>
+            <p class="fd-has-color-action-1">Change Customer</p>
+          </div> -->
+        <div fd-form-item>
+          <label fd-form-label for="combobox-2">
+            Lookup Job Pricing
+          </label>
+          <!-- fake ngModel for demo -->
+          <fd-combobox
+            id="combobox-2"
+            [(ngModel)]="searchTermTwo"
+            [dropdownValues]="dropdownValues2"
+            [placeholder]="'Fake placeholder text'"
+            [maxHeight]="'250px'"
+          >
+          </fd-combobox>
         </div>
-        <div>Matrix Price: {{ detail.product.matrixPrice }}</div>
+        <div fd-form-item class="button-primary-container">
+          <button class="btn-100" fd-button [options]="'emphasized'">
+            Get Job Pricing
+          </button>
+        </div>
+        <div fd-form-item>
+          <label fd-form-label for="input-4">Lookup Item Pricing</label>
+          <input
+            fd-form-control
+            type="text"
+            id="input-4"
+            placeholder="Fake placeholder text"
+          />
+        </div>
+        <div fd-form-item>
+          <button class="btn-100 item-lookup" fd-button [glyph]="'add'">
+            Add Item To Lookup
+          </button>
+        </div>
       </div>
-    </mat-cell>
-  </ng-container>
+    </fd-panel-body>
+  </fd-panel>
+  <fd-panel>
+    <fd-panel-header>
+      <fd-panel-head>
+        <h2 fd-panel-title>Pricing Lookup</h2>
+      </fd-panel-head>
+      <fd-panel-actions>
+        <button fd-button>Reset</button>
+      </fd-panel-actions>
+    </fd-panel-header>
+    <fd-panel-body class="panel-body customer-info">
+      <div class="job-info-container">
+        <div class="job-info">
+          <p class="fd-has-type-minus-1">Job Name</p>
+          Mickey Hotel
+        </div>
+        <div class="job-info">
+          <p class="fd-has-type-minus-1">Job Number</p>
+          4067594739272
+        </div>
+        <div class="job-info">
+          <p class="fd-has-type-minus-1">Effective Date</p>
+          05/02/2019
+        </div>
+        <div class="job-info">
+          <p class="fd-has-type-minus-1">Expiration Date</p>
+          05/02/2020
+        </div>
+      </div>
+      <div class="pricing-table">
+        <mat-table #table [dataSource]="dataSource">
+          <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
 
-  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row
-    *matRowDef="let row; columns: displayedColumns"
-    matRipple
-    class="product-row"
-    [class.expanded]="expandedData == row"
-    (click)="
-      expandedData === row ? (expandedData = null) : (expandedData = row)
-    "
-  ></mat-row>
-  <mat-row
-    *matRowDef="
-      let row;
-      columns: ['expandedDetail'];
-      when: isExpansionDetailRow
-    "
-    [@detailExpand]="row.product == expandedData ? 'expanded' : 'collapsed'"
-    style="overflow: hidden"
-  >
-  </mat-row>
-</mat-table>
+          <!-- Item Id Column -->
+          <ng-container matColumnDef="itemId">
+            <mat-header-cell *matHeaderCellDef>Item Id</mat-header-cell>
+            <mat-cell *matCellDef="let product">{{ product.itemId }}</mat-cell>
+          </ng-container>
+
+          <!-- Current Price Column -->
+          <ng-container matColumnDef="currentPrice">
+            <mat-header-cell *matHeaderCellDef>Current Price</mat-header-cell>
+            <mat-cell *matCellDef="let product">{{
+              product.currentPrice
+            }}</mat-cell>
+          </ng-container>
+
+          <!-- Price Source Column -->
+          <ng-container matColumnDef="priceSource">
+            <mat-header-cell *matHeaderCellDef>Price Source</mat-header-cell>
+            <mat-cell *matCellDef="let product">{{
+              product.priceSource
+            }}</mat-cell>
+          </ng-container>
+
+          <!-- Expanded Content Column - The detail row is made up of this one column -->
+          <ng-container matColumnDef="expandedDetail">
+            <mat-cell *matCellDef="let detail">
+              <div>
+                <div>
+                  Item Description:
+                  <div>
+                    {{ detail.product.itemDescription }}
+                  </div>
+                </div>
+                <div>Final: {{ detail.product.final }}</div>
+                <div>
+                  MGPL Price:
+                  {{ detail.product.mgplPrice }}
+                </div>
+                <div>Matrix Price: {{ detail.product.matrixPrice }}</div>
+              </div>
+            </mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row
+            *matRowDef="let row; columns: displayedColumns"
+            matRipple
+            class="product-row"
+            [class.expanded]="expandedData == row"
+            (click)="
+              expandedData === row
+                ? (expandedData = null)
+                : (expandedData = row)
+            "
+          ></mat-row>
+          <mat-row
+            *matRowDef="
+              let row;
+              columns: ['expandedDetail'];
+              when: isExpansionDetailRow
+            "
+            [@detailExpand]="
+              row.product == expandedData ? 'expanded' : 'collapsed'
+            "
+            style="overflow: hidden"
+          >
+          </mat-row>
+        </mat-table>
+      </div>
+      <div class="fd-pagination">
+        <span class="fd-pagination__total">30 items</span>
+        <nav class="fd-pagination__nav">
+          <a
+            href="#"
+            class="fd-pagination__link fd-pagination__link--previous"
+            aria-label="Previous"
+            aria-disabled="true"
+          ></a>
+          <a href="#" class="fd-pagination__link" aria-selected="true">1</a>
+          <a href="#" class="fd-pagination__link">2</a>
+          <a href="#" class="fd-pagination__link">3</a>
+          <a
+            href="#"
+            class="fd-pagination__link fd-pagination__link--next"
+            aria-label="Next"
+            aria-disabled="false"
+          ></a>
+        </nav>
+      </div>
+    </fd-panel-body>
+  </fd-panel>
+</div>
+
+<div *ngIf="currentWindowWidth >= 768">
+  <p>I'm the desktop version and don't exist yet</p>
+</div>

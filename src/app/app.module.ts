@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FundamentalNgxModule } from 'fundamental-ngx';
@@ -14,6 +15,7 @@ import { PricingLookupComponent } from './pricing-lookup/pricing-lookup.componen
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     FundamentalNgxModule,
     MatTableModule,
     CdkTableModule

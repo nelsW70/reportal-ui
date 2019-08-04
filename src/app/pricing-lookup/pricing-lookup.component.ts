@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { DataSource } from '@angular/cdk/collections';
 import { Observable, of } from 'rxjs';
 import {
@@ -141,6 +141,12 @@ export class MobileDataSource extends DataSource<any> {
   ]
 })
 export class PricingLookupComponent implements OnInit {
+  currentWindowWidth: number;
+  // fake combobox values and auto-complete for demo
+  searchTermOne = '';
+  searchTermTwo = '';
+  dropdownValues1 = ['1234', '12345', '12456'];
+  dropdownValues2 = ['Mickey Hotel', 'We Sell Paint', 'Bob Loves Paint'];
   expandedData: any;
   displayedColumns = ['itemId', 'currentPrice', 'priceSource'];
   dataSource = new MobileDataSource();
@@ -150,5 +156,15 @@ export class PricingLookupComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.currentWindowWidth = window.innerWidth;
+  }
+
+  // fake for demo to calculate window size on resize and show/different size screen
+  // this would be expensive if anyone resizes and should only be implemented in the onInit
+  // method if used
+  @HostListener('window:resize')
+  onResize() {
+    this.currentWindowWidth = window.innerWidth;
+  }
 }

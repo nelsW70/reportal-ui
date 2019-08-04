@@ -1,6 +1,85 @@
 // not using this but the console gets angry if there isn't a theme
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
+// body {
+//   @media only screen and (max-width: 768px) {
+//     background-color: var(--fd-color-background-2);
+//   }
+// }
+
+// FONTS
+
+.panel-body {
+  & .fd-has-type-minus-1 {
+    color: var(--fd-color-text-3);
+  }
+}
+
+.pricing-table th {
+  text-transform: uppercase;
+}
+
+td {
+  color: var(--fd-color-text-2);
+}
+
+// MAIN CONTAINER
+
+main {
+  margin: 2rem 0.85rem;
+}
+
+// BUTTON CONTAINER
+
+.button-primary-container {
+  margin-bottom: 0.5rem;
+}
+
+// FORM CONTAINER
+
+.inline-form-inputs {
+  display: flex;
+  justify-content: space-between;
+
+  & .fd-form__item {
+    width: calc(50% - 4px);
+  }
+}
+
+// PANEL JOB INFO CONTAINER
+
+.job-info-container {
+  padding: 1.5rem;
+}
+
+// BUTTONS
+
+.btn-100 {
+  width: 100%;
+}
+
+// PANELS
+
+.fd-panel {
+  margin: 1.25rem 0;
+}
+
+.fd-panel__header,
+.fd-panel__body,
+.fd-panel__filters {
+  padding: 1rem;
+}
+
+.fd-panel__body.customer-info {
+  padding: 0;
+}
+
+.panel-body .job-info {
+  margin: 0.75rem 0;
+}
+
+// TABLE
+
 .mat-table {
   .product-row:not(.expanded) {
     cursor: pointer;
@@ -14,3 +93,67 @@
   //   border-bottom-color: transparent;
   // }
 }
+
+// table {
+//   .th-title-two,
+//   .th-title-three {
+//     text-align: right;
+//   }
+//   tr {
+//     cursor: pointer;
+//   }
+// }
+
+// .fd-table td {
+//   padding-top: 10px;
+//   padding-bottom: 10px;
+
+//   @media only screen and (max-width: 414px) {
+//     &.nav-arrow-td {
+//       text-align: center;
+//     }
+//     &.td-col-two,
+//     &.td-col-three {
+//       text-align: right;
+//     }
+//   }
+// }
+
+// TABLE PAGINATION
+
+.fd-pagination {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+// ICONS
+
+.navigation-arrow-right {
+  color: var(--fd-color-action-1);
+}
+
+// XS-TABLE-HEADER - because the UI library breaks otherwise
+
+// .xs-table-header {
+//   th {
+//     width: calc(95% / 3);
+//     &.nav-arrow-col {
+//       width: 5%;
+//       min-width: 2rem;
+//     }
+
+//     &.fd-table__sort-column:first-of-type {
+//       vertical-align: baseline;
+//     }
+//   }
+//   .fd-table__sort-column::after {
+//     content: unset;
+//   }
+//   .xs-th-container {
+//     display: flex;
+//   }
+//   .th-title {
+//     padding-right: 6px;
+//   }
+// }
