@@ -169,14 +169,17 @@
                   Price Source
                 </div>
                 <div>
-                  <span class="sap-icon--sorting-ranking sap-icon--s"></span>
+                  <span class="sap-icon--sorting-ranking sap-icon"></span>
                 </div></div
             ></mat-header-cell>
             <mat-cell
               *matCellDef="let product"
               class="col-3 fd-has-type-minus-1 fd-has-text-align-right"
               >{{ product.priceSource }}
-              <span class="sap-icon--navigation-right-arrow sap-icon--s expand-icon"></span>
+              <span
+                [@detailExpand]="expandedData ? 'open' : 'closed'"
+                class="sap-icon--navigation-right-arrow sap-icon--s expand-icon"
+              ></span>
             </mat-cell>
           </ng-container>
 
@@ -214,14 +217,15 @@
 
           <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
           <mat-row
-            *matRowDef="let row; columns: displayedColumns"
+            *matRowDef="let row; columns: displayedColumns; let i = index"
             matRipple
             class="product-row"
             [class.expanded]="expandedData == row"
             (click)="
               expandedData === row
                 ? (expandedData = null)
-                : (expandedData = row)
+                : (expandedData = row);
+              rowExpanded(i)
             "
           ></mat-row>
           <mat-row

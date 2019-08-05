@@ -136,6 +136,22 @@ export class MobileDataSource extends DataSource<any> {
       transition(
         'expanded <=> collapsed',
         animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')
+      ),
+      state(
+        'closed',
+        style({
+          transform: 'rotate(0deg)'
+        })
+      ),
+      state(
+        'open',
+        style({
+          transform: 'rotate(90deg)'
+        })
+      ),
+      transition(
+        'open <=> closed',
+        animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')
       )
     ])
   ]
@@ -166,5 +182,8 @@ export class PricingLookupComponent implements OnInit {
   @HostListener('window:resize')
   onResize() {
     this.currentWindowWidth = window.innerWidth;
+  }
+  rowExpanded(index: number) {
+    console.log(index);
   }
 }
