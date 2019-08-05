@@ -8,16 +8,19 @@
 // }
 
 // FONTS
-
 mat-table {
   mat-header-cell,
   mat-cell {
     font-family: '72';
+    &.fd-has-type-minus-1.fd-has-text-align-right {
+      font-size: 12px;
+      color: var(--fd-color-text-2);
+    }
   }
-
-  mat-cell.fd-has-type-minus-1.fd-has-text-align-right {
-    font-size: 12px;
-    color: var(--fd-color-text-2);
+  mat-header-cell.fd-has-type-minus-1 {
+    color: var(--fd-color-text-4);
+    text-transform: uppercase;
+    font-weight: 400;
   }
 }
 
@@ -28,19 +31,16 @@ mat-table {
 }
 
 // MAIN CONTAINER
-
 main {
   margin: 2rem 0.85rem;
 }
 
 // BUTTON CONTAINER
-
 .button-primary-container {
   margin-bottom: 0.5rem;
 }
 
 // FORM CONTAINER
-
 .inline-form-inputs {
   display: flex;
   justify-content: space-between;
@@ -51,19 +51,16 @@ main {
 }
 
 // PANEL JOB INFO CONTAINER
-
 .job-info-container {
   padding: 1.5rem;
 }
 
 // BUTTONS
-
 .btn-100 {
   width: 100%;
 }
 
 // PANELS
-
 .fd-panel {
   margin: 1.25rem 0;
 }
@@ -83,29 +80,25 @@ main {
 }
 
 // TABLE
-
 mat-table {
-  & .th-container {
+  .th-container {
     display: flex;
     & .fd-has-text-align-right {
       padding-right: 6px;
     }
   }
-  & mat-header-row {
+  mat-header-row {
     background-color: var(--fd-color-background-7);
   }
-  & mat-header-cell.fd-has-type-minus-1 {
+  mat-header-cell.fd-has-type-minus-1 {
     justify-content: flex-end;
-    color: var(--fd-color-text-4);
-    text-transform: uppercase;
-    font-weight: 400;
 
     &:first-of-type {
       justify-content: flex-start;
       padding-left: 12px;
     }
   }
-  & mat-cell {
+  mat-cell {
     padding-left: 12px;
     &:first-of-type {
       padding-left: 12px;
@@ -144,12 +137,10 @@ mat-table {
 }
 
 .fd-table__sort-column::after {
-  // margin: 0 0 0 6px;
   content: unset;
 }
 
 // TABLE PAGINATION
-
 .fd-pagination {
   padding: 2rem 1rem;
   display: flex;
@@ -158,6 +149,6 @@ mat-table {
 
 // ICONS
 
-.navigation-arrow-right {
-  color: var(--fd-color-action-1);
-}
+// .navigation-arrow-right {
+//   color: var(--fd-color-action-1);
+// }
