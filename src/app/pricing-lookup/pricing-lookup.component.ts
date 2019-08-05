@@ -158,6 +158,7 @@ export class MobileDataSource extends DataSource<any> {
 })
 export class PricingLookupComponent implements OnInit {
   currentWindowWidth: number;
+  currentIndex: number = null;
   // fake combobox values and auto-complete for demo
   searchTermOne = '';
   searchTermTwo = '';
@@ -182,8 +183,5 @@ export class PricingLookupComponent implements OnInit {
   @HostListener('window:resize')
   onResize() {
     this.currentWindowWidth = window.innerWidth;
-  }
-  rowExpanded(index: number) {
-    console.log(index);
   }
 }

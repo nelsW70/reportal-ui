@@ -173,12 +173,10 @@
                 </div></div
             ></mat-header-cell>
             <mat-cell
-              *matCellDef="let product"
+              *matCellDef="let product; let i = index"
               class="col-3 fd-has-type-minus-1 fd-has-text-align-right"
-              >{{ product.priceSource }}
-              <span
-                [@detailExpand]="expandedData ? 'open' : 'closed'"
-                class="sap-icon--navigation-right-arrow sap-icon--s expand-icon"
+              >{{ product.priceSource }} {{i}}
+              <span [ngClass]="currentIndex === i ? 'sap-icon--navigation-down-arrow sap-icon--s expand-icon' : 'sap-icon--navigation-right-arrow sap-icon--s expand-icon'"
               ></span>
             </mat-cell>
           </ng-container>
@@ -225,7 +223,7 @@
               expandedData === row
                 ? (expandedData = null)
                 : (expandedData = row);
-              rowExpanded(i)
+              currentIndex = expandedData == row ? i : null;
             "
           ></mat-row>
           <mat-row
