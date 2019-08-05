@@ -134,10 +134,21 @@ mat-table {
       }
     }
   }
-}
-
-.fd-table__sort-column::after {
-  content: unset;
+  .fd-table__sort-column::after {
+    content: unset;
+  }
+  // expand icon placement at end of column
+  mat-header-cell:last-of-type {
+    padding-right: 36px;
+  }
+  mat-cell:last-of-type {
+    padding-right: 0;
+    & .expand-icon {
+      width: 36px;
+      text-align: center;
+      color: var(--fd-color-action-1);
+    }
+  }
 }
 
 // TABLE PAGINATION
@@ -146,9 +157,3 @@ mat-table {
   display: flex;
   justify-content: space-between;
 }
-
-// ICONS
-
-// .navigation-arrow-right {
-//   color: var(--fd-color-action-1);
-// }

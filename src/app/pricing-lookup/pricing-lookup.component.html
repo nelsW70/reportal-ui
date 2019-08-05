@@ -112,9 +112,6 @@
       </div>
       <div>
         <mat-table #table [dataSource]="dataSource" class="pricing-lookup">
-          <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-
           <!-- Item Id Column -->
           <ng-container matColumnDef="itemId">
             <mat-header-cell
@@ -178,8 +175,9 @@
             <mat-cell
               *matCellDef="let product"
               class="col-3 fd-has-type-minus-1 fd-has-text-align-right"
-              >{{ product.priceSource }}</mat-cell
-            >
+              >{{ product.priceSource }}
+              <span class="sap-icon--navigation-right-arrow sap-icon--s expand-icon"></span>
+            </mat-cell>
           </ng-container>
 
           <!-- Expanded Content Column - The detail row is made up of this one column -->
