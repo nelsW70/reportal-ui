@@ -33,15 +33,16 @@ mat-table {
   }
 }
 
+.error-message {
+  color: var(--fd-color-status-3);
+  // this should probably be done with an ngIf based on validation
+  visibility: hidden;
+}
+
 // MAIN CONTAINER
 main {
   margin: 2rem 0.85rem;
 }
-
-// BUTTON CONTAINER
-// .button-primary-container {
-//   margin-bottom: 0.5rem;
-// }
 
 // FORM CONTAINER
 .inline-form-inputs {
@@ -51,6 +52,10 @@ main {
   & .fd-form__item {
     width: calc(50% - 4px);
   }
+}
+
+.required-input-fields {
+  margin-bottom: 4px;
 }
 
 // PANEL JOB INFO CONTAINER
