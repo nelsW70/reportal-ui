@@ -48,7 +48,7 @@
           </div> -->
         <div fd-form-item>
           <label fd-form-label for="combobox-2">
-            Lookup Job Pricing
+            Job Quote
           </label>
           <!-- fake ngModel for demo -->
           <fd-combobox
@@ -60,20 +60,26 @@
           >
           </fd-combobox>
         </div>
+        <div fd-form-item>
+          <label fd-form-label for="input-4">Item</label>
+          <div class="fd-input-group fd-input-group--after">
+            <input
+              fd-form-control
+              type="text"
+              id="input-4"
+              placeholder="Fake placeholder text"
+            />
+            <span
+              class="fd-input-group__addon fd-input-group__addon--after sap-icon--search sap-icon"
+            ></span>
+          </div>
+        </div>
         <div fd-form-item class="button-primary-container">
           <button class="btn-100" fd-button [options]="'emphasized'">
             Get Job Pricing
           </button>
         </div>
-        <div fd-form-item>
-          <label fd-form-label for="input-4">Lookup Item Pricing</label>
-          <input
-            fd-form-control
-            type="text"
-            id="input-4"
-            placeholder="Fake placeholder text"
-          />
-        </div>
+
         <div fd-form-item>
           <button class="btn-100 item-lookup" fd-button [glyph]="'add'">
             Add Item To Lookup

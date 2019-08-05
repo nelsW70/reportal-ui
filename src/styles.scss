@@ -82,6 +82,11 @@ main {
   margin: 0.75rem 0;
 }
 
+// ICONS
+.sap-icon--search {
+  color: var(--fd-color-action-1);
+}
+
 // TABLE
 mat-table {
   .th-container {
