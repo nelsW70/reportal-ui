@@ -9,6 +9,9 @@
 
 // FONTS
 mat-table {
+  .th-header {
+    line-height: 1;
+  }
   mat-header-cell,
   mat-cell {
     font-family: '72';
@@ -103,6 +106,9 @@ mat-table {
     &:first-of-type {
       padding-left: 12px;
     }
+    &.col-2 {
+      padding-right: 36px;
+    }
     &.col-2,
     &.col-3 {
       justify-content: flex-end;
@@ -130,7 +136,7 @@ mat-table {
   &.pricing-lookup {
     & mat-header-cell:first-of-type {
       @media only screen and (max-width: 380px) {
-        padding-bottom: 0.85rem;
+        padding-bottom: 0.525rem;
       }
     }
   }
