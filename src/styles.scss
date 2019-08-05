@@ -103,6 +103,9 @@ mat-table {
     &:first-of-type {
       padding-left: 12px;
     }
+    &.col-2 {
+      padding-right: 36px;
+    }
     &.col-2,
     &.col-3 {
       justify-content: flex-end;
