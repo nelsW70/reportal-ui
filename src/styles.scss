@@ -39,9 +39,9 @@ main {
 }
 
 // BUTTON CONTAINER
-.button-primary-container {
-  margin-bottom: 0.5rem;
-}
+// .button-primary-container {
+//   margin-bottom: 0.5rem;
+// }
 
 // FORM CONTAINER
 .inline-form-inputs {
@@ -61,6 +61,11 @@ main {
 // BUTTONS
 .btn-100 {
   width: 100%;
+}
+.fd-button::before,
+[class*='fd-button--']::before,
+a[class*='fd-button--']::before {
+  font-size: 14px;
 }
 
 // PANELS

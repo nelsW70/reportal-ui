@@ -14,7 +14,6 @@
             fd-form-control
             type="text"
             id="input-1"
-            placeholder="Fake placeholder text"
             aria-required="true"
           />
         </div>
@@ -25,7 +24,6 @@
               fd-form-control
               type="text"
               id="input-2"
-              placeholder="Fake placeholder text"
               aria-required="true"
             />
           </div>
@@ -36,16 +34,12 @@
               id="combobox-1"
               [(ngModel)]="searchTermOne"
               [dropdownValues]="dropdownValues1"
-              [placeholder]="'Fake placeholder text'"
               [maxHeight]="'250px'"
               aria-required="true"
             >
             </fd-combobox>
           </div>
         </div>
-        <!-- <div fd-form-item>
-            <p class="fd-has-color-action-1">Change Customer</p>
-          </div> -->
         <div fd-form-item>
           <label fd-form-label for="combobox-2">
             Job Quote
@@ -55,35 +49,34 @@
             id="combobox-2"
             [(ngModel)]="searchTermTwo"
             [dropdownValues]="dropdownValues2"
-            [placeholder]="'Fake placeholder text'"
+            [placeholder]="'Select a Job Quote'"
             [maxHeight]="'250px'"
           >
           </fd-combobox>
         </div>
         <div fd-form-item>
           <label fd-form-label for="input-4">Item</label>
-          <div class="fd-input-group fd-input-group--after">
-            <input
-              fd-form-control
-              type="text"
-              id="input-4"
-              placeholder="Fake placeholder text"
-            />
-            <span
-              class="fd-input-group__addon fd-input-group__addon--after sap-icon--search sap-icon"
-            ></span>
-          </div>
+          <fd-input-group
+            fd-form-control
+            type="text"
+            id="input-4"
+            [placement]="'after'"
+            [glyph]="'search'"
+            [placeholder]="'Search Items'"
+          ></fd-input-group>
         </div>
-        <div fd-form-item class="button-primary-container">
-          <button class="btn-100" fd-button [options]="'emphasized'">
-            Get Job Pricing
-          </button>
-        </div>
-
         <div fd-form-item>
           <button class="btn-100 item-lookup" fd-button [glyph]="'add'">
             Add Item To Lookup
           </button>
+        </div>
+        <div fd-form-item>
+          <button class="btn-100" fd-button [options]="'emphasized'">
+            Get Pricing
+          </button>
+        </div>
+        <div fd-form-item>
+          <p class="fd-has-color-action-1 fd-has-text-align-center">Reset</p>
         </div>
       </div>
     </fd-panel-body>
