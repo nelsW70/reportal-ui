@@ -75,6 +75,11 @@ a[class*='fd-button--']::before {
   font-size: 14px;
 }
 
+.fd-button.sap-icon--navigation-down-arrow:hover,
+.fd-input-group__addon.fd-input-group__addon--after:hover {
+  border-color: var(--fd-color-action-hover);
+}
+
 // PANELS
 .fd-panel {
   margin: 1.25rem 0;
