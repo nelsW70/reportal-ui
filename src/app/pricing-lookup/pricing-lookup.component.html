@@ -9,13 +9,18 @@
     <fd-panel-body>
       <div fd-form-set>
         <div fd-form-item class="required-input-fields">
-          <label fd-form-label for="input-1">Customer Name*</label>
-          <input
+          <label fd-form-label for="select-1">Customer Name*</label>
+          <select
             fd-form-control
-            type="text"
-            id="input-1"
+            class="custom-select"
+            id="select-1"
+            name=""
             aria-required="true"
-          />
+          >
+            <option value="1"></option>
+            <option value="2">Fake content</option>
+            <option value="3">Fake content</option>
+          </select>
           <!-- this should probably be done with an ngIf based on validation -->
           <span class="error-message fd-has-type-minus-1"
             >Fake error message</span

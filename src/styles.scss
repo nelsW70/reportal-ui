@@ -61,6 +61,13 @@ main {
   min-height: 84px;
 }
 
+select {
+  &.custom-select {
+    padding-right: unset;
+    background-image: unset;
+  }
+}
+
 // PANEL JOB INFO CONTAINER
 .job-info-container {
   padding: 1.5rem 1rem;
