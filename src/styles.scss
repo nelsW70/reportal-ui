@@ -61,10 +61,13 @@ main {
   min-height: 84px;
 }
 
-select {
-  &.custom-select {
-    padding-right: unset;
-    background-image: unset;
+fd-combobox {
+  &.custom-combo span {
+    display: none;
+  }
+  &.custom-combo .fd-input-group--after input[type='text'] {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
   }
 }
 
