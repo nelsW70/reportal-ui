@@ -25,3 +25,38 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+dependencies:  
+
+ "@angular/animations": "^7.2.15",  
+ 
+ "@angular/cdk": "^7.3.7",    
+ 
+ "@angular/common": "~7.2.0",   
+ 
+ "@angular/compiler": "~7.2.0",   
+ 
+ "@angular/core": "~7.2.0",   
+ 
+ "@angular/forms": "~7.2.0",    
+ 
+ "@angular/material": "^7.3.7",   
+ 
+ "@angular/platform-browser": "~7.2.0",   
+ 
+ "@angular/platform-browser-dynamic": "~7.2.0",   
+ 
+ "@angular/router": "~7.2.0",   
+ 
+ "core-js": "^2.5.4",   
+ 
+ "fundamental-ngx": "^0.8.0",   
+ 
+ "fundamental-styles": "^0.1.0",    
+ 
+ "rxjs": "^6.3.3",    
+ 
+ "tslib": "^1.9.0",   
+ 
+ "zone.js": "~0.8.26"
