@@ -35,8 +35,9 @@
 
 .error-message {
   color: var(--fd-color-status-3);
-  // fake: should probably be done with an ngIf wrapped
-  // around the span and based on validation
+  // fake: this should probably be done with an ngIf wrapped
+  // around the span and based on validation so delete the display
+  // none line after that's been done
   display: none;
 }
 
