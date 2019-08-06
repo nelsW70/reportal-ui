@@ -9,7 +9,7 @@
     <fd-panel-body>
       <div fd-form-set>
         <div fd-form-item class="required-input-fields">
-          <label fd-form-label for="">Customer Name*</label>
+          <label fd-form-label for="input-1">Customer Name*</label>
           <!-- <input
             fd-form-control
             type="text"
@@ -18,7 +18,7 @@
           /> -->
           <fd-combobox
             class="custom-combo"
-            id=""
+            id="input-1"
             [(ngModel)]="searchTermOne"
             [dropdownValues]="dropdownValues1"
             [placeholder]="''"
@@ -45,12 +45,12 @@
             >
           </div>
           <div fd-form-item>
-            <label fd-form-label for="combobox-1">PPG Store Number*</label>
+            <label fd-form-label for="input-2">PPG Store Number*</label>
             <!-- fake ngModel for demo -->
             <fd-combobox
-              id="combobox-1"
-              [(ngModel)]="searchTermOne"
-              [dropdownValues]="dropdownValues1"
+              id="input-2"
+              [(ngModel)]="searchTermTwo"
+              [dropdownValues]="dropdownValues2"
               [maxHeight]="'250px'"
               aria-required="true"
             >
@@ -62,14 +62,14 @@
           </div>
         </div>
         <div fd-form-item class="required-input-fields">
-          <label fd-form-label for="combobox-2">
+          <label fd-form-label for="input-3">
             Job Quote
           </label>
           <!-- fake ngModel for demo -->
           <fd-combobox
-            id="combobox-2"
-            [(ngModel)]="searchTermTwo"
-            [dropdownValues]="dropdownValues2"
+            id="input-3"
+            [(ngModel)]="searchTermThree"
+            [dropdownValues]="dropdownValues3"
             [placeholder]="'Select a Job Quote'"
             [maxHeight]="'250px'"
           >

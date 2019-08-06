@@ -146,8 +146,10 @@ export class PricingLookupComponent implements OnInit {
   // fake combobox values and auto-complete for demo
   searchTermOne = '';
   searchTermTwo = '';
+  searchTermThree = '';
   dropdownValues1 = ['1234', '12345', '12456'];
   dropdownValues2 = ['Mickey Hotel', 'We Sell Paint', 'Bob Loves Paint'];
+  dropdownValues3 = ['Value 1', 'Value 2', 'Value 3'];
   expandedData: any;
   displayedColumns = ['itemId', 'currentPrice', 'priceSource'];
   dataSource = new MobileDataSource();
