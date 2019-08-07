@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FundamentalNgxModule } from 'fundamental-ngx';
 import { MatTableModule } from '@angular/material';
 import { CdkTableModule } from '@angular/cdk/table';
+import { SuiModule } from 'ng2-semantic-ui';
+
 import { PricingLookupComponent } from './pricing-lookup/pricing-lookup.component';
 
 @NgModule({
@@ -18,7 +20,8 @@ import { PricingLookupComponent } from './pricing-lookup/pricing-lookup.componen
     FormsModule,
     FundamentalNgxModule,
     MatTableModule,
-    CdkTableModule
+    CdkTableModule,
+    SuiModule
   ],
   providers: [],
   bootstrap: [AppComponent]

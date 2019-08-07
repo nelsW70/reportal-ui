@@ -46,11 +46,22 @@
           </div>
           <div fd-form-item>
             <label fd-form-label for="select-1">PPG Store Number*</label>
-            <select fd-form-control id="select-1" name="" aria-required="true">
+            <!-- <select fd-form-control id="select-1" name="" aria-required="true">
               <option value="1"></option>
               <option value="2">Suspendisse ante ligula</option>
               <option value="3">Sed bibendum sapien at posuere interdum</option>
-            </select>
+            </select> -->
+            <sui-select
+              class="selection"
+              [(ngModel)]="selectedOption"
+              [isSearchable]="true"
+              [options]="options"
+              aria-required="true"
+            >
+              <sui-select-option *ngFor="let option of options" [value]="option"
+                >{{ option }}
+              </sui-select-option>
+            </sui-select>
             <!-- this should probably be done with an ngIf based on validation -->
             <span class="error-message fd-has-type-minus-1"
               >Fake error message</span
