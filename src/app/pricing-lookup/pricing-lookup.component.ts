@@ -147,9 +147,12 @@ export class PricingLookupComponent implements OnInit {
   searchTermOne = '';
   dropdownValues1 = ['aType', 'bSomething Else', 'cMaybe this', 'dOr this'];
 
-  // semantic ui select
+  // fake values for semantic ui select
   selectedOption = [];
   options: Array<string> = ['one', 'two', 'three', 'four', 'Five'];
+
+  selectedOption2 = [];
+  options2: Array<string> = ['one', 'two', 'three', 'four', 'Five'];
 
   expandedData: any;
   displayedColumns = ['itemId', 'currentPrice', 'priceSource'];

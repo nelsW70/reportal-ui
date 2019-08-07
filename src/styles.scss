@@ -81,6 +81,7 @@ input {
   }
 }
 
+// CUSTOM INPUTS
 sui-select.selection.ui.dropdown {
   width: 100%;
   border: 1px solid rgb(135, 144, 154);
@@ -91,7 +92,6 @@ sui-select.selection.ui.dropdown {
   }
   &.search.active {
     border: 1px solid rgb(137, 145, 154);
-    // box-shadow: 0 0 0 1px var(--fd-color-action-focus);
   }
   ::-webkit-scrollbar {
     display: none;
@@ -119,13 +119,20 @@ sui-select.selection.ui.dropdown {
     }
   }
   & > i.icon {
-    opacity: 0.7;
+    opacity: 0.75;
   }
 }
 .ui.selection.dropdown .menu {
   width: auto;
   min-width: calc(100% + 2px);
-  z-index: 99999;
+}
+
+// this keeps the first expanded menu from being underneath the one below it
+.first-input {
+  z-index: 999999;
+}
+.second-input {
+  z-index: 888888;
 }
 
 .ui.selection.active.dropdown:hover .menu,
@@ -183,86 +190,8 @@ a[class*='fd-button--']::before {
 
 // TABLE
 .mat-table {
-  .th-container {
-    display: flex;
-    & .fd-has-text-align-right {
-      padding-right: 6px;
-    }
-  }
   .mat-header-row {
     background-color: var(--fd-color-background-7);
-  }
-  .mat-header-cell.fd-has-type-minus-1 {
-    justify-content: flex-end;
-
-    &:first-of-type {
-      justify-content: flex-start;
-      padding-left: 12px;
-    }
-  }
-  .mat-cell {
-    padding-left: 12px;
-    &:first-of-type {
-      padding-left: 12px;
-    }
-    &.col-2 {
-      padding-right: 36px;
-    }
-    &.col-2,
-    &.col-3 {
-      justify-content: flex-end;
-    }
-    &.cdk-column-expandedDetail {
-      background-color: var(--fd-color-neutral-1);
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      & .expanded-details {
-        color: var(--fd-color-text-3);
-      }
-      & .expanded-details-info {
-        color: var(--fd-color-text-2);
-      }
-    }
-  }
-
-  .product-row:not(.expanded) {
-    cursor: pointer;
-  }
-
-  .product-row:not(.expanded):hover {
-    background: #f5f5f5;
-  }
-  &.pricing-lookup {
-    & .mat-header-cell:first-of-type {
-      @media only screen and (max-width: 380px) {
-        padding-bottom: 0.525rem;
-      }
-    }
-  }
-  .fd-table__sort-column::after {
-    content: unset;
-  }
-
-  .element-row {
-    position: relative;
-  }
-  // expand icon placement at end of column
-  .mat-header-cell:last-of-type {
-    padding-right: 36px;
-  }
-  .mat-cell:last-of-type {
-    padding-right: 0;
-    & .expand-icon {
-      width: 36px;
-      height: 14px;
-      text-align: center;
-      color: var(--fd-color-action-1);
-      transition: all 225ms cubic-bezier(0.4, 0, 0.2, 1);
-      &.expand-animation {
-        transform: rotate(90deg);
-        transition: all 225ms cubic-bezier(0.4, 0, 0.2, 1);
-      }
-    }
   }
 }
 
