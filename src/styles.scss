@@ -98,6 +98,26 @@ sui-select.selection.ui.dropdown {
   }
   &.ui.selection.dropdown {
     min-width: 4rem;
+    & > .dropdown.icon {
+      display: none;
+    }
+  }
+}
+.ui.icon.input {
+  width: 100%;
+  & .icon.custom-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: rgb(23, 112, 206);
+    padding-top: 0.25rem;
+    & .sap-icon--navigation-down-arrow.sap-icon {
+      font-size: 18px;
+    }
+  }
+  & > i.icon {
+    opacity: 1;
   }
 }
 

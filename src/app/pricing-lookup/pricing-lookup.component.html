@@ -46,19 +46,26 @@
           </div>
           <div fd-form-item>
             <label fd-form-label for="select-1">PPG Store Number*</label>
-            <sui-select
-              id="select-1"
-              name=""
-              class="selection"
-              [(ngModel)]="selectedOption"
-              [isSearchable]="true"
-              [options]="options"
-              aria-required="true"
-            >
-              <sui-select-option *ngFor="let option of options" [value]="option"
-                >{{ option }}
-              </sui-select-option>
-            </sui-select>
+            <div class="ui icon input">
+              <sui-select
+                id="select-1"
+                name=""
+                class="selection"
+                [(ngModel)]="selectedOption"
+                [isSearchable]="true"
+                [options]="options"
+                aria-required="true"
+              >
+                <sui-select-option
+                  *ngFor="let option of options"
+                  [value]="option"
+                  >{{ option }}
+                </sui-select-option>
+              </sui-select>
+              <i class="icon custom-icon"
+                ><div class="sap-icon--navigation-down-arrow sap-icon"></div
+              ></i>
+            </div>
             <!-- this should probably be done with an ngIf based on validation -->
             <span class="error-message fd-has-type-minus-1"
               >Fake error message</span
