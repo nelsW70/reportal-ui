@@ -149,7 +149,7 @@ export class PricingLookupComponent implements OnInit {
 
   // semantic ui select
   selectedOption = [];
-  options: Array<string> = ['one', 'two', 'three', 'four'];
+  options: Array<string> = ['one', 'two', 'three', 'four', 'Five'];
 
   expandedData: any;
   displayedColumns = ['itemId', 'currentPrice', 'priceSource'];

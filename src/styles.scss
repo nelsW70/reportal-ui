@@ -60,7 +60,8 @@ main {
   margin-bottom: 4px;
   min-height: 84px;
 }
-// remove
+
+// FORMS - INPUTS
 fd-combobox {
   &.custom-combo span {
     display: none;
@@ -69,6 +70,38 @@ fd-combobox {
     border-top-right-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
   }
+}
+
+input {
+  &.fd-form__control {
+    height: 38px;
+  }
+  &.fd-input {
+    height: 38px;
+  }
+}
+
+sui-select.selection.ui.dropdown {
+  width: 100%;
+  border: 1px solid rgb(135, 144, 154);
+  height: 36px;
+  line-height: 1;
+  &:hover {
+    border: 1px solid rgb(49, 109, 168);
+  }
+  &.search.active {
+    border: 1px solid rgb(137, 145, 154);
+    // box-shadow: 0 0 0 1px var(--fd-color-action-focus);
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.ui.selection.active.dropdown:hover .menu,
+.ui.selection.active.dropdown.active .menu {
+  border-color: rgb(137, 145, 154);
+  // box-shadow: 0 0 0 1px var(--fd-color-action-focus);
 }
 
 // PANEL JOB INFO CONTAINER
