@@ -50,7 +50,7 @@ main {
 .inline-form-inputs {
   display: flex;
   justify-content: space-between;
-
+  // update
   & .fd-form__item {
     width: calc(50% - 4px);
   }
@@ -60,7 +60,7 @@ main {
   margin-bottom: 4px;
   min-height: 84px;
 }
-
+// remove
 fd-combobox {
   &.custom-combo span {
     display: none;

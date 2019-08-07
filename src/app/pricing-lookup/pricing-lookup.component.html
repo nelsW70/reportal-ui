@@ -45,16 +45,12 @@
             >
           </div>
           <div fd-form-item>
-            <label fd-form-label for="input-2">PPG Store Number*</label>
-            <!-- fake ngModel for demo -->
-            <fd-combobox
-              id="input-2"
-              [(ngModel)]="searchTermTwo"
-              [dropdownValues]="dropdownValues2"
-              [maxHeight]="'250px'"
-              aria-required="true"
-            >
-            </fd-combobox>
+            <label fd-form-label for="select-1">PPG Store Number*</label>
+            <select fd-form-control id="select-1" name="" aria-required="true">
+              <option value="1"></option>
+              <option value="2">Suspendisse ante ligula</option>
+              <option value="3">Sed bibendum sapien at posuere interdum</option>
+            </select>
             <!-- this should probably be done with an ngIf based on validation -->
             <span class="error-message fd-has-type-minus-1"
               >Fake error message</span
@@ -62,18 +58,14 @@
           </div>
         </div>
         <div fd-form-item class="required-input-fields">
-          <label fd-form-label for="input-3">
+          <label fd-form-label for="select-2">
             Job Quote
           </label>
-          <!-- fake ngModel for demo -->
-          <fd-combobox
-            id="input-3"
-            [(ngModel)]="searchTermThree"
-            [dropdownValues]="dropdownValues3"
-            [placeholder]="'Select a Job Quote'"
-            [maxHeight]="'250px'"
-          >
-          </fd-combobox>
+          <select fd-form-control id="select-1" name="" aria-required="true">
+            <option value="1"></option>
+            <option value="2">Suspendisse ante ligula</option>
+            <option value="3">Sed bibendum sapien at posuere interdum</option>
+          </select>
         </div>
         <div fd-form-item class="required-input-fields">
           <label fd-form-label for="input-4">Item</label>
