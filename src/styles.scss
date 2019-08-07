@@ -110,6 +110,7 @@ sui-select.selection.ui.dropdown {
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 2.7rem;
     border-left: 1px solid var(--fd-forms-border-color);
     color: rgb(23, 112, 206);
     padding-top: 0.25rem;
@@ -124,12 +125,14 @@ sui-select.selection.ui.dropdown {
 .ui.selection.dropdown .menu {
   width: auto;
   min-width: calc(100% + 2px);
+  z-index: 99999;
 }
 
 .ui.selection.active.dropdown:hover .menu,
 .ui.selection.active.dropdown.active .menu {
   border-color: rgb(137, 145, 154);
   width: auto;
+  min-width: calc(100% + 2px);
   // min-width: 100%;
   // box-shadow: 0 0 0 1px var(--fd-color-action-focus);
 }
