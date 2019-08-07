@@ -76,11 +76,29 @@
           <label fd-form-label for="select-2">
             Job Quote
           </label>
-          <select fd-form-control id="select-1" name="" aria-required="true">
+          <div class="ui icon input">
+            <sui-select
+              id="select-2"
+              name=""
+              class="selection"
+              [(ngModel)]="selectedOption2"
+              [isSearchable]="true"
+              [options]="options2"
+              aria-required="true"
+            >
+              <sui-select-option *ngFor="let option of options" [value]="option"
+                >{{ option }}
+              </sui-select-option>
+            </sui-select>
+            <i class="icon custom-icon"
+              ><div class="sap-icon--navigation-down-arrow sap-icon"></div
+            ></i>
+          </div>
+          <!-- <select fd-form-control id="select-1" name="" aria-required="true">
             <option value="1"></option>
             <option value="2">Suspendisse ante ligula</option>
             <option value="3">Sed bibendum sapien at posuere interdum</option>
-          </select>
+          </select> -->
         </div>
         <div fd-form-item class="required-input-fields">
           <label fd-form-label for="input-4">Item</label>
