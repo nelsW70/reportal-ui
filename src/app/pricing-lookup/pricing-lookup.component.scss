@@ -1,18 +1,45 @@
 .panel-body--large {
-  @media only screen and (min-width: 1024px) {
-    .row-one {
+  @media only screen and (min-width: 768px) {
+    & .fd-form__item,
+    .fd-form__item:last-child {
+      margin-bottom: 0;
+    }
+    .row-one-tablet {
       display: flex;
-      width: 65%;
-      max-width: 1200px;
+      width: 100%;
+      // max-width: 1200px;
       &__col-one {
         flex: 1;
         padding-right: 16px;
       }
       &__col-two {
-        flex: 1.5;
+        flex: 1;
       }
       & .inline-form-inputs .fd-form__item {
         width: calc(50% - 8px);
+      }
+    }
+    .row-two-tablet,
+    .row-three-tablet {
+      width: calc(50% - 8px);
+    }
+    .row-four-tablet {
+      display: flex;
+      align-items: center;
+
+      &__col-one {
+        display: flex;
+        width: calc(50% - 8px);
+        justify-content: space-between;
+        margin-right: 16px;
+        & .fd-form__item {
+          &:nth-child(1) {
+            width: calc(50% - 8px);
+          }
+          &:nth-child(2) {
+            width: calc(50% - 8px);
+          }
+        }
       }
     }
   }

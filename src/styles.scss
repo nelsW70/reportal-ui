@@ -148,7 +148,9 @@ sui-select.selection.ui.dropdown {
 }
 
 // BUTTONS
-.btn-100 {
+button.btn-100 {
+  height: 38px;
+  max-height: 38px;
   width: 100%;
 }
 .fd-button::before,

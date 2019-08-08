@@ -7,8 +7,8 @@
   </fd-panel-header>
   <fd-panel-body class="panel-body--large">
     <div fd-form-set>
-      <div class="row-one">
-        <div fd-form-item class="required-input-fields row-one__col-one">
+      <div class="row-one-tablet">
+        <div fd-form-item class="required-input-fields row-one-tablet__col-one">
           <label fd-form-label for="input-1">Customer Name*</label>
           <fd-combobox
             class="custom-combo"
@@ -25,7 +25,7 @@
             >Fake error message</span
           >
         </div>
-        <div class="inline-form-inputs row-one__col-two">
+        <div class="inline-form-inputs row-one-tablet__col-two">
           <div fd-form-item class="required-input-fields">
             <label fd-form-label for="input-2">Customer Number*</label>
             <input
@@ -68,54 +68,54 @@
           </div>
         </div>
       </div>
-      <div class="row-two">
-        <div fd-form-item class="required-input-fields">
-          <label fd-form-label for="select-2">
-            Job Quote
-          </label>
-          <div class="ui icon input">
-            <sui-select
-              id="select-2"
-              name=""
-              class="selection"
-              [(ngModel)]="selectedOption2"
-              [isSearchable]="true"
-              [options]="options2"
-              aria-required="true"
-            >
-              <sui-select-option *ngFor="let option of options" [value]="option"
-                >{{ option }}
-              </sui-select-option>
-            </sui-select>
-            <i class="icon custom-icon"
-              ><div class="sap-icon--navigation-down-arrow sap-icon"></div
-            ></i>
-          </div>
-        </div>
-        <div fd-form-item class="required-input-fields">
-          <label fd-form-label for="input-4">Item</label>
-          <fd-input-group
-            fd-form-control
-            type="text"
-            id="input-4"
-            [placement]="'after'"
-            [glyph]="'search'"
-            [placeholder]="'Search Items'"
-          ></fd-input-group>
-        </div>
-        <div fd-form-item>
-          <button class="btn-100 item-lookup" fd-button [glyph]="'add'">
-            Add Item To Lookup
-          </button>
+      <div fd-form-item class="required-input-fields row-two-tablet">
+        <label fd-form-label for="select-2">
+          Job Quote
+        </label>
+        <div class="ui icon input">
+          <sui-select
+            id="select-2"
+            name=""
+            class="selection"
+            [(ngModel)]="selectedOption2"
+            [isSearchable]="true"
+            [options]="options2"
+            aria-required="true"
+          >
+            <sui-select-option *ngFor="let option of options" [value]="option"
+              >{{ option }}
+            </sui-select-option>
+          </sui-select>
+          <i class="icon custom-icon"
+            ><div class="sap-icon--navigation-down-arrow sap-icon"></div
+          ></i>
         </div>
       </div>
-      <div class="row-three">
-        <div fd-form-item>
-          <button class="btn-100" fd-button [options]="'emphasized'">
-            Get Pricing
-          </button>
+      <div fd-form-item class="required-input-fields row-three-tablet">
+        <label fd-form-label for="input-4">Item</label>
+        <fd-input-group
+          fd-form-control
+          type="text"
+          id="input-4"
+          [placement]="'after'"
+          [glyph]="'search'"
+          [placeholder]="'Search Items'"
+        ></fd-input-group>
+      </div>
+      <div class="row-four-tablet">
+        <div class="row-four-tablet__col-one">
+          <div fd-form-item class="btn-container">
+            <button class="btn-100 item-lookup" fd-button [glyph]="'add'">
+              Add Item To Lookup
+            </button>
+          </div>
+          <div fd-form-item>
+            <button class="btn-100" fd-button [options]="'emphasized'">
+              Get Pricing
+            </button>
+          </div>
         </div>
-        <div fd-form-item>
+        <div fd-form-item class="row-four-tablet__col-two">
           <p class="fd-has-color-action-1 fd-has-text-align-center">Reset</p>
         </div>
       </div>
