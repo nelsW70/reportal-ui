@@ -127,18 +127,6 @@ sui-select.selection.ui.dropdown {
   min-width: calc(100% + 2px);
 }
 
-// this keeps the first expanded menu from being underneath the one below it
-.first-input {
-  z-index: 999999;
-}
-.second-input {
-  z-index: 888888;
-}
-
-.third-input {
-  z-index: 777777;
-}
-
 .ui.selection.active.dropdown:hover .menu,
 .ui.selection.active.dropdown.active .menu {
   border-color: rgb(137, 145, 154);
