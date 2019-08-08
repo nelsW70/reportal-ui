@@ -134,14 +134,12 @@ sui-select.selection.ui.dropdown {
 }
 .ui.selection.dropdown .menu {
   width: auto;
-  min-width: calc(100% + 2px);
 }
 
 .ui.selection.active.dropdown:hover .menu,
 .ui.selection.active.dropdown.active .menu {
   border-color: rgb(137, 145, 154);
   width: auto;
-  min-width: calc(100% + 2px);
 }
 
 // PANEL JOB INFO CONTAINER
