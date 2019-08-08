@@ -10,12 +10,6 @@
       <div fd-form-set>
         <div fd-form-item class="required-input-fields">
           <label fd-form-label for="input-1">Customer Name*</label>
-          <!-- <input
-            fd-form-control
-            type="text"
-            id="input-1"
-            aria-required="true"
-          /> -->
           <fd-combobox
             class="custom-combo"
             id="input-1"
@@ -23,6 +17,7 @@
             [dropdownValues]="dropdownValues1"
             [placeholder]="''"
             [maxHeight]="'250px'"
+            aria-required="true"
           >
           </fd-combobox>
           <!-- this should probably be done with an ngIf based on validation -->
@@ -62,8 +57,8 @@
                   >{{ option }}
                 </sui-select-option>
               </sui-select>
-              <i class="icon custom-icon"
-                ><div class="sap-icon--navigation-down-arrow sap-icon"></div
+              <i class="icon custom-icon">
+                <div class="sap-icon--navigation-down-arrow sap-icon"></div
               ></i>
             </div>
             <!-- this should probably be done with an ngIf based on validation -->

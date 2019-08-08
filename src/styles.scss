@@ -81,6 +81,15 @@ input {
   }
 }
 
+.fd-input-group {
+  & input {
+    height: 38px;
+  }
+  & .fd-input-group__addon {
+    height: 38px;
+  }
+}
+
 // CUSTOM INPUTS
 sui-select.selection.ui.dropdown {
   width: 100%;
@@ -93,9 +102,7 @@ sui-select.selection.ui.dropdown {
   &.search.active {
     border: 1px solid rgb(137, 145, 154);
   }
-  ::-webkit-scrollbar {
-    display: none;
-  }
+
   &.ui.selection.dropdown {
     min-width: 4rem;
     & > .dropdown.icon {

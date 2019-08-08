@@ -145,7 +145,7 @@ export class PricingLookupComponent implements OnInit {
   currentIndex: number = null;
   // fake combobox values and auto-complete for demo
   searchTermOne = '';
-  dropdownValues1 = ['aType', 'bSomething Else', 'cMaybe this', 'dOr this'];
+  dropdownValues1 = ['a', 'b', 'c', 'd'];
 
   // fake values for semantic ui select
   selectedOption = [];
