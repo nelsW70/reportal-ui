@@ -1,5 +1,22 @@
-// .panel-body--large {
-// }
+.panel-body--large {
+  @media only screen and (min-width: 1024px) {
+    .row-one {
+      display: flex;
+      width: 65%;
+      max-width: 1200px;
+      &__col-one {
+        flex: 1;
+        padding-right: 16px;
+      }
+      &__col-two {
+        flex: 1.5;
+      }
+      & .inline-form-inputs .fd-form__item {
+        width: calc(50% - 8px);
+      }
+    }
+  }
+}
 
 .mat-table {
   .th-container {
