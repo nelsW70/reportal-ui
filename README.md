@@ -70,4 +70,4 @@ dependencies:
 
 "zone.js": "~0.8.26"
 
-"ng2-semantic-ui": "^0.9.7",
+"ng2-semantic-ui": "^0.9.7"
