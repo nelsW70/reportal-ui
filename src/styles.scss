@@ -60,6 +60,9 @@ main {
   margin-bottom: 4px;
   min-height: 84px;
 }
+.fd-form__item:last-child {
+  margin-bottom: 16px;
+}
 
 // FORMS - INPUTS
 fd-combobox {

@@ -1,13 +1,13 @@
-<div *ngIf="currentWindowWidth < 768">
-  <h4 class="fd-has-type-4">Pricing Lookup</h4>
-  <fd-panel>
-    <fd-panel-header>
-      <fd-panel-head>
-        <h2 fd-panel-title>Pricing Lookup</h2>
-      </fd-panel-head>
-    </fd-panel-header>
-    <fd-panel-body>
-      <div fd-form-set>
+<h4 class="fd-has-type-4">Pricing Lookup</h4>
+<fd-panel>
+  <fd-panel-header>
+    <fd-panel-head>
+      <h2 fd-panel-title>Pricing Lookup</h2>
+    </fd-panel-head>
+  </fd-panel-header>
+  <fd-panel-body class="panel-body--large">
+    <div fd-form-set>
+      <div class="row-one">
         <div fd-form-item class="required-input-fields">
           <label fd-form-label for="input-1">Customer Name*</label>
           <fd-combobox
@@ -67,6 +67,8 @@
             >
           </div>
         </div>
+      </div>
+      <div class="row-two">
         <div fd-form-item class="required-input-fields">
           <label fd-form-label for="select-2">
             Job Quote
@@ -106,6 +108,8 @@
             Add Item To Lookup
           </button>
         </div>
+      </div>
+      <div class="row-three">
         <div fd-form-item>
           <button class="btn-100" fd-button [options]="'emphasized'">
             Get Pricing
@@ -115,8 +119,11 @@
           <p class="fd-has-color-action-1 fd-has-text-align-center">Reset</p>
         </div>
       </div>
-    </fd-panel-body>
-  </fd-panel>
+    </div>
+  </fd-panel-body>
+</fd-panel>
+
+<div *ngIf="currentWindowWidth < 768">
   <fd-panel>
     <fd-panel-header>
       <fd-panel-head>
@@ -304,6 +311,6 @@
   </fd-panel>
 </div>
 
-<div *ngIf="currentWindowWidth >= 768">
+<!-- <div *ngIf="currentWindowWidth >= 768">
   <p>I'm the desktop version...coming soon.</p>
-</div>
+</div> -->
