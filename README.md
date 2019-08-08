@@ -26,37 +26,48 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+This project uses the SAP UI library called SAP Fundamental Styles and ng2-semantic-ui
 
-dependencies:  
+the relevant links are
 
- "@angular/animations": "^7.2.15",  
- 
- "@angular/cdk": "^7.3.7",    
- 
- "@angular/common": "~7.2.0",   
- 
- "@angular/compiler": "~7.2.0",   
- 
- "@angular/core": "~7.2.0",   
- 
- "@angular/forms": "~7.2.0",    
- 
- "@angular/material": "^7.3.7",   
- 
- "@angular/platform-browser": "~7.2.0",   
- 
- "@angular/platform-browser-dynamic": "~7.2.0",   
- 
- "@angular/router": "~7.2.0",   
- 
- "core-js": "^2.5.4",   
- 
- "fundamental-ngx": "^0.8.0",   
- 
- "fundamental-styles": "^0.1.0",    
- 
- "rxjs": "^6.3.3",    
- 
- "tslib": "^1.9.0",   
- 
- "zone.js": "~0.8.26"
+https://sap.github.io/fundamental-ngx/home - angular version
+
+https://sap.github.io/fundamental-styles/getting-started.html - core version
+
+https://edcarroll.github.io/ng2-semantic-ui/#/getting-started
+
+dependencies:
+
+"@angular/animations": "^7.2.15",
+
+"@angular/cdk": "^7.3.7",
+
+"@angular/common": "~7.2.0",
+
+"@angular/compiler": "~7.2.0",
+
+"@angular/core": "~7.2.0",
+
+"@angular/forms": "~7.2.0",
+
+"@angular/material": "^7.3.7",
+
+"@angular/platform-browser": "~7.2.0",
+
+"@angular/platform-browser-dynamic": "~7.2.0",
+
+"@angular/router": "~7.2.0",
+
+"core-js": "^2.5.4",
+
+"fundamental-ngx": "^0.8.0",
+
+"fundamental-styles": "^0.1.0",
+
+"rxjs": "^6.3.3",
+
+"tslib": "^1.9.0",
+
+"zone.js": "~0.8.26"
+
+"ng2-semantic-ui": "^0.9.7",
