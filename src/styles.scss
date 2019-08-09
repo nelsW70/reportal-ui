@@ -41,6 +41,16 @@
   display: none;
 }
 
+.fd-form__label {
+  margin-bottom: 4px;
+}
+
+.hint-text {
+  color: var(--fd-color-text-4);
+  margin-bottom: 0;
+  margin-top: 0.25rem;
+}
+
 // MAIN CONTAINER
 main {
   margin: 2rem 0.85rem;
@@ -58,7 +68,7 @@ main {
 
 .required-input-fields {
   margin-bottom: 4px;
-  min-height: 90px;
+  min-height: 94px;
 }
 .fd-form__item:last-child {
   margin-bottom: 16px;
