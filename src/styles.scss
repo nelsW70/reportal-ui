@@ -134,6 +134,7 @@ sui-select.selection.ui.dropdown {
 }
 .ui.selection.dropdown .menu {
   width: auto;
+  min-width: calc(100% + 2px);
 }
 
 .ui.selection.active.dropdown:hover .menu,
@@ -157,6 +158,8 @@ button.btn-100 {
 [class*='fd-button--']::before,
 a[class*='fd-button--']::before {
   font-size: 14px;
+  margin-right: 2px;
+  margin-bottom: 2px;
 }
 
 .fd-button.sap-icon--navigation-down-arrow:hover,
