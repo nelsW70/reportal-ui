@@ -1,4 +1,4 @@
-.panel-body--large {
+.panel-body--main {
   @media only screen and (min-width: 768px) {
     & .fd-form__item {
       margin-bottom: 0;
@@ -44,6 +44,14 @@
             width: calc(50% - 8px);
           }
         }
+      }
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .row-one-tablet {
+      width: 66.666%;
+      &__col-one {
+        max-width: 300px;
       }
     }
   }
