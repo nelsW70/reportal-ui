@@ -1,9 +1,11 @@
 .panel-body--large {
   @media only screen and (min-width: 768px) {
-    // & .fd-form__item,
-    // .fd-form__item:last-child {
-    //   margin-bottom: 0;
-    // }
+    & .fd-form__item {
+      margin-bottom: 0;
+    }
+    .btn-container {
+      margin-bottom: 0;
+    }
     .row-one-tablet {
       display: flex;
       width: 100%;
@@ -21,6 +23,9 @@
     .row-two-tablet,
     .row-three-tablet {
       width: calc(50% - 8px);
+    }
+    .row-three-tablet {
+      margin-bottom: 2rem;
     }
     .row-four-tablet {
       display: flex;
