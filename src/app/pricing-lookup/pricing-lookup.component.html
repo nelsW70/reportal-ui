@@ -5,7 +5,7 @@
       <h2 fd-panel-title>Pricing Lookup</h2>
     </fd-panel-head>
   </fd-panel-header>
-  <fd-panel-body class="panel-body--main">
+  <fd-panel-body class="panel-body panel-body--main">
     <div fd-form-set>
       <div class="row-one-tablet">
         <div fd-form-item class="required-input-fields row-one-tablet__col-one">
@@ -139,7 +139,7 @@
         <button fd-button>Reset</button>
       </fd-panel-actions>
     </fd-panel-header>
-    <fd-panel-body class="panel-body">
+    <fd-panel-body class="panel-body panel-body--secondary">
       <div class="job-info-container">
         <div class="job-info">
           <p class="fd-has-type-minus-1">Job Name</p>
@@ -158,7 +158,7 @@
           05/02/2020
         </div>
       </div>
-      <div *ngIf="currentWindowWidth < 768">
+      <div>
         <mat-table #table [dataSource]="dataSource" class="pricing-lookup">
           <!-- Item Id Column -->
           <ng-container matColumnDef="itemId">
