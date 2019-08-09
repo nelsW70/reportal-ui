@@ -48,19 +48,37 @@
     }
   }
   // @media only screen and (min-width: 1024px) {
-  //   .row-one-tablet {
-  //     width: 66.666%;
-  //     &__col-one {
-  //       width: 66.666%;
+  //   .fd-form__set {
+  //     width: 900px;
+  //     & .row-one-tablet__col-one {
+  //       max-width: 300px;
   //     }
-  //     &__col-two {
-  //       width: 33.3333%;
+  //     & .row-one-tablet__col-two {
+  //       max-width: 300px;
   //     }
-  //     &__col-three {
-  //       width: 33.3333%;
+  //     & .desktop {
+  //       display: flex;
+  //       flex-wrap: wrap;
+  //       & .row-two-tablet {
+  //         width: 300px;
+  //         padding-right: 16px;
+  //       }
+  //       & .row-three-tablet {
+  //         width: 300px;
+  //       }
   //     }
   //   }
   // }
+}
+
+.panel-body {
+  @media only screen and (min-width: 1024px) {
+    .job-info-container {
+      display: flex;
+      justify-content: space-between;
+      width: 600px;
+    }
+  }
 }
 
 .mat-table {
