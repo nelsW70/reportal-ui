@@ -24,8 +24,8 @@
     .row-three-tablet {
       width: calc(50% - 8px);
     }
-    .row-three-tablet {
-      margin-bottom: 2rem;
+    .required-input-fields.row-two-tablet {
+      min-height: 80px;
     }
     .row-four-tablet {
       display: flex;
@@ -47,14 +47,20 @@
       }
     }
   }
-  @media only screen and (min-width: 1024px) {
-    .row-one-tablet {
-      width: 66.666%;
-      &__col-one {
-        max-width: 300px;
-      }
-    }
-  }
+  // @media only screen and (min-width: 1024px) {
+  //   .row-one-tablet {
+  //     width: 66.666%;
+  //     &__col-one {
+  //       width: 66.666%;
+  //     }
+  //     &__col-two {
+  //       width: 33.3333%;
+  //     }
+  //     &__col-three {
+  //       width: 33.3333%;
+  //     }
+  //   }
+  // }
 }
 
 .mat-table {

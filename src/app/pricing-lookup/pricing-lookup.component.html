@@ -72,55 +72,57 @@
           </div>
         </div>
       </div>
-      <div fd-form-item class="required-input-fields row-two-tablet">
-        <label fd-form-label for="select-2">
-          Job Quote
-        </label>
-        <div class="ui icon input">
-          <sui-select
-            id="select-2"
-            name=""
-            class="selection"
-            [(ngModel)]="selectedOption2"
-            [isSearchable]="true"
-            [options]="options2"
-            aria-required="true"
-          >
-            <sui-select-option *ngFor="let option of options" [value]="option"
-              >{{ option }}
-            </sui-select-option>
-          </sui-select>
-          <i class="icon custom-icon"
-            ><div class="sap-icon--navigation-down-arrow sap-icon"></div
-          ></i>
-        </div>
-      </div>
-      <div fd-form-item class="required-input-fields row-three-tablet">
-        <label fd-form-label for="input-4">Item</label>
-        <fd-input-group
-          fd-form-control
-          type="text"
-          id="input-4"
-          [placement]="'after'"
-          [glyph]="'search'"
-          [placeholder]="'Search Items'"
-        ></fd-input-group>
-      </div>
-      <div class="row-four-tablet">
-        <div class="row-four-tablet__col-one btn-container">
-          <div fd-form-item>
-            <button class="btn-100 item-lookup" fd-button [glyph]="'add'">
-              Add Item To Lookup
-            </button>
-          </div>
-          <div fd-form-item>
-            <button class="btn-100" fd-button [options]="'emphasized'">
-              Get Pricing
-            </button>
+      <div>
+        <div fd-form-item class="required-input-fields row-two-tablet">
+          <label fd-form-label for="select-2">
+            Job Quote
+          </label>
+          <div class="ui icon input">
+            <sui-select
+              id="select-2"
+              name=""
+              class="selection"
+              [(ngModel)]="selectedOption2"
+              [isSearchable]="true"
+              [options]="options2"
+              aria-required="true"
+            >
+              <sui-select-option *ngFor="let option of options" [value]="option"
+                >{{ option }}
+              </sui-select-option>
+            </sui-select>
+            <i class="icon custom-icon"
+              ><div class="sap-icon--navigation-down-arrow sap-icon"></div
+            ></i>
           </div>
         </div>
-        <div fd-form-item class="row-four-tablet__col-two last-item">
-          <p class="fd-has-color-action-1 fd-has-text-align-center">Reset</p>
+        <div fd-form-item class="required-input-fields row-three-tablet">
+          <label fd-form-label for="input-4">Item</label>
+          <fd-input-group
+            fd-form-control
+            type="text"
+            id="input-4"
+            [placement]="'after'"
+            [glyph]="'search'"
+            [placeholder]="'Search Items'"
+          ></fd-input-group>
+        </div>
+        <div class="row-four-tablet">
+          <div class="row-four-tablet__col-one btn-container">
+            <div fd-form-item>
+              <button class="btn-100 item-lookup" fd-button [glyph]="'add'">
+                Add Item To Lookup
+              </button>
+            </div>
+            <div fd-form-item>
+              <button class="btn-100" fd-button [options]="'emphasized'">
+                Get Pricing
+              </button>
+            </div>
+          </div>
+          <div fd-form-item class="row-four-tablet__col-two last-item">
+            <p class="fd-has-color-action-1 fd-has-text-align-center">Reset</p>
+          </div>
         </div>
       </div>
     </div>
