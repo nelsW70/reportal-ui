@@ -70,8 +70,10 @@ main {
   margin-bottom: 4px;
   min-height: 94px;
 }
-.fd-form__item:last-child {
-  margin-bottom: 16px;
+
+.required-input-fields:nth-child(3) {
+  min-height: unset;
+  margin-bottom: 2rem;
 }
 
 // FORMS - INPUTS
@@ -156,6 +158,12 @@ sui-select.selection.ui.dropdown {
 // PANEL JOB INFO CONTAINER
 .job-info-container {
   padding: 1.5rem 1rem;
+}
+
+// BUTTON CONTAINER
+
+.btn-container {
+  margin-bottom: 1rem;
 }
 
 // BUTTONS
