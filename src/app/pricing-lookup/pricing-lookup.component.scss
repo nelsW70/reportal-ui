@@ -24,23 +24,38 @@
       flex-wrap: wrap;
       align-items: center;
       width: 475px;
-      & .fd-form__item:first-child,
-      .fd-form__item:nth-child(2) {
-        width: 350px;
-      }
-      & .fd-form__item:nth-child(3) {
-        width: 167px;
-        margin-right: 16px;
-      }
-      & .fd-form__item:nth-child(4) {
-        width: 167px;
-        margin-right: 16px;
+
+      .fd-form__item {
+        &:first-child,
+        &:nth-child(2) {
+          width: 350px;
+        }
+        &:nth-child(3) {
+          width: 167px;
+          margin-right: 16px;
+        }
+        &:nth-child(4) {
+          width: 167px;
+          margin-right: 16px;
+        }
       }
     }
 
     .required-input-fields.row-two-tablet {
       min-height: 80px;
     }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .row-one-large {
+      max-width: 650px;
+      &__col-one {
+        width: 300px;
+      }
+    }
+    // .row-two-large {
+
+    // }
   }
 }
 
