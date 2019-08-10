@@ -11,9 +11,10 @@ import { CdkTableModule } from '@angular/cdk/table';
 import { SuiModule } from 'ng2-semantic-ui';
 
 import { PricingLookupComponent } from './pricing-lookup/pricing-lookup.component';
+import { PricingLookupTableLargeComponent } from './pricing-lookup-table-large/pricing-lookup-table-large.component';
 
 @NgModule({
-  declarations: [AppComponent, PricingLookupComponent],
+  declarations: [AppComponent, PricingLookupComponent, PricingLookupTableLargeComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
