@@ -150,10 +150,10 @@ export class PricingLookupComponent implements OnInit {
 
   // fake values for semantic ui select
   selectedOption = [];
-  options: Array<string> = ['one', 'two', 'three', 'four', 'Five'];
+  options: Array<string> = ['one', 'two', 'three', 'four', 'five'];
 
   selectedOption2 = [];
-  options2: Array<string> = ['one', 'two', 'three', 'four', 'Five'];
+  options2: Array<string> = ['one', 'two', 'three', 'four', 'five'];
 
   expandedData: any;
   displayedColumns = ['itemId', 'currentPrice', 'priceSource'];
