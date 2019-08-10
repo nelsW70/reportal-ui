@@ -3,14 +3,12 @@
     & .fd-form__item {
       margin-bottom: 0;
     }
-    .btn-container {
-      margin-bottom: 0;
-    }
-    .row-one-tablet {
+
+    .row-one-large {
       display: flex;
       width: 100%;
       &__col-one {
-        flex: 1;
+        width: 365px;
         padding-right: 16px;
       }
       &__col-two {
@@ -20,55 +18,30 @@
         width: calc(50% - 8px);
       }
     }
-    // .row-two-tablet,
-    // .row-three-tablet {
-    //   width: calc(50% - 8px);
-    // }
+
+    .row-two-large {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 475px;
+      & .fd-form__item:first-child,
+      .fd-form__item:nth-child(2) {
+        width: 350px;
+      }
+      & .fd-form__item:nth-child(3) {
+        width: 167px;
+        margin-right: 16px;
+      }
+      & .fd-form__item:nth-child(4) {
+        width: 167px;
+        margin-right: 16px;
+      }
+    }
+
     .required-input-fields.row-two-tablet {
       min-height: 80px;
     }
-    // .row-four-tablet {
-    //   display: flex;
-    //   align-items: center;
-
-    //   &__col-one {
-    //     display: flex;
-    //     width: calc(50% - 8px);
-    //     justify-content: space-between;
-    //     margin-right: 16px;
-    //     & .fd-form__item {
-    //       &:nth-child(1) {
-    //         width: calc(50% - 8px);
-    //       }
-    //       &:nth-child(2) {
-    //         width: calc(50% - 8px);
-    //       }
-    //     }
-    //   }
-    // }
   }
-  // @media only screen and (min-width: 1024px) {
-  //   .fd-form__set {
-  //     width: 900px;
-  //     & .row-one-tablet__col-one {
-  //       max-width: 300px;
-  //     }
-  //     & .row-one-tablet__col-two {
-  //       max-width: 300px;
-  //     }
-  //     & .desktop {
-  //       display: flex;
-  //       flex-wrap: wrap;
-  //       & .row-two-tablet {
-  //         width: 300px;
-  //         padding-right: 16px;
-  //       }
-  //       & .row-three-tablet {
-  //         width: 300px;
-  //       }
-  //     }
-  //   }
-  // }
 }
 
 .panel-body--secondary {

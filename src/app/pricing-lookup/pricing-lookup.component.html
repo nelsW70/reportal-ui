@@ -7,8 +7,8 @@
   </fd-panel-header>
   <fd-panel-body class="panel-body panel-body--main">
     <div fd-form-set>
-      <div class="row-one-tablet">
-        <div fd-form-item class="required-input-fields row-one-tablet__col-one">
+      <div class="row-one-large">
+        <div fd-form-item class="required-input-fields row-one-large__col-one">
           <label fd-form-label for="input-1">Customer Name*</label>
           <fd-combobox
             class="custom-combo"
@@ -29,7 +29,7 @@
             >Fake error message</span
           >
         </div>
-        <div class="inline-form-inputs row-one-tablet__col-two">
+        <div class="inline-form-inputs row-one-large__col-two">
           <div fd-form-item class="required-input-fields">
             <label fd-form-label for="input-2">Customer Number*</label>
             <input
@@ -72,8 +72,8 @@
           </div>
         </div>
       </div>
-      <div class="desktop">
-        <div fd-form-item class="required-input-fields row-two-tablet">
+      <div class="row-two-large">
+        <div fd-form-item class="required-input-fields ">
           <label fd-form-label for="select-2">
             Job Quote
           </label>
@@ -96,7 +96,7 @@
             ></i>
           </div>
         </div>
-        <div fd-form-item class="required-input-fields row-three-tablet">
+        <div fd-form-item class="required-input-fields">
           <label fd-form-label for="input-4">Item</label>
           <fd-input-group
             fd-form-control
@@ -107,22 +107,18 @@
             [placeholder]="'Search Items'"
           ></fd-input-group>
         </div>
-        <div class="row-four-tablet">
-          <div class="row-four-tablet__col-one btn-container">
-            <div fd-form-item>
-              <button class="btn-100 item-lookup" fd-button [glyph]="'add'">
-                Add Item To Lookup
-              </button>
-            </div>
-            <div fd-form-item>
-              <button class="btn-100" fd-button [options]="'emphasized'">
-                Get Pricing
-              </button>
-            </div>
-          </div>
-          <div fd-form-item class="row-four-tablet__col-two last-item">
-            <p class="fd-has-color-action-1 fd-has-text-align-center">Reset</p>
-          </div>
+        <div fd-form-item>
+          <button class="btn-100 item-lookup" fd-button [glyph]="'add'">
+            Add Item To Lookup
+          </button>
+        </div>
+        <div fd-form-item>
+          <button class="btn-100" fd-button [options]="'emphasized'">
+            Get Pricing
+          </button>
+        </div>
+        <div fd-form-item>
+          <p class="fd-has-color-action-1 fd-has-text-align-center">Reset</p>
         </div>
       </div>
     </div>
