@@ -9,7 +9,9 @@
     <div fd-form-set>
       <div class="row-one-large">
         <div fd-form-item class="required-input-fields row-one-large__col-one">
-          <label fd-form-label for="input-1">Customer Name*</label>
+          <label fd-form-label class="required" for="input-1"
+            >Customer Name</label
+          >
           <fd-combobox
             class="custom-combo"
             id="input-1"
@@ -31,7 +33,9 @@
         </div>
         <div class="inline-form-inputs row-one-large__col-two">
           <div fd-form-item class="required-input-fields">
-            <label fd-form-label for="input-2">Customer Number*</label>
+            <label fd-form-label class="required" for="input-2"
+              >Customer Number</label
+            >
             <input
               fd-form-control
               type="text"
@@ -44,7 +48,9 @@
             >
           </div>
           <div fd-form-item>
-            <label fd-form-label for="select-1">PPG Store Number*</label>
+            <label fd-form-label class="required" for="select-1"
+              >PPG Store Number</label
+            >
             <div class="ui icon input">
               <sui-select
                 id="select-1"

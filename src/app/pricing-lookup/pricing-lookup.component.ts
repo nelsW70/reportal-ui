@@ -1,5 +1,4 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { PricingLookupTableLargeComponent } from './../pricing-lookup-table-large/pricing-lookup-table-large.component';
 import { DataSource } from '@angular/cdk/collections';
 import { Observable, of } from 'rxjs';
 import {

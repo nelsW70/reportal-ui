@@ -33,11 +33,11 @@
   }
 }
 
-.error-message {
+.error-message.fd-has-type-minus-1 {
   color: var(--fd-color-status-3);
   // fake: this should probably be done with an ngIf wrapped
   // around the span and based on validation so delete the display
-  // none line after that's been done
+  // none line after that's been written
   display: none;
 }
 
@@ -45,10 +45,16 @@
   margin-bottom: 4px;
 }
 
-.hint-text {
+.fd-has-type-minus-1.hint-text {
   color: var(--fd-color-text-4);
   margin-bottom: 0;
   margin-top: 0.25rem;
+}
+
+// REQUIRED ASTERISK
+.required:after {
+  content: ' *';
+  color: var(--fd-color-status-3);
 }
 
 // MAIN CONTAINER
