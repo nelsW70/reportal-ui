@@ -154,7 +154,7 @@
           05/02/2020
         </div>
       </div>
-      <div>
+      <div *ngIf="currentWindowWidth < 1024">
         <mat-table #table [dataSource]="dataSource" class="pricing-lookup">
           <!-- Item Id Column -->
           <ng-container matColumnDef="itemId">
@@ -288,6 +288,9 @@
           >
           </mat-row>
         </mat-table>
+      </div>
+      <div *ngIf="currentWindowWidth >= 1024">
+        <p>I'M THE LARGE TABLE...COMING SOON</p>
       </div>
       <div class="fd-pagination">
         <span class="fd-pagination__total">30 items</span>
