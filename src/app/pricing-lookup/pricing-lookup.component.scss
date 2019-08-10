@@ -1,3 +1,4 @@
+// PANELS
 .panel-body--main {
   @media only screen and (min-width: 768px) {
     & .fd-form__item {
@@ -56,7 +57,7 @@
       width: 1000px;
 
       .required-input-fields {
-        min-height: 86px;
+        min-height: 84px;
       }
 
       .fd-form__item {
@@ -82,6 +83,7 @@
   }
 }
 
+// TABLE
 .mat-table {
   .th-container {
     display: flex;
@@ -163,4 +165,9 @@
       }
     }
   }
+}
+
+// RESET LINK
+.reset-link {
+  cursor: pointer;
 }
