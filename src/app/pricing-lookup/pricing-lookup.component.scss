@@ -40,22 +40,35 @@
         }
       }
     }
-
-    .required-input-fields.row-two-tablet {
-      min-height: 80px;
-    }
   }
 
   @media only screen and (min-width: 1024px) {
     .row-one-large {
-      max-width: 650px;
+      max-width: 750px;
       &__col-one {
         width: 300px;
       }
+      &__col-two {
+        max-width: 350px;
+      }
     }
-    // .row-two-large {
+    .row-two-large {
+      width: 1000px;
 
-    // }
+      .required-input-fields {
+        min-height: 86px;
+      }
+
+      .fd-form__item {
+        &:first-child {
+          width: 300px;
+          padding-right: 16px;
+        }
+        &:nth-child(2) {
+          margin-right: 16px;
+        }
+      }
+    }
   }
 }
 
