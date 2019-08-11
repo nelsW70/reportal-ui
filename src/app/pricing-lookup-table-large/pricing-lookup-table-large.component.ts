@@ -1,23 +1,106 @@
 import { Component, OnInit } from '@angular/core';
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+export interface ProductInfo {
+  itemId: string;
+  itemDescription: string;
+  currentPrice: string;
+  priceSource: string;
+  final: string;
+  mgplPrice: string;
+  matrixPrice: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-  { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-  { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-  { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-  { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-  { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-  { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-  { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-  { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-  { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' }
+const data: ProductInfo[] = [
+  {
+    itemId: '6-411/01',
+    itemDescription: 'S-Hide INT LX EGG WHPB 6-411 B100',
+    currentPrice: '$18.85',
+    priceSource: 'GPQ',
+    final: 'N',
+    mgplPrice: '$18.85',
+    matrixPrice: '$25.75'
+  },
+  {
+    itemId: 'AK2LV-B/55',
+    itemDescription: 'AMERLOCK 2 LV CUBE',
+    currentPrice: '$18.85',
+    priceSource: 'GPQ',
+    final: '-',
+    mgplPrice: '$18.85',
+    matrixPrice: '$25.75'
+  },
+  {
+    itemId: 'AK2-T1/01',
+    itemDescription: 'AMERLOCK 2/400 DEEP TINT RESIN',
+    currentPrice: '$18.85',
+    priceSource: '-',
+    final: 'Y',
+    mgplPrice: '-',
+    matrixPrice: '$25.75'
+  },
+  {
+    itemId: '6-411/01',
+    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
+    currentPrice: '$18.85',
+    priceSource: 'GPQ',
+    final: 'N',
+    mgplPrice: '$18.85',
+    matrixPrice: '$25.75'
+  },
+  {
+    itemId: '6-411/01',
+    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
+    currentPrice: '$18.85',
+    priceSource: 'MGPL',
+    final: 'N',
+    mgplPrice: '$18.85',
+    matrixPrice: '$25.75'
+  },
+  {
+    itemId: '6-411/01',
+    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
+    currentPrice: 'NOT FOUND',
+    priceSource: 'GPQ',
+    final: 'N',
+    mgplPrice: 'NOT FOUND',
+    matrixPrice: '$25.75'
+  },
+  {
+    itemId: '6-411/01',
+    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
+    currentPrice: '$18.85',
+    priceSource: '-',
+    final: '-',
+    mgplPrice: '$18.85',
+    matrixPrice: '$25.75'
+  },
+  {
+    itemId: '6-411/01',
+    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
+    currentPrice: '$18.85',
+    priceSource: 'GPQ',
+    final: 'Y',
+    mgplPrice: '$18.85',
+    matrixPrice: '$25.75'
+  },
+  {
+    itemId: 'AK2LV-B/55',
+    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
+    currentPrice: '$18.85',
+    priceSource: 'GPQ',
+    final: 'N',
+    mgplPrice: '$18.85',
+    matrixPrice: 'NOT FOUND'
+  },
+  {
+    itemId: 'AK2LV-B/55',
+    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
+    currentPrice: '$18.85',
+    priceSource: 'GPQ',
+    final: 'N',
+    mgplPrice: 'NOT FOUND',
+    matrixPrice: '$25.75'
+  }
 ];
 
 @Component({
@@ -26,8 +109,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./pricing-lookup-table-large.component.scss']
 })
 export class PricingLookupTableLargeComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  displayedColumns = ['itemId', 'currentPrice', 'priceSource'];
+  dataSource = data;
 
   constructor() {}
 

@@ -3,28 +3,22 @@
     <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
 
-    <!-- Position Column -->
-    <ng-container cdkColumnDef="position">
+    <!-- Item Id Column -->
+    <ng-container cdkColumnDef="itemId">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>No.</th>
-      <td cdk-cell *cdkCellDef="let element">{{ element.position }}</td>
+      <td cdk-cell *cdkCellDef="let product">{{ product.itemId }}</td>
     </ng-container>
 
-    <!-- Name Column -->
-    <ng-container cdkColumnDef="name">
+    <!-- Current Price Column -->
+    <ng-container cdkColumnDef="currentPrice">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Name</th>
-      <td cdk-cell *cdkCellDef="let element">{{ element.name }}</td>
+      <td cdk-cell *cdkCellDef="let product">{{ product.currentPrice }}</td>
     </ng-container>
 
-    <!-- Weight Column -->
-    <ng-container cdkColumnDef="weight">
+    <!-- Price Source Column -->
+    <ng-container cdkColumnDef="priceSource">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Weight</th>
-      <td cdk-cell *cdkCellDef="let element">{{ element.weight }}</td>
-    </ng-container>
-
-    <!-- Symbol Column -->
-    <ng-container cdkColumnDef="symbol">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Symbol</th>
-      <td cdk-cell *cdkCellDef="let element">{{ element.symbol }}</td>
+      <td cdk-cell *cdkCellDef="let product">{{ product.priceSource }}</td>
     </ng-container>
 
     <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
