@@ -170,7 +170,7 @@ sui-select.selection.ui.dropdown {
 
 // PANEL JOB INFO CONTAINER
 .job-info-container {
-  padding: 1.5rem 1rem;
+  padding: 0 1.5rem 1rem 1.5rem;
 }
 
 // BUTTONS
@@ -212,6 +212,12 @@ a[class*='fd-button--']::before {
 
 .panel-body .job-info {
   margin: 0.75rem 0;
+}
+
+.panel-body {
+  &.panel-body--secondary {
+    padding: 1rem 0 0 0;
+  }
 }
 
 // ICONS
