@@ -5,20 +5,46 @@
 
     <!-- Item Id Column -->
     <ng-container cdkColumnDef="itemId">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>No.</th>
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Item Id</th>
       <td cdk-cell *cdkCellDef="let product">{{ product.itemId }}</td>
+    </ng-container>
+
+    <!-- Item Description Column -->
+    <ng-container cdkColumnDef="itemDescription">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Item Description
+      </th>
+      <td cdk-cell *cdkCellDef="let product">{{ product.itemDescription }}</td>
     </ng-container>
 
     <!-- Current Price Column -->
     <ng-container cdkColumnDef="currentPrice">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Name</th>
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Current Price</th>
       <td cdk-cell *cdkCellDef="let product">{{ product.currentPrice }}</td>
     </ng-container>
 
     <!-- Price Source Column -->
     <ng-container cdkColumnDef="priceSource">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Weight</th>
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Price Source</th>
       <td cdk-cell *cdkCellDef="let product">{{ product.priceSource }}</td>
+    </ng-container>
+
+    <!-- Final Column -->
+    <ng-container cdkColumnDef="final">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Final</th>
+      <td cdk-cell *cdkCellDef="let product">{{ product.final }}</td>
+    </ng-container>
+
+    <!-- Final Column -->
+    <ng-container cdkColumnDef="mgplPrice">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>MGPL Price</th>
+      <td cdk-cell *cdkCellDef="let product">{{ product.mgplPrice }}</td>
+    </ng-container>
+
+    <!-- Matrix Price Column -->
+    <ng-container cdkColumnDef="matrixPrice">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Matrix Price</th>
+      <td cdk-cell *cdkCellDef="let product">{{ product.matrixPrice }}</td>
     </ng-container>
 
     <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>

@@ -27,6 +27,10 @@
   }
 }
 
+th {
+  text-transform: uppercase;
+}
+
 .panel-body {
   & .fd-has-type-minus-1 {
     color: var(--fd-color-text-3);

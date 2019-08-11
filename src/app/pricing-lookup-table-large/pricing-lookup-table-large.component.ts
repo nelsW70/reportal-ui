@@ -109,7 +109,15 @@ const data: ProductInfo[] = [
   styleUrls: ['./pricing-lookup-table-large.component.scss']
 })
 export class PricingLookupTableLargeComponent implements OnInit {
-  displayedColumns = ['itemId', 'currentPrice', 'priceSource'];
+  displayedColumns = [
+    'itemId',
+    'itemDescription',
+    'currentPrice',
+    'priceSource',
+    'final',
+    'mgplPrice',
+    'matrixPrice'
+  ];
   dataSource = data;
 
   constructor() {}
