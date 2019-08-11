@@ -1,1 +1,33 @@
-<p>I'M THE LARGE TABLE. PUT ME HERE.</p>
+<div fd-table-responsive-wrapper>
+  <table fd-table cdk-table [dataSource]="dataSource">
+    <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container cdkColumnDef="position">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>No.</th>
+      <td cdk-cell *cdkCellDef="let element">{{ element.position }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container cdkColumnDef="name">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Name</th>
+      <td cdk-cell *cdkCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container cdkColumnDef="weight">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Weight</th>
+      <td cdk-cell *cdkCellDef="let element">{{ element.weight }}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container cdkColumnDef="symbol">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Symbol</th>
+      <td cdk-cell *cdkCellDef="let element">{{ element.symbol }}</td>
+    </ng-container>
+
+    <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
+    <tr cdk-row *cdkRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>
