@@ -71,6 +71,32 @@
       }
     }
   }
+
+  @media only screen and (min-width: 1440px) {
+    .row-one-large {
+      max-width: 1000px;
+      &__col-one {
+        width: 400px;
+      }
+      &__col-two {
+        max-width: 450px;
+      }
+    }
+    .row-two-large {
+      width: 1200px;
+
+      .fd-form__item {
+        &:first-child {
+          width: 400px;
+          padding-right: 16px;
+        }
+        &:nth-child(2) {
+          width: 450px;
+          margin-right: 16px;
+        }
+      }
+    }
+  }
 }
 
 .panel-body--secondary {
