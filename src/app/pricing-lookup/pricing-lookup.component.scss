@@ -21,35 +21,6 @@
   margin-bottom: 2rem;
 }
 
-// FORMS - INPUTS
-fd-combobox {
-  &.custom-combo span {
-    display: none;
-  }
-  &.custom-combo .fd-input-group--after input[type='text'] {
-    border-top-right-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
-  }
-}
-
-input {
-  &.fd-form__control {
-    height: 38px;
-  }
-  &.fd-input {
-    height: 38px;
-  }
-}
-
-.fd-input-group {
-  & input {
-    height: 38px;
-  }
-  & .fd-input-group__addon {
-    height: 38px;
-  }
-}
-
 // PANEL JOB INFO CONTAINER
 .job-info-container {
   padding: 0 1.5rem 1rem 1.5rem;
