@@ -1,4 +1,84 @@
+// FORM CONTAINER
+.inline-form-inputs {
+  display: flex;
+  justify-content: space-between;
+  & .fd-form__item {
+    width: calc(50% - 4px);
+  }
+}
+
+.fd-form__set .last-item {
+  margin-bottom: 0.5rem;
+}
+
+.required-input-fields {
+  margin-bottom: 4px;
+  min-height: 94px;
+}
+
+.required-input-fields:nth-child(3) {
+  min-height: unset;
+  margin-bottom: 2rem;
+}
+
+// FORMS - INPUTS
+fd-combobox {
+  &.custom-combo span {
+    display: none;
+  }
+  &.custom-combo .fd-input-group--after input[type='text'] {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+}
+
+input {
+  &.fd-form__control {
+    height: 38px;
+  }
+  &.fd-input {
+    height: 38px;
+  }
+}
+
+.fd-input-group {
+  & input {
+    height: 38px;
+  }
+  & .fd-input-group__addon {
+    height: 38px;
+  }
+}
+
+// PANEL JOB INFO CONTAINER
+.job-info-container {
+  padding: 0 1.5rem 1rem 1.5rem;
+}
+
 // PANELS
+.fd-panel {
+  margin: 1.25rem 0;
+}
+
+.fd-panel__header,
+.fd-panel__body,
+.fd-panel__filters {
+  padding: 1rem;
+}
+
+.fd-panel__body.customer-info {
+  padding: 0;
+}
+
+.panel-body .job-info {
+  margin: 0.75rem 0;
+}
+
+.panel-body {
+  &.panel-body--secondary {
+    padding: 1rem 0 0 0;
+  }
+}
 
 .panel-body--main {
   @media only screen and (min-width: 768px) {
@@ -111,6 +191,7 @@
 }
 
 // TABLE
+// small table
 .mat-table {
   .th-container {
     display: flex;
@@ -191,6 +272,32 @@
         transition: all 225ms cubic-bezier(0.4, 0, 0.2, 1);
       }
     }
+  }
+}
+
+// large table
+.pricing-lookup-large {
+  th {
+    &:first-child::after {
+      float: right;
+    }
+    &:nth-child(2)::after {
+      float: right;
+    }
+  }
+
+  td:nth-child(3),
+  td:nth-child(4),
+  td:nth-child(6) {
+    padding-right: 14px;
+  }
+
+  td:nth-child(5) {
+    padding-right: 10px;
+  }
+
+  td:nth-child(7) {
+    padding-right: 24px;
   }
 }
 
