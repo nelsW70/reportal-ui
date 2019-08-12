@@ -19,32 +19,72 @@
 
     <!-- Current Price Column -->
     <ng-container cdkColumnDef="currentPrice">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Current Price</th>
-      <td cdk-cell *cdkCellDef="let product">{{ product.currentPrice }}</td>
+      <th
+        fdColumnSortable
+        cdk-header-cell
+        *cdkHeaderCellDef
+        class="fd-has-text-align-right"
+      >
+        Current Price
+      </th>
+      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
+        {{ product.currentPrice }}
+      </td>
     </ng-container>
 
     <!-- Price Source Column -->
     <ng-container cdkColumnDef="priceSource">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Price Source</th>
-      <td cdk-cell *cdkCellDef="let product">{{ product.priceSource }}</td>
+      <th
+        fdColumnSortable
+        cdk-header-cell
+        *cdkHeaderCellDef
+        class="fd-has-text-align-right"
+      >
+        Price Source
+      </th>
+      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
+        {{ product.priceSource }}
+      </td>
     </ng-container>
 
     <!-- Final Column -->
     <ng-container cdkColumnDef="final">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Final</th>
-      <td cdk-cell *cdkCellDef="let product">{{ product.final }}</td>
+      <th cdk-header-cell *cdkHeaderCellDef class="fd-has-text-align-right">
+        Final
+      </th>
+      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
+        {{ product.final }}
+      </td>
     </ng-container>
 
-    <!-- Final Column -->
+    <!-- MGPL Column -->
     <ng-container cdkColumnDef="mgplPrice">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>MGPL Price</th>
-      <td cdk-cell *cdkCellDef="let product">{{ product.mgplPrice }}</td>
+      <th
+        fdColumnSortable
+        cdk-header-cell
+        *cdkHeaderCellDef
+        class="fd-has-text-align-right"
+      >
+        MGPL Price
+      </th>
+      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
+        {{ product.mgplPrice }}
+      </td>
     </ng-container>
 
     <!-- Matrix Price Column -->
     <ng-container cdkColumnDef="matrixPrice">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Matrix Price</th>
-      <td cdk-cell *cdkCellDef="let product">{{ product.matrixPrice }}</td>
+      <th
+        fdColumnSortable
+        cdk-header-cell
+        *cdkHeaderCellDef
+        class="fd-has-text-align-right"
+      >
+        Matrix Price
+      </th>
+      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
+        {{ product.matrixPrice }}
+      </td>
     </ng-container>
 
     <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>

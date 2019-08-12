@@ -55,6 +55,11 @@ th {
   margin-top: 0.25rem;
 }
 
+// placeholder for inputs
+.ui.dropdown:not(.button) > .default.text {
+  color: rgb(137, 145, 154);
+}
+
 // REQUIRED ASTERISK
 .required:after {
   content: ' *';
@@ -119,11 +124,13 @@ input {
 }
 
 // CUSTOM INPUTS
+
 sui-select.selection.ui.dropdown {
   width: 100%;
   border: 1px solid rgb(135, 144, 154);
   height: 36px;
   line-height: 1;
+
   &:hover {
     border: 1px solid rgb(49, 109, 168);
   }
@@ -138,6 +145,7 @@ sui-select.selection.ui.dropdown {
     }
   }
 }
+
 .ui.icon.input {
   width: 100%;
   & .icon.custom-icon {
@@ -230,6 +238,10 @@ a[class*='fd-button--']::before {
   .mat-header-row {
     background-color: var(--fd-color-background-7);
   }
+}
+
+.fd-table__sort-column::after {
+  margin: 0 6px;
 }
 
 // TABLE PAGINATION

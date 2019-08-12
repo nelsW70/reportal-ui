@@ -1,0 +1,19 @@
+th {
+  &:first-child::after {
+    float: right;
+  }
+  &:nth-child(2)::after {
+    float: right;
+  }
+}
+
+td:nth-child(3),
+td:nth-child(4),
+td:nth-child(5),
+td:nth-child(6) {
+  padding-right: 16px;
+}
+
+td:nth-child(7) {
+  padding-right: 24px;
+}
