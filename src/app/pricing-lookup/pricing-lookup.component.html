@@ -59,6 +59,7 @@
                 [(ngModel)]="selectedOption"
                 [isSearchable]="true"
                 [options]="options"
+                placeholder="Select Store"
                 aria-required="true"
               >
                 <sui-select-option
@@ -91,6 +92,7 @@
               [(ngModel)]="selectedOption2"
               [isSearchable]="true"
               [options]="options2"
+              placeholder="Select Job Quote"
               aria-required="true"
             >
               <sui-select-option *ngFor="let option of options" [value]="option"

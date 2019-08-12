@@ -1,11 +1,11 @@
 // not using this but the console gets angry if there isn't a theme
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
-// body {
-//   @media only screen and (max-width: 768px) {
-//     background-color: var(--fd-color-background-2);
-//   }
-// }
+body {
+  @media only screen and (max-width: 768px) {
+    background-color: var(--fd-color-background-2);
+  }
+}
 
 // FONTS
 .mat-table {
@@ -124,12 +124,16 @@ input {
 }
 
 // CUSTOM INPUTS
+.ui.search.selection.dropdown > input.search {
+  padding-left: 10px;
+}
 
 sui-select.selection.ui.dropdown {
   width: 100%;
   border: 1px solid rgb(135, 144, 154);
   height: 36px;
   line-height: 1;
+  padding-left: 10px;
 
   &:hover {
     border: 1px solid rgb(49, 109, 168);
@@ -242,6 +246,31 @@ a[class*='fd-button--']::before {
 
 .fd-table__sort-column::after {
   margin: 0 6px;
+}
+
+.pricing-lookup-large {
+  th {
+    &:first-child::after {
+      float: right;
+    }
+    &:nth-child(2)::after {
+      float: right;
+    }
+  }
+
+  td:nth-child(3),
+  td:nth-child(4),
+  td:nth-child(6) {
+    padding-right: 14px;
+  }
+
+  td:nth-child(5) {
+    padding-right: 10px;
+  }
+
+  td:nth-child(7) {
+    padding-right: 24px;
+  }
 }
 
 // TABLE PAGINATION
