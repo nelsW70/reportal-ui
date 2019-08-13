@@ -1,0 +1,21 @@
+// PANELS
+.fd-panel {
+  margin: 1.25rem 0;
+}
+
+.fd-panel__header,
+.fd-panel__body,
+.fd-panel__filters {
+  padding: 1rem;
+}
+
+// INPUTS
+.required-input-fields {
+  margin-bottom: 4px;
+  min-height: 86px;
+}
+
+// BUTTONS
+.btn-100 {
+  color: var(--fd-color-text-5);
+}

@@ -12,9 +12,10 @@ import { SuiModule } from 'ng2-semantic-ui';
 
 import { PricingLookupComponent } from './pricing-lookup/pricing-lookup.component';
 import { PricingLookupTableLargeComponent } from './pricing-lookup-table-large/pricing-lookup-table-large.component';
+import { ThdProspectsComponent } from './thd-prospects/thd-prospects.component';
 
 @NgModule({
-  declarations: [AppComponent, PricingLookupComponent, PricingLookupTableLargeComponent],
+  declarations: [AppComponent, PricingLookupComponent, PricingLookupTableLargeComponent, ThdProspectsComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

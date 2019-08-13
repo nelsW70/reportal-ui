@@ -1,0 +1,60 @@
+<h4 class="fd-has-type-4">THD Prospects</h4>
+<fd-panel>
+  <fd-panel-header>
+    <fd-panel-head>
+      <h2 fd-panel-title>THD Prospects</h2>
+    </fd-panel-head>
+  </fd-panel-header>
+  <fd-panel-body class="panel-body panel-body--main panel-body--main__thd">
+    <div fd-form-set>
+      <div fd-form-item class="required-input-fields">
+        <label fd-form-label for="input-1">Search Pro Xtra Number</label>
+        <fd-combobox
+          id="input-1"
+          [(ngModel)]="searchTermOne"
+          [dropdownValues]="dropdownValues1"
+          [placeholder]="'Search by Pro Xtra Number'"
+          [glyph]="'search'"
+          [maxHeight]="'250px'"
+        >
+        </fd-combobox>
+        <!-- this should probably be done with an ngIf based on validation -->
+        <!-- if invalid - hide the hint text and show the error message  -->
+        <span class="error-message fd-has-type-minus-1"
+          >Fake error message</span
+        >
+      </div>
+      <div fd-form-item class="required-input-fields ">
+        <label fd-form-label for="input-1">Phone Number</label>
+        <fd-combobox
+          id="input-1"
+          [(ngModel)]="searchTermOne"
+          [dropdownValues]="dropdownValues1"
+          [placeholder]="'Search by Phone Number'"
+          [glyph]="'search'"
+          [maxHeight]="'250px'"
+        >
+        </fd-combobox>
+        <!-- this should probably be done with an ngIf based on validation -->
+        <!-- if invalid - hide the hint text and show the error message  -->
+        <span class="error-message fd-has-type-minus-1"
+          >Fake error message</span
+        >
+      </div>
+      <div fd-form-item>
+        <button
+          class="btn-100"
+          fd-button
+          [glyph]="'search'"
+          [options]="'emphasized'"
+        >
+          Search Prospects
+        </button>
+      </div>
+    </div>
+  </fd-panel-body>
+</fd-panel>
+
+<!-- <div *ngIf="currentWindowWidth >= 768">
+  <p>I'm the desktop version...coming soon.</p>
+</div> -->
