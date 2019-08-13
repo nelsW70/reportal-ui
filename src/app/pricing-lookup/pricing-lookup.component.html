@@ -106,14 +106,16 @@
         </div>
         <div fd-form-item class="required-input-fields">
           <label fd-form-label for="input-4">Item</label>
-          <fd-input-group
-            fd-form-control
-            type="text"
+          <fd-combobox
             id="input-4"
-            [placement]="'after'"
+            [(ngModel)]="searchTermTwo"
+            [dropdownValues]="dropdownValues2"
+            [placeholder]="''"
             [glyph]="'search'"
+            [maxHeight]="'250px'"
             [placeholder]="'Search Items'"
-          ></fd-input-group>
+          >
+          </fd-combobox>
         </div>
         <div fd-form-item>
           <button class="btn-100 item-lookup" fd-button [glyph]="'add'">
