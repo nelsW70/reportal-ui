@@ -9,6 +9,23 @@
   padding: 1rem;
 }
 
+// CONTAINERS
+.fd-form__set {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    & .fd-form__item {
+      width: 50%;
+      padding-right: 16px;
+      max-width: 350px;
+    }
+    & .required-input-fields {
+      min-height: 78px;
+    }
+  }
+}
+
 // INPUTS
 .required-input-fields {
   margin-bottom: 4px;
@@ -18,4 +35,7 @@
 // BUTTONS
 .btn-100 {
   color: var(--fd-color-text-5);
+  @media screen and (min-width: 1100px) {
+    max-width: 170px;
+  }
 }

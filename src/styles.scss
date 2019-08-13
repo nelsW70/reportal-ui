@@ -2,9 +2,9 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 body {
-  // @media only screen and (max-width: 768px) {
-  //   background-color: var(--fd-color-background-2);
-  // }
+  @media only screen and (max-width: 768px) {
+    background-color: var(--fd-color-background-2);
+  }
 }
 
 // FONTS
@@ -69,6 +69,9 @@ th {
 // MAIN CONTAINER
 main {
   margin: 2rem 0.85rem;
+  @media screen and (min-width: 1400px) {
+    margin: 2rem;
+  }
 }
 
 // FORMS - INPUTS
