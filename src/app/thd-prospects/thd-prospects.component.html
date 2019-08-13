@@ -65,7 +65,7 @@
     <fd-panel-body class="panel-body panel-body--secondary">
       <div *ngIf="currentWindowWidth < 1024">
         <mat-table #table [dataSource]="dataSource">
-          <!-- Item Id Column -->
+          <!-- Pro Xtra Id Column -->
           <ng-container matColumnDef="proXtraID">
             <mat-header-cell
               fdColumnSortable
@@ -81,14 +81,12 @@
                 </div>
               </div>
             </mat-header-cell>
-            <mat-cell
-              *matCellDef="let product"
-              class="fd-has-type-minus-1 fd-has-text-align-right"
-              >{{ product.proXtraID }}</mat-cell
-            >
+            <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">{{
+              product.proXtraID
+            }}</mat-cell>
           </ng-container>
 
-          <!-- Current Price Column -->
+          <!-- Full Name Column -->
           <ng-container matColumnDef="fullName">
             <mat-header-cell
               fdColumnSortable
@@ -105,12 +103,12 @@
             ></mat-header-cell>
             <mat-cell
               *matCellDef="let product"
-              class="col-2 fd-has-type-minus-1 fd-has-text-align-right"
+              class="col-2 fd-has-type-minus-1"
               >{{ product.fullName }}</mat-cell
             >
           </ng-container>
 
-          <!-- Price Source Column -->
+          <!-- Phone Column -->
           <ng-container matColumnDef="phone">
             <mat-header-cell
               fdColumnSortable
@@ -127,7 +125,7 @@
             ></mat-header-cell>
             <mat-cell
               *matCellDef="let product; let i = index"
-              class="col-3 fd-has-type-minus-1 fd-has-text-align-right"
+              class="col-3 fd-has-type-minus-1"
               >{{ product.phone }}
               <span
                 [ngClass]="
