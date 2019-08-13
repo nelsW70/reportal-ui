@@ -55,6 +55,176 @@
   </fd-panel-body>
 </fd-panel>
 
+<div>
+  <fd-panel>
+    <fd-panel-header>
+      <fd-panel-head>
+        <h2 fd-panel-title>THD Prospect Results</h2>
+      </fd-panel-head>
+    </fd-panel-header>
+    <fd-panel-body class="panel-body panel-body--secondary">
+      <div *ngIf="currentWindowWidth < 1024">
+        <mat-table #table [dataSource]="dataSource">
+          <!-- Item Id Column -->
+          <ng-container matColumnDef="proXtraID">
+            <mat-header-cell
+              fdColumnSortable
+              *matHeaderCellDef
+              class="fd-has-type-minus-1 th-1"
+            >
+              <div class="th-container">
+                <div class="th-header">
+                  PRO XTRA ID
+                </div>
+                <div>
+                  <span class="sap-icon--sorting-ranking sap-icon--s"></span>
+                </div>
+              </div>
+            </mat-header-cell>
+            <mat-cell
+              *matCellDef="let product"
+              class="fd-has-type-minus-1 fd-has-text-align-right"
+              >{{ product.proXtraID }}</mat-cell
+            >
+          </ng-container>
+
+          <!-- Current Price Column -->
+          <ng-container matColumnDef="fullName">
+            <mat-header-cell
+              fdColumnSortable
+              *matHeaderCellDef
+              class="fd-has-type-minus-1"
+            >
+              <div class="th-container">
+                <div class="th-header">
+                  Full Name
+                </div>
+                <div>
+                  <span class="sap-icon--sorting-ranking sap-icon--s"></span>
+                </div></div
+            ></mat-header-cell>
+            <mat-cell
+              *matCellDef="let product"
+              class="col-2 fd-has-type-minus-1 fd-has-text-align-right"
+              >{{ product.fullName }}</mat-cell
+            >
+          </ng-container>
+
+          <!-- Price Source Column -->
+          <ng-container matColumnDef="phone">
+            <mat-header-cell
+              fdColumnSortable
+              *matHeaderCellDef
+              class="fd-has-type-minus-1"
+            >
+              <div class="th-container">
+                <div class="th-header">
+                  Phone
+                </div>
+                <div>
+                  <span class="sap-icon--sorting-ranking sap-icon"></span>
+                </div></div
+            ></mat-header-cell>
+            <mat-cell
+              *matCellDef="let product; let i = index"
+              class="col-3 fd-has-type-minus-1 fd-has-text-align-right"
+              >{{ product.phone }}
+              <span
+                [ngClass]="
+                  currentIndex === i
+                    ? 'sap-icon--navigation-right-arrow sap-icon--s expand-icon expand-animation'
+                    : 'sap-icon--navigation-right-arrow sap-icon--s expand-icon'
+                "
+              ></span>
+            </mat-cell>
+          </ng-container>
+
+          <!-- Expanded Content Column - The detail row is made up of this one column -->
+          <ng-container matColumnDef="expandedDetail">
+            <mat-cell *matCellDef="let detail">
+              <div class="fd-has-type-0 expanded-details">
+                <div>
+                  Company:
+                  <div class="expanded-details-info">
+                    {{ detail.product.company }}
+                  </div>
+                </div>
+                <div>
+                  Email:
+                  <span class="expanded-details-info">
+                    {{ detail.product.email }}
+                  </span>
+                </div>
+                <div>
+                  Address:
+                  <span class="expanded-details-info">
+                    {{ detail.product.address }}
+                  </span>
+                </div>
+                <div>
+                  Matrix Price:
+                  <span class="expanded-details-info">
+                    {{ detail.product.signUpDate }}
+                  </span>
+                </div>
+              </div>
+            </mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row
+            *matRowDef="let row; columns: displayedColumns; let i = index"
+            matRipple
+            class="product-row"
+            [class.expanded]="expandedData == row"
+            (click)="
+              expandedData === row
+                ? (expandedData = null)
+                : (expandedData = row);
+              currentIndex = expandedData == row ? i : null
+            "
+          ></mat-row>
+          <mat-row
+            *matRowDef="
+              let row;
+              columns: ['expandedDetail'];
+              when: isExpansionDetailRow
+            "
+            [@detailExpand]="
+              row.product == expandedData ? 'expanded' : 'collapsed'
+            "
+            style="overflow: hidden"
+          >
+          </mat-row>
+        </mat-table>
+      </div>
+      <div *ngIf="currentWindowWidth >= 1024">
+        <app-pricing-lookup-table-large></app-pricing-lookup-table-large>
+      </div>
+      <div class="fd-pagination">
+        <span class="fd-pagination__total">30 items</span>
+        <nav class="fd-pagination__nav">
+          <a
+            href="#"
+            class="fd-pagination__link fd-pagination__link--previous"
+            aria-label="Previous"
+            aria-disabled="true"
+          ></a>
+          <a href="#" class="fd-pagination__link" aria-selected="true">1</a>
+          <a href="#" class="fd-pagination__link">2</a>
+          <a href="#" class="fd-pagination__link">3</a>
+          <a
+            href="#"
+            class="fd-pagination__link fd-pagination__link--next"
+            aria-label="Next"
+            aria-disabled="false"
+          ></a>
+        </nav>
+      </div>
+    </fd-panel-body>
+  </fd-panel>
+</div>
+
 <!-- <div *ngIf="currentWindowWidth >= 768">
   <p>I'm the desktop version...coming soon.</p>
 </div> -->
