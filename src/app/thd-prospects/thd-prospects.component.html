@@ -140,15 +140,15 @@
             <mat-cell *matCellDef="let detail">
               <div class="fd-has-type-0 expanded-details">
                 <div>
-                  Company:
+                  SAP Branch Number:
                   <span class="expanded-details-info">
-                    {{ detail.product.company }}
+                    {{ detail.product.sapBranchNumber }}
                   </span>
                 </div>
                 <div>
-                  Email:
+                  Company:
                   <span class="expanded-details-info">
-                    {{ detail.product.email }}
+                    {{ detail.product.company }}
                   </span>
                 </div>
                 <div>
@@ -157,6 +157,13 @@
                     {{ detail.product.address }}
                   </span>
                 </div>
+                <div>
+                  Email:
+                  <span class="expanded-details-info">
+                    {{ detail.product.email }}
+                  </span>
+                </div>
+
                 <div>
                   Matrix Price:
                   <span class="expanded-details-info">

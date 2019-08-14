@@ -18,13 +18,14 @@ export interface ProductInfo {
   phoneNumber: string;
   signUpDate: string;
   storesPurchasedFrom?: string;
-  status?: string;
+  status: string;
   sapBranchNumber?: string;
 }
 
 const data: ProductInfo[] = [
   {
     proXtraId: '1234567',
+    sapBranchNumber: '0',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
@@ -36,6 +37,7 @@ const data: ProductInfo[] = [
   },
   {
     proXtraId: '1234567',
+    sapBranchNumber: '0',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
@@ -47,6 +49,7 @@ const data: ProductInfo[] = [
   },
   {
     proXtraId: '1234567',
+    sapBranchNumber: '0',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
@@ -58,6 +61,7 @@ const data: ProductInfo[] = [
   },
   {
     proXtraId: '1234567',
+    sapBranchNumber: '0',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
@@ -69,6 +73,7 @@ const data: ProductInfo[] = [
   },
   {
     proXtraId: '1234567',
+    sapBranchNumber: '0',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
@@ -80,6 +85,7 @@ const data: ProductInfo[] = [
   },
   {
     proXtraId: '1234567',
+    sapBranchNumber: '0',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
@@ -91,6 +97,7 @@ const data: ProductInfo[] = [
   },
   {
     proXtraId: '1234567',
+    sapBranchNumber: '0',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
@@ -102,6 +109,7 @@ const data: ProductInfo[] = [
   },
   {
     proXtraId: '1234567',
+    sapBranchNumber: '0',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
@@ -113,6 +121,7 @@ const data: ProductInfo[] = [
   },
   {
     proXtraId: '1234567',
+    sapBranchNumber: '0',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
