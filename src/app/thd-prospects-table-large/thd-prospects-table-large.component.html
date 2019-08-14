@@ -84,14 +84,12 @@
       </th>
       <td cdk-cell *cdkCellDef="let product">
         <div *ngIf="product.status === 'created'">
-          <span fd-status-label [statusIcon]="'available'"
-            >Account Created</span
-          >
+          <div fd-status-label [statusIcon]="'available'">Account Created</div>
         </div>
         <div *ngIf="product.status === 'pending'">
-          <span fd-status-label [statusIcon]="'away'"
-            >Pending Account Creation</span
-          >
+          <div fd-status-label [statusIcon]="'away'">
+            Pending Account Creation
+          </div>
         </div>
         <div *ngIf="product.status === 'none'" class="create-account">
           <button fd-button [options]="'emphasized'">Create Account</button>

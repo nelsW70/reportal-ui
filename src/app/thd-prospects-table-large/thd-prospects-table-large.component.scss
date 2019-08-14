@@ -1,26 +1,4 @@
-// large table
-// th {
-//   &:first-child::after {
-//     float: right;
-//   }
-//   &:nth-child(2)::after {
-//     float: right;
-//   }
-// }
-
-// td:nth-child(3),
-// td:nth-child(4),
-// td:nth-child(6) {
-//   padding-right: 16px;
-// }
-
-// td:nth-child(5) {
-//   padding-right: 12px;
-// }
-
-// td:nth-child(7) {
-//   padding-right: 22px;
-// }
+// LARGE TABLE
 
 // CREATE ACCOUNT COLUMN
 .create-account {
@@ -28,4 +6,20 @@
   & button {
     flex: 1;
   }
+}
+
+// STATUS ICON
+
+.fd-status-label--available::after,
+.fd-status-label--away::after,
+.fd-status-label--busy::after,
+.fd-status-label--offline::after {
+  top: 2px;
+}
+
+.fd-status-label--available::before,
+.fd-status-label--away::before,
+.fd-status-label--busy::before,
+.fd-status-label--offline::before {
+  top: 6px;
 }
