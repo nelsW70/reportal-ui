@@ -1,0 +1,93 @@
+<div fd-table-responsive-wrapper>
+  <table fd-table cdk-table [dataSource]="dataSource">
+    <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Pro Xtra Id Column -->
+    <ng-container cdkColumnDef="proXtraId">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Pro Xtra ID</th>
+      <td cdk-cell *cdkCellDef="let product">{{ product.proXtraId }}</td>
+    </ng-container>
+
+    <!-- Company Column -->
+    <ng-container cdkColumnDef="company">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Company
+      </th>
+      <td cdk-cell *cdkCellDef="let product">{{ product.company }}</td>
+    </ng-container>
+
+    <!-- Full Name Column -->
+    <ng-container cdkColumnDef="fullName">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Full Name
+      </th>
+      <td cdk-cell *cdkCellDef="let product">
+        {{ product.fullName }}
+      </td>
+    </ng-container>
+
+    <!-- Address Column -->
+    <ng-container cdkColumnDef="address">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Address
+      </th>
+      <td cdk-cell *cdkCellDef="let product">
+        {{ product.address }}
+      </td>
+    </ng-container>
+
+    <!-- Email Column -->
+    <ng-container cdkColumnDef="email">
+      <th cdk-header-cell *cdkHeaderCellDef>
+        Email
+      </th>
+      <td cdk-cell *cdkCellDef="let product">
+        {{ product.email }}
+      </td>
+    </ng-container>
+
+    <!-- Phone Column -->
+    <ng-container cdkColumnDef="phoneNumber">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Phone Number
+      </th>
+      <td cdk-cell *cdkCellDef="let product">
+        {{ product.phoneNumber }}
+      </td>
+    </ng-container>
+
+    <!-- Sign Up Date Column -->
+    <ng-container cdkColumnDef="signUpDate">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Sign Up Date
+      </th>
+      <td cdk-cell *cdkCellDef="let product">
+        {{ product.signUpDate }}
+      </td>
+    </ng-container>
+
+    <!-- Stores Purchased From Column -->
+    <ng-container cdkColumnDef="storesPurchasedFrom">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Stores Purchased From
+      </th>
+      <td cdk-cell *cdkCellDef="let product">
+        {{ product.storesPurchasedFrom }}
+      </td>
+    </ng-container>
+
+    <!-- Status Column -->
+    <ng-container cdkColumnDef="status">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Status
+      </th>
+      <td cdk-cell *cdkCellDef="let product">
+        {{ product.status }}
+      </td>
+    </ng-container>
+
+    <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
+    <tr cdk-row *cdkRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>
