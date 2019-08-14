@@ -66,7 +66,7 @@
       <div *ngIf="currentWindowWidth < 1024">
         <mat-table #table [dataSource]="dataSource">
           <!-- Pro Xtra Id Column -->
-          <ng-container matColumnDef="proXtraID">
+          <ng-container matColumnDef="proXtraId">
             <mat-header-cell
               fdColumnSortable
               *matHeaderCellDef
@@ -82,7 +82,7 @@
               </div>
             </mat-header-cell>
             <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">{{
-              product.proXtraID
+              product.proXtraId
             }}</mat-cell>
           </ng-container>
 
@@ -107,7 +107,7 @@
           </ng-container>
 
           <!-- Phone Column -->
-          <ng-container matColumnDef="phone">
+          <ng-container matColumnDef="phoneNumber">
             <mat-header-cell
               fdColumnSortable
               *matHeaderCellDef
@@ -124,7 +124,7 @@
             <mat-cell
               *matCellDef="let product; let i = index"
               class="fd-has-type-minus-1"
-              >{{ product.phone }}
+              >{{ product.phoneNumber }}
               <span
                 [ngClass]="
                   currentIndex === i
@@ -141,9 +141,9 @@
               <div class="fd-has-type-0 expanded-details">
                 <div>
                   Company:
-                  <div class="expanded-details-info">
+                  <span class="expanded-details-info">
                     {{ detail.product.company }}
-                  </div>
+                  </span>
                 </div>
                 <div>
                   Email:

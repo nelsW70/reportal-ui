@@ -10,12 +10,12 @@ import {
 } from '@angular/animations';
 
 export interface ProductInfo {
-  proXtraID: string;
+  proXtraId: string;
   company: string;
   fullName: string;
   address: string;
   email: string;
-  phone: string;
+  phoneNumber: string;
   signUpDate: string;
   storesPurchasedFrom?: string;
   status?: string;
@@ -24,94 +24,103 @@ export interface ProductInfo {
 
 const data: ProductInfo[] = [
   {
-    proXtraID: '6-411/01',
-    company: 'S-Hide INT LX EGG WHPB 6-411 B100',
-    fullName: '$18.85',
-    address: 'GPQ',
-    email: 'N',
-    phone: '$18.85',
-    signUpDate: '$25.75'
+    proXtraId: '1234567',
+    company: 'COMPANY',
+    fullName: 'LAST NAME, FIRST NAME',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
+    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    phoneNumber: '(555) 555-5555',
+    signUpDate: 'MM/DD/YYYY',
+    storesPurchasedFrom: '001, 002, 003, 004',
+    status: 'created'
   },
   {
-    proXtraID: 'AK2LV-B/55',
-    company: 'AMERLOCK 2 LV CUBE',
-    fullName: '$18.85',
-    address: 'GPQ',
-    email: '-',
-    phone: '$18.85',
-    signUpDate: '$25.75'
+    proXtraId: '1234567',
+    company: 'COMPANY',
+    fullName: 'LAST NAME, FIRST NAME',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
+    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    phoneNumber: '(555) 555-5555',
+    signUpDate: 'MM/DD/YYYY',
+    storesPurchasedFrom: '001, 002, 003, 004',
+    status: 'created'
   },
   {
-    proXtraID: 'AK2-T1/01',
-    company: 'AMERLOCK 2/400 DEEP TINT RESIN',
-    fullName: '$18.85',
-    address: '-',
-    email: 'Y',
-    phone: '-',
-    signUpDate: '$25.75'
+    proXtraId: '1234567',
+    company: 'COMPANY',
+    fullName: 'LAST NAME, FIRST NAME',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
+    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    phoneNumber: '(555) 555-5555',
+    signUpDate: 'MM/DD/YYYY',
+    storesPurchasedFrom: '001, 002, 003, 004',
+    status: 'created'
   },
   {
-    proXtraID: '6-411/01',
-    company: 'S-HIDE INT LX EGG WHPB 6-411 B100',
-    fullName: '$18.85',
-    address: 'GPQ',
-    email: 'N',
-    phone: '$18.85',
-    signUpDate: '$25.75'
+    proXtraId: '1234567',
+    company: 'COMPANY',
+    fullName: 'LAST NAME, FIRST NAME',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
+    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    phoneNumber: '(555) 555-5555',
+    signUpDate: 'MM/DD/YYYY',
+    storesPurchasedFrom: '001, 002, 003, 004',
+    status: 'pending'
   },
   {
-    proXtraID: '6-411/01',
-    company: 'S-HIDE INT LX EGG WHPB 6-411 B100',
-    fullName: '$18.85',
-    address: 'MGPL',
-    email: 'N',
-    phone: '$18.85',
-    signUpDate: '$25.75'
+    proXtraId: '1234567',
+    company: 'COMPANY',
+    fullName: 'LAST NAME, FIRST NAME',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
+    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    phoneNumber: '(555) 555-5555',
+    signUpDate: 'MM/DD/YYYY',
+    storesPurchasedFrom: '001, 002, 003, 004',
+    status: 'none'
   },
   {
-    proXtraID: '6-411/01',
-    company: 'S-HIDE INT LX EGG WHPB 6-411 B100',
-    fullName: 'NOT FOUND',
-    address: 'GPQ',
-    email: 'N',
-    phone: 'NOT FOUND',
-    signUpDate: '$25.75'
+    proXtraId: '1234567',
+    company: 'COMPANY',
+    fullName: 'LAST NAME, FIRST NAME',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
+    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    phoneNumber: '(555) 555-5555',
+    signUpDate: 'MM/DD/YYYY',
+    storesPurchasedFrom: '001, 002, 003, 004',
+    status: 'none'
   },
   {
-    proXtraID: '6-411/01',
-    company: 'S-HIDE INT LX EGG WHPB 6-411 B100',
-    fullName: '$18.85',
-    address: '-',
-    email: '-',
-    phone: '$18.85',
-    signUpDate: '$25.75'
+    proXtraId: '1234567',
+    company: 'COMPANY',
+    fullName: 'LAST NAME, FIRST NAME',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
+    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    phoneNumber: '(555) 555-5555',
+    signUpDate: 'MM/DD/YYYY',
+    storesPurchasedFrom: '001, 002, 003, 004',
+    status: 'none'
   },
   {
-    proXtraID: '6-411/01',
-    company: 'S-HIDE INT LX EGG WHPB 6-411 B100',
-    fullName: '$18.85',
-    address: 'GPQ',
-    email: 'Y',
-    phone: '$18.85',
-    signUpDate: '$25.75'
+    proXtraId: '1234567',
+    company: 'COMPANY',
+    fullName: 'LAST NAME, FIRST NAME',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
+    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    phoneNumber: '(555) 555-5555',
+    signUpDate: 'MM/DD/YYYY',
+    storesPurchasedFrom: '001, 002, 003, 004',
+    status: 'none'
   },
   {
-    proXtraID: 'AK2LV-B/55',
-    company: 'S-HIDE INT LX EGG WHPB 6-411 B100',
-    fullName: '$18.85',
-    address: 'GPQ',
-    email: 'N',
-    phone: '$18.85',
-    signUpDate: 'NOT FOUND'
-  },
-  {
-    proXtraID: 'AK2LV-B/55',
-    company: 'S-HIDE INT LX EGG WHPB 6-411 B100',
-    fullName: '$18.85',
-    address: 'GPQ',
-    email: 'N',
-    phone: 'NOT FOUND',
-    signUpDate: '$25.75'
+    proXtraId: '1234567',
+    company: 'COMPANY',
+    fullName: 'LAST NAME, FIRST NAME',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
+    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    phoneNumber: '(555) 555-5555',
+    signUpDate: 'MM/DD/YYYYUND',
+    storesPurchasedFrom: '001, 002, 003, 004',
+    status: 'none'
   }
 ];
 
@@ -153,7 +162,7 @@ export class ThdProspectsComponent implements OnInit {
   dropdownValues2 = ['a', 'b', 'c', 'd'];
 
   expandedData: any;
-  displayedColumns = ['proXtraID', 'fullName', 'phone'];
+  displayedColumns = ['proXtraId', 'fullName', 'phoneNumber'];
   dataSource = new MobileDataSource();
 
   isExpansionDetailRow = (i: number, row: object) =>

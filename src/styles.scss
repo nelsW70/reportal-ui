@@ -35,6 +35,9 @@ th {
   & .fd-has-type-minus-1 {
     color: var(--fd-color-text-3);
   }
+  & mat-cell.fd-has-type-minus-1 {
+    color: unset;
+  }
 }
 
 .error-message.fd-has-type-minus-1 {
