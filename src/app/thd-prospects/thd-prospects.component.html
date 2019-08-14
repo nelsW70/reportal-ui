@@ -163,12 +163,35 @@
                     {{ detail.product.email }}
                   </span>
                 </div>
-
                 <div>
-                  Matrix Price:
+                  Sign Up Date:
                   <span class="expanded-details-info">
                     {{ detail.product.signUpDate }}
                   </span>
+                </div>
+                <div>
+                  Stores Purchased From:
+                  <span class="expanded-details-info">
+                    {{ detail.product.storesPurchasedFrom }}
+                  </span>
+                </div>
+                <div *ngIf="detail.product.status === 'created'">
+                  <div fd-status-label [statusIcon]="'available'">
+                    Account Created
+                  </div>
+                </div>
+                <div *ngIf="detail.product.status === 'pending'">
+                  <div fd-status-label [statusIcon]="'away'">
+                    Pending Account Creation
+                  </div>
+                </div>
+                <div
+                  *ngIf="detail.product.status === 'none'"
+                  class="create-account"
+                >
+                  <button fd-button [options]="'emphasized'">
+                    Create Account
+                  </button>
                 </div>
               </div>
             </mat-cell>

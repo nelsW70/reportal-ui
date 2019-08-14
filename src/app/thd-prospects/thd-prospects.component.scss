@@ -115,4 +115,27 @@
       }
     }
   }
+
+  // CREATE ACCOUNT COLUMN
+  .create-account {
+    display: flex;
+    & button {
+      flex: 1;
+    }
+  }
+
+  // STATUS ICON
+  .fd-status-label--available::after,
+  .fd-status-label--away::after,
+  .fd-status-label--busy::after,
+  .fd-status-label--offline::after {
+    top: 2px;
+  }
+
+  .fd-status-label--available::before,
+  .fd-status-label--away::before,
+  .fd-status-label--busy::before,
+  .fd-status-label--offline::before {
+    top: 6px;
+  }
 }

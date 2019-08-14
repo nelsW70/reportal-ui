@@ -19,6 +19,12 @@ body {
       font-size: 12px;
       color: var(--fd-color-text-2);
     }
+    &.cdk-column-expandedDetail.mat-column-expandedDetail {
+      padding: 8px !important;
+      & .expanded-details > div {
+        margin-bottom: 4px;
+      }
+    }
   }
   .mat-header-cell.fd-has-type-minus-1 {
     color: var(--fd-color-text-4);
