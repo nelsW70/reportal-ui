@@ -39,7 +39,7 @@
 
     <!-- Email Column -->
     <ng-container cdkColumnDef="email">
-      <th cdk-header-cell *cdkHeaderCellDef>
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
         Email
       </th>
       <td cdk-cell *cdkCellDef="let product">
@@ -84,12 +84,16 @@
       </th>
       <td cdk-cell *cdkCellDef="let product">
         <div *ngIf="product.status === 'created'">
-          <span>Account Created</span>
+          <span fd-status-label [statusIcon]="'available'"
+            >Account Created</span
+          >
         </div>
         <div *ngIf="product.status === 'pending'">
-          <span>Pending Account Creation</span>
+          <span fd-status-label [statusIcon]="'away'"
+            >Pending Account Creation</span
+          >
         </div>
-        <div *ngIf="product.status === 'none'">
+        <div *ngIf="product.status === 'none'" class="create-account">
           <button fd-button [options]="'emphasized'">Create Account</button>
         </div>
         <!-- {{ product.status }} -->

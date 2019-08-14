@@ -21,3 +21,11 @@
 // td:nth-child(7) {
 //   padding-right: 22px;
 // }
+
+// CREATE ACCOUNT COLUMN
+.create-account {
+  display: flex;
+  & button {
+    flex: 1;
+  }
+}
