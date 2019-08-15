@@ -170,41 +170,53 @@
           <ng-container matColumnDef="expandedDetail">
             <mat-cell *matCellDef="let detail">
               <div class="fd-has-type-0 expanded-details">
-                <div>
-                  SAP Branch Number:
-                  <span class="expanded-details-info">
+                <div class="expanded-details__detail-container">
+                  <div>
+                    SAP Branch Number:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
                     {{ detail.product.sapBranchNumber }}
-                  </span>
+                  </div>
                 </div>
-                <div>
-                  Company:
-                  <span class="expanded-details-info">
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Company:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
                     {{ detail.product.company }}
-                  </span>
+                  </div>
                 </div>
-                <div>
-                  Address:
-                  <span class="expanded-details-info">
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Address:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
                     {{ detail.product.address }}
-                  </span>
+                  </div>
                 </div>
-                <div>
-                  Email:
-                  <span class="expanded-details-info">
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Email:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
                     {{ detail.product.email }}
-                  </span>
+                  </div>
                 </div>
-                <div>
-                  Sign Up Date:
-                  <span class="expanded-details-info">
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Sign Up Date:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
                     {{ detail.product.signUpDate }}
-                  </span>
+                  </div>
                 </div>
-                <div>
-                  Stores Purchased From:
-                  <span class="expanded-details-info">
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Stores Purchased From:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
                     {{ detail.product.storesPurchasedFrom }}
-                  </span>
+                  </div>
                 </div>
                 <div class="fd-has-margin-top-small fd-has-margin-bottom-tiny">
                   <div *ngIf="detail.product.status === 'created'">

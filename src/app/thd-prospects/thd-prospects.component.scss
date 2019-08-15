@@ -56,6 +56,17 @@
     }
   }
 
+  .expanded-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    &__detail-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
   mat-cell:first-of-type,
   mat-footer-cell:first-of-type,
   mat-header-cell:first-of-type {
