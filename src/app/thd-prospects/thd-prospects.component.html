@@ -130,9 +130,11 @@
                   <span class="sap-icon--sorting-ranking sap-icon--s"></span>
                 </div></div
             ></mat-header-cell>
-            <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">{{
-              product.fullName
-            }}</mat-cell>
+            <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
+              <div class="name-wrap">
+                {{ product.fullName }}
+              </div>
+            </mat-cell>
           </ng-container>
 
           <!-- Phone Column -->

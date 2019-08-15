@@ -84,6 +84,9 @@
         color: var(--fd-color-text-2);
       }
     }
+    & .name-wrap {
+      max-width: 100px;
+    }
   }
 
   .product-row:not(.expanded) {
