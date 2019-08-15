@@ -81,9 +81,26 @@
                 </div>
               </div>
             </mat-header-cell>
-            <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">{{
-              product.proXtraId
-            }}</mat-cell>
+            <mat-cell
+              *matCellDef="let product"
+              class="fd-has-type-minus-1 visible-td-status"
+            >
+              <div *ngIf="product.status === 'created'">
+                <div fd-status-label [statusIcon]="'available'">
+                  {{ product.proXtraId }}
+                </div>
+              </div>
+              <div *ngIf="product.status === 'pending'">
+                <div fd-status-label [statusIcon]="'away'">
+                  {{ product.proXtraId }}
+                </div>
+              </div>
+              <div *ngIf="product.status === 'none'" class="create-account">
+                <div fd-status-label [statusIcon]="'offline'">
+                  {{ product.proXtraId }}
+                </div>
+              </div>
+            </mat-cell>
           </ng-container>
 
           <!-- Full Name Column -->
@@ -250,7 +267,3 @@
     </fd-panel-body>
   </fd-panel>
 </div>
-
-<!-- <div *ngIf="currentWindowWidth >= 768">
-  <p>I'm the desktop version...coming soon.</p>
-</div> -->

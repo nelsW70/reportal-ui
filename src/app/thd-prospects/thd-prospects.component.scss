@@ -124,6 +124,16 @@
     }
   }
 
+  .visible-td-status {
+    // STATUS ICON
+    .fd-status-label--available::before,
+    .fd-status-label--away::before,
+    .fd-status-label--busy::before,
+    .fd-status-label--offline::before {
+      background-image: none;
+    }
+  }
+
   // STATUS ICON
   .fd-status-label--available::after,
   .fd-status-label--away::after,
