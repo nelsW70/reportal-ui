@@ -17,9 +17,9 @@ export interface ProductInfo {
   email: string;
   phoneNumber: string;
   signUpDate: string;
-  storesPurchasedFrom?: string;
+  storesPurchasedFrom: string;
   status: string;
-  sapBranchNumber?: string;
+  sapBranchNumber: string;
 }
 
 const data: ProductInfo[] = [
