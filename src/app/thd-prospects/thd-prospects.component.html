@@ -208,20 +208,12 @@
                 </div>
                 <div class="fd-has-margin-top-small fd-has-margin-bottom-tiny">
                   <div *ngIf="detail.product.status === 'created'">
-                    <div
-                      fd-status-label
-                      [statusIcon]="'available'"
-                      class="fd-has-type-minus-1"
-                    >
+                    <div fd-status-label [statusIcon]="'available'">
                       Account Created
                     </div>
                   </div>
                   <div *ngIf="detail.product.status === 'pending'">
-                    <div
-                      fd-status-label
-                      [statusIcon]="'away'"
-                      class="fd-has-type-minus-1"
-                    >
+                    <div fd-status-label [statusIcon]="'away'">
                       Pending Account Creation
                     </div>
                   </div>
