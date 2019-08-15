@@ -132,6 +132,12 @@
     .fd-status-label--offline::before {
       background-image: none;
     }
+    .fd-status-label--available::after,
+    .fd-status-label--away::after,
+    .fd-status-label--busy::after,
+    .fd-status-label--offline::after {
+      top: 0;
+    }
   }
 
   // STATUS ICON
@@ -139,13 +145,13 @@
   .fd-status-label--away::after,
   .fd-status-label--busy::after,
   .fd-status-label--offline::after {
-    top: 2px;
+    top: 0;
   }
 
   .fd-status-label--available::before,
   .fd-status-label--away::before,
   .fd-status-label--busy::before,
   .fd-status-label--offline::before {
-    top: 6px;
+    top: 4px;
   }
 }

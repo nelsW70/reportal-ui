@@ -86,17 +86,29 @@
               class="fd-has-type-minus-1 visible-td-status"
             >
               <div *ngIf="product.status === 'created'">
-                <div fd-status-label [statusIcon]="'available'">
+                <div
+                  fd-status-label
+                  [statusIcon]="'available'"
+                  class="fd-has-type-minus-1"
+                >
                   {{ product.proXtraId }}
                 </div>
               </div>
               <div *ngIf="product.status === 'pending'">
-                <div fd-status-label [statusIcon]="'away'">
+                <div
+                  fd-status-label
+                  [statusIcon]="'away'"
+                  class="fd-has-type-minus-1"
+                >
                   {{ product.proXtraId }}
                 </div>
               </div>
               <div *ngIf="product.status === 'none'" class="create-account">
-                <div fd-status-label [statusIcon]="'offline'">
+                <div
+                  fd-status-label
+                  [statusIcon]="'offline'"
+                  class="fd-has-type-minus-1"
+                >
                   {{ product.proXtraId }}
                 </div>
               </div>
@@ -192,23 +204,33 @@
                     {{ detail.product.storesPurchasedFrom }}
                   </span>
                 </div>
-                <div *ngIf="detail.product.status === 'created'">
-                  <div fd-status-label [statusIcon]="'available'">
-                    Account Created
+                <div class="fd-has-margin-top-small fd-has-margin-bottom-tiny">
+                  <div *ngIf="detail.product.status === 'created'">
+                    <div
+                      fd-status-label
+                      [statusIcon]="'available'"
+                      class="fd-has-type-minus-1"
+                    >
+                      Account Created
+                    </div>
                   </div>
-                </div>
-                <div *ngIf="detail.product.status === 'pending'">
-                  <div fd-status-label [statusIcon]="'away'">
-                    Pending Account Creation
+                  <div *ngIf="detail.product.status === 'pending'">
+                    <div
+                      fd-status-label
+                      [statusIcon]="'away'"
+                      class="fd-has-type-minus-1"
+                    >
+                      Pending Account Creation
+                    </div>
                   </div>
-                </div>
-                <div
-                  *ngIf="detail.product.status === 'none'"
-                  class="create-account"
-                >
-                  <button fd-button [options]="'emphasized'">
-                    Create Account
-                  </button>
+                  <div
+                    *ngIf="detail.product.status === 'none'"
+                    class="create-account"
+                  >
+                    <button fd-button [options]="'emphasized'">
+                      Create Account
+                    </button>
+                  </div>
                 </div>
               </div>
             </mat-cell>
