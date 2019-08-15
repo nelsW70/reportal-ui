@@ -138,8 +138,8 @@
     }
   }
 
+  // STATUS ICON
   .visible-td-status {
-    // STATUS ICON
     .fd-status-label--offline::before {
       background-image: none;
     }
@@ -150,16 +150,17 @@
     }
   }
 
-  // STATUS ICON
-  .fd-status-label--available::after,
-  .fd-status-label--away::after,
-  .fd-status-label--offline::after {
-    top: 0;
-  }
+  .expanded-details {
+    .fd-status-label--available::after,
+    .fd-status-label--away::after,
+    .fd-status-label--offline::after {
+      top: 2px;
+    }
 
-  .fd-status-label--available::before,
-  .fd-status-label--away::before,
-  .fd-status-label--offline::before {
-    top: 4px;
+    .fd-status-label--available::before,
+    .fd-status-label--away::before,
+    .fd-status-label--offline::before {
+      top: 6px;
+    }
   }
 }
