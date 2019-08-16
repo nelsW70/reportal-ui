@@ -24,12 +24,12 @@
           >Fake error message</span
         >
       </div>
-      <div fd-form-item class="required-input-fields ">
-        <label fd-form-label for="input-1">Phone Number</label>
+      <div fd-form-item class="required-input-fields">
+        <label fd-form-label for="input-2">Phone Number</label>
         <fd-combobox
-          id="input-1"
-          [(ngModel)]="searchTermOne"
-          [dropdownValues]="dropdownValues1"
+          id="input-2"
+          [(ngModel)]="searchTermTwo"
+          [dropdownValues]="dropdownValues2"
           [placeholder]="'Search by Phone Number'"
           [glyph]="'search'"
           [maxHeight]="'250px'"
@@ -170,14 +170,6 @@
           <ng-container matColumnDef="expandedDetail">
             <mat-cell *matCellDef="let detail">
               <div class="fd-has-type-0 expanded-details">
-                <div class="expanded-details__detail-container">
-                  <div>
-                    SAP Branch Number:&nbsp;
-                  </div>
-                  <div class="expanded-details-info">
-                    {{ detail.product.sapBranchNumber }}
-                  </div>
-                </div>
                 <div class="expanded-details__detail-container">
                   <div>
                     Company:&nbsp;

@@ -46,7 +46,8 @@ th.fd-table__sort-column {
 }
 
 td.cdk-cell.cdk-column-proXtraId.ng-star-inserted,
-td.cdk-cell.cdk-column-company.ng-star-inserted {
+td.cdk-cell.cdk-column-company.ng-star-inserted,
+td.cdk-cell.cdk-column-fullName.ng-star-inserted {
   min-width: 100px;
 }
 
@@ -54,15 +55,16 @@ td.cdk-cell.cdk-column-company.ng-star-inserted {
   min-width: 90px;
 }
 
+td.cdk-cell.cdk-column-storesPurchasedFrom.ng-star-inserted {
+  min-width: 150px;
+}
+
 .full-name-container {
   max-width: 100px;
 }
 
-td.cdk-cell.cdk-column-fullName.ng-star-inserted {
-  min-width: 100px;
-}
 .address-container {
-  max-width: 106px;
+  max-width: 110px;
 }
 
 th.fd-table__sort-column.cdk-header-cell.cdk-column-status.ng-star-inserted,
@@ -70,10 +72,6 @@ th.fd-table__sort-column.cdk-header-cell.cdk-column-status.ng-star-inserted,
   @media screen and (max-width: 1440px) {
     max-width: 130px;
   }
-}
-
-td.cdk-cell.cdk-column-storesPurchasedFrom.ng-star-inserted {
-  min-width: 150px;
 }
 
 th {
