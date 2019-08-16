@@ -1,8 +1,9 @@
-// LARGE TABLE
-
 // FONTS
 td {
   font-size: 12px;
+}
+tr {
+  vertical-align: baseline;
 }
 
 // CREATE ACCOUNT COLUMN
@@ -11,11 +12,6 @@ td {
   & button {
     flex: 1;
   }
-}
-
-// BUTTON
-button.fd-button.fd-button--emphasized {
-  min-width: unset;
 }
 
 // STATUS ICON
@@ -51,6 +47,9 @@ td.cdk-cell.cdk-column-company.ng-star-inserted {
   max-width: 100px;
 }
 
+td.cdk-cell.cdk-column-fullName.ng-star-inserted {
+  min-width: 100px;
+}
 .address-container {
   max-width: 100px;
 }
@@ -68,7 +67,8 @@ th {
   &:nth-child(2),
   &:nth-child(3),
   &:nth-child(4),
-  &:nth-child(5) {
+  &:nth-child(5),
+  &:nth-child(9) {
     padding-top: 2px;
   }
 }
@@ -76,6 +76,6 @@ th {
 .fd-table__sort-column::after {
   margin: 0 6px;
   position: absolute;
-  top: 22px;
+  top: 16px;
   right: 6px;
 }
