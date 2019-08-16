@@ -1,5 +1,33 @@
 // LARGE TABLE
 
+// HAVE TO POSITION THE SORT ICON ABSOLUTE BECAUSE THE LIBRARY IS BUILT IN A VERY INTERESTING WAY AND BREAKS OTHERWISE - THANKS SAP
+th.fd-table__sort-column {
+  position: relative;
+}
+
+td.cdk-cell.cdk-column-proXtraId.ng-star-inserted,
+td.cdk-cell.cdk-column-company.ng-star-inserted {
+  min-width: 100px;
+}
+
+th {
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(4),
+  &:nth-child(5) {
+    padding-top: 2px;
+  }
+}
+
+.fd-table__sort-column::after {
+  @media screen and (min-width: 1024px) {
+    margin: 0 6px;
+    position: absolute;
+    top: 22px;
+    right: 6px;
+  }
+}
+
 // CREATE ACCOUNT COLUMN
 .create-account {
   display: flex;

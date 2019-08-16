@@ -5,7 +5,10 @@
 
     <!-- Pro Xtra Id Column -->
     <ng-container cdkColumnDef="proXtraId">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Pro Xtra ID</th>
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Pro<br />
+        Xtra ID
+      </th>
       <td cdk-cell *cdkCellDef="let product">{{ product.proXtraId }}</td>
     </ng-container>
 
@@ -50,7 +53,8 @@
     <!-- Phone Column -->
     <ng-container cdkColumnDef="phoneNumber">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Phone Number
+        Phone<br />
+        Number
       </th>
       <td cdk-cell *cdkCellDef="let product">
         {{ product.phoneNumber }}
@@ -60,7 +64,8 @@
     <!-- Sign Up Date Column -->
     <ng-container cdkColumnDef="signUpDate">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Sign Up Date
+        Sign Up<br />
+        Date
       </th>
       <td cdk-cell *cdkCellDef="let product">
         {{ product.signUpDate }}
@@ -70,7 +75,8 @@
     <!-- Stores Purchased From Column -->
     <ng-container cdkColumnDef="storesPurchasedFrom">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Stores Purchased From
+        Stores<br />
+        Purchased From
       </th>
       <td cdk-cell *cdkCellDef="let product">
         {{ product.storesPurchasedFrom }}
