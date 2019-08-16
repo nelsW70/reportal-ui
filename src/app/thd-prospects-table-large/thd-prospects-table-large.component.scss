@@ -5,9 +5,38 @@ td {
   font-size: 12px;
 }
 
-// HAVE TO POSITION THE SORT ICON ABSOLUTELY BECAUSE SAP BUILT THE TABLE HEADER
-// SORT ICON AS AN AFTER CLASS INSTEAD OF USING FLEXBOX AND IT WILL WRAP BELOW
-// THE TEXT IF THERE ARE MORE THAN ABOUT SIX CHARACTERS UNLESS WE DO THIS.
+// CREATE ACCOUNT COLUMN
+.create-account {
+  display: flex;
+  & button {
+    flex: 1;
+  }
+}
+
+// BUTTON
+button.fd-button.fd-button--emphasized {
+  min-width: unset;
+}
+
+// STATUS ICON
+.fd-status-label--available::after,
+.fd-status-label--away::after,
+.fd-status-label--busy::after,
+.fd-status-label--offline::after {
+  top: 2px;
+}
+
+.fd-status-label--available::before,
+.fd-status-label--away::before,
+.fd-status-label--busy::before,
+.fd-status-label--offline::before {
+  top: 6px;
+}
+
+// HAVE TO POSITION THE SORT ICON ABSOLUTELY AND DO ALL THE STYLING BELOW BECAUSE
+// SAP BUILT THE TABLE HEADER SORT ICON AS AN AFTER CLASS INSTEAD OF USING FLEXBOX
+// AND IT WILL WRAP BELOW THE TEXT IF THERE ARE MORE THAN ABOUT SIX CHARACTERS
+// UNLESS WE DO THIS.
 
 th.fd-table__sort-column {
   position: relative;
@@ -16,6 +45,23 @@ th.fd-table__sort-column {
 td.cdk-cell.cdk-column-proXtraId.ng-star-inserted,
 td.cdk-cell.cdk-column-company.ng-star-inserted {
   min-width: 100px;
+}
+
+.full-name-container {
+  max-width: 100px;
+}
+
+.address-container {
+  max-width: 100px;
+}
+
+th.fd-table__sort-column.cdk-header-cell.cdk-column-status.ng-star-inserted,
+.status-container {
+  max-width: 130px;
+}
+
+td.cdk-cell.cdk-column-storesPurchasedFrom.ng-star-inserted {
+  min-width: 150px;
 }
 
 th {
@@ -32,27 +78,4 @@ th {
   position: absolute;
   top: 22px;
   right: 6px;
-}
-
-// CREATE ACCOUNT COLUMN
-.create-account {
-  display: flex;
-  & button {
-    flex: 1;
-  }
-}
-
-// STATUS ICON
-.fd-status-label--available::after,
-.fd-status-label--away::after,
-.fd-status-label--busy::after,
-.fd-status-label--offline::after {
-  top: 2px;
-}
-
-.fd-status-label--available::before,
-.fd-status-label--away::before,
-.fd-status-label--busy::before,
-.fd-status-label--offline::before {
-  top: 6px;
 }
