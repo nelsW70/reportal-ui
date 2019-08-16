@@ -118,6 +118,25 @@ main {
       }
     }
   }
+  &__thd {
+    input {
+      &.fd-form__control {
+        height: 38px;
+      }
+      &.fd-input {
+        height: 38px;
+      }
+    }
+
+    .fd-input-group {
+      & input {
+        height: 38px;
+      }
+      & .fd-input-group__addon {
+        height: 38px;
+      }
+    }
+  }
 }
 
 // CUSTOM INPUTS

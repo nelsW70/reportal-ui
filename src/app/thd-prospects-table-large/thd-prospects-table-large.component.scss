@@ -62,12 +62,14 @@ td.cdk-cell.cdk-column-fullName.ng-star-inserted {
   min-width: 100px;
 }
 .address-container {
-  max-width: 100px;
+  max-width: 106px;
 }
 
 th.fd-table__sort-column.cdk-header-cell.cdk-column-status.ng-star-inserted,
 .status-container {
-  max-width: 130px;
+  @media screen and (max-width: 1440px) {
+    max-width: 130px;
+  }
 }
 
 td.cdk-cell.cdk-column-storesPurchasedFrom.ng-star-inserted {
