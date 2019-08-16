@@ -59,12 +59,23 @@ td.cdk-cell.cdk-column-storesPurchasedFrom.ng-star-inserted {
   min-width: 150px;
 }
 
+.phone-container {
+  min-width: 80px;
+}
+
 .full-name-container {
-  max-width: 100px;
+  @media screen and (max-width: 1440px) {
+    max-width: 100px;
+  }
 }
 
 .address-container {
-  max-width: 110px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 150px;
+  & .address-item {
+    padding-right: 4px;
+  }
 }
 
 th.fd-table__sort-column.cdk-header-cell.cdk-column-status.ng-star-inserted,

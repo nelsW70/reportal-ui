@@ -27,7 +27,7 @@ const data: ProductInfo[] = [
 
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
     phoneNumber: '(555) 555-5555',
     signUpDate: 'MM/DD/YYYY',
@@ -39,7 +39,7 @@ const data: ProductInfo[] = [
 
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
     phoneNumber: '(555) 555-5555',
     signUpDate: 'MM/DD/YYYY',
@@ -51,7 +51,7 @@ const data: ProductInfo[] = [
 
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
     phoneNumber: '(555) 555-5555',
     signUpDate: 'MM/DD/YYYY',
@@ -63,7 +63,7 @@ const data: ProductInfo[] = [
 
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
     phoneNumber: '(555) 555-5555',
     signUpDate: 'MM/DD/YYYY',
@@ -75,7 +75,7 @@ const data: ProductInfo[] = [
 
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
     phoneNumber: '(555) 555-5555',
     signUpDate: 'MM/DD/YYYY',
@@ -87,7 +87,7 @@ const data: ProductInfo[] = [
 
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
     phoneNumber: '(555) 555-5555',
     signUpDate: 'MM/DD/YYYY',
@@ -99,7 +99,7 @@ const data: ProductInfo[] = [
 
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
     phoneNumber: '(555) 555-5555',
     signUpDate: 'MM/DD/YYYY',
@@ -111,7 +111,7 @@ const data: ProductInfo[] = [
 
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
     phoneNumber: '(555) 555-5555',
     signUpDate: 'MM/DD/YYYY',
@@ -123,7 +123,7 @@ const data: ProductInfo[] = [
 
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE, ZIP',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
     phoneNumber: '(555) 555-5555',
     signUpDate: 'MM/DD/YYYYUND',

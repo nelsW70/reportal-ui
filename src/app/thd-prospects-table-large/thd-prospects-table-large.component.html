@@ -39,7 +39,15 @@
       </th>
       <td cdk-cell *cdkCellDef="let product">
         <div class="address-container">
-          {{ product.address }}
+          <div class="address-item">{{ product.addressOne }},</div>
+          <div class="address-item">
+            {{ product.addressTwo }}
+          </div>
+          <div class="address-item">{{ product.city }},</div>
+          <div class="address-item">{{ product.state }}</div>
+          <div class="address-item">
+            {{ product.zip }}
+          </div>
         </div>
       </td>
     </ng-container>
@@ -50,7 +58,9 @@
         Email
       </th>
       <td cdk-cell *cdkCellDef="let product">
-        {{ product.email }}
+        <div class="email-container">
+          {{ product.email }}
+        </div>
       </td>
     </ng-container>
 
@@ -61,7 +71,9 @@
         Number
       </th>
       <td cdk-cell *cdkCellDef="let product">
-        {{ product.phoneNumber }}
+        <div class="phone-container">
+          {{ product.phoneNumber }}
+        </div>
       </td>
     </ng-container>
 
