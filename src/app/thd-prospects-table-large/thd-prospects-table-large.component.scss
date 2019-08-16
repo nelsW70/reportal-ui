@@ -1,6 +1,14 @@
 // LARGE TABLE
 
-// HAVE TO POSITION THE SORT ICON ABSOLUTE BECAUSE THE LIBRARY IS BUILT IN A VERY INTERESTING WAY AND BREAKS OTHERWISE - THANKS SAP
+// FONTS
+td {
+  font-size: 12px;
+}
+
+// HAVE TO POSITION THE SORT ICON ABSOLUTELY BECAUSE SAP BUILT THE TABLE HEADER
+// SORT ICON AS AN AFTER CLASS INSTEAD OF USING FLEXBOX AND IT WILL WRAP BELOW
+// THE TEXT IF THERE ARE MORE THAN ABOUT SIX CHARACTERS UNLESS WE DO THIS.
+
 th.fd-table__sort-column {
   position: relative;
 }
@@ -20,12 +28,10 @@ th {
 }
 
 .fd-table__sort-column::after {
-  @media screen and (min-width: 1024px) {
-    margin: 0 6px;
-    position: absolute;
-    top: 22px;
-    right: 6px;
-  }
+  margin: 0 6px;
+  position: absolute;
+  top: 22px;
+  right: 6px;
 }
 
 // CREATE ACCOUNT COLUMN
