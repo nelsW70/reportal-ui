@@ -72,7 +72,9 @@
         Date
       </th>
       <td cdk-cell *cdkCellDef="let product">
-        {{ product.signUpDate }}
+        <div class="sign-up-container">
+          {{ product.signUpDate }}
+        </div>
       </td>
     </ng-container>
 

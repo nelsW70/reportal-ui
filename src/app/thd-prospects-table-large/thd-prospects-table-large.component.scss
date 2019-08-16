@@ -14,6 +14,11 @@ tr {
   }
 }
 
+// HAVE TO POSITION THE SORT ICON ABSOLUTELY AND DO ALL THE STYLING BELOW BECAUSE
+// SAP BUILT THE TABLE HEADER SORT ICON AS A PSEUDO CLASS INSTEAD OF MARKUP USING
+// FLEXBOX AND IT WILL WRAP BELOW THE TEXT IF THERE ARE MORE THAN ABOUT SIX CHARACTERS
+// UNLESS WE DO THIS.
+
 // STATUS ICON
 .fd-status-label--available::after,
 .fd-status-label--away::after,
@@ -29,10 +34,12 @@ tr {
   top: 6px;
 }
 
-// HAVE TO POSITION THE SORT ICON ABSOLUTELY AND DO ALL THE STYLING BELOW BECAUSE
-// SAP BUILT THE TABLE HEADER SORT ICON AS AN AFTER CLASS INSTEAD OF USING FLEXBOX
-// AND IT WILL WRAP BELOW THE TEXT IF THERE ARE MORE THAN ABOUT SIX CHARACTERS
-// UNLESS WE DO THIS.
+.fd-table__sort-column::after {
+  margin: 0 6px;
+  position: absolute;
+  top: 16px;
+  right: 6px;
+}
 
 th.fd-table__sort-column {
   position: relative;
@@ -41,6 +48,10 @@ th.fd-table__sort-column {
 td.cdk-cell.cdk-column-proXtraId.ng-star-inserted,
 td.cdk-cell.cdk-column-company.ng-star-inserted {
   min-width: 100px;
+}
+
+.sign-up-container {
+  min-width: 90px;
 }
 
 .full-name-container {
@@ -71,11 +82,4 @@ th {
   &:nth-child(9) {
     padding-top: 2px;
   }
-}
-
-.fd-table__sort-column::after {
-  margin: 0 6px;
-  position: absolute;
-  top: 16px;
-  right: 6px;
 }
