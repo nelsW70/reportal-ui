@@ -14,9 +14,10 @@ import { PricingLookupComponent } from './pricing-lookup/pricing-lookup.componen
 import { PricingLookupTableLargeComponent } from './pricing-lookup-table-large/pricing-lookup-table-large.component';
 import { ThdProspectsComponent } from './thd-prospects/thd-prospects.component';
 import { ThdProspectsTableLargeComponent } from './thd-prospects-table-large/thd-prospects-table-large.component';
+import { EDealerComponent } from './e-dealer/e-dealer.component';
 
 @NgModule({
-  declarations: [AppComponent, PricingLookupComponent, PricingLookupTableLargeComponent, ThdProspectsComponent, ThdProspectsTableLargeComponent],
+  declarations: [AppComponent, PricingLookupComponent, PricingLookupTableLargeComponent, ThdProspectsComponent, ThdProspectsTableLargeComponent, EDealerComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

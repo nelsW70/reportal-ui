@@ -1,0 +1,83 @@
+<h4 class="fd-has-type-4">eDealer Data</h4>
+<fd-panel>
+  <fd-panel-header>
+    <fd-panel-head>
+      <h2 fd-panel-title>eDealer Data</h2>
+    </fd-panel-head>
+  </fd-panel-header>
+  <fd-panel-body class="panel-body panel-body--main panel-body--main__edealer">
+    <div fd-form-set>
+      <div class="row-one-large">
+        <div fd-form-item class="required-input-fields ">
+          <label fd-form-label class="required" for="input-1"
+            >Customer Name</label
+          >
+          <fd-combobox
+            id="input-1"
+            [(ngModel)]="searchTermOne"
+            [dropdownValues]="dropdownValues1"
+            [placeholder]="''"
+            [glyph]="'search'"
+            [maxHeight]="'250px'"
+            aria-required="true"
+          >
+          </fd-combobox>
+          <!-- this should probably be done with an ngIf based on validation -->
+          <!-- if invalid - hide the hint text and show the error message  -->
+          <p class="fd-has-type-minus-1 hint-text">
+            Search Customer Name or Number
+          </p>
+          <span class="error-message fd-has-type-minus-1"
+            >Fake error message</span
+          >
+        </div>
+        <div fd-form-item class="required-input-fields">
+          <label fd-form-label class="required" for="input-2"
+            >Customer Number</label
+          >
+          <input
+            fd-form-control
+            type="text"
+            id="input-2"
+            aria-required="true"
+            disabled
+          />
+          <!-- this should probably be done with an ngIf based on validation -->
+          <span class="error-message fd-has-type-minus-1"
+            >Fake error message</span
+          >
+        </div>
+        <div fd-form-item>
+          <label fd-form-label class="required" for="select-1"
+            >PPG Store Number</label
+          >
+          <div class="ui icon input">
+            <sui-select
+              id="select-1"
+              name=""
+              class="selection"
+              [(ngModel)]="selectedOption"
+              [isSearchable]="true"
+              [options]="options"
+              placeholder="Select Store"
+              aria-required="true"
+            >
+              <sui-select-option *ngFor="let option of options" [value]="option"
+                >{{ option }}
+              </sui-select-option>
+            </sui-select>
+          </div>
+          <!-- this should probably be done with an ngIf based on validation -->
+          <span class="error-message fd-has-type-minus-1"
+            >Fake error message</span
+          >
+        </div>
+        <div fd-form-item>
+          <button class="btn-100" fd-button [options]="'emphasized'">
+            Get eDealer Data
+          </button>
+        </div>
+      </div>
+    </div>
+  </fd-panel-body>
+</fd-panel>
