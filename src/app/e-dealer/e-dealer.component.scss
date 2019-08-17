@@ -1,3 +1,17 @@
+// FONTS
+.secondary {
+  h5.text-medium {
+    color: var(--fd-color-text-2);
+    margin-bottom: 0.25rem;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
 // PANELS
 .fd-panel {
   margin: 1.25rem 0 0.5rem 0;
@@ -7,6 +21,10 @@
 .fd-panel__body,
 .fd-panel__filters {
   padding: 1rem;
+}
+
+.secondary .fd-panel {
+  height: fit-content;
 }
 
 // INPUTS
