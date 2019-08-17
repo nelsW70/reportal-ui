@@ -1,6 +1,6 @@
 // PANELS
 .fd-panel {
-  margin: 1.25rem 0;
+  margin: 1.25rem 0 0.5rem 0;
 }
 
 .fd-panel__header,
@@ -50,5 +50,13 @@
 
   .row-two {
     max-width: 185px;
+  }
+  .secondary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & fd-panel {
+      width: calc(50% - 0.75rem);
+    }
   }
 }
