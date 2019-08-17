@@ -137,11 +137,31 @@ main {
       }
     }
   }
+  &__edealer {
+    input {
+      &.fd-form__control {
+        height: 38px;
+      }
+      &.fd-input {
+        height: 38px;
+      }
+    }
+
+    .fd-input-group {
+      & input {
+        height: 38px;
+      }
+      & .fd-input-group__addon {
+        height: 38px;
+      }
+    }
+  }
 }
 
 // CUSTOM INPUTS
 .panel-body--main {
-  &__pricing {
+  &__pricing,
+  &__edealer {
     .ui.search.selection.dropdown > input.search {
       padding-left: 10px;
       left: 0;

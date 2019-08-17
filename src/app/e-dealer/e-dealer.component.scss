@@ -1,0 +1,32 @@
+// PANELS
+.fd-panel {
+  margin: 1.25rem 0;
+}
+
+.fd-panel__header,
+.fd-panel__body,
+.fd-panel__filters {
+  padding: 1rem;
+}
+
+// INPUTS
+.required-input-fields {
+  margin-bottom: 4px;
+  min-height: 94px;
+  @media only screen and (min-width: 1024px) {
+    min-height: 84px;
+  }
+}
+
+// TOP PANEL LAYOUT
+.row-one {
+  max-width: 900px;
+}
+
+.inline-form-inputs {
+  display: flex;
+  justify-content: space-between;
+  & .fd-form__item {
+    width: calc(50% - 4px);
+  }
+}

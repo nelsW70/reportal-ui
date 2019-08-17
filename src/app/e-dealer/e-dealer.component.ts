@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./e-dealer.component.scss']
 })
 export class EDealerComponent implements OnInit {
+  // fake combobox values and auto-complete for demo
+  searchTermOne = '';
+  searchTermTwo = '';
+  dropdownValues1 = ['a', 'b', 'c', 'd'];
+  dropdownValues2 = ['a', 'b', 'c', 'd'];
 
-  constructor() { }
+  // fake values for semantic ui select
+  selectedOption = [];
+  options: Array<string> = ['one', 'two', 'three', 'four', 'five'];
 
-  ngOnInit() {
-  }
+  constructor() {}
 
+  ngOnInit() {}
 }
