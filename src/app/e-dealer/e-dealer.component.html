@@ -8,7 +8,7 @@
   <fd-panel-body class="panel-body panel-body--main panel-body--main__edealer">
     <div fd-form-set>
       <div class="row-one">
-        <div fd-form-item class="required-input-fields">
+        <div fd-form-item class="required-input-fields row-one__col-one">
           <label fd-form-label class="required" for="input-1"
             >Customer Name</label
           >
@@ -31,7 +31,7 @@
             >Fake error message</span
           >
         </div>
-        <div class="inline-form-inputs">
+        <div class="inline-form-inputs row-one__col-two">
           <div fd-form-item class="required-input-fields">
             <label fd-form-label class="required" for="input-2"
               >Customer Number</label
@@ -76,11 +76,11 @@
             >
           </div>
         </div>
-        <div fd-form-item>
-          <button class="btn-100" fd-button [options]="'emphasized'">
-            Get eDealer Data
-          </button>
-        </div>
+      </div>
+      <div fd-form-item class="row-two">
+        <button class="btn-100" fd-button [options]="'emphasized'">
+          Get eDealer Data
+        </button>
       </div>
     </div>
   </fd-panel-body>

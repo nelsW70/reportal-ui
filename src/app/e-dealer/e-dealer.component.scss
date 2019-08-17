@@ -13,9 +13,6 @@
 .required-input-fields {
   margin-bottom: 4px;
   min-height: 94px;
-  @media only screen and (min-width: 1024px) {
-    min-height: 84px;
-  }
 }
 
 // TOP PANEL LAYOUT
@@ -28,5 +25,30 @@
   justify-content: space-between;
   & .fd-form__item {
     width: calc(50% - 4px);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  & .fd-form__item {
+    margin-bottom: 0;
+  }
+
+  .row-one {
+    display: flex;
+    width: 100%;
+    &__col-one {
+      width: 365px;
+      padding-right: 16px;
+    }
+    &__col-two {
+      flex: 1;
+    }
+    & .inline-form-inputs .fd-form__item {
+      width: calc(50% - 8px);
+    }
+  }
+
+  .row-two {
+    max-width: 185px;
   }
 }
