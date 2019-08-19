@@ -17,7 +17,14 @@ import { ThdProspectsTableLargeComponent } from './thd-prospects-table-large/thd
 import { EDealerComponent } from './e-dealer/e-dealer.component';
 
 @NgModule({
-  declarations: [AppComponent, PricingLookupComponent, PricingLookupTableLargeComponent, ThdProspectsComponent, ThdProspectsTableLargeComponent, EDealerComponent],
+  declarations: [
+    AppComponent,
+    PricingLookupComponent,
+    PricingLookupTableLargeComponent,
+    ThdProspectsComponent,
+    ThdProspectsTableLargeComponent,
+    EDealerComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
