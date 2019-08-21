@@ -92,6 +92,14 @@
       break-inside: avoid;
       -webkit-column-break-inside: avoid;
     }
+    & .items-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      &__item {
+        width: calc(50% - 1rem);
+      }
+    }
   }
 }
 
