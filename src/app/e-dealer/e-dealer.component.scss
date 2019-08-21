@@ -14,7 +14,7 @@
 
 // PANELS
 .fd-panel {
-  margin: 1.25rem 0 0.5rem 0;
+  margin: 1.25rem 0 1rem 0;
 }
 
 .fd-panel__header,
@@ -70,14 +70,27 @@
     max-width: 185px;
   }
   .secondary {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    // height: 1000px;
-    max-height: 80vh;
     & fd-panel {
-      width: calc(50% - 0.5rem);
-      margin: 0 1rem 1rem 0;
+      margin: unset;
+    }
+    column-count: 2;
+    -webkit-column-count: 2;
+    column-gap: 0;
+    -webkit-column-gap: 0;
+    & .mason-panel {
+      &:nth-child(1) {
+        padding: 0 1rem 1rem 0;
+      }
+      &:nth-child(2) {
+        padding: 0 1rem 0 0;
+      }
+      &:nth-child(3) {
+        padding: 0 0 1rem 0;
+      }
+    }
+    & .mason-panel__content {
+      break-inside: avoid;
+      -webkit-column-break-inside: avoid;
     }
   }
 }
@@ -86,24 +99,27 @@
   .secondary {
     display: flex;
     flex-direction: column;
-    & .mason-layout {
+    & fd-panel {
+      margin: unset;
+    }
+    & .mason-panel {
       margin: 0.5rem 0;
       &:first-of-type {
         margin-top: 0;
       }
     }
   }
-  .mason-layout {
-    &__details {
+  .mason-panel {
+    &--details {
       order: 1;
     }
-    &__technical {
+    &--technical {
       order: 3;
     }
-    &__marketing {
+    &--marketing {
       order: 2;
     }
-    &__delivery {
+    &--delivery {
       order: 4;
     }
   }
