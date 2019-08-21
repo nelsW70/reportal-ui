@@ -33,7 +33,7 @@
   min-height: 94px;
 }
 
-// TOP PANEL LAYOUT
+// LAYOUT
 .row-one {
   max-width: 900px;
 }
@@ -43,6 +43,14 @@
   justify-content: space-between;
   & .fd-form__item {
     width: calc(50% - 4px);
+  }
+}
+.items-container {
+  &__item--color-matching:last-of-type {
+    margin-bottom: 0 !important;
+    & .details-container {
+      margin-bottom: 8px !important;
+    }
   }
 }
 
