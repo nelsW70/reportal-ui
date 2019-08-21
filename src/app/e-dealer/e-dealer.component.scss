@@ -46,7 +46,8 @@
   }
 }
 .items-container {
-  &__item--color-matching:last-of-type {
+  &__item--color-matching:last-of-type,
+  &__item--delivery {
     margin-bottom: 0 !important;
     & .details-container {
       margin-bottom: 8px !important;
