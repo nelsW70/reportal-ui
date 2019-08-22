@@ -221,6 +221,7 @@
   }
   .fd-table__sort-column::after {
     content: unset;
+    display: none;
   }
 
   .element-row {
