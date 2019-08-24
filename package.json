@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "postcss ./node_modules/fundamental-styles/dist/fundamental-styles.css -o ./node_modules/fundamental-styles/dist/fundamental-styles.css && postcss ./node_modules/fundamental-styles/dist/fundamental-styles.min.css -o ./node_modules/fundamental-styles/dist/fundamental-styles.min.css"
+    "postinstall": "node ./node_modules/postcss-cli/bin/postcss ./node_modules/fundamental-styles/dist/fundamental-styles.css -o ./node_modules/fundamental-styles/dist/fundamental-styles.css && node ./node_modules/postcss-cli/bin/postcss ./node_modules/fundamental-styles/dist/fundamental-styles.min.css -o ./node_modules/fundamental-styles/dist/fundamental-styles.min.css"
   },
   "private": true,
   "dependencies": {
