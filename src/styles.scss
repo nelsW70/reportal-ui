@@ -3,7 +3,7 @@
 
 body {
   @media only screen and (max-width: 768px) {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
 }
 
@@ -24,14 +24,14 @@ body {
       color: #515559;
     }
     &.cdk-column-expandedDetail.mat-column-expandedDetail {
-      padding: 8px !important;
+      padding: 1rem !important;
       & .expanded-details > div {
         margin-bottom: 4px;
       }
     }
   }
   .mat-header-cell.fd-has-type-minus-1 {
-    color:#74777A;
+    color: #74777a;
     text-transform: uppercase;
     font-weight: 400;
   }
@@ -43,7 +43,7 @@ th {
 
 .panel-body {
   & .fd-has-type-minus-1 {
-    color:#6A6d70;
+    color: #6a6d70;
   }
   & mat-cell.fd-has-type-minus-1 {
     color: unset;
@@ -51,7 +51,7 @@ th {
 }
 
 .error-message.fd-has-type-minus-1 {
-  color: #BB0000;
+  color: #bb0000;
   // fake: this should probably be done with an ngIf wrapped
   // around the span and based on validation so delete the display
   // none line after that's been written
@@ -63,7 +63,7 @@ th {
 }
 
 .fd-has-type-minus-1.hint-text {
-  color:#74777A;
+  color: #74777a;
   margin-bottom: 0;
   margin-top: 0.25rem;
 }
@@ -76,7 +76,7 @@ th {
 // REQUIRED ASTERISK
 .required:after {
   content: ' *';
-  color: #BB0000;
+  color: #bb0000;
 }
 
 // MAIN CONTAINER
@@ -167,8 +167,8 @@ main {
       left: 0;
       width: calc(100% - 37px);
       &:focus {
-        box-shadow: 0 0 0 1px #0A6ED1 !important;
-        border: 1px solid #0A6ED1 !important;
+        box-shadow: 0 0 0 1px #0a6ed1 !important;
+        border: 1px solid #0a6ed1 !important;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
       }
@@ -217,7 +217,7 @@ main {
     }
   }
   .ui.selection.dropdown > .dropdown.icon {
-    color: #0A6ED1;
+    color: #0a6ed1;
     background-color: rgb(249, 249, 249);
     opacity: 0.85;
     font-size: 20px;
@@ -252,18 +252,18 @@ a[class*='fd-button--']::before {
 
 .fd-button.sap-icon--navigation-down-arrow:hover,
 .fd-input-group__addon.fd-input-group__addon--after:hover {
-  border-color:#085CAF;
+  border-color: #085caf;
 }
 
 // ICONS
 .sap-icon--search {
-  color: #0A6ED1;
+  color: #0a6ed1;
 }
 
 // TABLE
 .mat-table {
   .mat-header-row {
-    background-color: #F4F4F4;
+    background-color: #f4f4f4;
   }
 }
 
@@ -278,16 +278,16 @@ a[class*='fd-button--']::before {
   justify-content: space-between;
 }
 
-
 // TABLE HEADER/DATA TEXT ALIGNMENT: BECAUSE OF IE.
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   /* IE10+ CSS styles go here */
-  .mat-header-row, .mat-row {
+  .mat-header-row,
+  .mat-row {
     -ms-flex-align: stretch;
   }
-  .cdk-table{
+  .cdk-table {
     & tr.cdk-row {
       vertical-align: top;
     }
-  } 
+  }
 }
