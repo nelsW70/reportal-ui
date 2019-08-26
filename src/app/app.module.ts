@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { FundamentalNgxModule } from 'fundamental-ngx';
 import {
   MatTableModule,
@@ -36,6 +37,7 @@ import { EDealerComponent } from './e-dealer/e-dealer.component';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    FlexLayoutModule,
     FundamentalNgxModule,
     MatTableModule,
     CdkTableModule,

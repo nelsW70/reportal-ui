@@ -1,8 +1,49 @@
-<h4>fake nav test</h4>
+<!-- <h4>fake nav test</h4>
 <a routerLink="pricing-lookup" style="margin-right: 1rem;">pricing lookup</a>
 <a routerLink="thd-prospects" style="margin-right: 1rem;">thd prospects</a>
-<a routerLink="eDealer">eDealer data</a>
+<a routerLink="eDealer">eDealer data</a> -->
 
-<main>
-  <router-outlet></router-outlet>
-</main>
+<div>
+  <mat-toolbar color="primary">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <a mat-button class="companyName" routerLink="/">
+      <span>Site name</span>
+    </a>
+    <span class="example-spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true">
+      <a mat-button routerLink="/about-us">About us</a>
+      <a mat-button routerLink="/prices">Prices</a>
+      <a mat-button routerLink="/start-page">Start page</a>
+      <a mat-button routerLink="/offer">Offer</a>
+      <a mat-button routerLink="/contact">Contact</a>
+    </div>
+  </mat-toolbar>
+  <mat-sidenav-container fxFlexFill class="example-container">
+    <mat-sidenav
+      color="primary"
+      #sidenav
+      fxLayout="column"
+      mode="over"
+      opened="false"
+      fxHide.gt-sm="true"
+    >
+      <div fxLayout="column">
+        <a mat-button routerLink="/about-us">About us</a>
+        <a mat-button routerLink="/prices">Prices</a>
+        <a mat-button routerLink="/start-page">Start page</a>
+        <a mat-button routerLink="/offer">Offer</a>
+        <a mat-button routerLink="/contact">Contact</a>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
