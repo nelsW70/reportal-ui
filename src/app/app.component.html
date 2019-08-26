@@ -1,11 +1,12 @@
-<!-- <h4>fake nav test</h4>
-<a routerLink="pricing-lookup" style="margin-right: 1rem;">pricing lookup</a>
-<a routerLink="thd-prospects" style="margin-right: 1rem;">thd prospects</a>
-<a routerLink="eDealer">eDealer data</a> -->
-
 <div>
-  <mat-toolbar color="primary">
-    <a mat-button class="companyName" routerLink="/">
+  <mat-toolbar>
+    <img
+      class="navbar-logo"
+      src="assets/images/PPG_Blue_Bug.png"
+      alt="PPG logo"
+    />
+    <span class="example-spacer"></span>
+    <a mat-button class="company-name" routerLink="/">
       <span>Reportal</span>
     </a>
     <span class="example-spacer"></span>
@@ -30,7 +31,7 @@
       opened="false"
       fxHide.gt-sm="true"
     >
-      <div fxLayout="column">
+      <div class="sidenav-list" fxLayout="column">
         <a mat-button routerLink="/pricing-lookup">Pricing Lookup</a>
         <a mat-button routerLink="/thd-prospects">THD Prospects</a>
         <a mat-button routerLink="/eDealer">eDealer Data</a>

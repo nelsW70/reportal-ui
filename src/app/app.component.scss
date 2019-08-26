@@ -1,40 +1,38 @@
-// .companyName {
-//   font-size: 150%;
-// }
-
 .mat-toolbar {
-  height: 4vh;
+  height: 3.25vh;
+  background-color: #354a5f;
+  color: #ffffff;
+  & .company-name {
+    font-size: 18px;
+    font-family: '72';
+    font-weight: 300;
+  }
 }
-
-// div {
-//   overflow: inherit;
-// }
 
 .mat-sidenav-container {
-  // background-color: lightskyblue;
-  min-height: 96vh !important;
+  min-height: 96.75vh !important;
 }
 
-// a {
-//   text-decoration: none;
-//   font-size: 110%;
-//   white-space: normal;
-// }
+.mat-sidenav {
+  width: 67.7vw;
 
-// button {
-//   font-size: 110%;
-//   min-width: min-content;
-// }
+  & .sidenav-list {
+    align-items: flex-start;
+    & a {
+      color: #32363a;
+      font-family: '72';
+      font-size: 16px;
+      line-height: 1.25;
+      font-weight: 400;
+      margin-top: 1.25rem;
+    }
+  }
+}
 
-// .example-icon {
-//   padding: 0 14px;
-// }
+.navbar-logo {
+  height: 34px;
+}
 
 .example-spacer {
   flex: 1 1 auto;
 }
-
-// .mat-sidenav-content {
-//   font-size: 200%;
-//   text-align: center;
-// }
