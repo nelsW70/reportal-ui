@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FundamentalNgxModule } from 'fundamental-ngx';
@@ -32,7 +33,8 @@ import { EDealerComponent } from './e-dealer/e-dealer.component';
     FundamentalNgxModule,
     MatTableModule,
     CdkTableModule,
-    SuiModule
+    SuiModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
