@@ -5,6 +5,7 @@
       class="navbar-logo"
       src="assets/images/PPG_Blue_Bug.png"
       alt="PPG logo"
+      (click)="opened ? sidenav.toggle() && (opened = !opened) : null"
     />
     <span class="spacer"></span>
     <a class="company-name">
