@@ -1,18 +1,20 @@
 <div>
   <mat-toolbar>
     <img
+      routerLink="/"
       class="navbar-logo"
       src="assets/images/PPG_Blue_Bug.png"
       alt="PPG logo"
     />
-    <span class="example-spacer"></span>
-    <a mat-button class="company-name" routerLink="/">
+    <span class="spacer"></span>
+    <a class="company-name">
       <span>Reportal</span>
     </a>
-    <span class="example-spacer"></span>
+    <span class="spacer"></span>
     <div fxShow="true" fxHide.gt-sm="true">
-      <button mat-icon-button (click)="sidenav.toggle()">
-        <mat-icon>menu</mat-icon>
+      <button mat-icon-button (click)="sidenav.toggle(); opened = !opened">
+        <mat-icon *ngIf="!opened">menu</mat-icon>
+        <mat-icon *ngIf="opened">close</mat-icon>
       </button>
     </div>
     <div fxShow="true" fxHide.lt-md="true">
@@ -32,9 +34,24 @@
       fxHide.gt-sm="true"
     >
       <div class="sidenav-list" fxLayout="column">
-        <a mat-button routerLink="/pricing-lookup">Pricing Lookup</a>
-        <a mat-button routerLink="/thd-prospects">THD Prospects</a>
-        <a mat-button routerLink="/eDealer">eDealer Data</a>
+        <a
+          mat-button
+          routerLink="/pricing-lookup"
+          (click)="sidenav.toggle(); opened = !opened"
+          >Pricing Lookup</a
+        >
+        <a
+          mat-button
+          routerLink="/thd-prospects"
+          (click)="sidenav.toggle(); opened = !opened"
+          >THD Prospects</a
+        >
+        <a
+          mat-button
+          routerLink="/eDealer"
+          (click)="sidenav.toggle(); opened = !opened"
+          >eDealer Data</a
+        >
       </div>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>
