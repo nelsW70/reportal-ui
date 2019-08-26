@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/pricing-lookup', pathMatch: 'full' },
   { path: 'pricing-lookup', component: PricingLookupComponent },
   { path: 'thd-prospects', component: ThdProspectsComponent },
-  { path: 'e-dealer', component: EDealerComponent },
+  { path: 'eDealer', component: EDealerComponent },
   { path: '**', redirectTo: 'pricing-lookup', pathMatch: 'full' }
 ];
 

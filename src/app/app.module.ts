@@ -7,7 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FundamentalNgxModule } from 'fundamental-ngx';
-import { MatTableModule } from '@angular/material';
+import {
+  MatTableModule,
+  MatIconModule,
+  MatButtonModule,
+  MatSidenavModule,
+  MatToolbarModule
+} from '@angular/material';
 import { CdkTableModule } from '@angular/cdk/table';
 import { SuiModule } from 'ng2-semantic-ui';
 
@@ -34,7 +40,11 @@ import { EDealerComponent } from './e-dealer/e-dealer.component';
     MatTableModule,
     CdkTableModule,
     SuiModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
