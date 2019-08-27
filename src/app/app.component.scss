@@ -1,6 +1,5 @@
 .mat-toolbar {
-  height: 42px;
-  min-height: 3.5vh;
+  height: 48px !important;
   background-color: #354a5f;
   color: #ffffff;
   & .company-name {
@@ -10,7 +9,7 @@
     font-weight: 300;
   }
   & .navbar-logo {
-    height: 30px;
+    height: 34px;
   }
   & .spacer {
     flex: 1 1 auto;
@@ -21,7 +20,7 @@
 }
 
 .mat-sidenav-container {
-  min-height: 96.75vh !important;
+  min-height: calc(100vh - 48px) !important;
 }
 
 .mat-sidenav {
