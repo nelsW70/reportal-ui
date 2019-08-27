@@ -1,11 +1,14 @@
 <div class="landing-page">
   <mat-toolbar>
     <img
-      routerLink="/"
+      routerLink="/pricing-lookup"
       class="navbar-logo"
       src="assets/images/PPG_Blue_Bug.png"
       alt="PPG logo"
-      (click)="opened ? sidenav.toggle() && (opened = !opened) : null"
+      (click)="
+        opened ? sidenav.toggle() && (opened = !opened) && activeLink : null;
+        activeLink = links[0]
+      "
     />
     <span class="spacer"></span>
     <a class="company-name">
@@ -52,7 +55,7 @@
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>
       <div *ngIf="currentWindowWidth >= 768">
-        <mat-tab-group>
+        <!-- <mat-tab-group>
           <mat-tab label="Pricing Lookup">
             <ng-template matTabContent>
               <main>
@@ -74,7 +77,21 @@
               </main>
             </ng-template>
           </mat-tab>
-        </mat-tab-group>
+        </mat-tab-group> -->
+        <nav mat-tab-nav-bar>
+          <a
+            mat-tab-link
+            *ngFor="let link of links"
+            (click)="activeLink = link"
+            [routerLink]="link.path"
+            [active]="activeLink == link"
+          >
+            {{ link.label }}
+          </a>
+        </nav>
+        <main>
+          <router-outlet></router-outlet>
+        </main>
       </div>
       <div *ngIf="currentWindowWidth < 768">
         <main>

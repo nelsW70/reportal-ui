@@ -8,8 +8,17 @@ import { Component, OnInit, HostListener } from '@angular/core';
 export class AppComponent implements OnInit {
   currentWindowWidth: number;
   title = 'reportal';
+
   // sidenav menu status
   opened = false;
+
+  // large screen tab nav
+  links = [
+    { path: 'pricing-lookup', label: 'Pricing Lookup' },
+    { path: 'thd-prospects', label: 'THD Prospects' },
+    { path: 'eDealer', label: 'eDealer' }
+  ];
+  activeLink = this.links[0];
 
   ngOnInit() {
     this.currentWindowWidth = window.innerWidth;
