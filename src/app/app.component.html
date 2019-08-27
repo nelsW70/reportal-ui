@@ -56,9 +56,32 @@
       </div>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>
-      <main>
-        <router-outlet></router-outlet>
-      </main>
+      <div *ngIf="currentWindowWidth >= 768">
+        <mat-tab-group>
+          <mat-tab label="Pricing Lookup">
+            <ng-template matTabContent>
+              <main>
+                <app-pricing-lookup></app-pricing-lookup>
+              </main>
+            </ng-template>
+          </mat-tab>
+          <mat-tab label="THD Prospects">
+            <ng-template matTabContent>
+              Content 2
+            </ng-template>
+          </mat-tab>
+          <mat-tab label="eDealer Data">
+            <ng-template matTabContent>
+              Content 3
+            </ng-template>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+      <div *ngIf="currentWindowWidth < 768">
+        <main>
+          <router-outlet></router-outlet>
+        </main>
+      </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

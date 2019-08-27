@@ -15,6 +15,7 @@ import {
   MatSidenavModule,
   MatToolbarModule
 } from '@angular/material';
+import { MatTabsModule } from '@angular/material/tabs';
 import { CdkTableModule } from '@angular/cdk/table';
 import { SuiModule } from 'ng2-semantic-ui';
 
@@ -46,7 +47,8 @@ import { EDealerComponent } from './e-dealer/e-dealer.component';
     MatIconModule,
     MatButtonModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
