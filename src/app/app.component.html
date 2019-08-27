@@ -1,4 +1,4 @@
-<div>
+<div class="landing-page">
   <mat-toolbar>
     <img
       routerLink="/"
@@ -18,11 +18,6 @@
         <mat-icon *ngIf="opened">close</mat-icon>
       </button>
     </div>
-    <!-- <div fxShow="true" fxHide.lt-md="true">
-      <a mat-button routerLink="/pricing-lookup">Pricing Lookup</a>
-      <a mat-button routerLink="/thd-prospects">THD Prospects</a>
-      <a mat-button routerLink="/eDealer">eDealer Data</a>
-    </div> -->
   </mat-toolbar>
   <mat-sidenav-container fxFlexFill class="example-container">
     <mat-sidenav
@@ -67,12 +62,16 @@
           </mat-tab>
           <mat-tab label="THD Prospects">
             <ng-template matTabContent>
-              Content 2
+              <main>
+                <app-thd-prospects></app-thd-prospects>
+              </main>
             </ng-template>
           </mat-tab>
           <mat-tab label="eDealer Data">
             <ng-template matTabContent>
-              Content 3
+              <main>
+                <app-e-dealer></app-e-dealer>
+              </main>
             </ng-template>
           </mat-tab>
         </mat-tab-group>
