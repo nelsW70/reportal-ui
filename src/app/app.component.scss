@@ -28,7 +28,7 @@
 
   .mat-sidenav {
     width: 67.5vw;
-    max-width: 350px;
+    max-width: 216px;
 
     & .sidenav-list {
       & a {
@@ -38,7 +38,7 @@
         line-height: 1.5;
         font-weight: 400;
         padding: 1rem;
-        width: 10rem;
+        width: 100%;
         &.mat-button {
           text-align: start;
         }
