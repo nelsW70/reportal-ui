@@ -9,15 +9,13 @@
     <div fd-form-set>
       <div fd-form-item class="required-input-fields">
         <label fd-form-label for="input-1">Search Pro Xtra Number</label>
-        <fd-combobox
+        <fd-input-group
+          type="text"
           id="input-1"
-          [(ngModel)]="searchTermOne"
-          [dropdownValues]="dropdownValues1"
-          [placeholder]="'Search by Pro Xtra Number'"
+          [placement]="'after'"
           [glyph]="'search'"
-          [maxHeight]="'250px'"
-        >
-        </fd-combobox>
+          [placeholder]="'Search by Pro Xtra Number'"
+        ></fd-input-group>
         <!-- this should probably be done with an ngIf based on validation -->
         <!-- if invalid - hide the hint text and show the error message  -->
         <span class="error-message fd-has-type-minus-1"
@@ -26,15 +24,13 @@
       </div>
       <div fd-form-item class="required-input-fields">
         <label fd-form-label for="input-2">Phone Number</label>
-        <fd-combobox
+        <fd-input-group
+          type="text"
           id="input-2"
-          [(ngModel)]="searchTermTwo"
-          [dropdownValues]="dropdownValues2"
-          [placeholder]="'Search by Phone Number'"
+          [placement]="'after'"
           [glyph]="'search'"
-          [maxHeight]="'250px'"
-        >
-        </fd-combobox>
+          [placeholder]="'Search by Phone Number'"
+        ></fd-input-group>
         <!-- this should probably be done with an ngIf based on validation -->
         <!-- if invalid - hide the hint text and show the error message  -->
         <span class="error-message fd-has-type-minus-1"

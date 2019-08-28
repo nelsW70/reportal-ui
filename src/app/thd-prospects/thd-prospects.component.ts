@@ -163,11 +163,6 @@ export class MobileDataSource extends DataSource<any> {
 export class ThdProspectsComponent implements OnInit {
   currentWindowWidth: number;
   currentIndex: number = null;
-  // fake combobox values and auto-complete for demo
-  searchTermOne = '';
-  searchTermTwo = '';
-  dropdownValues1 = ['a', 'b', 'c', 'd'];
-  dropdownValues2 = ['a', 'b', 'c', 'd'];
 
   expandedData: any;
   displayedColumns = ['proXtraId', 'fullName', 'phoneNumber'];
