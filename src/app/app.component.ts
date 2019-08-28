@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   links = [
     { path: 'pricing-lookup', label: 'Pricing Lookup' },
     { path: 'thd-prospects', label: 'THD Prospects' },
-    { path: 'eDealer', label: 'eDealer' }
+    { path: 'eDealer', label: 'eDealer Data' }
   ];
   activeLink = this.links[0];
 
