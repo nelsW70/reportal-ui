@@ -27,6 +27,7 @@
   }
 }
 
+// table
 .mat-table {
   .th-header {
     line-height: 1;
@@ -60,6 +61,8 @@ th {
   text-transform: uppercase;
 }
 
+// panel text
+
 .panel-body {
   & .fd-has-type-minus-1 {
     color: #6a6d70;
@@ -68,6 +71,8 @@ th {
     color: unset;
   }
 }
+
+// error messages
 
 .error-message.fd-has-type-minus-1 {
   color: #bb0000;
@@ -100,9 +105,9 @@ th {
 
 // MAIN CONTAINER
 main {
-  margin: 1rem;
+  margin: 1.5rem 1rem 1rem 1rem;
   @media screen and (min-width: 1400px) {
-    margin: 2rem;
+    margin: 1.5rem 6rem 0 6rem;
   }
 }
 
