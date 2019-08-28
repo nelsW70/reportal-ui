@@ -22,7 +22,11 @@
       </button>
     </div>
   </mat-toolbar>
-  <mat-sidenav-container fxFlexFill class="example-container">
+  <mat-sidenav-container
+    fxFlexFill
+    class="example-container"
+    (click)="toggleIcon()"
+  >
     <mat-sidenav
       #sidenav
       position="end"
@@ -30,6 +34,7 @@
       mode="over"
       opened="false"
       fxHide.gt-sm="true"
+      (click)="opened ? sidenav.toggle() && (opened = !opened) : null"
     >
       <div class="sidenav-list" fxLayout="column">
         <a

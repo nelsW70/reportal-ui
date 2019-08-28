@@ -20,6 +20,9 @@ export class AppComponent implements OnInit {
   ];
   activeLink = this.links[0];
 
+  toggleIcon() {
+    this.opened ? (this.opened = !this.opened) : null;
+  }
   ngOnInit() {
     this.currentWindowWidth = window.innerWidth;
   }

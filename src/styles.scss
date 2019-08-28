@@ -17,12 +17,12 @@
       transition: all 225ms;
     }
     &:focus {
-      color: #0254a7;
+      color: #0a6ed1;
       transition: all 225ms;
     }
   }
   .mat-tab-label-active {
-    color: #0254a7;
+    color: #0a6ed1;
     transition: all 225ms;
   }
 }
@@ -62,7 +62,6 @@ th {
 }
 
 // panel text
-
 .panel-body {
   & .fd-has-type-minus-1 {
     color: #6a6d70;
@@ -73,7 +72,6 @@ th {
 }
 
 // error messages
-
 .error-message.fd-has-type-minus-1 {
   color: #bb0000;
   // fake: this should probably be done with an ngIf wrapped
@@ -121,7 +119,7 @@ main {
 .landing-page {
   .mat-tab-nav-bar .mat-ink-bar {
     background-color: #0a6ed1;
-    // width: 100px !important;
+    min-width: 120px !important;
   }
 }
 
