@@ -23,6 +23,7 @@
 
   // SIDENAV
   .mat-sidenav-container {
+    background-color: #edeff0;
     min-height: calc(100vh - 48px) !important;
   }
 
@@ -48,6 +49,7 @@
 
   // LARGE SCREEN TAB NAV
   .mat-tab-nav-bar {
+    background-color: rgb(255, 255, 255);
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
     border-bottom: 0;
   }
