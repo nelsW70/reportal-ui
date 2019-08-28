@@ -35,19 +35,19 @@
         <a
           mat-button
           routerLink="/pricing-lookup"
-          (click)="sidenav.toggle(); opened = !opened"
+          (click)="sidenav.toggle(); opened = !opened; activeLink = links[0]"
           >Pricing Lookup</a
         >
         <a
           mat-button
           routerLink="/thd-prospects"
-          (click)="sidenav.toggle(); opened = !opened"
+          (click)="sidenav.toggle(); opened = !opened; activeLink = links[1]"
           >THD Prospects</a
         >
         <a
           mat-button
           routerLink="/eDealer"
-          (click)="sidenav.toggle(); opened = !opened"
+          (click)="sidenav.toggle(); opened = !opened; activeLink = links[2]"
           >eDealer Data</a
         >
       </div>
@@ -65,15 +65,10 @@
             {{ link.label }}
           </a>
         </nav>
-        <main>
-          <router-outlet></router-outlet>
-        </main>
       </div>
-      <div *ngIf="currentWindowWidth < 960">
-        <main>
-          <router-outlet></router-outlet>
-        </main>
-      </div>
+      <main>
+        <router-outlet></router-outlet>
+      </main>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
