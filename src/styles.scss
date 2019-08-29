@@ -32,8 +32,7 @@
   .th-header {
     line-height: 1;
   }
-  .mat-header-cell,
-  .mat-cell {
+  .mat-header-cell {
     font-family: '72';
     &.fd-has-type-minus-1.fd-has-text-align-right {
       font-size: 12px;
@@ -41,6 +40,18 @@
     }
     &.fd-has-type-minus-1 {
       font-size: 12px;
+      color: rgb(50, 54, 58);
+    }
+  }
+
+  .mat-cell {
+    font-family: '72';
+    &.fd-has-type-minus-1.fd-has-text-align-right {
+      font-size: 14px;
+      color: rgb(50, 54, 58);
+    }
+    &.fd-has-type-minus-1 {
+      font-size: 14px;
       color: rgb(50, 54, 58);
     }
     &.cdk-column-expandedDetail.mat-column-expandedDetail {
@@ -54,6 +65,27 @@
     color: #74777a;
     text-transform: uppercase;
     font-weight: 400;
+  }
+  .fd-status-label {
+    &.fd-status-label {
+      &--available,
+      &--away,
+      &--offline {
+        color: rgb(50, 54, 58);
+      }
+    }
+  }
+}
+
+td {
+  .fd-status-label {
+    &.fd-status-label {
+      &--available,
+      &--away,
+      &--offline {
+        font-size: 12px;
+      }
+    }
   }
 }
 

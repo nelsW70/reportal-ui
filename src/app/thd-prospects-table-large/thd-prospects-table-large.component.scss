@@ -24,14 +24,14 @@ tr {
 .fd-status-label--away::after,
 .fd-status-label--busy::after,
 .fd-status-label--offline::after {
-  top: 2px;
+  top: 0px;
 }
 
 .fd-status-label--available::before,
 .fd-status-label--away::before,
 .fd-status-label--busy::before,
 .fd-status-label--offline::before {
-  top: 6px;
+  top: 4px;
 }
 
 .fd-table__sort-column::after {
