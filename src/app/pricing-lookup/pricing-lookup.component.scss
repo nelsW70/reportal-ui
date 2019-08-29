@@ -78,6 +78,12 @@
       flex-wrap: wrap;
       align-items: center;
 
+      .required-input-fields {
+        &:first-child {
+          min-height: 84px;
+        }
+      }
+
       .fd-form__item {
         &:first-child {
           width: 50%;
@@ -115,11 +121,6 @@
     .row-one-large {
       max-width: 1000px;
     }
-    .row-two-large {
-      .required-input-fields {
-        min-height: 84px;
-      }
-    }
   }
 
   @media only screen and (min-width: 1200px) {
@@ -144,7 +145,6 @@
         &:first-child {
           margin-right: 0;
         }
-
         &:nth-child(3) {
           margin-right: 0;
         }
