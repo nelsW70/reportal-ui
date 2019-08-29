@@ -116,8 +116,14 @@ main {
   background-color: rgb(255, 255, 255);
 }
 
-// TABS
+// SIDENAV OVERLAY
+.mat-drawer-backdrop {
+  @media only screen and (min-width: 960px) {
+    visibility: hidden !important;
+  }
+}
 
+// TABS
 .landing-page {
   .mat-tab-nav-bar .mat-ink-bar {
     background-color: #0a6ed1;
