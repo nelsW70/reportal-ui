@@ -140,6 +140,15 @@ main {
   }
 }
 
+//HAMBURGER ICON
+
+.hamburger {
+  @media only screen and (min-width: 960px) {
+    display: block;
+    visibility: hidden !important;
+  }
+}
+
 // TABS
 .landing-page {
   .mat-tab-nav-bar .mat-ink-bar {
