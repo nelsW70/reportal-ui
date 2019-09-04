@@ -142,12 +142,11 @@
           max-width: 200px;
         }
       }
-    }
-
-    .datepickers-container {
-      width: 50%;
-      max-width: 400px;
-      padding-right: 16px;
+      & .datepickers-container {
+        width: 50%;
+        max-width: 400px;
+        padding-right: 16px;
+      }
     }
   }
 
@@ -159,8 +158,6 @@
 
   @media only screen and (min-width: 1200px) {
     .row-one-large {
-      max-width: 800px;
-
       &__col-two {
         justify-content: flex-start;
         & .fd-form__item:first-child {
@@ -173,16 +170,27 @@
       }
     }
     .row-two-large {
-      // max-width: 1200px;
-
-      // .fd-form__item {
-      //   &:first-child {
-      //     margin-right: 0;
-      //   }
-      //   &:nth-child(3) {
-      //     margin-right: 0;
-      //   }
-      // }
+      max-width: 1240px;
+      .fd-form__item {
+        &:nth-child(2) {
+          padding-right: 16px;
+        }
+        &:nth-child(3) {
+          padding-right: 0;
+        }
+        &:nth-child(4) {
+          padding-right: 16px;
+        }
+        &:nth-child(8) {
+          max-width: 192px;
+        }
+        &:nth-child(9) {
+          max-width: 192px;
+        }
+      }
+      & .datepickers-container {
+        padding-right: 0px;
+      }
     }
   }
 }
