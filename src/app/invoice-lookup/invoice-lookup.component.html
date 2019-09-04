@@ -1,3 +1,319 @@
-<p>
-  invoice-lookup works!
-</p>
+<h4 class="fd-has-type-4">Invoice Lookup</h4>
+<fd-panel>
+  <fd-panel-header>
+    <fd-panel-head>
+      <h2 fd-panel-title>Invoice Lookup</h2>
+    </fd-panel-head>
+  </fd-panel-header>
+  <fd-panel-body class="panel-body panel-body--main panel-body--main__pricing">
+    <div fd-form-set>
+      <div class="row-one-large">
+        <div fd-form-item class="required-input-fields row-one-large__col-one">
+          <label fd-form-label class="required" for="input-1"
+            >Customer Name</label
+          >
+          <fd-combobox
+            id="input-1"
+            [(ngModel)]="searchTermOne"
+            [dropdownValues]="dropdownValues1"
+            [placeholder]="''"
+            [glyph]="'search'"
+            [maxHeight]="'250px'"
+            aria-required="true"
+          >
+          </fd-combobox>
+          <!-- this should probably be done with an ngIf based on validation -->
+          <!-- if invalid - hide the hint text and show the error message  -->
+          <p class="fd-has-type-minus-1 hint-text">
+            Search Customer Name or Number
+          </p>
+          <span class="error-message fd-has-type-minus-1"
+            >Fake error message</span
+          >
+        </div>
+        <div class="inline-form-inputs row-one-large__col-two">
+          <div fd-form-item class="required-input-fields">
+            <label fd-form-label class="required" for="input-2"
+              >Customer Number</label
+            >
+            <input
+              fd-form-control
+              type="text"
+              id="input-2"
+              aria-required="true"
+              disabled
+            />
+            <!-- this should probably be done with an ngIf based on validation -->
+            <span class="error-message fd-has-type-minus-1"
+              >Fake error message</span
+            >
+          </div>
+          <div fd-form-item>
+            <label fd-form-label class="required" for="select-1"
+              >PPG Store Number</label
+            >
+            <div class="ui icon input">
+              <sui-select
+                id="select-1"
+                name=""
+                class="selection"
+                [(ngModel)]="selectedOption"
+                [isSearchable]="true"
+                [options]="options"
+                placeholder="Select Store"
+                aria-required="true"
+              >
+                <sui-select-option
+                  *ngFor="let option of options"
+                  [value]="option"
+                  >{{ option }}
+                </sui-select-option>
+              </sui-select>
+            </div>
+            <!-- this should probably be done with an ngIf based on validation -->
+            <span class="error-message fd-has-type-minus-1"
+              >Fake error message</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row-two-large">
+        <div fd-form-item class="required-input-fields ">
+          <label fd-form-label for="select-2">
+            Job Quote
+          </label>
+          <div class="ui icon input">
+            <sui-select
+              id="select-2"
+              name=""
+              class="selection"
+              [(ngModel)]="selectedOption2"
+              [isSearchable]="true"
+              [options]="options2"
+              placeholder="Select Job Quote"
+              aria-required="true"
+            >
+              <sui-select-option *ngFor="let option of options" [value]="option"
+                >{{ option }}
+              </sui-select-option>
+            </sui-select>
+          </div>
+        </div>
+        <div fd-form-item class="required-input-fields">
+          <label fd-form-label for="input-4">Item</label>
+          <fd-combobox
+            id="input-4"
+            [(ngModel)]="searchTermTwo"
+            [dropdownValues]="dropdownValues2"
+            [placeholder]="''"
+            [glyph]="'search'"
+            [maxHeight]="'250px'"
+            [placeholder]="'Search Items'"
+          >
+          </fd-combobox>
+        </div>
+        <div fd-form-item>
+          <button class="btn-100 item-lookup" fd-button [glyph]="'add'">
+            Add Item To Lookup
+          </button>
+        </div>
+        <div fd-form-item>
+          <button class="btn-100" fd-button [options]="'emphasized'">
+            Get Pricing
+          </button>
+        </div>
+        <div fd-form-item class="reset-link">
+          <p class="fd-has-color-action-1 fd-has-text-align-center">Reset</p>
+        </div>
+      </div>
+    </div>
+  </fd-panel-body>
+</fd-panel>
+
+<div>
+  <fd-panel>
+    <fd-panel-header>
+      <fd-panel-head>
+        <h2 fd-panel-title>Invoice Lookup</h2>
+      </fd-panel-head>
+    </fd-panel-header>
+    <fd-panel-body class="panel-body panel-body--secondary">
+      <div class="job-info-container">
+        <div class="job-info">
+          <p class="fd-has-type-minus-1">Job Name</p>
+          Mickey Hotel
+        </div>
+        <div class="job-info">
+          <p class="fd-has-type-minus-1">Job Number</p>
+          4067594739272
+        </div>
+        <div class="job-info">
+          <p class="fd-has-type-minus-1">Effective Date</p>
+          05/02/2019
+        </div>
+        <div class="job-info">
+          <p class="fd-has-type-minus-1">Expiration Date</p>
+          05/02/2020
+        </div>
+      </div>
+      <div *ngIf="currentWindowWidth < 1024">
+        <mat-table #table [dataSource]="dataSource" class="pricing-lookup">
+          <!-- Item Id Column -->
+          <ng-container matColumnDef="itemId">
+            <mat-header-cell
+              fdColumnSortable
+              *matHeaderCellDef
+              class="fd-has-type-minus-1 th-1"
+            >
+              <div class="th-container">
+                <div class="fd-has-text-align-right th-header">
+                  Item Id
+                </div>
+                <div>
+                  <span class="sap-icon--sorting-ranking sap-icon--s"></span>
+                </div>
+              </div>
+            </mat-header-cell>
+            <mat-cell
+              *matCellDef="let product"
+              class="fd-has-type-minus-1 fd-has-text-align-right"
+              >{{ product.itemId }}</mat-cell
+            >
+          </ng-container>
+
+          <!-- Current Price Column -->
+          <ng-container matColumnDef="currentPrice">
+            <mat-header-cell
+              fdColumnSortable
+              *matHeaderCellDef
+              class="fd-has-type-minus-1"
+            >
+              <div class="th-container">
+                <div class="fd-has-text-align-right th-header">
+                  Current Price
+                </div>
+                <div>
+                  <span class="sap-icon--sorting-ranking sap-icon--s"></span>
+                </div></div
+            ></mat-header-cell>
+            <mat-cell
+              *matCellDef="let product"
+              class="col-2 fd-has-type-minus-1 fd-has-text-align-right"
+              >{{ product.currentPrice }}</mat-cell
+            >
+          </ng-container>
+
+          <!-- Price Source Column -->
+          <ng-container matColumnDef="priceSource">
+            <mat-header-cell
+              fdColumnSortable
+              *matHeaderCellDef
+              class="fd-has-type-minus-1"
+            >
+              <div class="th-container">
+                <div class="fd-has-text-align-right th-header">
+                  Price Source
+                </div>
+                <div>
+                  <span class="sap-icon--sorting-ranking sap-icon"></span>
+                </div></div
+            ></mat-header-cell>
+            <mat-cell
+              *matCellDef="let product; let i = index"
+              class="col-3 fd-has-type-minus-1 fd-has-text-align-right"
+              >{{ product.priceSource }}
+              <span
+                [ngClass]="
+                  currentIndex === i
+                    ? 'sap-icon--navigation-right-arrow sap-icon--s expand-icon expand-animation'
+                    : 'sap-icon--navigation-right-arrow sap-icon--s expand-icon'
+                "
+              ></span>
+            </mat-cell>
+          </ng-container>
+
+          <!-- Expanded Content Column - The detail row is made up of this one column -->
+          <ng-container matColumnDef="expandedDetail">
+            <mat-cell *matCellDef="let detail">
+              <div class="fd-has-type-0 expanded-details">
+                <div>
+                  Item Description:
+                  <div class="expanded-details-info">
+                    {{ detail.product.itemDescription }}
+                  </div>
+                </div>
+                <div>
+                  Final:
+                  <span class="expanded-details-info">
+                    {{ detail.product.final }}
+                  </span>
+                </div>
+                <div>
+                  MGPL Price:
+                  <span class="expanded-details-info">
+                    {{ detail.product.mgplPrice }}
+                  </span>
+                </div>
+                <div>
+                  Matrix Price:
+                  <span class="expanded-details-info">
+                    {{ detail.product.matrixPrice }}
+                  </span>
+                </div>
+              </div>
+            </mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row
+            *matRowDef="let row; columns: displayedColumns; let i = index"
+            matRipple
+            class="product-row"
+            [class.expanded]="expandedData == row"
+            (click)="
+              expandedData === row
+                ? (expandedData = null)
+                : (expandedData = row);
+              currentIndex = expandedData == row ? i : null
+            "
+          ></mat-row>
+          <mat-row
+            *matRowDef="
+              let row;
+              columns: ['expandedDetail'];
+              when: isExpansionDetailRow
+            "
+            [@detailExpand]="
+              row.product == expandedData ? 'expanded' : 'collapsed'
+            "
+            style="overflow: hidden"
+          >
+          </mat-row>
+        </mat-table>
+      </div>
+      <div *ngIf="currentWindowWidth >= 1024">
+        <app-pricing-lookup-table-large></app-pricing-lookup-table-large>
+      </div>
+      <div class="fd-pagination">
+        <span class="fd-pagination__total">30 items</span>
+        <nav class="fd-pagination__nav">
+          <a
+            href="#"
+            class="fd-pagination__link fd-pagination__link--previous"
+            aria-label="Previous"
+            aria-disabled="true"
+          ></a>
+          <a href="#" class="fd-pagination__link" aria-selected="true">1</a>
+          <a href="#" class="fd-pagination__link">2</a>
+          <a href="#" class="fd-pagination__link">3</a>
+          <a
+            href="#"
+            class="fd-pagination__link fd-pagination__link--next"
+            aria-label="Next"
+            aria-disabled="false"
+          ></a>
+        </nav>
+      </div>
+    </fd-panel-body>
+  </fd-panel>
+</div>
