@@ -146,8 +146,10 @@ export class InvoiceLookupComponent implements OnInit {
   // fake combobox values and auto-complete for demo
   searchTermOne = '';
   searchTermTwo = '';
+  searchTermThree = '';
   dropdownValues1 = ['a', 'b', 'c', 'd'];
   dropdownValues2 = ['a', 'b', 'c', 'd'];
+  dropdownValues3 = ['a', 'b', 'c', 'd'];
 
   // fake values for semantic ui select
   selectedOption = [];

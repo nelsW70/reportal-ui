@@ -78,52 +78,25 @@
         </div>
       </div>
       <div class="row-two-large">
-        <div fd-form-item class="required-input-fields ">
-          <label fd-form-label for="select-2">
-            Job Quote
-          </label>
-          <div class="ui icon input">
-            <sui-select
-              id="select-2"
-              name=""
-              class="selection"
-              [(ngModel)]="selectedOption2"
-              [isSearchable]="true"
-              [options]="options2"
-              placeholder="Select Job Quote"
-              aria-required="true"
-            >
-              <sui-select-option *ngFor="let option of options" [value]="option"
-                >{{ option }}
-              </sui-select-option>
-            </sui-select>
-          </div>
-        </div>
         <div fd-form-item class="required-input-fields">
-          <label fd-form-label for="input-4">Item</label>
+          <label fd-form-label for="input-3">Job Quote</label>
           <fd-combobox
-            id="input-4"
-            [(ngModel)]="searchTermTwo"
-            [dropdownValues]="dropdownValues2"
-            [placeholder]="''"
+            id="input-3"
+            [(ngModel)]="searchTermThree"
+            [dropdownValues]="dropdownValues3"
+            [placeholder]="'Search Job Quotes'"
             [glyph]="'search'"
             [maxHeight]="'250px'"
-            [placeholder]="'Search Items'"
           >
           </fd-combobox>
         </div>
-        <div fd-form-item>
-          <button class="btn-100 item-lookup" fd-button [glyph]="'add'">
-            Add Item To Lookup
-          </button>
+        <div fd-form-item class="required-input-fields">
+          <label fd-form-label for="input-4">PO Number</label>
+          <input fd-form-control type="text" id="input-4" />
         </div>
-        <div fd-form-item>
-          <button class="btn-100" fd-button [options]="'emphasized'">
-            Get Pricing
-          </button>
-        </div>
-        <div fd-form-item class="reset-link">
-          <p class="fd-has-color-action-1 fd-has-text-align-center">Reset</p>
+        <div fd-form-item class="required-input-fields">
+          <label fd-form-label for="input-5">Invoice Number</label>
+          <input fd-form-control type="text" id="input-5" />
         </div>
       </div>
     </div>
