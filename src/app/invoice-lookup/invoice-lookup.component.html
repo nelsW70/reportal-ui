@@ -98,6 +98,57 @@
           <label fd-form-label for="input-5">Invoice Number</label>
           <input fd-form-control type="text" id="input-5" />
         </div>
+        <div fd-form-item class="required-input-fields">
+          <label fd-form-label for="input-5">Invoice Item</label>
+          <fd-combobox
+            id="input-5"
+            [(ngModel)]="searchTermFour"
+            [dropdownValues]="dropdownValues4"
+            [placeholder]="'Search Invoice Item'"
+            [glyph]="'search'"
+            [maxHeight]="'250px'"
+          >
+          </fd-combobox>
+        </div>
+        <div fd-form-item class="required-input-fields">
+          <label fd-form-label for="input-6">SMan</label>
+          <input fd-form-control type="text" id="input-6" />
+          <p class="fd-has-type-minus-1 hint-text">
+            Enter a valid SMAn 3 digit code
+          </p>
+        </div>
+        <div fd-form-item class="required-input-fields">
+          <label fd-form-label for="input-6">SAP Branch Number</label>
+          <input fd-form-control type="text" id="input-6" />
+        </div>
+        <div class="datepickers-container">
+          <div fd-form-item>
+            <label fd-form-label for="date1" class="required">Start Date</label>
+            <fd-date-picker [type]="'single'" id="date1"></fd-date-picker>
+          </div>
+          <div fd-form-item>
+            <label fd-form-label for="date2" class="required">End Date</label>
+            <fd-date-picker [type]="'single'" id="date2"></fd-date-picker>
+          </div>
+        </div>
+        <div fd-form-item [isCheck]="true">
+          <label fd-form-label for="checkbox-1" class="fd-form-label--checkbox">
+            <input
+              fd-form-control
+              class="fd-form-control--checkbox"
+              type="checkbox"
+              id="checkbox-1"
+              name="checkbox-name-1"
+              checked
+            />
+            Include Cash Invoices
+          </label>
+        </div>
+        <div fd-form-item>
+          <button class="btn-100" fd-button [options]="'emphasized'">
+            Search Invoices
+          </button>
+        </div>
       </div>
     </div>
   </fd-panel-body>

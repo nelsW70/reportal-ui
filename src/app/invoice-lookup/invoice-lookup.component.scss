@@ -1,11 +1,20 @@
 // DELETE DEAD STUFF THAT WAS COPIED OVER!!!!!!!!!!
 
+// FONTS
+.fd-form-label--checkbox {
+  color: #32363a;
+}
+
 // FORM CONTAINER
-.inline-form-inputs {
+.inline-form-inputs,
+.datepickers-container {
   display: flex;
   justify-content: space-between;
   & .fd-form__item {
     width: calc(50% - 4px);
+    & .fd-date-picker-custom {
+      display: inherit;
+    }
   }
 }
 
@@ -26,6 +35,11 @@
 // PANEL JOB INFO CONTAINER
 .job-info-container {
   padding: 0 1.5rem 1rem 1.5rem;
+}
+
+// CHECKBOX
+.fd-form-control--checkbox.fd-form__control {
+  height: 16px;
 }
 
 // PANELS
@@ -62,6 +76,7 @@
     .row-one-large {
       display: flex;
       width: 100%;
+      max-width: 800px;
       &__col-one {
         width: 50%;
         max-width: 400px;
@@ -78,7 +93,6 @@
     .row-two-large {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
 
       .required-input-fields {
         &:first-child {
@@ -86,42 +100,48 @@
         }
       }
 
-      // .fd-form__item {
-      //   &:first-child {
-      //     width: 50%;
-      //     max-width: 400px;
-      //     padding-right: 16px;
-      //     margin-right: 50%;
-      //   }
-      //   &:nth-child(2) {
-      //     width: 50%;
-      //     max-width: 400px;
-      //     padding-right: 16px;
-      //     min-height: 84px;
-      //   }
-      //   &:nth-child(3) {
-      //     width: 25%;
-      //     max-width: 250px;
-      //     margin-right: 25%;
-      //   }
-      //   &:nth-child(4) {
-      //     width: 25%;
-      //     max-width: 230px;
-      //     margin-right: 16px;
-      //   }
-      //   &:nth-child(5) {
-      //     width: 25%;
-      //     & p {
-      //       text-align: left !important;
-      //     }
-      //   }
-      // }
+      .fd-form__item {
+        &:first-child {
+          width: 50%;
+          max-width: 400px;
+          padding-right: 16px;
+        }
+        &:nth-child(2) {
+          width: 50%;
+          max-width: 400px;
+          min-height: 84px;
+        }
+        &:nth-child(3) {
+          width: 50%;
+          max-width: 400px;
+          padding-right: 16px;
+        }
+        &:nth-child(4) {
+          width: 50%;
+          max-width: 400px;
+        }
+        &:nth-child(5) {
+          width: 50%;
+          max-width: 400px;
+          padding-right: 16px;
+        }
+        &:nth-child(6) {
+          width: 50%;
+          max-width: 400px;
+        }
+      }
+    }
+
+    .datepickers-container {
+      width: 50%;
+      max-width: 400px;
+      padding-right: 16px;
     }
   }
 
   @media only screen and (min-width: 1024px) {
     .row-one-large {
-      max-width: 1000px;
+      // max-width: 1000px;
     }
   }
 

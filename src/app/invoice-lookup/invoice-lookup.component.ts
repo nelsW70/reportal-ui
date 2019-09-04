@@ -147,9 +147,11 @@ export class InvoiceLookupComponent implements OnInit {
   searchTermOne = '';
   searchTermTwo = '';
   searchTermThree = '';
+  searchTermFour = '';
   dropdownValues1 = ['a', 'b', 'c', 'd'];
   dropdownValues2 = ['a', 'b', 'c', 'd'];
   dropdownValues3 = ['a', 'b', 'c', 'd'];
+  dropdownValues4 = ['a', 'b', 'c', 'd'];
 
   // fake values for semantic ui select
   selectedOption = [];
