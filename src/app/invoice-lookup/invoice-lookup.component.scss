@@ -18,19 +18,14 @@
   }
 }
 
-.fd-form__set .last-item {
-  margin-bottom: 0.5rem;
-}
+// .fd-form__set .last-item {
+//   margin-bottom: 0.5rem;
+// }
 
 .required-input-fields {
   margin-bottom: 4px;
   min-height: 94px;
 }
-
-// PANEL JOB INFO CONTAINER
-// .job-info-container {
-//   padding: 0 1.5rem 1rem 1.5rem;
-// }
 
 // CHECKBOX
 .fd-form-control--checkbox.fd-form__control {
@@ -46,10 +41,6 @@
 .fd-panel__body,
 .fd-panel__filters {
   padding: 1rem;
-}
-
-.fd-panel__body.customer-info {
-  padding: 0;
 }
 
 .panel-body {
@@ -267,9 +258,4 @@
       }
     }
   }
-}
-
-// RESET LINK
-.reset-link {
-  cursor: pointer;
 }

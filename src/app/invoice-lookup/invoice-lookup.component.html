@@ -124,11 +124,19 @@
         <div class="datepickers-container">
           <div fd-form-item>
             <label fd-form-label for="date1" class="required">Start Date</label>
-            <fd-date-picker [type]="'single'" id="date1"></fd-date-picker>
+            <fd-date-picker
+              [type]="'single'"
+              [placement]="'bottom-start'"
+              id="date1"
+            ></fd-date-picker>
           </div>
           <div fd-form-item>
             <label fd-form-label for="date2" class="required">End Date</label>
-            <fd-date-picker [type]="'single'" id="date2"></fd-date-picker>
+            <fd-date-picker
+              [type]="'single'"
+              [placement]="'bottom-end'"
+              id="date2"
+            ></fd-date-picker>
           </div>
         </div>
         <div fd-form-item [isCheck]="true">
