@@ -10,105 +10,116 @@ import {
 } from '@angular/animations';
 
 export interface ProductInfo {
-  itemId: string;
-  itemDescription: string;
-  currentPrice: string;
-  priceSource: string;
-  final: string;
-  mgplPrice: string;
-  matrixPrice: string;
+  proXtraId: string;
+  company: string;
+  fullName: string;
+  address: string;
+  email: string;
+  phoneNumber: string;
+  signUpDate: string;
+  storesPurchasedFrom: string;
+  status: string;
 }
 
 const data: ProductInfo[] = [
   {
-    itemId: '6-411/01',
-    itemDescription: 'S-Hide INT LX EGG WHPB 6-411 B100',
-    currentPrice: '$18.85',
-    priceSource: 'GPQ',
-    final: 'N',
-    mgplPrice: '$18.85',
-    matrixPrice: '$25.75'
+    proXtraId: '1234567',
+    company: 'COMPANY',
+    fullName: 'LAST NAME, FIRST NAME',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
+    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    phoneNumber: '(555) 555-5555',
+    signUpDate: 'MM/DD/YYYY',
+    storesPurchasedFrom: '001, 002, 003, 004',
+    status: 'created'
   },
   {
-    itemId: 'AK2LV-B/55',
-    itemDescription: 'AMERLOCK 2 LV CUBE',
-    currentPrice: '$18.85',
-    priceSource: 'GPQ',
-    final: '-',
-    mgplPrice: '$18.85',
-    matrixPrice: '$25.75'
+    proXtraId: '1234567',
+    company: 'COMPANY',
+    fullName: 'LAST NAME, FIRST NAME',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
+    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    phoneNumber: '(555) 555-5555',
+    signUpDate: 'MM/DD/YYYY',
+    storesPurchasedFrom: '001, 002, 003, 004',
+    status: 'created'
   },
   {
-    itemId: 'AK2-T1/01',
-    itemDescription: 'AMERLOCK 2/400 DEEP TINT RESIN',
-    currentPrice: '$18.85',
-    priceSource: '-',
-    final: 'Y',
-    mgplPrice: '-',
-    matrixPrice: '$25.75'
+    proXtraId: '1234567',
+    company: 'COMPANY',
+    fullName: 'LAST NAME, FIRST NAME',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
+    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    phoneNumber: '(555) 555-5555',
+    signUpDate: 'MM/DD/YYYY',
+    storesPurchasedFrom: '001, 002, 003, 004',
+    status: 'created'
   },
   {
-    itemId: '6-411/01',
-    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
-    currentPrice: '$18.85',
-    priceSource: 'GPQ',
-    final: 'N',
-    mgplPrice: '$18.85',
-    matrixPrice: '$25.75'
+    proXtraId: '1234567',
+    company: 'COMPANY',
+    fullName: 'LAST NAME, FIRST NAME',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
+    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    phoneNumber: '(555) 555-5555',
+    signUpDate: 'MM/DD/YYYY',
+    storesPurchasedFrom: '001, 002, 003, 004',
+    status: 'pending'
   },
   {
-    itemId: '6-411/01',
-    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
-    currentPrice: '$18.85',
-    priceSource: 'MGPL',
-    final: 'N',
-    mgplPrice: '$18.85',
-    matrixPrice: '$25.75'
+    proXtraId: '1234567',
+    company: 'COMPANY',
+    fullName: 'LAST NAME, FIRST NAME',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
+    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    phoneNumber: '(555) 555-5555',
+    signUpDate: 'MM/DD/YYYY',
+    storesPurchasedFrom: '001, 002, 003, 004',
+    status: 'none'
   },
   {
-    itemId: '6-411/01',
-    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
-    currentPrice: 'NOT FOUND',
-    priceSource: 'GPQ',
-    final: 'N',
-    mgplPrice: 'NOT FOUND',
-    matrixPrice: '$25.75'
+    proXtraId: '1234567',
+    company: 'COMPANY',
+    fullName: 'LAST NAME, FIRST NAME',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
+    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    phoneNumber: '(555) 555-5555',
+    signUpDate: 'MM/DD/YYYY',
+    storesPurchasedFrom: '001, 002, 003, 004',
+    status: 'none'
   },
   {
-    itemId: '6-411/01',
-    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
-    currentPrice: '$18.85',
-    priceSource: '-',
-    final: '-',
-    mgplPrice: '$18.85',
-    matrixPrice: '$25.75'
+    proXtraId: '1234567',
+    company: 'COMPANY',
+    fullName: 'LAST NAME, FIRST NAME',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
+    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    phoneNumber: '(555) 555-5555',
+    signUpDate: 'MM/DD/YYYY',
+    storesPurchasedFrom: '001, 002, 003, 004',
+    status: 'none'
   },
   {
-    itemId: '6-411/01',
-    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
-    currentPrice: '$18.85',
-    priceSource: 'GPQ',
-    final: 'Y',
-    mgplPrice: '$18.85',
-    matrixPrice: '$25.75'
+    proXtraId: '1234567',
+    company: 'COMPANY',
+    fullName: 'LAST NAME, FIRST NAME',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
+    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    phoneNumber: '(555) 555-5555',
+    signUpDate: 'MM/DD/YYYY',
+    storesPurchasedFrom: '001, 002, 003, 004',
+    status: 'none'
   },
   {
-    itemId: 'AK2LV-B/55',
-    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
-    currentPrice: '$18.85',
-    priceSource: 'GPQ',
-    final: 'N',
-    mgplPrice: '$18.85',
-    matrixPrice: 'NOT FOUND'
-  },
-  {
-    itemId: 'AK2LV-B/55',
-    itemDescription: 'S-HIDE INT LX EGG WHPB 6-411 B100',
-    currentPrice: '$18.85',
-    priceSource: 'GPQ',
-    final: 'N',
-    mgplPrice: 'NOT FOUND',
-    matrixPrice: '$25.75'
+    proXtraId: '1234567',
+    company: 'COMPANY',
+    fullName: 'LAST NAME, FIRST NAME',
+    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
+    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    phoneNumber: '(555) 555-5555',
+    signUpDate: 'MM/DD/YYYYUND',
+    storesPurchasedFrom: '001, 002, 003, 004',
+    status: 'none'
   }
 ];
 
@@ -143,6 +154,7 @@ export class MobileDataSource extends DataSource<any> {
 export class InvoiceLookupComponent implements OnInit {
   currentWindowWidth: number;
   currentIndex: number = null;
+
   // fake combobox values and auto-complete for demo
   searchTermOne = '';
   searchTermTwo = '';
@@ -161,7 +173,7 @@ export class InvoiceLookupComponent implements OnInit {
   options2: Array<string> = ['one', 'two', 'three', 'four', 'five'];
 
   expandedData: any;
-  displayedColumns = ['itemId', 'currentPrice', 'priceSource'];
+  displayedColumns = ['proXtraId', 'fullName', 'phoneNumber'];
   dataSource = new MobileDataSource();
 
   isExpansionDetailRow = (i: number, row: object) =>

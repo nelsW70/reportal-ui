@@ -171,17 +171,17 @@
     </fd-panel-header>
     <fd-panel-body class="panel-body panel-body--secondary">
       <div *ngIf="currentWindowWidth < 1024">
-        <mat-table #table [dataSource]="dataSource" class="pricing-lookup">
-          <!-- Item Id Column -->
-          <ng-container matColumnDef="itemId">
+        <mat-table #table [dataSource]="dataSource">
+          <!-- Pro Xtra Id Column -->
+          <ng-container matColumnDef="proXtraId">
             <mat-header-cell
               fdColumnSortable
               *matHeaderCellDef
               class="fd-has-type-minus-1 th-1"
             >
               <div class="th-container">
-                <div class="fd-has-text-align-right th-header">
-                  Item Id
+                <div class="th-header">
+                  PRO XTRA ID
                 </div>
                 <div>
                   <span class="sap-icon--sorting-ranking sap-icon--s"></span>
@@ -190,43 +190,70 @@
             </mat-header-cell>
             <mat-cell
               *matCellDef="let product"
-              class="fd-has-type-minus-1 fd-has-text-align-right"
-              >{{ product.itemId }}</mat-cell
+              class="fd-has-type-minus-1 visible-td-status"
             >
+              <div *ngIf="product.status === 'created'">
+                <div
+                  fd-status-label
+                  [statusIcon]="'available'"
+                  class="fd-has-type-minus-1"
+                >
+                  {{ product.proXtraId }}
+                </div>
+              </div>
+              <div *ngIf="product.status === 'pending'">
+                <div
+                  fd-status-label
+                  [statusIcon]="'away'"
+                  class="fd-has-type-minus-1"
+                >
+                  {{ product.proXtraId }}
+                </div>
+              </div>
+              <div *ngIf="product.status === 'none'" class="create-account">
+                <div
+                  fd-status-label
+                  [statusIcon]="'offline'"
+                  class="fd-has-type-minus-1"
+                >
+                  {{ product.proXtraId }}
+                </div>
+              </div>
+            </mat-cell>
           </ng-container>
 
-          <!-- Current Price Column -->
-          <ng-container matColumnDef="currentPrice">
+          <!-- Full Name Column -->
+          <ng-container matColumnDef="fullName">
             <mat-header-cell
               fdColumnSortable
               *matHeaderCellDef
               class="fd-has-type-minus-1"
             >
               <div class="th-container">
-                <div class="fd-has-text-align-right th-header">
-                  Current Price
+                <div class="th-header">
+                  Full Name
                 </div>
                 <div>
                   <span class="sap-icon--sorting-ranking sap-icon--s"></span>
                 </div></div
             ></mat-header-cell>
-            <mat-cell
-              *matCellDef="let product"
-              class="col-2 fd-has-type-minus-1 fd-has-text-align-right"
-              >{{ product.currentPrice }}</mat-cell
-            >
+            <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
+              <div class="name-wrap">
+                {{ product.fullName }}
+              </div>
+            </mat-cell>
           </ng-container>
 
-          <!-- Price Source Column -->
-          <ng-container matColumnDef="priceSource">
+          <!-- Phone Column -->
+          <ng-container matColumnDef="phoneNumber">
             <mat-header-cell
               fdColumnSortable
               *matHeaderCellDef
               class="fd-has-type-minus-1"
             >
               <div class="th-container">
-                <div class="fd-has-text-align-right th-header">
-                  Price Source
+                <div class="th-header">
+                  Phone Number
                 </div>
                 <div>
                   <span class="sap-icon--sorting-ranking sap-icon"></span>
@@ -234,8 +261,8 @@
             ></mat-header-cell>
             <mat-cell
               *matCellDef="let product; let i = index"
-              class="col-3 fd-has-type-minus-1 fd-has-text-align-right"
-              >{{ product.priceSource }}
+              class="fd-has-type-minus-1"
+              >{{ product.phoneNumber }}
               <span
                 [ngClass]="
                   currentIndex === i
@@ -250,29 +277,65 @@
           <ng-container matColumnDef="expandedDetail">
             <mat-cell *matCellDef="let detail">
               <div class="fd-has-type-0 expanded-details">
-                <div>
-                  Item Description:
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Company:&nbsp;
+                  </div>
                   <div class="expanded-details-info">
-                    {{ detail.product.itemDescription }}
+                    {{ detail.product.company }}
                   </div>
                 </div>
-                <div>
-                  Final:
-                  <span class="expanded-details-info">
-                    {{ detail.product.final }}
-                  </span>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Address:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.address }}
+                  </div>
                 </div>
-                <div>
-                  MGPL Price:
-                  <span class="expanded-details-info">
-                    {{ detail.product.mgplPrice }}
-                  </span>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Email:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.email }}
+                  </div>
                 </div>
-                <div>
-                  Matrix Price:
-                  <span class="expanded-details-info">
-                    {{ detail.product.matrixPrice }}
-                  </span>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Sign Up Date:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.signUpDate }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Stores Purchased From:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.storesPurchasedFrom }}
+                  </div>
+                </div>
+                <div class="fd-has-margin-top-small fd-has-margin-bottom-tiny">
+                  <div *ngIf="detail.product.status === 'created'">
+                    <div fd-status-label [statusIcon]="'available'">
+                      Account Created
+                    </div>
+                  </div>
+                  <div *ngIf="detail.product.status === 'pending'">
+                    <div fd-status-label [statusIcon]="'away'">
+                      Pending Account Creation
+                    </div>
+                  </div>
+                  <div
+                    *ngIf="detail.product.status === 'none'"
+                    class="create-account"
+                  >
+                    <button fd-button [options]="'emphasized'">
+                      Create Account
+                    </button>
+                  </div>
                 </div>
               </div>
             </mat-cell>
@@ -306,7 +369,7 @@
         </mat-table>
       </div>
       <div *ngIf="currentWindowWidth >= 1024">
-        <app-pricing-lookup-table-large></app-pricing-lookup-table-large>
+        <app-thd-prospects-table-large></app-thd-prospects-table-large>
       </div>
       <div class="fd-pagination">
         <span class="fd-pagination__total">30 items</span>

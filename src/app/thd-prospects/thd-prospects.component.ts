@@ -24,7 +24,6 @@ export interface ProductInfo {
 const data: ProductInfo[] = [
   {
     proXtraId: '1234567',
-
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
@@ -36,7 +35,6 @@ const data: ProductInfo[] = [
   },
   {
     proXtraId: '1234567',
-
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
@@ -48,7 +46,6 @@ const data: ProductInfo[] = [
   },
   {
     proXtraId: '1234567',
-
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
@@ -60,7 +57,6 @@ const data: ProductInfo[] = [
   },
   {
     proXtraId: '1234567',
-
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
@@ -72,7 +68,6 @@ const data: ProductInfo[] = [
   },
   {
     proXtraId: '1234567',
-
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
@@ -84,7 +79,6 @@ const data: ProductInfo[] = [
   },
   {
     proXtraId: '1234567',
-
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
@@ -96,7 +90,6 @@ const data: ProductInfo[] = [
   },
   {
     proXtraId: '1234567',
-
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
@@ -108,7 +101,6 @@ const data: ProductInfo[] = [
   },
   {
     proXtraId: '1234567',
-
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
@@ -120,7 +112,6 @@ const data: ProductInfo[] = [
   },
   {
     proXtraId: '1234567',
-
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
