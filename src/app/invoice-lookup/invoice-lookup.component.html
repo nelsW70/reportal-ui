@@ -173,7 +173,7 @@
       <div *ngIf="currentWindowWidth < 1024">
         <mat-table #table [dataSource]="dataSource">
           <!-- Invoice Number Column -->
-          <ng-container matColumnDef="proXtraId">
+          <ng-container matColumnDef="invoiceNumber">
             <mat-header-cell
               fdColumnSortable
               *matHeaderCellDef
@@ -189,12 +189,14 @@
               </div>
             </mat-header-cell>
             <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
-              {{ product.proXtraId }}
+              <div class="invoice-number">
+                {{ product.invoiceNumber }}
+              </div>
             </mat-cell>
           </ng-container>
 
           <!-- Customer Name Column -->
-          <ng-container matColumnDef="fullName">
+          <ng-container matColumnDef="customerName">
             <mat-header-cell
               fdColumnSortable
               *matHeaderCellDef
@@ -210,13 +212,13 @@
             ></mat-header-cell>
             <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
               <div class="name-wrap">
-                {{ product.fullName }}
+                {{ product.customerName }}
               </div>
             </mat-cell>
           </ng-container>
 
           <!-- Invoice Total Column -->
-          <ng-container matColumnDef="phoneNumber">
+          <ng-container matColumnDef="invoiceTotal">
             <mat-header-cell
               fdColumnSortable
               *matHeaderCellDef
@@ -233,7 +235,7 @@
             <mat-cell
               *matCellDef="let product; let i = index"
               class="fd-has-type-minus-1"
-              >{{ product.phoneNumber }}
+              >{{ product.invoiceTotal }}
               <span
                 [ngClass]="
                   currentIndex === i
@@ -250,18 +252,18 @@
               <div class="fd-has-type-0 expanded-details">
                 <div class="expanded-details__detail-container">
                   <div>
-                    Company:&nbsp;
+                    SAP Branch Number:&nbsp;
                   </div>
                   <div class="expanded-details-info">
-                    {{ detail.product.company }}
+                    {{ detail.product.SAPBranch }}
                   </div>
                 </div>
                 <div class="expanded-details__detail-container">
                   <div>
-                    Address:&nbsp;
+                    Customer Number:&nbsp;
                   </div>
                   <div class="expanded-details-info">
-                    {{ detail.product.address }}
+                    {{ detail.product.customerNumber }}
                   </div>
                 </div>
                 <div class="expanded-details__detail-container">

@@ -3,6 +3,17 @@
   color: #32363a;
 }
 
+.invoice-number {
+  color: #0a6ed1;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.name-wrap {
+  text-transform: uppercase;
+}
+
 // FORM CONTAINER
 .inline-form-inputs,
 .datepickers-container {
@@ -225,6 +236,11 @@
     & .name-wrap {
       @media screen and (max-width: 768px) {
         max-width: 100px;
+      }
+    }
+    & .invoice-number {
+      @media screen and (max-width: 400px) {
+        max-width: 70px;
       }
     }
   }

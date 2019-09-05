@@ -10,12 +10,12 @@ import {
 } from '@angular/animations';
 
 export interface ProductInfo {
-  proXtraId: string;
-  company: string;
-  fullName: string;
-  address: string;
+  invoiceNumber: string;
+  SAPBranch: string;
+  customerName: string;
+  customerNumber: string;
   email: string;
-  phoneNumber: string;
+  invoiceTotal: string;
   signUpDate: string;
   storesPurchasedFrom: string;
   status: string;
@@ -23,100 +23,100 @@ export interface ProductInfo {
 
 const data: ProductInfo[] = [
   {
-    proXtraId: '1234567',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
+    invoiceNumber: '910102101125',
+    SAPBranch: '0',
+    customerName: 'Sally Baker',
+    customerNumber: '300437700000',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
+    invoiceTotal: '$56.50',
     signUpDate: 'MM/DD/YYYY',
     storesPurchasedFrom: '001, 002, 003, 004',
     status: 'created'
   },
   {
-    proXtraId: '1234567',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
+    invoiceNumber: '910102101125',
+    SAPBranch: '0',
+    customerName: 'Sally Baker',
+    customerNumber: '300437700000',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
+    invoiceTotal: '$56.50',
     signUpDate: 'MM/DD/YYYY',
     storesPurchasedFrom: '001, 002, 003, 004',
     status: 'created'
   },
   {
-    proXtraId: '1234567',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
+    invoiceNumber: '910102101125',
+    SAPBranch: '0',
+    customerName: 'Sally Baker',
+    customerNumber: '300437700000',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
+    invoiceTotal: '$56.50',
     signUpDate: 'MM/DD/YYYY',
     storesPurchasedFrom: '001, 002, 003, 004',
     status: 'created'
   },
   {
-    proXtraId: '1234567',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
+    invoiceNumber: '910102101125',
+    SAPBranch: '0',
+    customerName: 'Sally Baker',
+    customerNumber: '300437700000',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
+    invoiceTotal: '$56.50',
     signUpDate: 'MM/DD/YYYY',
     storesPurchasedFrom: '001, 002, 003, 004',
     status: 'pending'
   },
   {
-    proXtraId: '1234567',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
+    invoiceNumber: '910102101125',
+    SAPBranch: '0',
+    customerName: 'Sally Baker',
+    customerNumber: '300437700000',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
+    invoiceTotal: '$56.50',
     signUpDate: 'MM/DD/YYYY',
     storesPurchasedFrom: '001, 002, 003, 004',
     status: 'none'
   },
   {
-    proXtraId: '1234567',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
+    invoiceNumber: '910102101125',
+    SAPBranch: '0',
+    customerName: 'Sally Baker',
+    customerNumber: '300437700000',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
+    invoiceTotal: '$56.50',
     signUpDate: 'MM/DD/YYYY',
     storesPurchasedFrom: '001, 002, 003, 004',
     status: 'none'
   },
   {
-    proXtraId: '1234567',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
+    invoiceNumber: '910102101125',
+    SAPBranch: '0',
+    customerName: 'Sally Baker',
+    customerNumber: '300437700000',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
+    invoiceTotal: '$56.50',
     signUpDate: 'MM/DD/YYYY',
     storesPurchasedFrom: '001, 002, 003, 004',
     status: 'none'
   },
   {
-    proXtraId: '1234567',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
+    invoiceNumber: '910102101125',
+    SAPBranch: '0',
+    customerName: 'Sally Baker',
+    customerNumber: '300437700000',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
+    invoiceTotal: '$56.50',
     signUpDate: 'MM/DD/YYYY',
     storesPurchasedFrom: '001, 002, 003, 004',
     status: 'none'
   },
   {
-    proXtraId: '1234567',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
+    invoiceNumber: '910102101125',
+    SAPBranch: '0',
+    customerName: 'Sally Baker',
+    customerNumber: '300437700000',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
+    invoiceTotal: '$56.50',
     signUpDate: 'MM/DD/YYYYUND',
     storesPurchasedFrom: '001, 002, 003, 004',
     status: 'none'
@@ -173,7 +173,7 @@ export class InvoiceLookupComponent implements OnInit {
   options2: Array<string> = ['one', 'two', 'three', 'four', 'five'];
 
   expandedData: any;
-  displayedColumns = ['proXtraId', 'fullName', 'phoneNumber'];
+  displayedColumns = ['invoiceNumber', 'customerName', 'invoiceTotal'];
   dataSource = new MobileDataSource();
 
   isExpansionDetailRow = (i: number, row: object) =>
