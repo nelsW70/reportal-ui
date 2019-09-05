@@ -1,4 +1,7 @@
 .landing-page {
+  .mat-sidenav-content {
+    overflow: visible;
+  }
   // TOOLBAR
   .mat-toolbar {
     height: 48px !important;
