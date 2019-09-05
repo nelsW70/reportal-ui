@@ -10,6 +10,7 @@
   }
 }
 
+.expanded-details-info--uppercase,
 .name-wrap {
   text-transform: uppercase;
 }
@@ -215,6 +216,15 @@
   mat-header-cell:nth-child(3) {
     justify-content: flex-start;
     padding-left: 24px;
+  }
+
+  mat-row {
+    & mat-cell {
+      @media only screen and (max-width: 400px) {
+        align-items: flex-start;
+        padding-top: 12px;
+      }
+    }
   }
 
   .mat-cell {

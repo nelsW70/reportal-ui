@@ -14,11 +14,13 @@ export interface ProductInfo {
   SAPBranch: string;
   customerName: string;
   customerNumber: string;
-  email: string;
+  jobName: string;
   invoiceTotal: string;
-  signUpDate: string;
-  storesPurchasedFrom: string;
-  status: string;
+  PONumber: string;
+  customerJob: string;
+  invoiceType: string;
+  tenderType: string;
+  invoiceDate: string;
 }
 
 const data: ProductInfo[] = [
@@ -27,99 +29,117 @@ const data: ProductInfo[] = [
     SAPBranch: '0',
     customerName: 'Sally Baker',
     customerNumber: '300437700000',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    jobName: 'Sally Baker',
     invoiceTotal: '$56.50',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'created'
+    PONumber: '-',
+    customerJob: '-',
+    invoiceType: 'Sale',
+    tenderType: 'Check',
+    invoiceDate: '05/28/2019'
   },
   {
     invoiceNumber: '910102101125',
     SAPBranch: '0',
     customerName: 'Sally Baker',
     customerNumber: '300437700000',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    jobName: 'Sally Baker',
     invoiceTotal: '$56.50',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'created'
+    PONumber: '-',
+    customerJob: '-',
+    invoiceType: 'Sale',
+    tenderType: 'Check',
+    invoiceDate: '05/28/2019'
   },
   {
     invoiceNumber: '910102101125',
     SAPBranch: '0',
     customerName: 'Sally Baker',
     customerNumber: '300437700000',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    jobName: 'Sally Baker',
     invoiceTotal: '$56.50',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'created'
+    PONumber: '-',
+    customerJob: '-',
+    invoiceType: 'Sale',
+    tenderType: 'Check',
+    invoiceDate: '05/28/2019'
   },
   {
     invoiceNumber: '910102101125',
     SAPBranch: '0',
     customerName: 'Sally Baker',
     customerNumber: '300437700000',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    jobName: 'Sally Baker',
     invoiceTotal: '$56.50',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'pending'
+    PONumber: '-',
+    customerJob: '-',
+    invoiceType: 'Sale',
+    tenderType: 'Check',
+    invoiceDate: '05/28/2019'
   },
   {
     invoiceNumber: '910102101125',
     SAPBranch: '0',
     customerName: 'Sally Baker',
     customerNumber: '300437700000',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    jobName: 'Sally Baker',
     invoiceTotal: '$56.50',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'none'
+    PONumber: '-',
+    customerJob: '-',
+    invoiceType: 'Sale',
+    tenderType: 'Check',
+    invoiceDate: '05/28/2019'
   },
   {
     invoiceNumber: '910102101125',
     SAPBranch: '0',
     customerName: 'Sally Baker',
     customerNumber: '300437700000',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    jobName: 'Sally Baker',
     invoiceTotal: '$56.50',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'none'
+    PONumber: '-',
+    customerJob: '-',
+    invoiceType: 'Sale',
+    tenderType: 'Check',
+    invoiceDate: '05/28/2019'
   },
   {
     invoiceNumber: '910102101125',
     SAPBranch: '0',
     customerName: 'Sally Baker',
     customerNumber: '300437700000',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    jobName: 'Sally Baker',
     invoiceTotal: '$56.50',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'none'
+    PONumber: '-',
+    customerJob: '-',
+    invoiceType: 'Sale',
+    tenderType: 'Check',
+    invoiceDate: '05/28/2019'
   },
   {
     invoiceNumber: '910102101125',
     SAPBranch: '0',
     customerName: 'Sally Baker',
     customerNumber: '300437700000',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    jobName: 'Sally Baker',
     invoiceTotal: '$56.50',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'none'
+    PONumber: '-',
+    customerJob: '-',
+    invoiceType: 'Sale',
+    tenderType: 'Check',
+    invoiceDate: '05/28/2019'
   },
   {
     invoiceNumber: '910102101125',
     SAPBranch: '0',
     customerName: 'Sally Baker',
     customerNumber: '300437700000',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    jobName: 'Sally Baker',
     invoiceTotal: '$56.50',
-    signUpDate: 'MM/DD/YYYYUND',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'none'
+    PONumber: '-UND',
+    customerJob: '-',
+    invoiceType: 'Sale',
+    tenderType: 'Check',
+    invoiceDate: '05/28/2019'
   }
 ];
 

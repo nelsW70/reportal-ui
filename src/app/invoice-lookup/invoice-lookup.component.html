@@ -268,26 +268,56 @@
                 </div>
                 <div class="expanded-details__detail-container">
                   <div>
-                    Email:&nbsp;
+                    Job Name:&nbsp;
                   </div>
-                  <div class="expanded-details-info">
-                    {{ detail.product.email }}
-                  </div>
-                </div>
-                <div class="expanded-details__detail-container">
-                  <div>
-                    Sign Up Date:&nbsp;
-                  </div>
-                  <div class="expanded-details-info">
-                    {{ detail.product.signUpDate }}
+                  <div
+                    class="expanded-details-info"
+                  >
+                    {{ detail.product.jobName }}
                   </div>
                 </div>
                 <div class="expanded-details__detail-container">
                   <div>
-                    Stores Purchased From:&nbsp;
+                    PO Number:&nbsp;
                   </div>
                   <div class="expanded-details-info">
-                    {{ detail.product.storesPurchasedFrom }}
+                    {{ detail.product.PONumber }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Customer Job:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.customerJob }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Invoice Type:&nbsp;
+                  </div>
+                  <div
+                    class="expanded-details-info expanded-details-info--uppercase"
+                  >
+                    {{ detail.product.invoiceType }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Tender Type:&nbsp;
+                  </div>
+                  <div
+                    class="expanded-details-info expanded-details-info--uppercase"
+                  >
+                    {{ detail.product.tenderType }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Invoice Date:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.invoiceDate }}
                   </div>
                 </div>
               </div>
