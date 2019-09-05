@@ -172,7 +172,7 @@
     <fd-panel-body class="panel-body panel-body--secondary">
       <div *ngIf="currentWindowWidth < 1024">
         <mat-table #table [dataSource]="dataSource">
-          <!-- Pro Xtra Id Column -->
+          <!-- Invoice Number Column -->
           <ng-container matColumnDef="proXtraId">
             <mat-header-cell
               fdColumnSortable
@@ -181,7 +181,7 @@
             >
               <div class="th-container">
                 <div class="th-header">
-                  PRO XTRA ID
+                  Invoice Number
                 </div>
                 <div>
                   <span class="sap-icon--sorting-ranking sap-icon--s"></span>
@@ -193,7 +193,7 @@
             </mat-cell>
           </ng-container>
 
-          <!-- Full Name Column -->
+          <!-- Customer Name Column -->
           <ng-container matColumnDef="fullName">
             <mat-header-cell
               fdColumnSortable
@@ -202,7 +202,7 @@
             >
               <div class="th-container">
                 <div class="th-header">
-                  Full Name
+                  Customer Name
                 </div>
                 <div>
                   <span class="sap-icon--sorting-ranking sap-icon--s"></span>
@@ -215,7 +215,7 @@
             </mat-cell>
           </ng-container>
 
-          <!-- Phone Column -->
+          <!-- Invoice Total Column -->
           <ng-container matColumnDef="phoneNumber">
             <mat-header-cell
               fdColumnSortable
@@ -224,7 +224,7 @@
             >
               <div class="th-container">
                 <div class="th-header">
-                  Phone Number
+                  Invoice Total
                 </div>
                 <div>
                   <span class="sap-icon--sorting-ranking sap-icon"></span>

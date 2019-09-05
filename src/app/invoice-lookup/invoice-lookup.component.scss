@@ -202,6 +202,11 @@
   }
 
   mat-header-cell:nth-child(2),
+  mat-cell:nth-child(2) {
+    flex-grow: 1.25;
+  }
+
+  mat-header-cell:nth-child(2),
   mat-header-cell:nth-child(3) {
     justify-content: flex-start;
     padding-left: 24px;
