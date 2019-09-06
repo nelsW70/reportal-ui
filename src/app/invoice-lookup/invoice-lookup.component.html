@@ -168,6 +168,9 @@
       <fd-panel-head>
         <h2 fd-panel-title>Invoice Results (06/01/2019 - 07/01/2019)</h2>
       </fd-panel-head>
+      <fd-panel-actions class="download-button">
+        <button fd-button [glyph]="'pdf-attachment'">Download PDF</button>
+      </fd-panel-actions>
     </fd-panel-header>
     <fd-panel-body class="panel-body panel-body--secondary">
       <div *ngIf="currentWindowWidth < 1024">

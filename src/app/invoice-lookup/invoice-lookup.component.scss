@@ -33,6 +33,13 @@
   min-height: 84px;
 }
 
+// BUTTONS
+.download-button {
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
 // CHECKBOX
 .fd-form-control--checkbox.fd-form__control {
   height: 16px;
