@@ -25,6 +25,7 @@ import { ThdProspectsComponent } from './thd-prospects/thd-prospects.component';
 import { ThdProspectsTableLargeComponent } from './thd-prospects-table-large/thd-prospects-table-large.component';
 import { EDealerComponent } from './e-dealer/e-dealer.component';
 import { InvoiceLookupComponent } from './invoice-lookup/invoice-lookup.component';
+import { InvoiceLookupTableLargeComponent } from './invoice-lookup-table-large/invoice-lookup-table-large.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { InvoiceLookupComponent } from './invoice-lookup/invoice-lookup.componen
     ThdProspectsComponent,
     ThdProspectsTableLargeComponent,
     EDealerComponent,
-    InvoiceLookupComponent
+    InvoiceLookupComponent,
+    InvoiceLookupTableLargeComponent
   ],
   imports: [
     BrowserModule,
