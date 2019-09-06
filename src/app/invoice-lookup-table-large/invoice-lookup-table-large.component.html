@@ -41,7 +41,7 @@
       Customer Name
     </mat-header-cell>
     <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
-      <div class="name-wrap">
+      <div class="cell-uppercase">
         {{ product.customerName }}
       </div>
     </mat-cell>
@@ -57,7 +57,7 @@
       Job Name
     </mat-header-cell>
     <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
-      <div class="name-wrap">
+      <div class="cell-uppercase">
         {{ product.jobName }}
       </div>
     </mat-cell>
@@ -73,9 +73,7 @@
       PO Number
     </mat-header-cell>
     <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
-      <div class="name-wrap">
-        {{ product.PONumber }}
-      </div>
+      {{ product.PONumber }}
     </mat-cell>
   </ng-container>
 
@@ -89,9 +87,7 @@
       Invoice Total
     </mat-header-cell>
     <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
-      <div class="name-wrap">
-        {{ product.invoiceTotal }}
-      </div>
+      {{ product.invoiceTotal }}
     </mat-cell>
   </ng-container>
 

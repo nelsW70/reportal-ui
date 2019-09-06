@@ -1,8 +1,9 @@
 // FONTS
 .expanded-details-info--uppercase,
-.name-wrap {
+.cell-uppercase {
   text-transform: uppercase;
 }
+
 .invoice-number {
   color: #0a6ed1;
   &:hover {
@@ -82,16 +83,6 @@
       }
       & .expanded-details-info {
         color: #515559;
-      }
-    }
-    & .name-wrap {
-      @media screen and (max-width: 768px) {
-        max-width: 100px;
-      }
-    }
-    & .invoice-number {
-      @media screen and (max-width: 400px) {
-        max-width: 70px;
       }
     }
   }
