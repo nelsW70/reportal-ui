@@ -135,7 +135,7 @@ const data: ProductInfo[] = [
     customerNumber: '300437700000',
     jobName: 'Sally Baker',
     invoiceTotal: '$56.50',
-    PONumber: '-UND',
+    PONumber: '-',
     customerJob: '-',
     invoiceType: 'Sale',
     tenderType: 'Check',
@@ -178,6 +178,8 @@ export class InvoiceLookupTableLargeComponent implements OnInit {
   displayedColumns = [
     'invoiceNumber',
     'customerName',
+    'jobName',
+    'PONumber',
     'invoiceTotal',
     'invoiceDate'
   ];

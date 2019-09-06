@@ -39,7 +39,39 @@
     </mat-cell>
   </ng-container>
 
-  <!-- Customer Name Column -->
+  <!-- Job Name Column -->
+  <ng-container matColumnDef="jobName">
+    <mat-header-cell
+      fdColumnSortable
+      *matHeaderCellDef
+      class="fd-has-type-minus-1"
+    >
+      Job Name
+    </mat-header-cell>
+    <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
+      <div class="name-wrap">
+        {{ product.jobName }}
+      </div>
+    </mat-cell>
+  </ng-container>
+
+  <!-- PO Number Column -->
+  <ng-container matColumnDef="PONumber">
+    <mat-header-cell
+      fdColumnSortable
+      *matHeaderCellDef
+      class="fd-has-type-minus-1"
+    >
+      PO Number
+    </mat-header-cell>
+    <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
+      <div class="name-wrap">
+        {{ product.PONumber }}
+      </div>
+    </mat-cell>
+  </ng-container>
+
+  <!-- Invoice Total Column -->
   <ng-container matColumnDef="invoiceTotal">
     <mat-header-cell
       fdColumnSortable
@@ -55,7 +87,7 @@
     </mat-cell>
   </ng-container>
 
-  <!-- Invoice Total Column -->
+  <!-- Invoice Date Column -->
   <ng-container matColumnDef="invoiceDate">
     <mat-header-cell
       fdColumnSortable
@@ -98,22 +130,7 @@
             {{ detail.product.customerNumber }}
           </div>
         </div>
-        <div class="expanded-details__detail-container">
-          <div>
-            Job Name:&nbsp;
-          </div>
-          <div class="expanded-details-info">
-            {{ detail.product.jobName }}
-          </div>
-        </div>
-        <div class="expanded-details__detail-container">
-          <div>
-            PO Number:&nbsp;
-          </div>
-          <div class="expanded-details-info">
-            {{ detail.product.PONumber }}
-          </div>
-        </div>
+
         <div class="expanded-details__detail-container">
           <div>
             Customer Job:&nbsp;
@@ -138,14 +155,6 @@
             {{ detail.product.tenderType }}
           </div>
         </div>
-        <!-- <div class="expanded-details__detail-container">
-          <div>
-            Invoice Date:&nbsp;
-          </div>
-          <div class="expanded-details-info">
-            {{ detail.product.invoiceDate }}
-          </div>
-        </div> -->
       </div>
     </mat-cell>
   </ng-container>
