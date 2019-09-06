@@ -12,12 +12,20 @@
         type="checkbox"
         id="checkbox-1"
         name="checkbox-name-1"
-        checked
       />
       Invoice Number
     </mat-header-cell>
     <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
-      <div class="invoice-number">
+      <!-- stop propagation to prevent the animation from occuring if
+      user just wants to click the checkbox -->
+      <div class="invoice-number" (click)="$event.stopPropagation()">
+        <input
+          fd-form-control
+          class="fd-form-control--checkbox"
+          type="checkbox"
+          id="checkbox-1"
+          name="checkbox-name-1"
+        />
         {{ product.invoiceNumber }}
       </div>
     </mat-cell>

@@ -3,10 +3,22 @@
 .name-wrap {
   text-transform: uppercase;
 }
+.invoice-number {
+  color: #0a6ed1;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 // CHECKBOX
 .fd-form-control--checkbox {
   margin-right: 4px;
+}
+
+.invoice-number {
+  & input[type='checkbox'] {
+    vertical-align: bottom;
+  }
 }
 
 // SMALL TABLE
