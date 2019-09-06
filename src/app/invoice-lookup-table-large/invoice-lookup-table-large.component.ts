@@ -175,7 +175,12 @@ export class InvoiceLookupTableLargeComponent implements OnInit {
   currentIndex: number = null;
 
   expandedData: any;
-  displayedColumns = ['invoiceNumber', 'customerName', 'invoiceTotal'];
+  displayedColumns = [
+    'invoiceNumber',
+    'customerName',
+    'invoiceTotal',
+    'invoiceDate'
+  ];
   dataSource = new MobileDataSource();
 
   isExpansionDetailRow = (i: number, row: object) =>

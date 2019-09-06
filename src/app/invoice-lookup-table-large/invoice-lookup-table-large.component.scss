@@ -28,24 +28,27 @@
     padding-left: 8px;
   }
 
-  mat-header-cell:nth-child(2),
-  mat-cell:nth-child(2) {
-    flex-grow: 1.25;
-  }
+  // might need this later
+  // mat-header-cell:nth-child(2),
+  // mat-cell:nth-child(2) {
+  //   flex-grow: 1.25;
+  // }
 
   mat-header-cell:nth-child(2),
-  mat-header-cell:nth-child(3) {
+  mat-header-cell:nth-child(3),
+  mat-header-cell:nth-child(4) {
     justify-content: flex-start;
     padding-left: 24px;
   }
 
   mat-row {
-    & mat-cell {
-      @media only screen and (max-width: 400px) {
-        align-items: flex-start;
-        padding-top: 12px;
-      }
-    }
+    // might need this later
+    // & mat-cell {
+    //   @media only screen and (max-width: 400px) {
+    //     align-items: flex-start;
+    //     padding-top: 12px;
+    //   }
+    // }
   }
 
   .mat-cell {

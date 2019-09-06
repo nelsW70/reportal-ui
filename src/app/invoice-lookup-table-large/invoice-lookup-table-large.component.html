@@ -39,7 +39,7 @@
     </mat-cell>
   </ng-container>
 
-  <!-- Invoice Total Column -->
+  <!-- Customer Name Column -->
   <ng-container matColumnDef="invoiceTotal">
     <mat-header-cell
       fdColumnSortable
@@ -48,10 +48,26 @@
     >
       Invoice Total
     </mat-header-cell>
+    <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
+      <div class="name-wrap">
+        {{ product.invoiceTotal }}
+      </div>
+    </mat-cell>
+  </ng-container>
+
+  <!-- Invoice Total Column -->
+  <ng-container matColumnDef="invoiceDate">
+    <mat-header-cell
+      fdColumnSortable
+      *matHeaderCellDef
+      class="fd-has-type-minus-1"
+    >
+      Invoice Date
+    </mat-header-cell>
     <mat-cell
       *matCellDef="let product; let i = index"
       class="fd-has-type-minus-1"
-      >{{ product.invoiceTotal }}
+      >{{ product.invoiceDate }}
       <span
         [ngClass]="
           currentIndex === i
@@ -122,14 +138,14 @@
             {{ detail.product.tenderType }}
           </div>
         </div>
-        <div class="expanded-details__detail-container">
+        <!-- <div class="expanded-details__detail-container">
           <div>
             Invoice Date:&nbsp;
           </div>
           <div class="expanded-details-info">
             {{ detail.product.invoiceDate }}
           </div>
-        </div>
+        </div> -->
       </div>
     </mat-cell>
   </ng-container>
