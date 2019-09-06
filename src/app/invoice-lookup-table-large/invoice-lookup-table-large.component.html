@@ -6,14 +6,7 @@
       *matHeaderCellDef
       class="fd-has-type-minus-1 th-1"
     >
-      <div class="th-container">
-        <div class="th-header">
-          Invoice Number
-        </div>
-        <div>
-          <span class="sap-icon--sorting-ranking sap-icon--s"></span>
-        </div>
-      </div>
+      Invoice Number
     </mat-header-cell>
     <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
       <div class="invoice-number">
@@ -29,14 +22,8 @@
       *matHeaderCellDef
       class="fd-has-type-minus-1"
     >
-      <div class="th-container">
-        <div class="th-header">
-          Customer Name
-        </div>
-        <div>
-          <span class="sap-icon--sorting-ranking sap-icon--s"></span>
-        </div></div
-    ></mat-header-cell>
+      Customer Name
+    </mat-header-cell>
     <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
       <div class="name-wrap">
         {{ product.customerName }}
@@ -51,14 +38,8 @@
       *matHeaderCellDef
       class="fd-has-type-minus-1"
     >
-      <div class="th-container">
-        <div class="th-header">
-          Invoice Total
-        </div>
-        <div>
-          <span class="sap-icon--sorting-ranking sap-icon"></span>
-        </div></div
-    ></mat-header-cell>
+      Invoice Total
+    </mat-header-cell>
     <mat-cell
       *matCellDef="let product; let i = index"
       class="fd-has-type-minus-1"
