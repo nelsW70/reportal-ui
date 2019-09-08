@@ -205,9 +205,6 @@ export class InvoiceLookupComponent implements OnInit {
     this.currentWindowWidth = window.innerWidth;
   }
 
-  // fake for demo to calculate window size on resize and show/different size screen
-  // this would be expensive if anyone resizes and should only be implemented in the onInit
-  // method if used
   @HostListener('window:resize')
   onResize() {
     this.currentWindowWidth = window.innerWidth;
