@@ -35,3 +35,45 @@ th {
     padding-top: 2px;
   }
 }
+
+.invoice-number--content {
+  color: #0a6ed1;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// CHECKBOX
+.fd-form-control--checkbox {
+  margin-right: 4px;
+}
+
+.invoice-number--content {
+  & input[type='checkbox'] {
+    vertical-align: top;
+  }
+}
+
+.invoice-number--header {
+  & input[type='checkbox'] {
+    vertical-align: bottom;
+  }
+}
+
+// CONTAINERS
+.po-number {
+  max-width: 70px;
+}
+
+.invoice-total {
+  &--header {
+    width: 110px;
+  }
+  &--content {
+    width: 110px;
+  }
+}
+
+.invoice-date {
+  min-width: 100px;
+}
