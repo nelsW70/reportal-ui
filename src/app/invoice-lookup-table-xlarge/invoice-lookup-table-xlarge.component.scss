@@ -36,7 +36,7 @@ th {
   }
 }
 
-.invoice-number--content {
+.invoice-number__content {
   color: #0a6ed1;
   &:hover {
     text-decoration: underline;
@@ -44,17 +44,20 @@ th {
 }
 
 // CHECKBOX
-.fd-form-control--checkbox {
+.fd-form-control__checkbox {
   margin-right: 4px;
 }
 
-.invoice-number--content {
+.invoice-number__content {
+  display: flex;
+  max-width: 120px;
   & input[type='checkbox'] {
     vertical-align: top;
   }
 }
 
-.invoice-number--header {
+.invoice-number__header {
+  width: 180px;
   & input[type='checkbox'] {
     vertical-align: bottom;
   }

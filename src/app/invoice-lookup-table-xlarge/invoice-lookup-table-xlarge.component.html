@@ -5,26 +5,32 @@
 
     <!-- Inoive Number Column -->
     <ng-container cdkColumnDef="invoiceNumber">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        <div class="invoice-number--header">
-          <input
-            fd-form-control
-            class="fd-form-control--checkbox"
-            type="checkbox"
-            id=""
-            name=""
-          />Invoice Number
-        </div>
+      <th
+        fdColumnSortable
+        cdk-header-cell
+        *cdkHeaderCellDef
+        class="invoice-number__header"
+      >
+        <input
+          fd-form-control
+          class="fd-form-control__checkbox"
+          type="checkbox"
+          id=""
+          name=""
+        />Invoice Number
       </th>
       <td cdk-cell *cdkCellDef="let product">
-        <div class="invoice-number--content">
+        <div class="invoice-number__content">
           <input
             fd-form-control
-            class="fd-form-control--checkbox"
+            class="fd-form-control__checkbox"
             type="checkbox"
             id=""
             name=""
-          />{{ product.invoiceNumber }}
+          />
+          <span>
+            {{ product.invoiceNumber }}
+          </span>
         </div>
       </td>
     </ng-container>
