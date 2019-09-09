@@ -35,7 +35,9 @@
         Customer<br />Name
       </th>
       <td cdk-cell *cdkCellDef="let product">
-        {{ product.customerName }}
+        <div class="uppercase">
+          {{ product.customerName }}
+        </div>
       </td>
     </ng-container>
 
@@ -43,7 +45,9 @@
     <ng-container cdkColumnDef="jobName">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Job<br />Name</th>
       <td cdk-cell *cdkCellDef="let product">
-        {{ product.jobName }}
+        <div class="uppercase">
+          {{ product.jobName }}
+        </div>
       </td>
     </ng-container>
 
@@ -72,7 +76,9 @@
         Type
       </th>
       <td cdk-cell *cdkCellDef="let product">
-        {{ product.invoiceType }}
+        <div class="uppercase">
+          {{ product.invoiceType }}
+        </div>
       </td>
     </ng-container>
 
@@ -83,7 +89,9 @@
         Type
       </th>
       <td cdk-cell *cdkCellDef="let product">
-        {{ product.tenderType }}
+        <div class="uppercase">
+          {{ product.tenderType }}
+        </div>
       </td>
     </ng-container>
 
