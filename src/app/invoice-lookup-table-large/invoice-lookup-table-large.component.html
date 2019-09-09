@@ -72,7 +72,9 @@
       PO Number
     </mat-header-cell>
     <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
-      {{ product.PONumber }}
+      <div class="po-number">
+        {{ product.PONumber }}
+      </div>
     </mat-cell>
   </ng-container>
 
