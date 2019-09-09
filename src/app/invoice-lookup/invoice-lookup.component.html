@@ -350,8 +350,11 @@
           </mat-row>
         </mat-table>
       </div>
-      <div *ngIf="currentWindowWidth >= 1024">
+      <div *ngIf="currentWindowWidth >= 1024 && currentWindowWidth < 1440">
         <app-invoice-lookup-table-large></app-invoice-lookup-table-large>
+      </div>
+      <div *ngIf="currentWindowWidth >= 1440">
+        <app-invoice-lookup-table-xlarge></app-invoice-lookup-table-xlarge>
       </div>
       <div class="fd-pagination">
         <span class="fd-pagination__total">30 items</span>

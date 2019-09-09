@@ -189,7 +189,6 @@
 
 // SMALL TABLE
 .mat-table {
-  //DIFFERENT!!!!!
   .th-container {
     display: flex;
     align-items: baseline;
@@ -215,7 +214,6 @@
     padding-left: 8px;
   }
 
-  //DIFFERENT!!!!! - ADD MEDIA QUERY
   mat-header-cell:nth-child(2),
   mat-cell:nth-child(2) {
     @media screen and (max-width: 350px) {
@@ -223,14 +221,12 @@
     }
   }
 
-  //DIFFERENT!!!!!
   mat-header-cell:nth-child(2),
   mat-header-cell:nth-child(3) {
     justify-content: flex-start;
     padding-left: 24px;
   }
 
-  //DIFFERENT!!!!!
   mat-row {
     & mat-cell {
       @media only screen and (max-width: 400px) {
@@ -256,7 +252,6 @@
         color: #515559;
       }
     }
-    //DIFFERENT!!!!!
     & .name-wrap {
       @media screen and (max-width: 768px) {
         max-width: 100px;
