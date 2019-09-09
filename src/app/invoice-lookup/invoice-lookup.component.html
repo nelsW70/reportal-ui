@@ -191,10 +191,8 @@
                 </div>
               </div>
             </mat-header-cell>
-            <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
-              <div class="invoice-number">
-                {{ product.invoiceNumber }}
-              </div>
+            <mat-cell *matCellDef="let product" class="fd-has-type-minus-1"
+              ><div class="invoice-number">{{ product.invoiceNumber }}</div>
             </mat-cell>
           </ng-container>
 
