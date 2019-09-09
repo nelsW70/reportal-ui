@@ -66,14 +66,19 @@ th {
 }
 
 .invoice-total {
-  &--header {
+  &__header {
     width: 110px;
   }
-  &--content {
+  &__content {
     width: 110px;
   }
 }
 
 .invoice-date {
-  min-width: 100px;
+  &__header {
+    width: 110px;
+  }
+  &__content {
+    width: 110px;
+  }
 }

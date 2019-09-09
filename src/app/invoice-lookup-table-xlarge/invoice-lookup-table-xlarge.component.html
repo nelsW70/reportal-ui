@@ -121,24 +121,29 @@
         fdColumnSortable
         cdk-header-cell
         *cdkHeaderCellDef
-        class="invoice-total--header"
+        class="invoice-total__header"
       >
         Invoice<br />
         Total
       </th>
       <td cdk-cell *cdkCellDef="let product">
-        <div class="invoice-total--content">
+        <div class="invoice-total__content">
           {{ product.invoiceTotal }}
         </div>
       </td>
     </ng-container>
     <!-- Invoice Date Column -->
     <ng-container cdkColumnDef="invoiceDate">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+      <th
+        fdColumnSortable
+        cdk-header-cell
+        *cdkHeaderCellDef
+        class="invoice-date__header"
+      >
         Invoice Date
       </th>
       <td cdk-cell *cdkCellDef="let product">
-        <div class="invoice-date">
+        <div class="invoice-date invoice-date__content">
           {{ product.invoiceDate }}
         </div>
       </td>
