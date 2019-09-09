@@ -1,166 +1,136 @@
 import { Component, OnInit } from '@angular/core';
 
 export interface ProductInfo {
-  proXtraId: string;
-  company: string;
-  fullName: string;
-  address: string;
-  addressOne: string;
-  addressTwo: string;
-  city: string;
-  state: string;
-  zip: string;
-  email: string;
-  phoneNumber: string;
-  signUpDate: string;
-  storesPurchasedFrom: string;
-  status: string;
+  invoiceNumber: string;
+  SAPBranch: string;
+  customerName: string;
+  customerNumber: string;
+  jobName: string;
+  PONumber: string;
+  customerJob: string;
+  invoiceType: string;
+  tenderType: string;
+  invoiceTotal: string;
+  invoiceDate: string;
 }
 
 const data: ProductInfo[] = [
   {
-    proXtraId: '1234567',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: '',
-    addressOne: 'ADDRESS 1',
-    addressTwo: 'ADDRESS 2',
-    city: 'CITY',
-    state: 'STATE',
-    zip: 'ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'created'
+    invoiceNumber: '910102101125',
+    SAPBranch: '0',
+    customerName: 'Sally Baker',
+    customerNumber: '300437700000',
+    jobName: 'Sally Baker',
+    PONumber: '-',
+    customerJob: '-',
+    invoiceType: 'Sale',
+    tenderType: 'Check',
+    invoiceTotal: '$56.50',
+    invoiceDate: '05/28/2019'
   },
   {
-    proXtraId: '1234567',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: '',
-    addressOne: 'ADDRESS 1',
-    addressTwo: 'ADDRESS 2',
-    city: 'CITY',
-    state: 'STATE',
-    zip: 'ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'created'
+    invoiceNumber: '910102101125',
+    SAPBranch: '0',
+    customerName: 'Sally Baker',
+    customerNumber: '300437700000',
+    jobName: 'Sally Baker',
+    PONumber: '-',
+    customerJob: '-',
+    invoiceType: 'Sale',
+    tenderType: 'Check',
+    invoiceTotal: '$56.50',
+    invoiceDate: '05/28/2019'
   },
   {
-    proXtraId: '1234567',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: '',
-    addressOne: 'ADDRESS 1',
-    addressTwo: 'ADDRESS 2',
-    city: 'CITY',
-    state: 'STATE',
-    zip: 'ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'created'
+    invoiceNumber: '910102101125',
+    SAPBranch: '0',
+    customerName: 'Sally Baker',
+    customerNumber: '300437700000',
+    jobName: 'Sally Baker',
+    PONumber: '-',
+    customerJob: '-',
+    invoiceType: 'Sale',
+    tenderType: 'Check',
+    invoiceTotal: '$56.50',
+    invoiceDate: '05/28/2019'
   },
   {
-    proXtraId: '1234567',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: '',
-    addressOne: 'ADDRESS 1',
-    addressTwo: 'ADDRESS 2',
-    city: 'CITY',
-    state: 'STATE',
-    zip: 'ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'pending'
+    invoiceNumber: '910102101125',
+    SAPBranch: '0',
+    customerName: 'Sally Baker',
+    customerNumber: '300437700000',
+    jobName: 'Sally Baker',
+    PONumber: '-',
+    customerJob: '-',
+    invoiceType: 'Sale',
+    tenderType: 'Check',
+    invoiceTotal: '$56.50',
+    invoiceDate: '05/28/2019'
   },
   {
-    proXtraId: '1234567',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: '',
-    addressOne: 'ADDRESS 1',
-    addressTwo: 'ADDRESS 2',
-    city: 'CITY',
-    state: 'STATE',
-    zip: 'ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'none'
+    invoiceNumber: '910102101125',
+    SAPBranch: '0',
+    customerName: 'Sally Baker',
+    customerNumber: '300437700000',
+    jobName: 'Sally Baker',
+    PONumber: '-',
+    customerJob: '-',
+    invoiceType: 'Sale',
+    tenderType: 'Check',
+    invoiceTotal: '$56.50',
+    invoiceDate: '05/28/2019'
   },
   {
-    proXtraId: '1234567',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: '',
-    addressOne: 'ADDRESS 1',
-    addressTwo: 'ADDRESS 2',
-    city: 'CITY',
-    state: 'STATE',
-    zip: 'ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'none'
+    invoiceNumber: '910102101125',
+    SAPBranch: '0',
+    customerName: 'Sally Baker',
+    customerNumber: '300437700000',
+    jobName: 'Sally Baker',
+    PONumber: '-',
+    customerJob: '-',
+    invoiceType: 'Sale',
+    tenderType: 'Check',
+    invoiceTotal: '$56.50',
+    invoiceDate: '05/28/2019'
   },
   {
-    proXtraId: '1234567',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: '',
-    addressOne: 'ADDRESS 1',
-    addressTwo: 'ADDRESS 2',
-    city: 'CITY',
-    state: 'STATE',
-    zip: 'ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'none'
+    invoiceNumber: '910102101125',
+    SAPBranch: '0',
+    customerName: 'Sally Baker',
+    customerNumber: '300437700000',
+    jobName: 'Sally Baker',
+    PONumber: '-',
+    customerJob: '-',
+    invoiceType: 'Sale',
+    tenderType: 'Check',
+    invoiceTotal: '$56.50',
+    invoiceDate: '05/28/2019'
   },
   {
-    proXtraId: '1234567',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: '',
-    addressOne: 'ADDRESS 1',
-    addressTwo: 'ADDRESS 2',
-    city: 'CITY',
-    state: 'STATE',
-    zip: 'ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'none'
+    invoiceNumber: '910102101125',
+    SAPBranch: '0',
+    customerName: 'Sally Baker',
+    customerNumber: '300437700000',
+    jobName: 'Sally Baker',
+    PONumber: '-',
+    customerJob: '-',
+    invoiceType: 'Sale',
+    tenderType: 'Check',
+    invoiceTotal: '$56.50',
+    invoiceDate: '05/28/2019'
   },
   {
-    proXtraId: '1234567',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: '',
-    addressOne: 'ADDRESS 1',
-    addressTwo: 'ADDRESS 2',
-    city: 'CITY',
-    state: 'STATE',
-    zip: 'ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
-    signUpDate: 'MM/DD/YYYYUND',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'none'
+    invoiceNumber: '910102101125',
+    SAPBranch: '0',
+    customerName: 'Sally Baker',
+    customerNumber: '300437700000',
+    jobName: 'Sally Baker',
+    PONumber: '-',
+    customerJob: '-',
+    invoiceType: 'Sale',
+    tenderType: 'Check',
+    invoiceTotal: '$56.50',
+    invoiceDate: '05/28/2019'
   }
 ];
 
@@ -171,15 +141,17 @@ const data: ProductInfo[] = [
 })
 export class InvoiceLookupTableXlargeComponent implements OnInit {
   displayedColumns = [
-    'proXtraId',
-    'company',
-    'fullName',
-    'address',
-    'email',
-    'phoneNumber',
-    'signUpDate',
-    'storesPurchasedFrom',
-    'status'
+    'invoiceNumber',
+    'SAPBranch',
+    'customerNumber',
+    'customerName',
+    'jobName',
+    'PONumber',
+    'customerJob',
+    'invoiceType',
+    'tenderType',
+    'invoiceTotal',
+    'invoiceDate'
   ];
   dataSource = data;
 

@@ -3,107 +3,108 @@
     <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
 
-    <!-- Pro Xtra Id Column -->
-    <ng-container cdkColumnDef="proXtraId">
+    <!-- Inoive Number Column -->
+    <ng-container cdkColumnDef="invoiceNumber">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Pro<br />
-        Xtra ID
+        Invoice<br />Number
       </th>
-      <td cdk-cell *cdkCellDef="let product">{{ product.proXtraId }}</td>
+      <td cdk-cell *cdkCellDef="let product">{{ product.invoiceNumber }}</td>
     </ng-container>
 
-    <!-- Company Column -->
-    <ng-container cdkColumnDef="company">
+    <!-- SAP Branch Column -->
+    <ng-container cdkColumnDef="SAPBranch">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Company
+        SAP Branch<br />Number
       </th>
-      <td cdk-cell *cdkCellDef="let product">{{ product.company }}</td>
+      <td cdk-cell *cdkCellDef="let product">{{ product.SAPBranch }}</td>
     </ng-container>
 
-    <!-- Full Name Column -->
-    <ng-container cdkColumnDef="fullName">
+    <!-- Customer Number Column -->
+    <ng-container cdkColumnDef="customerNumber">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Full Name
+        Customer<br />Number
       </th>
       <td cdk-cell *cdkCellDef="let product">
-        {{ product.fullName }}
+        {{ product.customerNumber }}
       </td>
     </ng-container>
 
-    <!-- Address Column -->
-    <ng-container cdkColumnDef="address">
+    <!-- Customer Name Column -->
+    <ng-container cdkColumnDef="customerName">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Address
+        Customer<br />Name
       </th>
       <td cdk-cell *cdkCellDef="let product">
-        <div class="address-item">{{ product.addressOne }},</div>
+        {{ product.customerName }}
       </td>
     </ng-container>
 
-    <!-- Email Column -->
-    <ng-container cdkColumnDef="email">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Email
-      </th>
+    <!-- Job Name Column -->
+    <ng-container cdkColumnDef="jobName">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Job<br />Name</th>
       <td cdk-cell *cdkCellDef="let product">
-        {{ product.email }}
+        {{ product.jobName }}
       </td>
     </ng-container>
 
-    <!-- Phone Column -->
-    <ng-container cdkColumnDef="phoneNumber">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Phone<br />
-        Number
-      </th>
+    <!-- PO Number Column -->
+    <ng-container cdkColumnDef="PONumber">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>PO<br />Number</th>
       <td cdk-cell *cdkCellDef="let product">
-        {{ product.phoneNumber }}
+        {{ product.PONumber }}
       </td>
     </ng-container>
 
-    <!-- Sign Up Date Column -->
-    <ng-container cdkColumnDef="signUpDate">
+    <!-- Customer Job Column -->
+    <ng-container cdkColumnDef="customerJob">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Sign Up<br />
+        Customer<br />Job
+      </th>
+      <td cdk-cell *cdkCellDef="let product">
+        {{ product.customerJob }}
+      </td>
+    </ng-container>
+
+    <!-- Invoice Type Column -->
+    <ng-container cdkColumnDef="invoiceType">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Invoice<br />
+        Type
+      </th>
+      <td cdk-cell *cdkCellDef="let product">
+        {{ product.invoiceType }}
+      </td>
+    </ng-container>
+
+    <!-- Tender Type Column -->
+    <ng-container cdkColumnDef="tenderType">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Tender<br />
+        Type
+      </th>
+      <td cdk-cell *cdkCellDef="let product">
+        {{ product.tenderType }}
+      </td>
+    </ng-container>
+
+    <!-- Invoice Total Column -->
+    <ng-container cdkColumnDef="invoiceTotal">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Invoice<br />
+        Total
+      </th>
+      <td cdk-cell *cdkCellDef="let product">
+        {{ product.invoiceTotal }}
+      </td>
+    </ng-container>
+    <!-- Invoice Date Column -->
+    <ng-container cdkColumnDef="invoiceDate">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Invoice<br />
         Date
       </th>
       <td cdk-cell *cdkCellDef="let product">
-        {{ product.signUpDate }}
-      </td>
-    </ng-container>
-
-    <!-- Stores Purchased From Column -->
-    <ng-container cdkColumnDef="storesPurchasedFrom">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Stores<br />
-        Purchased From
-      </th>
-      <td cdk-cell *cdkCellDef="let product">
-        {{ product.storesPurchasedFrom }}
-      </td>
-    </ng-container>
-
-    <!-- Status Column -->
-    <ng-container cdkColumnDef="status">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Status
-      </th>
-      <td cdk-cell *cdkCellDef="let product">
-        <div class="status-container">
-          <div *ngIf="product.status === 'created'">
-            <div fd-status-label [statusIcon]="'available'">
-              Account Created
-            </div>
-          </div>
-          <div *ngIf="product.status === 'pending'">
-            <div fd-status-label [statusIcon]="'away'">
-              Pending Account Creation
-            </div>
-          </div>
-          <div *ngIf="product.status === 'none'" class="create-account">
-            <button fd-button [options]="'emphasized'">Create Account</button>
-          </div>
-        </div>
+        {{ product.invoiceDate }}
       </td>
     </ng-container>
 
