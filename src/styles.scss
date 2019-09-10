@@ -313,6 +313,14 @@ main {
   }
 }
 
+// DATEPICKER
+.fd-date-picker .fd-input-group input[type='text'] {
+  @media only screen and (max-width: 400px) {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+
 // BUTTONS
 button.btn-100 {
   height: 38px;
