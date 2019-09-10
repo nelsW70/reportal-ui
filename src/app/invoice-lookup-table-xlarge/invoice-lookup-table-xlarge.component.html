@@ -75,7 +75,9 @@
 
     <!-- PO Number Column -->
     <ng-container cdkColumnDef="PONumber">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>PO Number</th>
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef class="po-header">
+        PO Number
+      </th>
       <td cdk-cell *cdkCellDef="let product">
         <div class="po-number">{{ product.PONumber }}</div>
       </td>
