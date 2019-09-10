@@ -59,7 +59,7 @@
         Customer<br />Name
       </th>
       <td cdk-cell *cdkCellDef="let product">
-        <div class="uppercase">
+        <div class="uppercase customer-name">
           {{ product.customerName }}
         </div>
       </td>
@@ -69,7 +69,7 @@
     <ng-container cdkColumnDef="jobName">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Job Name</th>
       <td cdk-cell *cdkCellDef="let product">
-        <div class="uppercase">
+        <div class="uppercase job-name">
           {{ product.jobName }}
         </div>
       </td>
@@ -91,7 +91,9 @@
         Customer<br />Job
       </th>
       <td cdk-cell *cdkCellDef="let product">
-        {{ product.customerJob }}
+        <div class="customer-job">
+          {{ product.customerJob }}
+        </div>
       </td>
     </ng-container>
 

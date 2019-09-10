@@ -66,6 +66,12 @@ th {
   max-width: 70px;
 }
 
+.customer-name,
+.job-name,
+.customer-job {
+  max-width: 100px;
+}
+
 .invoice-total {
   &__header {
     width: 110px;
