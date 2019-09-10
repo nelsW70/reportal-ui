@@ -29,6 +29,10 @@
 
 // table
 .mat-table {
+  .mat-header-row {
+    background-color: rgb(247, 247, 247);
+    border-bottom-color: rgb(238, 238, 239);
+  }
   .th-header {
     line-height: 1;
   }
