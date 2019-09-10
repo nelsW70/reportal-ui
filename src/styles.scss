@@ -36,7 +36,7 @@
   .mat-header-cell,
   .mat-cell {
     font-family: '72';
-    word-wrap: break-word;
+    word-break: break-all;
     &.fd-has-type-minus-1.fd-has-text-align-right {
       font-size: 12px;
       color: rgb(50, 54, 58);
