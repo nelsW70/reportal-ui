@@ -69,9 +69,7 @@
     <ng-container cdkColumnDef="jobName">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Job Name</th>
       <td cdk-cell *cdkCellDef="let product">
-        <div class="uppercase job-name">
-          {{ product.jobName }}
-        </div>
+        <div class="uppercase job-name">{{ product.jobName }}</div>
       </td>
     </ng-container>
 
@@ -79,9 +77,7 @@
     <ng-container cdkColumnDef="PONumber">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>PO Number</th>
       <td cdk-cell *cdkCellDef="let product">
-        <div class="po-number">
-          {{ product.PONumber }}
-        </div>
+        <div class="po-number">{{ product.PONumber }}</div>
       </td>
     </ng-container>
 
@@ -100,8 +96,7 @@
     <!-- Invoice Type Column -->
     <ng-container cdkColumnDef="invoiceType">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Invoice<br />
-        Type
+        Invoice Type
       </th>
       <td cdk-cell *cdkCellDef="let product">
         <div class="uppercase">
@@ -113,8 +108,7 @@
     <!-- Tender Type Column -->
     <ng-container cdkColumnDef="tenderType">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Tender<br />
-        Type
+        Tender Type
       </th>
       <td cdk-cell *cdkCellDef="let product">
         <div class="uppercase">
@@ -131,8 +125,7 @@
         *cdkHeaderCellDef
         class="invoice-total__header"
       >
-        Invoice<br />
-        Total
+        Invoice Total
       </th>
       <td cdk-cell *cdkCellDef="let product">
         <div class="invoice-total__content">
