@@ -64,6 +64,9 @@
   }
 
   .mat-cell {
+    align-items: baseline;
+    padding-top: 12px;
+    padding-bottom: 12px;
     &:last-of-type {
       display: flex;
       justify-content: space-between;

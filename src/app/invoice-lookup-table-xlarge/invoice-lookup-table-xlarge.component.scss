@@ -43,6 +43,12 @@ th {
   }
 }
 
+// DATA CELLS
+.fd-table td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
 // CHECKBOX
 .fd-form-control__checkbox {
   margin-right: 4px;
@@ -50,7 +56,6 @@ th {
 }
 
 .invoice-number__content {
-  display: flex;
   max-width: 120px;
   & input[type='checkbox'] {
     vertical-align: top;
@@ -62,7 +67,6 @@ th {
 }
 
 // CONTAINERS
-
 .po-header {
   min-width: 100px;
 }
