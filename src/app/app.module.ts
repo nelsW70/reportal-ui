@@ -27,6 +27,7 @@ import { EDealerComponent } from './e-dealer/e-dealer.component';
 import { InvoiceLookupComponent } from './invoice-lookup/invoice-lookup.component';
 import { InvoiceLookupTableLargeComponent } from './invoice-lookup-table-large/invoice-lookup-table-large.component';
 import { InvoiceLookupTableXlargeComponent } from './invoice-lookup-table-xlarge/invoice-lookup-table-xlarge.component';
+import { InventoryLookupComponent } from './inventory-lookup/inventory-lookup.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { InvoiceLookupTableXlargeComponent } from './invoice-lookup-table-xlarge
     EDealerComponent,
     InvoiceLookupComponent,
     InvoiceLookupTableLargeComponent,
-    InvoiceLookupTableXlargeComponent
+    InvoiceLookupTableXlargeComponent,
+    InventoryLookupComponent
   ],
   imports: [
     BrowserModule,

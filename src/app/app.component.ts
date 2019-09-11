@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   // large screen tab nav
   links = [
     { path: 'pricing-lookup', label: 'Pricing Lookup' },
+    { path: 'inventory-lookup', label: 'Inventory Lookup' },
     { path: 'invoice-lookup', label: 'Invoice Lookup' },
     { path: 'eDealer', label: 'eDealer Data' },
     { path: 'thd-prospects', label: 'THD Prospects' }

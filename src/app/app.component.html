@@ -45,20 +45,26 @@
         >
         <a
           mat-button
-          routerLink="/invoice-lookup"
+          routerLink="/inventory-lookup"
           (click)="sidenav.toggle(); opened = !opened; activeLink = links[1]"
+          >Inventory Lookup</a
+        >
+        <a
+          mat-button
+          routerLink="/invoice-lookup"
+          (click)="sidenav.toggle(); opened = !opened; activeLink = links[2]"
           >Invoice Lookup</a
         >
         <a
           mat-button
           routerLink="/eDealer"
-          (click)="sidenav.toggle(); opened = !opened; activeLink = links[2]"
+          (click)="sidenav.toggle(); opened = !opened; activeLink = links[3]"
           >eDealer Data</a
         >
         <a
           mat-button
           routerLink="/thd-prospects"
-          (click)="sidenav.toggle(); opened = !opened; activeLink = links[3]"
+          (click)="sidenav.toggle(); opened = !opened; activeLink = links[4]"
           >THD Prospects</a
         >
       </div>
