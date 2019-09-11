@@ -71,7 +71,7 @@
   @media only screen and (min-width: 768px) {
     .row-one {
       width: 100%;
-      max-width: 500px;
+      max-width: 450px;
 
       & .inline-form-inputs {
         & .fd-form__item {
@@ -87,7 +87,7 @@
       max-width: 768px;
       & .fd-form__item {
         &:first-child {
-          width: 500px;
+          width: 450px;
           margin-right: 16px;
         }
         &:nth-child(2) {
