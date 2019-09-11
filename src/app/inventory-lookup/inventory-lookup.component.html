@@ -1,3 +1,128 @@
-<p>
-  inventory-lookup works!
-</p>
+<h4 class="fd-has-type-4">Inventory Lookup</h4>
+<fd-panel>
+  <fd-panel-header>
+    <fd-panel-head>
+      <h2 fd-panel-title>Inventory Lookup</h2>
+    </fd-panel-head>
+  </fd-panel-header>
+  <fd-panel-body class="panel-body panel-body--main panel-body--main__pricing">
+    <div fd-form-set>
+      <div class="row-one-large">
+        <div class="inline-form-inputs row-one">
+          <div fd-form-item class="required-input-fields">
+            <label fd-form-label class="required" for="select-1">Country</label>
+            <div class="ui icon input">
+              <sui-select
+                id="select-1"
+                name=""
+                class="selection"
+                [(ngModel)]="selectedOption"
+                [isSearchable]="true"
+                [options]="options"
+                placeholder="Select Store"
+                aria-required="true"
+              >
+                <sui-select-option
+                  *ngFor="let option of options"
+                  [value]="option"
+                  >{{ option }}
+                </sui-select-option>
+              </sui-select>
+            </div>
+            <!-- this should probably be done with an ngIf based on validation -->
+            <span class="error-message fd-has-type-minus-1"
+              >Fake error message</span
+            >
+          </div>
+          <div fd-form-item>
+            <label fd-form-label class="required" for="select-2"
+              >PPG Store Number</label
+            >
+            <div class="ui icon input">
+              <sui-select
+                id="select-2"
+                name=""
+                class="selection"
+                [(ngModel)]="selectedOption2"
+                [isSearchable]="true"
+                [options]="options"
+                placeholder="Select Store"
+                aria-required="true"
+              >
+                <sui-select-option
+                  *ngFor="let option of options"
+                  [value]="option"
+                  >{{ option }}
+                </sui-select-option>
+              </sui-select>
+            </div>
+            <!-- this should probably be done with an ngIf based on validation -->
+            <span class="error-message fd-has-type-minus-1"
+              >Fake error message</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row-two">
+        <div fd-form-item class="required-input-fields">
+          <label fd-form-label for="input-4">Lookup Item</label>
+          <fd-combobox
+            id="input-4"
+            [(ngModel)]="searchTermOne"
+            [dropdownValues]="dropdownValues1"
+            [placeholder]="'Search Items'"
+            [glyph]="'search'"
+            [maxHeight]="'250px'"
+            [placeholder]="'Search Items'"
+          >
+          </fd-combobox>
+        </div>
+        <div fd-form-item>
+          <button class="btn-100 item-lookup" fd-button [glyph]="'add'">
+            Add Item To Lookup
+          </button>
+        </div>
+        <div fd-form-item>
+          <button class="btn-100" fd-button [options]="'emphasized'">
+            Get Pricing
+          </button>
+        </div>
+        <div fd-form-item class="reset-link">
+          <p class="fd-has-color-action-1 fd-has-text-align-center">Reset</p>
+        </div>
+      </div>
+    </div>
+  </fd-panel-body>
+</fd-panel>
+
+<div>
+  <fd-panel>
+    <fd-panel-header>
+      <fd-panel-head>
+        <h2 fd-panel-title>Inventory and Stock Results</h2>
+      </fd-panel-head>
+    </fd-panel-header>
+    <fd-panel-body class="panel-body panel-body--secondary">
+      <!-- <div class="fd-pagination">
+        <span class="fd-pagination__total">30 items</span>
+        <nav class="fd-pagination__nav">
+          <a
+            href="#"
+            class="fd-pagination__link fd-pagination__link--previous"
+            aria-label="Previous"
+            aria-disabled="true"
+          ></a>
+          <a href="#" class="fd-pagination__link" aria-selected="true">1</a>
+          <a href="#" class="fd-pagination__link">2</a>
+          <a href="#" class="fd-pagination__link">3</a>
+          <a
+            href="#"
+            class="fd-pagination__link fd-pagination__link--next"
+            aria-label="Next"
+            aria-disabled="false"
+          ></a>
+        </nav>
+      </div> -->
+    </fd-panel-body>
+  </fd-panel>
+</div>
