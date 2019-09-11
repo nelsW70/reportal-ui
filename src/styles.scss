@@ -3,9 +3,8 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 // FONTS
-
-// landing page tab labels
 .landing-page {
+  // MAIN NAVIGATION TABS
   .mat-tab-link {
     color: #74777a;
     font-family: '72';
@@ -24,6 +23,38 @@
   .mat-tab-label-active {
     color: #0a6ed1;
     transition: all 225ms;
+  }
+  .mat-tab-nav-bar .mat-ink-bar {
+    background-color: #0a6ed1;
+    min-width: 120px !important;
+  }
+  // INVENTORY LOOKUP TABS
+  & .panel-body--secondary {
+    .mat-tab-label {
+      color: #74777a;
+      font-family: '72';
+      font-size: 14px;
+      opacity: 1;
+      transition: all 225ms;
+      padding: 0 16px;
+      min-width: 120px;
+      &:hover {
+        color: #085caf;
+        transition: all 225ms;
+      }
+      &:focus {
+        color: #0a6ed1;
+        transition: all 225ms;
+      }
+    }
+    .mat-ink-bar {
+      background-color: #0a6ed1;
+      min-width: 120px !important;
+    }
+    .mat-tab-label-active {
+      color: #0a6ed1;
+      transition: all 225ms;
+    }
   }
 }
 
@@ -151,14 +182,6 @@ main {
   @media only screen and (min-width: 960px) {
     display: block;
     visibility: hidden !important;
-  }
-}
-
-// TABS
-.landing-page {
-  .mat-tab-nav-bar .mat-ink-bar {
-    background-color: #0a6ed1;
-    min-width: 120px !important;
   }
 }
 
