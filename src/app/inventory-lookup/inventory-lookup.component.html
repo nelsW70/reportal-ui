@@ -19,7 +19,7 @@
                 [(ngModel)]="selectedOption"
                 [isSearchable]="true"
                 [options]="options"
-                placeholder="Select Store"
+                placeholder="US"
                 aria-required="true"
               >
                 <sui-select-option
@@ -65,7 +65,12 @@
       </div>
       <div class="row-two">
         <div fd-form-item class="required-input-fields">
-          <label fd-form-label for="input-4">Lookup Item</label>
+          <label fd-form-label for="input-4" class="lookup-label--mobile"
+            >Lookup Item</label
+          >
+          <label fd-form-label for="input-4" class="lookup-label--large"
+            >Lookup Item (Limit 5)</label
+          >
           <fd-combobox
             id="input-4"
             [(ngModel)]="searchTermOne"
@@ -77,14 +82,14 @@
           >
           </fd-combobox>
         </div>
-        <div fd-form-item>
+        <div fd-form-item class="button-one">
           <button class="btn-100 item-lookup" fd-button [glyph]="'add'">
             Add Item To Lookup
           </button>
         </div>
-        <div fd-form-item>
+        <div fd-form-item class="button-two">
           <button class="btn-100" fd-button [options]="'emphasized'">
-            Get Pricing
+            Search Inventory
           </button>
         </div>
         <div fd-form-item class="reset-link">

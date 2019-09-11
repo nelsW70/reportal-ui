@@ -42,6 +42,40 @@
   }
 }
 
+// RESET LINK
+.reset-link {
+  cursor: pointer;
+}
+
+// HIDE ELEMENTS ON MOBILE
+.button-one,
+.reset-link {
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+// BUTTONS
+.button-two {
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 8px;
+  }
+}
+
+// LOOKUP LABEL
+.lookup-label {
+  &--mobile {
+    @media only screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  &--large {
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
 // .panel-body--main {
 //   @media only screen and (min-width: 768px) {
 //     & .fd-form__item {
