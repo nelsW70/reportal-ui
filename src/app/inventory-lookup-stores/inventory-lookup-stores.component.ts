@@ -16,11 +16,8 @@ export interface ProductInfo {
   address3: string;
   address4: string;
   someNumber: string;
-  PONumber: string;
-  customerJob: string;
-  invoiceType: string;
-  tenderType: string;
-  invoiceDate: string;
+  phoneNumber: string;
+  distance: string;
 }
 
 const data: ProductInfo[] = [
@@ -31,11 +28,8 @@ const data: ProductInfo[] = [
     address3: 'CA',
     address4: '93036',
     someNumber: '2536',
-    PONumber: '-',
-    customerJob: '-',
-    invoiceType: 'Sale',
-    tenderType: 'Check',
-    invoiceDate: '05/28/2019'
+    phoneNumber: '(805) 485-9556',
+    distance: '0.02 miles'
   },
   {
     storeNumber: 'PPG Paints 8089',
@@ -44,11 +38,8 @@ const data: ProductInfo[] = [
     address3: 'CA',
     address4: '93036',
     someNumber: '2536',
-    PONumber: '-',
-    customerJob: '-',
-    invoiceType: 'Sale',
-    tenderType: 'Check',
-    invoiceDate: '05/28/2019'
+    phoneNumber: '(805) 485-9556',
+    distance: '0.02 miles'
   },
   {
     storeNumber: 'PPG Paints 8089',
@@ -57,11 +48,8 @@ const data: ProductInfo[] = [
     address3: 'CA',
     address4: '93036',
     someNumber: '2536',
-    PONumber: '-',
-    customerJob: '-',
-    invoiceType: 'Sale',
-    tenderType: 'Check',
-    invoiceDate: '05/28/2019'
+    phoneNumber: '(805) 485-9556',
+    distance: '0.02 miles'
   },
   {
     storeNumber: 'PPG Paints 8089',
@@ -70,11 +58,8 @@ const data: ProductInfo[] = [
     address3: 'CA',
     address4: '93036',
     someNumber: '2536',
-    PONumber: '-',
-    customerJob: '-',
-    invoiceType: 'Sale',
-    tenderType: 'Check',
-    invoiceDate: '05/28/2019'
+    phoneNumber: '(805) 485-9556',
+    distance: '0.02 miles'
   },
   {
     storeNumber: 'PPG Paints 8089',
@@ -83,11 +68,8 @@ const data: ProductInfo[] = [
     address3: 'CA',
     address4: '93036',
     someNumber: '2536',
-    PONumber: '-',
-    customerJob: '-',
-    invoiceType: 'Sale',
-    tenderType: 'Check',
-    invoiceDate: '05/28/2019'
+    phoneNumber: '(805) 485-9556',
+    distance: '0.02 miles'
   },
   {
     storeNumber: 'PPG Paints 8089',
@@ -96,11 +78,8 @@ const data: ProductInfo[] = [
     address3: 'CA',
     address4: '93036',
     someNumber: '2536',
-    PONumber: '-',
-    customerJob: '-',
-    invoiceType: 'Sale',
-    tenderType: 'Check',
-    invoiceDate: '05/28/2019'
+    phoneNumber: '(805) 485-9556',
+    distance: '0.02 miles'
   },
   {
     storeNumber: 'PPG Paints 8089',
@@ -109,11 +88,8 @@ const data: ProductInfo[] = [
     address3: 'CA',
     address4: '93036',
     someNumber: '2536',
-    PONumber: '-',
-    customerJob: '-',
-    invoiceType: 'Sale',
-    tenderType: 'Check',
-    invoiceDate: '05/28/2019'
+    phoneNumber: '(805) 485-9556',
+    distance: '0.02 miles'
   },
   {
     storeNumber: 'PPG Paints 8089',
@@ -122,11 +98,8 @@ const data: ProductInfo[] = [
     address3: 'CA',
     address4: '93036',
     someNumber: '2536',
-    PONumber: '-',
-    customerJob: '-',
-    invoiceType: 'Sale',
-    tenderType: 'Check',
-    invoiceDate: '05/28/2019'
+    phoneNumber: '(805) 485-9556',
+    distance: '0.02 miles'
   },
   {
     storeNumber: 'PPG Paints 8089',
@@ -135,11 +108,8 @@ const data: ProductInfo[] = [
     address3: 'CA',
     address4: '93036',
     someNumber: '2536',
-    PONumber: '-UND',
-    customerJob: '-',
-    invoiceType: 'Sale',
-    tenderType: 'Check',
-    invoiceDate: '05/28/2019'
+    phoneNumber: '-UND',
+    distance: '0.02 miles'
   }
 ];
 
