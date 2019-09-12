@@ -18,15 +18,15 @@
             </mat-cell>
           </ng-container>
 
-          <!-- Some Number Column -->
-          <ng-container matColumnDef="someNumber">
+          <!-- Item Number Column -->
+          <ng-container matColumnDef="itemNumber">
             <mat-header-cell *matHeaderCellDef class="fd-has-type-minus-1">
               6-411/01
             </mat-header-cell>
             <mat-cell
               *matCellDef="let product; let i = index"
               class="fd-has-type-minus-1"
-              >{{ product.someNumber }}
+              >{{ product.itemNumber }}
               <span
                 [ngClass]="
                   currentIndex === i

@@ -61,8 +61,7 @@
   //   }
   // }
 
-  mat-header-cell:nth-child(2),
-  mat-header-cell:nth-child(3) {
+  mat-header-cell:nth-child(2) {
     justify-content: flex-start;
     padding-left: 24px;
   }
@@ -92,16 +91,6 @@
         color: #515559;
       }
     }
-    // & .name-wrap {
-    //   @media screen and (max-width: 768px) {
-    //     max-width: 100px;
-    //   }
-    // }
-    // & .invoice-number {
-    //   @media screen and (max-width: 400px) {
-    //     max-width: 70px;
-    //   }
-    // }
   }
 
   .product-row:not(.expanded) {
@@ -110,11 +99,6 @@
 
   .product-row:not(.expanded):hover {
     background: #f5f5f5;
-  }
-
-  .fd-table__sort-column::after {
-    content: unset;
-    display: none;
   }
 
   .element-row {

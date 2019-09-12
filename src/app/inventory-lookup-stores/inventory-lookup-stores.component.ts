@@ -15,7 +15,7 @@ export interface ProductInfo {
   address2: string;
   address3: string;
   address4: string;
-  someNumber: string;
+  itemNumber: string;
   phoneNumber: string;
   distance: string;
 }
@@ -27,7 +27,7 @@ const data: ProductInfo[] = [
     address2: 'Oxnard',
     address3: 'CA',
     address4: '93036',
-    someNumber: '2536',
+    itemNumber: '2536',
     phoneNumber: '(805) 485-9556',
     distance: '0.02 miles'
   },
@@ -37,7 +37,7 @@ const data: ProductInfo[] = [
     address2: 'Oxnard',
     address3: 'CA',
     address4: '93036',
-    someNumber: '2536',
+    itemNumber: '2536',
     phoneNumber: '(805) 485-9556',
     distance: '0.02 miles'
   },
@@ -47,7 +47,7 @@ const data: ProductInfo[] = [
     address2: 'Oxnard',
     address3: 'CA',
     address4: '93036',
-    someNumber: '2536',
+    itemNumber: '2536',
     phoneNumber: '(805) 485-9556',
     distance: '0.02 miles'
   },
@@ -57,7 +57,7 @@ const data: ProductInfo[] = [
     address2: 'Oxnard',
     address3: 'CA',
     address4: '93036',
-    someNumber: '2536',
+    itemNumber: '2536',
     phoneNumber: '(805) 485-9556',
     distance: '0.02 miles'
   },
@@ -67,7 +67,7 @@ const data: ProductInfo[] = [
     address2: 'Oxnard',
     address3: 'CA',
     address4: '93036',
-    someNumber: '2536',
+    itemNumber: '2536',
     phoneNumber: '(805) 485-9556',
     distance: '0.02 miles'
   },
@@ -77,7 +77,7 @@ const data: ProductInfo[] = [
     address2: 'Oxnard',
     address3: 'CA',
     address4: '93036',
-    someNumber: '2536',
+    itemNumber: '2536',
     phoneNumber: '(805) 485-9556',
     distance: '0.02 miles'
   },
@@ -87,7 +87,7 @@ const data: ProductInfo[] = [
     address2: 'Oxnard',
     address3: 'CA',
     address4: '93036',
-    someNumber: '2536',
+    itemNumber: '2536',
     phoneNumber: '(805) 485-9556',
     distance: '0.02 miles'
   },
@@ -97,7 +97,7 @@ const data: ProductInfo[] = [
     address2: 'Oxnard',
     address3: 'CA',
     address4: '93036',
-    someNumber: '2536',
+    itemNumber: '2536',
     phoneNumber: '(805) 485-9556',
     distance: '0.02 miles'
   },
@@ -107,7 +107,7 @@ const data: ProductInfo[] = [
     address2: 'Oxnard',
     address3: 'CA',
     address4: '93036',
-    someNumber: '2536',
+    itemNumber: '2536',
     phoneNumber: '-UND',
     distance: '0.02 miles'
   }
@@ -146,7 +146,7 @@ export class InventoryLookupStoresComponent implements OnInit {
   currentIndex: number = null;
 
   expandedData: any;
-  displayedColumns = ['storeNumber', 'someNumber'];
+  displayedColumns = ['storeNumber', 'itemNumber'];
   dataSource = new MobileDataSource();
 
   isExpansionDetailRow = (i: number, row: object) =>
