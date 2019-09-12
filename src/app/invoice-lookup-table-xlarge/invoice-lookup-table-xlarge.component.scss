@@ -47,6 +47,15 @@ th {
 .fd-table td {
   padding-top: 12px;
   padding-bottom: 12px;
+  &:first-of-type {
+    word-break: break-all;
+  }
+  &:nth-child(3) {
+    word-break: break-all;
+  }
+  &:nth-child(6) {
+    word-break: break-all;
+  }
 }
 
 // CHECKBOX
@@ -71,12 +80,13 @@ th {
   min-width: 100px;
 }
 .po-number {
-  max-width: 70px;
+  max-width: 80px;
 }
 
 .customer-name,
 .job-name,
-.customer-job {
+.customer-job,
+.po-number {
   max-width: 100px;
 }
 

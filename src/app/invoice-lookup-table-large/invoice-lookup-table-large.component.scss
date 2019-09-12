@@ -26,7 +26,7 @@
 .mat-table {
   // CONTAINERS
   .po-number {
-    max-width: 70px;
+    max-width: 80px;
   }
 
   .customer-name,
@@ -45,6 +45,15 @@
     &__detail-container {
       display: flex;
       flex-wrap: wrap;
+    }
+  }
+
+  mat-cell {
+    &:first-of-type {
+      word-break: break-all;
+    }
+    &:nth-child(4) {
+      word-break: break-all;
     }
   }
 
