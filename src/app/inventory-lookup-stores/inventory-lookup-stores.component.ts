@@ -10,12 +10,12 @@ import {
 } from '@angular/animations';
 
 export interface ProductInfo {
+  itemNumber: string;
   storeNumber: string;
   address1: string;
   address2: string;
   address3: string;
   address4: string;
-  itemNumber: string;
   itemCount: string;
   phoneNumber: string;
   distance: string;
@@ -23,8 +23,8 @@ export interface ProductInfo {
 
 const data: ProductInfo[] = [
   {
-    storeNumber: 'PPG Paints 8089',
     itemNumber: '',
+    storeNumber: 'PPG Paints 8089',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
     address3: 'CA',
@@ -34,8 +34,8 @@ const data: ProductInfo[] = [
     distance: '0.02 miles'
   },
   {
-    storeNumber: 'PPG Paints 8089',
     itemNumber: '',
+    storeNumber: 'PPG Paints 8089',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
     address3: 'CA',
@@ -45,8 +45,8 @@ const data: ProductInfo[] = [
     distance: '0.02 miles'
   },
   {
-    storeNumber: 'PPG Paints 8089',
     itemNumber: '',
+    storeNumber: 'PPG Paints 8089',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
     address3: 'CA',
@@ -56,8 +56,8 @@ const data: ProductInfo[] = [
     distance: '0.02 miles'
   },
   {
-    storeNumber: 'PPG Paints 8089',
     itemNumber: '',
+    storeNumber: 'PPG Paints 8089',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
     address3: 'CA',
@@ -67,8 +67,8 @@ const data: ProductInfo[] = [
     distance: '0.02 miles'
   },
   {
-    storeNumber: 'PPG Paints 8089',
     itemNumber: '',
+    storeNumber: 'PPG Paints 8089',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
     address3: 'CA',
@@ -78,8 +78,8 @@ const data: ProductInfo[] = [
     distance: '0.02 miles'
   },
   {
-    storeNumber: 'PPG Paints 8089',
     itemNumber: '',
+    storeNumber: 'PPG Paints 8089',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
     address3: 'CA',
@@ -89,8 +89,8 @@ const data: ProductInfo[] = [
     distance: '0.02 miles'
   },
   {
-    storeNumber: 'PPG Paints 8089',
     itemNumber: '',
+    storeNumber: 'PPG Paints 8089',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
     address3: 'CA',
@@ -100,8 +100,8 @@ const data: ProductInfo[] = [
     distance: '0.02 miles'
   },
   {
-    storeNumber: 'PPG Paints 8089',
     itemNumber: '',
+    storeNumber: 'PPG Paints 8089',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
     address3: 'CA',
@@ -111,8 +111,8 @@ const data: ProductInfo[] = [
     distance: '0.02 miles'
   },
   {
-    storeNumber: 'PPG Paints 8089',
     itemNumber: '',
+    storeNumber: 'PPG Paints 8089',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
     address3: 'CA',

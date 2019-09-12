@@ -54,26 +54,10 @@
     padding-left: 8px;
   }
 
-  // mat-header-cell:nth-child(2),
-  // mat-cell:nth-child(2) {
-  //   @media screen and (max-width: 350px) {
-  //     flex-grow: 1.25;
-  //   }
-  // }
-
   mat-header-cell:nth-child(2) {
     justify-content: flex-start;
     padding-left: 24px;
   }
-
-  // mat-row {
-  //   & mat-cell {
-  //     @media only screen and (max-width: 400px) {
-  //       align-items: flex-start;
-  //       padding-top: 12px;
-  //     }
-  //   }
-  // }
 
   .mat-cell {
     &:last-of-type {
