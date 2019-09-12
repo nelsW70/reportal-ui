@@ -11,6 +11,10 @@ import {
 
 export interface ProductInfo {
   itemNumber1: string;
+  itemNumber2: string;
+  itemNumber3: string;
+  itemNumber4: string;
+  itemNumber5: string;
   storeNumber: string;
   address1: string;
   address2: string;
@@ -24,6 +28,10 @@ export interface ProductInfo {
 const data: ProductInfo[] = [
   {
     itemNumber1: '',
+    itemNumber2: '',
+    itemNumber3: '',
+    itemNumber4: '',
+    itemNumber5: '',
     storeNumber: 'PPG Paints 8089',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
@@ -35,6 +43,10 @@ const data: ProductInfo[] = [
   },
   {
     itemNumber1: '',
+    itemNumber2: '',
+    itemNumber3: '',
+    itemNumber4: '',
+    itemNumber5: '',
     storeNumber: 'PPG Paints 8089',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
@@ -46,6 +58,10 @@ const data: ProductInfo[] = [
   },
   {
     itemNumber1: '',
+    itemNumber2: '',
+    itemNumber3: '',
+    itemNumber4: '',
+    itemNumber5: '',
     storeNumber: 'PPG Paints 8089',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
@@ -57,6 +73,10 @@ const data: ProductInfo[] = [
   },
   {
     itemNumber1: '',
+    itemNumber2: '',
+    itemNumber3: '',
+    itemNumber4: '',
+    itemNumber5: '',
     storeNumber: 'PPG Paints 8089',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
@@ -68,6 +88,10 @@ const data: ProductInfo[] = [
   },
   {
     itemNumber1: '',
+    itemNumber2: '',
+    itemNumber3: '',
+    itemNumber4: '',
+    itemNumber5: '',
     storeNumber: 'PPG Paints 8089',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
@@ -79,6 +103,10 @@ const data: ProductInfo[] = [
   },
   {
     itemNumber1: '',
+    itemNumber2: '',
+    itemNumber3: '',
+    itemNumber4: '',
+    itemNumber5: '',
     storeNumber: 'PPG Paints 8089',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
@@ -90,6 +118,10 @@ const data: ProductInfo[] = [
   },
   {
     itemNumber1: '',
+    itemNumber2: '',
+    itemNumber3: '',
+    itemNumber4: '',
+    itemNumber5: '',
     storeNumber: 'PPG Paints 8089',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
@@ -101,6 +133,10 @@ const data: ProductInfo[] = [
   },
   {
     itemNumber1: '',
+    itemNumber2: '',
+    itemNumber3: '',
+    itemNumber4: '',
+    itemNumber5: '',
     storeNumber: 'PPG Paints 8089',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
@@ -112,6 +148,10 @@ const data: ProductInfo[] = [
   },
   {
     itemNumber1: '',
+    itemNumber2: '',
+    itemNumber3: '',
+    itemNumber4: '',
+    itemNumber5: '',
     storeNumber: 'PPG Paints 8089',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
@@ -155,7 +195,14 @@ export class InventoryLookupStoresTableLargeComponent implements OnInit {
   currentIndex: number = null;
 
   expandedData: any;
-  displayedColumns = ['storeNumber', 'itemNumber1'];
+  displayedColumns = [
+    'storeNumber',
+    'itemNumber1',
+    'itemNumber2',
+    'itemNumber3',
+    'itemNumber4',
+    'itemNumber5'
+  ];
   dataSource = new MobileDataSource();
 
   isExpansionDetailRow = (i: number, row: object) =>
