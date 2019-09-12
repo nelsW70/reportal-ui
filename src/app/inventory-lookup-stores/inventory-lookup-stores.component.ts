@@ -10,12 +10,12 @@ import {
 } from '@angular/animations';
 
 export interface ProductInfo {
-  invoiceNumber: string;
-  SAPBranch: string;
-  customerName: string;
-  customerNumber: string;
-  jobName: string;
-  invoiceTotal: string;
+  storeNumber: string;
+  address1: string;
+  address2: string;
+  address3: string;
+  address4: string;
+  someNumber: string;
   PONumber: string;
   customerJob: string;
   invoiceType: string;
@@ -25,12 +25,12 @@ export interface ProductInfo {
 
 const data: ProductInfo[] = [
   {
-    invoiceNumber: '910102101125',
-    SAPBranch: '0',
-    customerName: 'Sally Baker',
-    customerNumber: '300437700000',
-    jobName: 'Sally Baker',
-    invoiceTotal: '$56.50',
+    storeNumber: 'PPG Paints 8089',
+    address1: '921 East Ventura Blvd.',
+    address2: 'Oxnard',
+    address3: 'CA',
+    address4: '93036',
+    someNumber: '2536',
     PONumber: '-',
     customerJob: '-',
     invoiceType: 'Sale',
@@ -38,12 +38,12 @@ const data: ProductInfo[] = [
     invoiceDate: '05/28/2019'
   },
   {
-    invoiceNumber: '910102101125',
-    SAPBranch: '0',
-    customerName: 'Sally Baker',
-    customerNumber: '300437700000',
-    jobName: 'Sally Baker',
-    invoiceTotal: '$56.50',
+    storeNumber: 'PPG Paints 8089',
+    address1: '921 East Ventura Blvd.',
+    address2: 'Oxnard',
+    address3: 'CA',
+    address4: '93036',
+    someNumber: '2536',
     PONumber: '-',
     customerJob: '-',
     invoiceType: 'Sale',
@@ -51,12 +51,12 @@ const data: ProductInfo[] = [
     invoiceDate: '05/28/2019'
   },
   {
-    invoiceNumber: '910102101125',
-    SAPBranch: '0',
-    customerName: 'Sally Baker',
-    customerNumber: '300437700000',
-    jobName: 'Sally Baker',
-    invoiceTotal: '$56.50',
+    storeNumber: 'PPG Paints 8089',
+    address1: '921 East Ventura Blvd.',
+    address2: 'Oxnard',
+    address3: 'CA',
+    address4: '93036',
+    someNumber: '2536',
     PONumber: '-',
     customerJob: '-',
     invoiceType: 'Sale',
@@ -64,12 +64,12 @@ const data: ProductInfo[] = [
     invoiceDate: '05/28/2019'
   },
   {
-    invoiceNumber: '910102101125',
-    SAPBranch: '0',
-    customerName: 'Sally Baker',
-    customerNumber: '300437700000',
-    jobName: 'Sally Baker',
-    invoiceTotal: '$56.50',
+    storeNumber: 'PPG Paints 8089',
+    address1: '921 East Ventura Blvd.',
+    address2: 'Oxnard',
+    address3: 'CA',
+    address4: '93036',
+    someNumber: '2536',
     PONumber: '-',
     customerJob: '-',
     invoiceType: 'Sale',
@@ -77,12 +77,12 @@ const data: ProductInfo[] = [
     invoiceDate: '05/28/2019'
   },
   {
-    invoiceNumber: '910102101125',
-    SAPBranch: '0',
-    customerName: 'Sally Baker',
-    customerNumber: '300437700000',
-    jobName: 'Sally Baker',
-    invoiceTotal: '$56.50',
+    storeNumber: 'PPG Paints 8089',
+    address1: '921 East Ventura Blvd.',
+    address2: 'Oxnard',
+    address3: 'CA',
+    address4: '93036',
+    someNumber: '2536',
     PONumber: '-',
     customerJob: '-',
     invoiceType: 'Sale',
@@ -90,12 +90,12 @@ const data: ProductInfo[] = [
     invoiceDate: '05/28/2019'
   },
   {
-    invoiceNumber: '910102101125',
-    SAPBranch: '0',
-    customerName: 'Sally Baker',
-    customerNumber: '300437700000',
-    jobName: 'Sally Baker',
-    invoiceTotal: '$56.50',
+    storeNumber: 'PPG Paints 8089',
+    address1: '921 East Ventura Blvd.',
+    address2: 'Oxnard',
+    address3: 'CA',
+    address4: '93036',
+    someNumber: '2536',
     PONumber: '-',
     customerJob: '-',
     invoiceType: 'Sale',
@@ -103,12 +103,12 @@ const data: ProductInfo[] = [
     invoiceDate: '05/28/2019'
   },
   {
-    invoiceNumber: '910102101125',
-    SAPBranch: '0',
-    customerName: 'Sally Baker',
-    customerNumber: '300437700000',
-    jobName: 'Sally Baker',
-    invoiceTotal: '$56.50',
+    storeNumber: 'PPG Paints 8089',
+    address1: '921 East Ventura Blvd.',
+    address2: 'Oxnard',
+    address3: 'CA',
+    address4: '93036',
+    someNumber: '2536',
     PONumber: '-',
     customerJob: '-',
     invoiceType: 'Sale',
@@ -116,12 +116,12 @@ const data: ProductInfo[] = [
     invoiceDate: '05/28/2019'
   },
   {
-    invoiceNumber: '910102101125',
-    SAPBranch: '0',
-    customerName: 'Sally Baker',
-    customerNumber: '300437700000',
-    jobName: 'Sally Baker',
-    invoiceTotal: '$56.50',
+    storeNumber: 'PPG Paints 8089',
+    address1: '921 East Ventura Blvd.',
+    address2: 'Oxnard',
+    address3: 'CA',
+    address4: '93036',
+    someNumber: '2536',
     PONumber: '-',
     customerJob: '-',
     invoiceType: 'Sale',
@@ -129,12 +129,12 @@ const data: ProductInfo[] = [
     invoiceDate: '05/28/2019'
   },
   {
-    invoiceNumber: '910102101125',
-    SAPBranch: '0',
-    customerName: 'Sally Baker',
-    customerNumber: '300437700000',
-    jobName: 'Sally Baker',
-    invoiceTotal: '$56.50',
+    storeNumber: 'PPG Paints 8089',
+    address1: '921 East Ventura Blvd.',
+    address2: 'Oxnard',
+    address3: 'CA',
+    address4: '93036',
+    someNumber: '2536',
     PONumber: '-UND',
     customerJob: '-',
     invoiceType: 'Sale',
@@ -176,7 +176,7 @@ export class InventoryLookupStoresComponent implements OnInit {
   currentIndex: number = null;
 
   expandedData: any;
-  displayedColumns = ['invoiceNumber', 'customerName', 'invoiceTotal'];
+  displayedColumns = ['storeNumber', 'someNumber'];
   dataSource = new MobileDataSource();
 
   isExpansionDetailRow = (i: number, row: object) =>

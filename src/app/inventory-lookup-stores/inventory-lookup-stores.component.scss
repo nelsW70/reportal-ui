@@ -1,6 +1,6 @@
 // FONTS
 
-.invoice-number {
+.store-number {
   color: #0a6ed1;
   &:hover {
     text-decoration: underline;
@@ -31,14 +31,6 @@
 
 // SMALL TABLE
 .mat-table {
-  .th-container {
-    display: flex;
-    align-items: baseline;
-    & .th-header {
-      padding-right: 6px;
-    }
-  }
-
   .expanded-details {
     display: flex;
     flex-direction: column;
@@ -52,7 +44,7 @@
 
   mat-cell {
     &:first-of-type {
-      word-break: break-all;
+      word-break: break-word;
     }
   }
 
@@ -62,12 +54,12 @@
     padding-left: 8px;
   }
 
-  mat-header-cell:nth-child(2),
-  mat-cell:nth-child(2) {
-    @media screen and (max-width: 350px) {
-      flex-grow: 1.25;
-    }
-  }
+  // mat-header-cell:nth-child(2),
+  // mat-cell:nth-child(2) {
+  //   @media screen and (max-width: 350px) {
+  //     flex-grow: 1.25;
+  //   }
+  // }
 
   mat-header-cell:nth-child(2),
   mat-header-cell:nth-child(3) {
@@ -75,14 +67,14 @@
     padding-left: 24px;
   }
 
-  mat-row {
-    & mat-cell {
-      @media only screen and (max-width: 400px) {
-        align-items: flex-start;
-        padding-top: 12px;
-      }
-    }
-  }
+  // mat-row {
+  //   & mat-cell {
+  //     @media only screen and (max-width: 400px) {
+  //       align-items: flex-start;
+  //       padding-top: 12px;
+  //     }
+  //   }
+  // }
 
   .mat-cell {
     &:last-of-type {
@@ -100,16 +92,16 @@
         color: #515559;
       }
     }
-    & .name-wrap {
-      @media screen and (max-width: 768px) {
-        max-width: 100px;
-      }
-    }
-    & .invoice-number {
-      @media screen and (max-width: 400px) {
-        max-width: 70px;
-      }
-    }
+    // & .name-wrap {
+    //   @media screen and (max-width: 768px) {
+    //     max-width: 100px;
+    //   }
+    // }
+    // & .invoice-number {
+    //   @media screen and (max-width: 400px) {
+    //     max-width: 70px;
+    //   }
+    // }
   }
 
   .product-row:not(.expanded) {

@@ -8,68 +8,25 @@
     <fd-panel-body class="panel-body panel-body--secondary">
       <div *ngIf="currentWindowWidth < 1024">
         <mat-table #table [dataSource]="dataSource">
-          <!-- Invoice Number Column -->
-          <ng-container matColumnDef="invoiceNumber">
-            <mat-header-cell
-              fdColumnSortable
-              *matHeaderCellDef
-              class="fd-has-type-minus-1"
-            >
-              <div class="th-container">
-                <div class="th-header">
-                  Invoice Number
-                </div>
-                <div>
-                  <span class="sap-icon--sorting-ranking sap-icon--s"></span>
-                </div>
-              </div>
+          <!-- Store Column -->
+          <ng-container matColumnDef="storeNumber">
+            <mat-header-cell *matHeaderCellDef class="fd-has-type-minus-1">
+              Store
             </mat-header-cell>
             <mat-cell *matCellDef="let product" class="fd-has-type-minus-1"
-              ><div class="invoice-number">{{ product.invoiceNumber }}</div>
+              ><div class="store-number">{{ product.storeNumber }}</div>
             </mat-cell>
           </ng-container>
 
-          <!-- Customer Name Column -->
-          <ng-container matColumnDef="customerName">
-            <mat-header-cell
-              fdColumnSortable
-              *matHeaderCellDef
-              class="fd-has-type-minus-1"
-            >
-              <div class="th-container">
-                <div class="th-header">
-                  Customer Name
-                </div>
-                <div>
-                  <span class="sap-icon--sorting-ranking sap-icon--s"></span>
-                </div></div
-            ></mat-header-cell>
-            <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
-              <div class="name-wrap">
-                {{ product.customerName }}
-              </div>
-            </mat-cell>
-          </ng-container>
-
-          <!-- Invoice Total Column -->
-          <ng-container matColumnDef="invoiceTotal">
-            <mat-header-cell
-              fdColumnSortable
-              *matHeaderCellDef
-              class="fd-has-type-minus-1"
-            >
-              <div class="th-container">
-                <div class="th-header">
-                  Invoice Total
-                </div>
-                <div>
-                  <span class="sap-icon--sorting-ranking sap-icon"></span>
-                </div></div
-            ></mat-header-cell>
+          <!-- Some Number Column -->
+          <ng-container matColumnDef="someNumber">
+            <mat-header-cell *matHeaderCellDef class="fd-has-type-minus-1">
+              6-411/01
+            </mat-header-cell>
             <mat-cell
               *matCellDef="let product; let i = index"
               class="fd-has-type-minus-1"
-              >{{ product.invoiceTotal }}
+              >{{ product.someNumber }}
               <span
                 [ngClass]="
                   currentIndex === i
@@ -86,10 +43,12 @@
               <div class="fd-has-type-0 expanded-details">
                 <div class="expanded-details__detail-container">
                   <div>
-                    SAP Branch Number:&nbsp;
+                    Address:&nbsp;
                   </div>
                   <div class="expanded-details-info">
-                    {{ detail.product.SAPBranch }}
+                    {{ detail.product.address1 }} <br />
+                    {{ detail.product.address2 }},
+                    {{ detail.product.address3 }} {{ detail.product.address4 }}
                   </div>
                 </div>
                 <div class="expanded-details__detail-container">
