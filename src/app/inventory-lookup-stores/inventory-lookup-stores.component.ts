@@ -16,6 +16,7 @@ export interface ProductInfo {
   address3: string;
   address4: string;
   itemNumber: string;
+  itemCount: string;
   phoneNumber: string;
   distance: string;
 }
@@ -23,92 +24,101 @@ export interface ProductInfo {
 const data: ProductInfo[] = [
   {
     storeNumber: 'PPG Paints 8089',
+    itemNumber: '',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
     address3: 'CA',
     address4: '93036',
-    itemNumber: '2536',
+    itemCount: '2536',
     phoneNumber: '(805) 485-9556',
     distance: '0.02 miles'
   },
   {
     storeNumber: 'PPG Paints 8089',
+    itemNumber: '',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
     address3: 'CA',
     address4: '93036',
-    itemNumber: '2536',
+    itemCount: '0',
     phoneNumber: '(805) 485-9556',
     distance: '0.02 miles'
   },
   {
     storeNumber: 'PPG Paints 8089',
+    itemNumber: '',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
     address3: 'CA',
     address4: '93036',
-    itemNumber: '2536',
+    itemCount: '3652',
     phoneNumber: '(805) 485-9556',
     distance: '0.02 miles'
   },
   {
     storeNumber: 'PPG Paints 8089',
+    itemNumber: '',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
     address3: 'CA',
     address4: '93036',
-    itemNumber: '2536',
+    itemCount: '0',
     phoneNumber: '(805) 485-9556',
     distance: '0.02 miles'
   },
   {
     storeNumber: 'PPG Paints 8089',
+    itemNumber: '',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
     address3: 'CA',
     address4: '93036',
-    itemNumber: '2536',
+    itemCount: '0',
     phoneNumber: '(805) 485-9556',
     distance: '0.02 miles'
   },
   {
     storeNumber: 'PPG Paints 8089',
+    itemNumber: '',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
     address3: 'CA',
     address4: '93036',
-    itemNumber: '2536',
+    itemCount: '3544',
     phoneNumber: '(805) 485-9556',
     distance: '0.02 miles'
   },
   {
     storeNumber: 'PPG Paints 8089',
+    itemNumber: '',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
     address3: 'CA',
     address4: '93036',
-    itemNumber: '2536',
+    itemCount: '0',
     phoneNumber: '(805) 485-9556',
     distance: '0.02 miles'
   },
   {
     storeNumber: 'PPG Paints 8089',
+    itemNumber: '',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
     address3: 'CA',
     address4: '93036',
-    itemNumber: '2536',
+    itemCount: '2312',
     phoneNumber: '(805) 485-9556',
     distance: '0.02 miles'
   },
   {
     storeNumber: 'PPG Paints 8089',
+    itemNumber: '',
     address1: '921 East Ventura Blvd.',
     address2: 'Oxnard',
     address3: 'CA',
     address4: '93036',
-    itemNumber: '2536',
-    phoneNumber: '-UND',
+    itemCount: '7496',
+    phoneNumber: '(805) 485-9556',
     distance: '0.02 miles'
   }
 ];
