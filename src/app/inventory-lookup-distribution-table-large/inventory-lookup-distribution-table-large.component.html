@@ -1,0 +1,69 @@
+<mat-table #table [dataSource]="dataSource">
+  <!-- Store Name Column -->
+  <ng-container matColumnDef="storeName">
+    <mat-header-cell *matHeaderCellDef class="fd-has-type-minus-1">
+      Distribution Center
+    </mat-header-cell>
+    <mat-cell *matCellDef="let product" class="fd-has-type-minus-1"
+      ><div class="store-name">
+        {{ product.storeName }}
+      </div>
+    </mat-cell>
+  </ng-container>
+
+  <!-- Item Number One Column -->
+  <ng-container matColumnDef="itemNumber1">
+    <mat-header-cell *matHeaderCellDef class="fd-has-type-minus-1">
+      6-411/01
+    </mat-header-cell>
+    <mat-cell *matCellDef="let product" class="fd-has-type-minus-1"
+      >{{ product.itemCount }}
+    </mat-cell>
+  </ng-container>
+
+  <!-- Item Number Two Column -->
+  <ng-container matColumnDef="itemNumber2">
+    <mat-header-cell *matHeaderCellDef class="fd-has-type-minus-1">
+      6-411/01
+    </mat-header-cell>
+    <mat-cell *matCellDef="let product" class="fd-has-type-minus-1"
+      >{{ product.itemCount }}
+    </mat-cell>
+  </ng-container>
+
+  <!-- Item Number Three Column -->
+  <ng-container matColumnDef="itemNumber3">
+    <mat-header-cell *matHeaderCellDef class="fd-has-type-minus-1">
+      6-411/01
+    </mat-header-cell>
+    <mat-cell *matCellDef="let product" class="fd-has-type-minus-1"
+      >{{ product.itemCount }}
+    </mat-cell>
+  </ng-container>
+
+  <!-- Item Number Four Column -->
+  <ng-container matColumnDef="itemNumber4">
+    <mat-header-cell *matHeaderCellDef class="fd-has-type-minus-1">
+      6-411/01
+    </mat-header-cell>
+    <mat-cell *matCellDef="let product" class="fd-has-type-minus-1"
+      >{{ product.itemCount }}
+    </mat-cell>
+  </ng-container>
+
+  <!-- Item Number Five Column -->
+  <ng-container matColumnDef="itemNumber5">
+    <mat-header-cell *matHeaderCellDef class="fd-has-type-minus-1">
+      6-411/01
+    </mat-header-cell>
+    <mat-cell *matCellDef="let product" class="fd-has-type-minus-1"
+      >{{ product.itemCount }}
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>
+<div class="fd-pagination">
+  <span class="fd-pagination__total">9 Items</span>
+</div>

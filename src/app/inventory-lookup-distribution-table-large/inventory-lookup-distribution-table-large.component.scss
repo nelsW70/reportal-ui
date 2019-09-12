@@ -1,0 +1,41 @@
+// FONTS
+.store-name {
+  text-transform: uppercase;
+}
+
+// PANELS
+.fd-panel {
+  margin: 0;
+}
+
+.fd-panel__header,
+.fd-panel__body,
+.fd-panel__filters {
+  padding: 1rem;
+}
+
+.panel-body {
+  &.panel-body--secondary {
+    padding: 0;
+  }
+}
+
+// LARGE TABLE
+.mat-table {
+  mat-cell {
+    &:first-of-type {
+      word-break: break-word;
+    }
+  }
+
+  mat-cell:first-of-type,
+  mat-header-cell:first-of-type {
+    // flex: 1.75;
+    padding-left: 8px;
+  }
+
+  mat-cell:last-of-type,
+  mat-header-cell:last-of-type {
+    padding-right: 0;
+  }
+}

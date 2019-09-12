@@ -11,7 +11,7 @@
           <!-- Store Name Column -->
           <ng-container matColumnDef="storeName">
             <mat-header-cell *matHeaderCellDef class="fd-has-type-minus-1">
-              Store
+              Distribution Center
             </mat-header-cell>
             <mat-cell *matCellDef="let product" class="fd-has-type-minus-1"
               ><div class="store-name">
@@ -38,7 +38,7 @@
         </div>
       </div>
       <div *ngIf="currentWindowWidth >= 1024">
-        i'm the large distribution table
+        <app-inventory-lookup-distribution-table-large></app-inventory-lookup-distribution-table-large>
       </div>
     </fd-panel-body>
   </fd-panel>
