@@ -2,21 +2,20 @@
   <fd-panel>
     <fd-panel-header>
       <fd-panel-head>
-        <h2 fd-panel-title>Store Inventory</h2>
+        <h2 fd-panel-title>Distribution Center Stock</h2>
       </fd-panel-head>
     </fd-panel-header>
     <fd-panel-body class="panel-body panel-body--secondary">
       <div *ngIf="currentWindowWidth < 1024">
         <mat-table #table [dataSource]="dataSource">
-          <!-- Store Column -->
-          <ng-container matColumnDef="storeNumber">
+          <!-- Store Name Column -->
+          <ng-container matColumnDef="storeName">
             <mat-header-cell *matHeaderCellDef class="fd-has-type-minus-1">
               Store
             </mat-header-cell>
             <mat-cell *matCellDef="let product" class="fd-has-type-minus-1"
-              ><div class="store-number" (click)="$event.stopPropagation()">
-                <!-- user should be able to click on the store number link without triggering the expand row animation -->
-                {{ product.storeNumber }}
+              ><div class="store-name">
+                {{ product.storeName }}
               </div>
             </mat-cell>
           </ng-container>
@@ -26,17 +25,8 @@
             <mat-header-cell *matHeaderCellDef class="fd-has-type-minus-1">
               6-411/01
             </mat-header-cell>
-            <mat-cell
-              *matCellDef="let product; let i = index"
-              class="fd-has-type-minus-1"
+            <mat-cell *matCellDef="let product" class="fd-has-type-minus-1"
               >{{ product.itemCount }}
-              <span
-                [ngClass]="
-                  currentIndex === i
-                    ? 'sap-icon--navigation-right-arrow sap-icon--s expand-icon expand-animation'
-                    : 'sap-icon--navigation-right-arrow sap-icon--s expand-icon'
-                "
-              ></span>
             </mat-cell>
           </ng-container>
 
@@ -44,28 +34,11 @@
           <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
         </mat-table>
         <div class="fd-pagination">
-          <span class="fd-pagination__total">172 items</span>
-          <nav class="fd-pagination__nav">
-            <a
-              href="#"
-              class="fd-pagination__link fd-pagination__link--previous"
-              aria-label="Previous"
-              aria-disabled="true"
-            ></a>
-            <a href="#" class="fd-pagination__link" aria-selected="true">1</a>
-            <a href="#" class="fd-pagination__link">2</a>
-            <a href="#" class="fd-pagination__link">3</a>
-            <a
-              href="#"
-              class="fd-pagination__link fd-pagination__link--next"
-              aria-label="Next"
-              aria-disabled="false"
-            ></a>
-          </nav>
+          <span class="fd-pagination__total">9 Items</span>
         </div>
       </div>
       <div *ngIf="currentWindowWidth >= 1024">
-        <app-inventory-lookup-stores-table-large></app-inventory-lookup-stores-table-large>
+        i'm the large distribution table
       </div>
     </fd-panel-body>
   </fd-panel>
