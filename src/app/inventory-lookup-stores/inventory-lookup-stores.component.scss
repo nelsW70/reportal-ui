@@ -1,0 +1,145 @@
+// FONTS
+
+.invoice-number {
+  color: #0a6ed1;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.expanded-details-info--uppercase,
+.name-wrap {
+  text-transform: uppercase;
+}
+
+// PANELS
+.fd-panel {
+  margin: 0;
+}
+
+.fd-panel__header,
+.fd-panel__body,
+.fd-panel__filters {
+  padding: 1rem;
+}
+
+.panel-body {
+  &.panel-body--secondary {
+    padding: 0;
+  }
+}
+
+// SMALL TABLE
+.mat-table {
+  .th-container {
+    display: flex;
+    align-items: baseline;
+    & .th-header {
+      padding-right: 6px;
+    }
+  }
+
+  .expanded-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    &__detail-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  mat-cell {
+    &:first-of-type {
+      word-break: break-all;
+    }
+  }
+
+  mat-cell:first-of-type,
+  mat-footer-cell:first-of-type,
+  mat-header-cell:first-of-type {
+    padding-left: 8px;
+  }
+
+  mat-header-cell:nth-child(2),
+  mat-cell:nth-child(2) {
+    @media screen and (max-width: 350px) {
+      flex-grow: 1.25;
+    }
+  }
+
+  mat-header-cell:nth-child(2),
+  mat-header-cell:nth-child(3) {
+    justify-content: flex-start;
+    padding-left: 24px;
+  }
+
+  mat-row {
+    & mat-cell {
+      @media only screen and (max-width: 400px) {
+        align-items: flex-start;
+        padding-top: 12px;
+      }
+    }
+  }
+
+  .mat-cell {
+    &:last-of-type {
+      display: flex;
+      justify-content: space-between;
+    }
+    &.cdk-column-expandedDetail {
+      background-color: #fafafa;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      & .expanded-details {
+        color: #6a6d70;
+      }
+      & .expanded-details-info {
+        color: #515559;
+      }
+    }
+    & .name-wrap {
+      @media screen and (max-width: 768px) {
+        max-width: 100px;
+      }
+    }
+    & .invoice-number {
+      @media screen and (max-width: 400px) {
+        max-width: 70px;
+      }
+    }
+  }
+
+  .product-row:not(.expanded) {
+    cursor: pointer;
+  }
+
+  .product-row:not(.expanded):hover {
+    background: #f5f5f5;
+  }
+
+  .fd-table__sort-column::after {
+    content: unset;
+    display: none;
+  }
+
+  .element-row {
+    position: relative;
+  }
+
+  .mat-cell:last-of-type {
+    padding-right: 0;
+    & .expand-icon {
+      width: 36px;
+      text-align: center;
+      color: #0a6ed1;
+      transition: all 225ms cubic-bezier(0.4, 0, 0.2, 1);
+      &.expand-animation {
+        transform: rotate(90deg);
+        transition: all 225ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    }
+  }
+}

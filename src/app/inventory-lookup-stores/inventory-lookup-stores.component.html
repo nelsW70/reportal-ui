@@ -1,3 +1,211 @@
-<p>
-  inventory-lookup-stores works!
-</p>
+<div>
+  <fd-panel>
+    <fd-panel-header>
+      <fd-panel-head>
+        <h2 fd-panel-title>Store Inventory</h2>
+      </fd-panel-head>
+    </fd-panel-header>
+    <fd-panel-body class="panel-body panel-body--secondary">
+      <div *ngIf="currentWindowWidth < 1024">
+        <mat-table #table [dataSource]="dataSource">
+          <!-- Invoice Number Column -->
+          <ng-container matColumnDef="invoiceNumber">
+            <mat-header-cell
+              fdColumnSortable
+              *matHeaderCellDef
+              class="fd-has-type-minus-1"
+            >
+              <div class="th-container">
+                <div class="th-header">
+                  Invoice Number
+                </div>
+                <div>
+                  <span class="sap-icon--sorting-ranking sap-icon--s"></span>
+                </div>
+              </div>
+            </mat-header-cell>
+            <mat-cell *matCellDef="let product" class="fd-has-type-minus-1"
+              ><div class="invoice-number">{{ product.invoiceNumber }}</div>
+            </mat-cell>
+          </ng-container>
+
+          <!-- Customer Name Column -->
+          <ng-container matColumnDef="customerName">
+            <mat-header-cell
+              fdColumnSortable
+              *matHeaderCellDef
+              class="fd-has-type-minus-1"
+            >
+              <div class="th-container">
+                <div class="th-header">
+                  Customer Name
+                </div>
+                <div>
+                  <span class="sap-icon--sorting-ranking sap-icon--s"></span>
+                </div></div
+            ></mat-header-cell>
+            <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
+              <div class="name-wrap">
+                {{ product.customerName }}
+              </div>
+            </mat-cell>
+          </ng-container>
+
+          <!-- Invoice Total Column -->
+          <ng-container matColumnDef="invoiceTotal">
+            <mat-header-cell
+              fdColumnSortable
+              *matHeaderCellDef
+              class="fd-has-type-minus-1"
+            >
+              <div class="th-container">
+                <div class="th-header">
+                  Invoice Total
+                </div>
+                <div>
+                  <span class="sap-icon--sorting-ranking sap-icon"></span>
+                </div></div
+            ></mat-header-cell>
+            <mat-cell
+              *matCellDef="let product; let i = index"
+              class="fd-has-type-minus-1"
+              >{{ product.invoiceTotal }}
+              <span
+                [ngClass]="
+                  currentIndex === i
+                    ? 'sap-icon--navigation-right-arrow sap-icon--s expand-icon expand-animation'
+                    : 'sap-icon--navigation-right-arrow sap-icon--s expand-icon'
+                "
+              ></span>
+            </mat-cell>
+          </ng-container>
+
+          <!-- Expanded Content Column - The detail row is made up of this one column -->
+          <ng-container matColumnDef="expandedDetail">
+            <mat-cell *matCellDef="let detail">
+              <div class="fd-has-type-0 expanded-details">
+                <div class="expanded-details__detail-container">
+                  <div>
+                    SAP Branch Number:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.SAPBranch }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Customer Number:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.customerNumber }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Job Name:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.jobName }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    PO Number:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.PONumber }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Customer Job:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.customerJob }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Invoice Type:&nbsp;
+                  </div>
+                  <div
+                    class="expanded-details-info expanded-details-info--uppercase"
+                  >
+                    {{ detail.product.invoiceType }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Tender Type:&nbsp;
+                  </div>
+                  <div
+                    class="expanded-details-info expanded-details-info--uppercase"
+                  >
+                    {{ detail.product.tenderType }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Invoice Date:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.invoiceDate }}
+                  </div>
+                </div>
+              </div>
+            </mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row
+            *matRowDef="let row; columns: displayedColumns; let i = index"
+            matRipple
+            class="product-row"
+            [class.expanded]="expandedData == row"
+            (click)="
+              expandedData === row
+                ? (expandedData = null)
+                : (expandedData = row);
+              currentIndex = expandedData == row ? i : null
+            "
+          ></mat-row>
+          <mat-row
+            *matRowDef="
+              let row;
+              columns: ['expandedDetail'];
+              when: isExpansionDetailRow
+            "
+            [@detailExpand]="
+              row.product == expandedData ? 'expanded' : 'collapsed'
+            "
+            style="overflow: hidden"
+          >
+          </mat-row>
+        </mat-table>
+        <div class="fd-pagination">
+          <span class="fd-pagination__total">172 items</span>
+          <nav class="fd-pagination__nav">
+            <a
+              href="#"
+              class="fd-pagination__link fd-pagination__link--previous"
+              aria-label="Previous"
+              aria-disabled="true"
+            ></a>
+            <a href="#" class="fd-pagination__link" aria-selected="true">1</a>
+            <a href="#" class="fd-pagination__link">2</a>
+            <a href="#" class="fd-pagination__link">3</a>
+            <a
+              href="#"
+              class="fd-pagination__link fd-pagination__link--next"
+              aria-label="Next"
+              aria-disabled="false"
+            ></a>
+          </nav>
+        </div>
+      </div>
+      <div *ngIf="currentWindowWidth >= 1024">
+        i'm inventory stores large table
+      </div>
+    </fd-panel-body>
+  </fd-panel>
+</div>
