@@ -14,7 +14,10 @@
               Store
             </mat-header-cell>
             <mat-cell *matCellDef="let product" class="fd-has-type-minus-1"
-              ><div class="store-number">{{ product.storeNumber }}</div>
+              ><div class="store-number" (click)="$event.stopPropagation()">
+                <!-- user should be able to click on the store number link without triggering the expand row animation -->
+                {{ product.storeNumber }}
+              </div>
             </mat-cell>
           </ng-container>
 
@@ -119,7 +122,7 @@
         </div>
       </div>
       <div *ngIf="currentWindowWidth >= 1024">
-        i'm inventory stores large table
+        <app-inventory-lookup-stores-table-large></app-inventory-lookup-stores-table-large>
       </div>
     </fd-panel-body>
   </fd-panel>

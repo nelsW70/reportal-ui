@@ -1,0 +1,109 @@
+<mat-table #table [dataSource]="dataSource">
+  <!-- Store Column -->
+  <ng-container matColumnDef="storeNumber">
+    <mat-header-cell *matHeaderCellDef class="fd-has-type-minus-1">
+      Store
+    </mat-header-cell>
+    <mat-cell *matCellDef="let product" class="fd-has-type-minus-1"
+      ><div class="store-number" (click)="$event.stopPropagation()">
+        <!-- user should be able to click on the store number link without triggering the expand row animation -->
+        {{ product.storeNumber }}
+      </div>
+    </mat-cell>
+  </ng-container>
+
+  <!-- Item Number One Column -->
+  <ng-container matColumnDef="itemNumber1">
+    <mat-header-cell *matHeaderCellDef class="fd-has-type-minus-1">
+      6-411/01
+    </mat-header-cell>
+    <mat-cell
+      *matCellDef="let product; let i = index"
+      class="fd-has-type-minus-1"
+      >{{ product.itemCount }}
+      <span
+        [ngClass]="
+          currentIndex === i
+            ? 'sap-icon--navigation-right-arrow sap-icon--s expand-icon expand-animation'
+            : 'sap-icon--navigation-right-arrow sap-icon--s expand-icon'
+        "
+      ></span>
+    </mat-cell>
+  </ng-container>
+
+  <!-- Expanded Content Column - The detail row is made up of this one column -->
+  <ng-container matColumnDef="expandedDetail">
+    <mat-cell *matCellDef="let detail">
+      <div class="fd-has-type-0 expanded-details">
+        <div class="expanded-details__detail-container">
+          <div>
+            Address:&nbsp;
+          </div>
+          <div class="expanded-details-info">
+            {{ detail.product.address1 }} <br />
+            {{ detail.product.address2 }}, {{ detail.product.address3 }}
+            {{ detail.product.address4 }}
+          </div>
+        </div>
+        <div class="expanded-details__detail-container">
+          <div>
+            Phone #:&nbsp;
+          </div>
+          <div class="expanded-details-info">
+            {{ detail.product.phoneNumber }}
+          </div>
+        </div>
+        <div class="expanded-details__detail-container">
+          <div>
+            Distance:&nbsp;
+          </div>
+          <div class="expanded-details-info">
+            {{ detail.product.distance }}
+          </div>
+        </div>
+      </div>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row
+    *matRowDef="let row; columns: displayedColumns; let i = index"
+    matRipple
+    class="product-row"
+    [class.expanded]="expandedData == row"
+    (click)="
+      expandedData === row ? (expandedData = null) : (expandedData = row);
+      currentIndex = expandedData == row ? i : null
+    "
+  ></mat-row>
+  <mat-row
+    *matRowDef="
+      let row;
+      columns: ['expandedDetail'];
+      when: isExpansionDetailRow
+    "
+    [@detailExpand]="row.product == expandedData ? 'expanded' : 'collapsed'"
+    style="overflow: hidden"
+  >
+  </mat-row>
+</mat-table>
+<div class="fd-pagination">
+  <span class="fd-pagination__total">172 items</span>
+  <nav class="fd-pagination__nav">
+    <a
+      href="#"
+      class="fd-pagination__link fd-pagination__link--previous"
+      aria-label="Previous"
+      aria-disabled="true"
+    ></a>
+    <a href="#" class="fd-pagination__link" aria-selected="true">1</a>
+    <a href="#" class="fd-pagination__link">2</a>
+    <a href="#" class="fd-pagination__link">3</a>
+    <a
+      href="#"
+      class="fd-pagination__link fd-pagination__link--next"
+      aria-label="Next"
+      aria-disabled="false"
+    ></a>
+  </nav>
+</div>

@@ -30,6 +30,7 @@ import { InvoiceLookupTableXlargeComponent } from './invoice-lookup-table-xlarge
 import { InventoryLookupComponent } from './inventory-lookup/inventory-lookup.component';
 import { InventoryLookupStoresComponent } from './inventory-lookup-stores/inventory-lookup-stores.component';
 import { InventoryLookupDistributionComponent } from './inventory-lookup-distribution/inventory-lookup-distribution.component';
+import { InventoryLookupStoresTableLargeComponent } from './inventory-lookup-stores-table-large/inventory-lookup-stores-table-large.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { InventoryLookupDistributionComponent } from './inventory-lookup-distrib
     InvoiceLookupTableXlargeComponent,
     InventoryLookupComponent,
     InventoryLookupStoresComponent,
-    InventoryLookupDistributionComponent
+    InventoryLookupDistributionComponent,
+    InventoryLookupStoresTableLargeComponent
   ],
   imports: [
     BrowserModule,
