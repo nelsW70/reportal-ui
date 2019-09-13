@@ -48,6 +48,10 @@
     }
   }
 
+  mat-cell.mat-cell.mat-column-expandedDetail {
+    max-width: none;
+  }
+
   mat-cell:first-of-type,
   mat-header-cell:first-of-type {
     padding-left: 8px;
