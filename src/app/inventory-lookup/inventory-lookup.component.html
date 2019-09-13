@@ -108,18 +108,14 @@
       </fd-panel-head>
     </fd-panel-header>
     <fd-panel-body class="panel-body panel-body--secondary">
-      <mat-tab-group>
-        <mat-tab label="Stores">
-          <ng-template matTabContent>
-            <app-inventory-lookup-stores></app-inventory-lookup-stores>
-          </ng-template>
-        </mat-tab>
-        <mat-tab label="Distribution Centers">
-          <ng-template matTabContent>
-            <app-inventory-lookup-distribution></app-inventory-lookup-distribution>
-          </ng-template>
-        </mat-tab>
-      </mat-tab-group>
+      <fd-tab-list>
+        <fd-tab [title]="'Stores'">
+          <app-inventory-lookup-stores></app-inventory-lookup-stores>
+        </fd-tab>
+        <fd-tab [title]="'Distribution Centers'">
+          <app-inventory-lookup-distribution></app-inventory-lookup-distribution>
+        </fd-tab>
+      </fd-tab-list>
     </fd-panel-body>
   </fd-panel>
 </div>
