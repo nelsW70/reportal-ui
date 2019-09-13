@@ -31,6 +31,7 @@
   mat-cell:first-of-type,
   mat-header-cell:first-of-type {
     padding-left: 8px;
+    max-width: 200px;
   }
 
   mat-cell:last-of-type,

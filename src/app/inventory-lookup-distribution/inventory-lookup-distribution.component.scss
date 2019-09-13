@@ -27,6 +27,10 @@
       word-break: break-word;
     }
   }
+  mat-cell:last-of-type,
+  mat-header-cell:last-of-type {
+    padding-right: 0;
+  }
 
   mat-cell:first-of-type,
   mat-header-cell:first-of-type {
