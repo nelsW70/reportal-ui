@@ -6,7 +6,7 @@
       </fd-panel-head>
     </fd-panel-header>
     <fd-panel-body class="panel-body panel-body--secondary">
-      <div *ngIf="currentWindowWidth < 1024">
+      <div *ngIf="currentWindowWidth < 768">
         <mat-table #table [dataSource]="dataSource">
           <!-- Store Name Column -->
           <ng-container matColumnDef="storeName">
@@ -37,7 +37,7 @@
           <span class="fd-pagination__total">9 Items</span>
         </div>
       </div>
-      <div *ngIf="currentWindowWidth >= 1024">
+      <div *ngIf="currentWindowWidth >= 768">
         <app-inventory-lookup-distribution-table-large></app-inventory-lookup-distribution-table-large>
       </div>
     </fd-panel-body>
