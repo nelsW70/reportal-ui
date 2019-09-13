@@ -30,6 +30,13 @@
 .panel-body {
   &.panel-body--secondary {
     padding: 0;
+    // there is a known bug in angular material that causes
+    // a jump to the top of the page on tab click - this is
+    // to help with that but they have not resolved the bug
+    // as of 9/13/2019
+    @media only screen and (max-width: 767px) {
+      min-height: 50vh;
+    }
   }
 }
 
