@@ -126,13 +126,15 @@
         }
         &:nth-child(8) {
           display: flex;
+          align-items: flex-end;
+          margin-bottom: 10px;
           width: 25%;
           max-width: 200px;
           padding-right: 16px;
         }
         &:nth-child(9) {
           display: flex;
-          align-items: center;
+          align-items: flex-end;
           width: 25%;
           max-width: 200px;
         }
@@ -141,6 +143,10 @@
         width: 50%;
         max-width: 400px;
         padding-right: 16px;
+
+        & .fd-form__item {
+          min-height: 0;
+        }
       }
     }
   }

@@ -110,10 +110,11 @@
           width: 25%;
           max-width: 230px;
           margin-right: 16px;
+          margin-bottom: 0;
         }
         &:nth-child(4) {
           width: 25%;
-          margin-bottom: 16px;
+          margin-bottom: 0;
           & p {
             text-align: left !important;
           }

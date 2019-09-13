@@ -50,8 +50,8 @@
 
   mat-cell:first-of-type,
   mat-header-cell:first-of-type {
-    flex: 1.5;
     padding-left: 8px;
+    max-width: 200px;
   }
 
   // mat-header-cell:nth-child(2) {
