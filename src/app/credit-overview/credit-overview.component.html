@@ -14,8 +14,8 @@
     <fd-panel-body class="panel-body panel-body--secondary">
       <div *ngIf="currentWindowWidth < 1024">
         <mat-table #table [dataSource]="dataSource">
-          <!-- Pro Xtra Id Column -->
-          <ng-container matColumnDef="proXtraId">
+          <!-- Customer Name Column -->
+          <ng-container matColumnDef="customerName">
             <mat-header-cell
               fdColumnSortable
               *matHeaderCellDef
@@ -23,7 +23,7 @@
             >
               <div class="th-container">
                 <div class="th-header">
-                  PRO XTRA ID
+                  Customer Name
                 </div>
                 <div>
                   <span class="sap-icon--sorting-ranking sap-icon--s"></span>
@@ -34,60 +34,52 @@
               *matCellDef="let product"
               class="fd-has-type-minus-1 visible-td-status"
             >
-              <div *ngIf="product.status === 'created'">
+              <div *ngIf="product.status === 'open'" class="customer-status">
                 <div
                   fd-status-label
-                  [statusIcon]="'available'"
-                  class="fd-has-type-minus-1"
-                >
-                  {{ product.proXtraId }}
-                </div>
+                  [icon]="'unlocked'"
+                  class="fd-has-type-minus-1 credit--open"
+                ></div>
+                <div>{{ product.companyName }}</div>
               </div>
-              <div *ngIf="product.status === 'pending'">
+              <div
+                *ngIf="product.status === 'approaching'"
+                class="customer-status"
+              >
                 <div
                   fd-status-label
-                  [statusIcon]="'away'"
-                  class="fd-has-type-minus-1"
-                >
-                  {{ product.proXtraId }}
-                </div>
-              </div>
-              <div *ngIf="product.status === 'none'" class="create-account">
-                <div
-                  fd-status-label
-                  [statusIcon]="'offline'"
-                  class="fd-has-type-minus-1"
-                >
-                  {{ product.proXtraId }}
-                </div>
-              </div>
-            </mat-cell>
-          </ng-container>
-
-          <!-- Full Name Column -->
-          <ng-container matColumnDef="fullName">
-            <mat-header-cell
-              fdColumnSortable
-              *matHeaderCellDef
-              class="fd-has-type-minus-1"
-            >
-              <div class="th-container">
-                <div class="th-header">
-                  Full Name
-                </div>
+                  [icon]="'message-warning'"
+                  class="fd-has-type-minus-1 credit--approaching"
+                ></div>
                 <div>
-                  <span class="sap-icon--sorting-ranking sap-icon--s"></span>
-                </div></div
-            ></mat-header-cell>
-            <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
-              <div class="name-wrap">
-                {{ product.fullName }}
+                  {{ product.companyName }}
+                </div>
+              </div>
+              <div *ngIf="product.status === 'over'" class="customer-status">
+                <div
+                  fd-status-label
+                  [icon]="'message-warning'"
+                  class="fd-has-type-minus-1 credit--over"
+                ></div>
+                <div>
+                  {{ product.companyName }}
+                </div>
+              </div>
+              <div *ngIf="product.status === 'locked'" class="customer-status">
+                <div
+                  fd-status-label
+                  [icon]="'locked'"
+                  class="fd-has-type-minus-1 credit--locked"
+                ></div>
+                <div>
+                  {{ product.companyName }}
+                </div>
               </div>
             </mat-cell>
           </ng-container>
 
           <!-- Phone Column -->
-          <ng-container matColumnDef="phoneNumber">
+          <ng-container matColumnDef="pastDueTotal">
             <mat-header-cell
               fdColumnSortable
               *matHeaderCellDef
@@ -95,7 +87,7 @@
             >
               <div class="th-container">
                 <div class="th-header">
-                  Phone Number
+                  Total Past Due
                 </div>
                 <div>
                   <span class="sap-icon--sorting-ranking sap-icon"></span>
@@ -104,7 +96,7 @@
             <mat-cell
               *matCellDef="let product; let i = index"
               class="fd-has-type-minus-1"
-              >{{ product.phoneNumber }}
+              >{{ product.pastDueTotal }}
               <span
                 [ngClass]="
                   currentIndex === i
@@ -157,26 +149,6 @@
                   </div>
                   <div class="expanded-details-info">
                     {{ detail.product.storesPurchasedFrom }}
-                  </div>
-                </div>
-                <div class="fd-has-margin-top-small fd-has-margin-bottom-tiny">
-                  <div *ngIf="detail.product.status === 'created'">
-                    <div fd-status-label [statusIcon]="'available'">
-                      Account Created
-                    </div>
-                  </div>
-                  <div *ngIf="detail.product.status === 'pending'">
-                    <div fd-status-label [statusIcon]="'away'">
-                      Pending Account Creation
-                    </div>
-                  </div>
-                  <div
-                    *ngIf="detail.product.status === 'none'"
-                    class="create-account"
-                  >
-                    <button fd-button [options]="'emphasized'">
-                      Create Account
-                    </button>
                   </div>
                 </div>
               </div>

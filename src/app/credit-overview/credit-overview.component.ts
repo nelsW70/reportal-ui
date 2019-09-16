@@ -10,12 +10,13 @@ import {
 } from '@angular/animations';
 
 export interface ProductInfo {
-  proXtraId: string;
+  customerName: string;
+  companyName: string;
   company: string;
   fullName: string;
   address: string;
   email: string;
-  phoneNumber: string;
+  pastDueTotal: string;
   signUpDate: string;
   storesPurchasedFrom: string;
   status: string;
@@ -23,103 +24,112 @@ export interface ProductInfo {
 
 const data: ProductInfo[] = [
   {
-    proXtraId: '1234567',
+    customerName: '1234567',
+    companyName: 'Walt Disney World ALL STAR RESORT-TRAVISAVAN',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
+    pastDueTotal: '$4,225.01',
     signUpDate: 'MM/DD/YYYY',
     storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'created'
+    status: 'open'
   },
   {
-    proXtraId: '1234567',
+    customerName: '1234567',
+    companyName: 'Company Name',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
+    pastDueTotal: '$4,225.01',
     signUpDate: 'MM/DD/YYYY',
     storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'created'
+    status: 'approaching'
   },
   {
-    proXtraId: '1234567',
+    customerName: '1234567',
+    companyName: 'Company Name',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
+    pastDueTotal: '$4,225.01',
     signUpDate: 'MM/DD/YYYY',
     storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'created'
+    status: 'over'
   },
   {
-    proXtraId: '1234567',
+    customerName: '1234567',
+    companyName: 'Company Name',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
+    pastDueTotal: '$4,225.01',
     signUpDate: 'MM/DD/YYYY',
     storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'pending'
+    status: 'locked'
   },
   {
-    proXtraId: '1234567',
+    customerName: '1234567',
+    companyName: 'Company Name',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
+    pastDueTotal: '$4,225.01',
     signUpDate: 'MM/DD/YYYY',
     storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'none'
+    status: 'open'
   },
   {
-    proXtraId: '1234567',
+    customerName: '1234567',
+    companyName: 'Company Name',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
+    pastDueTotal: '$4,225.01',
     signUpDate: 'MM/DD/YYYY',
     storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'none'
+    status: 'open'
   },
   {
-    proXtraId: '1234567',
+    customerName: '1234567',
+    companyName: 'Company Name',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
+    pastDueTotal: '$4,225.01',
     signUpDate: 'MM/DD/YYYY',
     storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'none'
+    status: 'approaching'
   },
   {
-    proXtraId: '1234567',
+    customerName: '1234567',
+    companyName: 'Company Name',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
+    pastDueTotal: '$4,225.01',
     signUpDate: 'MM/DD/YYYY',
     storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'none'
+    status: 'over'
   },
   {
-    proXtraId: '1234567',
+    customerName: '1234567',
+    companyName: 'Company Name',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
     email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
+    pastDueTotal: '$4,225.01',
     signUpDate: 'MM/DD/YYYYUND',
     storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'none'
+    status: 'open'
   }
 ];
 
@@ -155,7 +165,7 @@ export class CreditOverviewComponent implements OnInit {
   currentIndex: number = null;
 
   expandedData: any;
-  displayedColumns = ['proXtraId', 'fullName', 'phoneNumber'];
+  displayedColumns = ['customerName', 'pastDueTotal'];
   dataSource = new MobileDataSource();
 
   isExpansionDetailRow = (i: number, row: object) =>
