@@ -12,124 +12,113 @@ import {
 export interface ProductInfo {
   customerName: string;
   companyName: string;
-  company: string;
-  fullName: string;
-  address: string;
-  email: string;
+  customerNumber: string;
+  totalCreditLimit: string;
+  totalRemainingCredit: string;
   pastDueTotal: string;
-  signUpDate: string;
-  storesPurchasedFrom: string;
+  totalPastDue: string;
+  totalCurrentBalance: string;
   status: string;
 }
 
 const data: ProductInfo[] = [
   {
     customerName: '1234567',
-    companyName:
-      'Walt Disney World ALL STAR RESORT-TRAVISAVAN fggdgfgfdgfdgfdgfdgfdggfgdfgfdgfgfdgfdgfgfdg',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    companyName: 'Walt Disney World ALL STAR RESORT-TRAVISAVAN',
+    customerNumber: '3056058505000',
+    totalCreditLimit: '$50,000.00',
+    totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
+    totalPastDue: '$4,225.01',
+    totalCurrentBalance: '$1,685.00',
     status: 'open'
   },
   {
     customerName: '1234567',
     companyName: 'Wausau Equipment Co, INC',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    customerNumber: '3056058505000',
+    totalCreditLimit: '$50,000.00',
+    totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
+    totalPastDue: '$4,225.01',
+    totalCurrentBalance: '$1,685.00',
     status: 'approaching'
   },
   {
     customerName: '1234567',
     companyName: 'Hyatt Place',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    customerNumber: '3056058505000',
+    totalCreditLimit: '$50,000.00',
+    totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
+    totalPastDue: '$4,225.01',
+    totalCurrentBalance: '$1,685.00',
     status: 'over'
   },
   {
     customerName: '1234567',
     companyName: 'Alfreda Gallardo',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    customerNumber: '3056058505000',
+    totalCreditLimit: '$50,000.00',
+    totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
+    totalPastDue: '$4,225.01',
+    totalCurrentBalance: '$1,685.00',
     status: 'locked'
   },
   {
     customerName: '1234567',
     companyName: 'DDG Construction',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    customerNumber: '3056058505000',
+    totalCreditLimit: '$50,000.00',
+    totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
+    totalPastDue: '$4,225.01',
+    totalCurrentBalance: '$1,685.00',
     status: 'open'
   },
   {
     customerName: '1234567',
     companyName: 'Telecom Products, INC.',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    customerNumber: '3056058505000',
+    totalCreditLimit: '$50,000.00',
+    totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
+    totalPastDue: '$4,225.01',
+    totalCurrentBalance: '$1,685.00',
     status: 'open'
   },
   {
     customerName: '1234567',
-    companyName: 'ROn Testerman Builders',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    companyName: 'Ron Testerman Builders',
+    customerNumber: '3056058505000',
+    totalCreditLimit: '$50,000.00',
+    totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
+    totalPastDue: '$4,225.01',
+    totalCurrentBalance: '$1,685.00',
     status: 'approaching'
   },
   {
     customerName: '1234567',
     companyName: 'Wausau Equipment Co, INC.',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    customerNumber: '3056058505000',
+    totalCreditLimit: '$50,000.00',
+    totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
+    totalPastDue: '$4,225.01',
+    totalCurrentBalance: '$1,685.00',
     status: 'over'
   },
   {
     customerName: '1234567',
     companyName: 'Lakeside Painting',
-    company: 'COMPANY',
-    fullName: 'LAST NAME, FIRST NAME',
-    address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
+    customerNumber: '3056058505000',
+    totalCreditLimit: '$50,000.00',
+    totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
-    signUpDate: 'MM/DD/YYYYUND',
-    storesPurchasedFrom: '001, 002, 003, 004',
+    totalPastDue: '$4,225.01',
+    totalCurrentBalance: '$1,685.00',
     status: 'open'
   }
 ];

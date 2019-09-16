@@ -80,7 +80,7 @@
             </mat-cell>
           </ng-container>
 
-          <!-- Phone Column -->
+          <!-- Total Past Due Column -->
           <ng-container matColumnDef="pastDueTotal">
             <mat-header-cell
               fdColumnSortable
@@ -115,42 +115,42 @@
               <div class="fd-has-type-0 expanded-details">
                 <div class="expanded-details__detail-container">
                   <div>
-                    Company:&nbsp;
+                    Customer Number:&nbsp;
                   </div>
                   <div class="expanded-details-info">
-                    {{ detail.product.company }}
+                    {{ detail.product.customerNumber }}
                   </div>
                 </div>
                 <div class="expanded-details__detail-container">
                   <div>
-                    Address:&nbsp;
+                    Total Credit Limit:&nbsp;
                   </div>
                   <div class="expanded-details-info">
-                    {{ detail.product.address }}
+                    {{ detail.product.totalCreditLimit }}
                   </div>
                 </div>
                 <div class="expanded-details__detail-container">
                   <div>
-                    Email:&nbsp;
+                    Total Remaining Credit:&nbsp;
                   </div>
                   <div class="expanded-details-info">
-                    {{ detail.product.email }}
+                    {{ detail.product.totalRemainingCredit }}
                   </div>
                 </div>
                 <div class="expanded-details__detail-container">
                   <div>
-                    Sign Up Date:&nbsp;
+                    Total Past Due:&nbsp;
                   </div>
                   <div class="expanded-details-info">
-                    {{ detail.product.signUpDate }}
+                    {{ detail.product.totalPastDue }}
                   </div>
                 </div>
                 <div class="expanded-details__detail-container">
                   <div>
-                    Stores Purchased From:&nbsp;
+                    Total Current Balance:&nbsp;
                   </div>
                   <div class="expanded-details-info">
-                    {{ detail.product.storesPurchasedFrom }}
+                    {{ detail.product.totalCurrentBalance }}
                   </div>
                 </div>
               </div>
