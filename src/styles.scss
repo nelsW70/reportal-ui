@@ -235,6 +235,39 @@ main {
   }
 }
 
+// DATEPICKER
+@supports (-ms-ime-align: auto) {
+  .datepickers-container {
+    .fd-popover__control {
+      @media only screen and (min-width: 768px) {
+        .fd-input-group {
+          width: 90%;
+
+          & input {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@-moz-document url-prefix() {
+  .datepickers-container {
+    .fd-popover__control {
+      @media only screen and (min-width: 768px) {
+        .fd-input-group {
+          width: 90%;
+
+          & input {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}
+
 // CUSTOM INPUTS
 .panel-body--main {
   .ui.search.selection.dropdown > input.search {
