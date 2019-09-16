@@ -84,10 +84,17 @@
     }
   }
 
+  mat-header-cell:first-of-type {
+    flex: 1.75;
+  }
+
+  mat-cell:first-of-type {
+    flex: 1;
+  }
+
   mat-cell:first-of-type,
   mat-header-cell:first-of-type {
     padding-left: 8px;
-    flex: 1.75;
   }
 
   mat-header-cell:nth-child(2) {
@@ -97,6 +104,8 @@
   }
 
   .mat-cell {
+    padding-top: 12px;
+    padding-bottom: 12px;
     &:last-of-type {
       display: flex;
       justify-content: flex-end;

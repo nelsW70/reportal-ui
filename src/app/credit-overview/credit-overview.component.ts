@@ -25,7 +25,8 @@ export interface ProductInfo {
 const data: ProductInfo[] = [
   {
     customerName: '1234567',
-    companyName: 'Walt Disney World ALL STAR RESORT-TRAVISAVAN',
+    companyName:
+      'Walt Disney World ALL STAR RESORT-TRAVISAVAN fggdgfgfdgfdgfdgfdgfdggfgdfgfdgfgfdgfdgfgfdg',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
@@ -37,7 +38,7 @@ const data: ProductInfo[] = [
   },
   {
     customerName: '1234567',
-    companyName: 'Company Name',
+    companyName: 'Wausau Equipment Co, INC',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
@@ -49,7 +50,7 @@ const data: ProductInfo[] = [
   },
   {
     customerName: '1234567',
-    companyName: 'Company Name',
+    companyName: 'Hyatt Place',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
@@ -61,7 +62,7 @@ const data: ProductInfo[] = [
   },
   {
     customerName: '1234567',
-    companyName: 'Company Name',
+    companyName: 'Alfreda Gallardo',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
@@ -73,7 +74,7 @@ const data: ProductInfo[] = [
   },
   {
     customerName: '1234567',
-    companyName: 'Company Name',
+    companyName: 'DDG Construction',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
@@ -85,7 +86,7 @@ const data: ProductInfo[] = [
   },
   {
     customerName: '1234567',
-    companyName: 'Company Name',
+    companyName: 'Telecom Products, INC.',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
@@ -97,7 +98,7 @@ const data: ProductInfo[] = [
   },
   {
     customerName: '1234567',
-    companyName: 'Company Name',
+    companyName: 'ROn Testerman Builders',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
@@ -109,7 +110,7 @@ const data: ProductInfo[] = [
   },
   {
     customerName: '1234567',
-    companyName: 'Company Name',
+    companyName: 'Wausau Equipment Co, INC.',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
@@ -121,7 +122,7 @@ const data: ProductInfo[] = [
   },
   {
     customerName: '1234567',
-    companyName: 'Company Name',
+    companyName: 'Lakeside Painting',
     company: 'COMPANY',
     fullName: 'LAST NAME, FIRST NAME',
     address: 'ADDRESS 1, ADDRESS 2, CITY, STATE ZIP',
