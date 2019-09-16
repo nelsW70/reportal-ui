@@ -48,16 +48,15 @@
     }
   }
 
+  mat-cell.mat-cell.mat-column-expandedDetail {
+    max-width: none;
+  }
+
   mat-cell:first-of-type,
   mat-header-cell:first-of-type {
     padding-left: 8px;
     max-width: 200px;
   }
-
-  // mat-header-cell:nth-child(2) {
-  //   justify-content: flex-start;
-  //   padding-left: 24px;
-  // }
 
   mat-header-cell:last-of-type {
     padding-right: 0;
