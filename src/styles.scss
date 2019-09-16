@@ -235,14 +235,14 @@ main {
   }
 }
 
-// DATEPICKER
+// DATEPICKER (fixes issue caused by sap's datepicker that breaks in
+// Firefox and Edge)
 @supports (-ms-ime-align: auto) {
   .datepickers-container {
     .fd-popover__control {
       @media only screen and (min-width: 768px) {
         .fd-input-group {
           width: 90%;
-
           & input {
             width: 90%;
           }
@@ -258,7 +258,6 @@ main {
       @media only screen and (min-width: 768px) {
         .fd-input-group {
           width: 90%;
-
           & input {
             width: 90%;
           }
