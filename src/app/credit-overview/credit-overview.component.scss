@@ -81,11 +81,6 @@
         color: #515559;
       }
     }
-    & .name-wrap {
-      @media screen and (max-width: 768px) {
-        max-width: 100px;
-      }
-    }
   }
 
   .product-row:not(.expanded) {
@@ -116,40 +111,6 @@
         transform: rotate(90deg);
         transition: all 225ms cubic-bezier(0.4, 0, 0.2, 1);
       }
-    }
-  }
-
-  // CREATE ACCOUNT COLUMN
-  .create-account {
-    display: flex;
-    & button {
-      flex: 1;
-    }
-  }
-
-  // STATUS ICON
-  .visible-td-status {
-    .fd-status-label--offline::before {
-      background-image: none;
-    }
-    .fd-status-label--available::after,
-    .fd-status-label--away::after,
-    .fd-status-label--offline::after {
-      top: 0;
-    }
-  }
-
-  .expanded-details {
-    .fd-status-label--available::after,
-    .fd-status-label--away::after,
-    .fd-status-label--offline::after {
-      top: 2px;
-    }
-
-    .fd-status-label--available::before,
-    .fd-status-label--away::before,
-    .fd-status-label--offline::before {
-      top: 6px;
     }
   }
 }
