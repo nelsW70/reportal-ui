@@ -3,6 +3,7 @@
   color: #0a6ed1;
   &:hover {
     text-decoration: underline;
+    cursor: pointer;
   }
 }
 
@@ -91,7 +92,7 @@
   }
 
   mat-header-cell:first-of-type {
-    flex: 1.75;
+    flex: 1.5;
   }
 
   mat-cell:first-of-type {
@@ -107,6 +108,10 @@
     justify-content: flex-start;
     padding-left: 24px;
     padding-right: 36px;
+
+    @media only screen and (min-width: 768px) {
+      padding-right: 72px;
+    }
   }
 
   .mat-cell {
@@ -125,6 +130,11 @@
       }
       & .expanded-details-info {
         color: #515559;
+      }
+    }
+    & span {
+      @media only screen and (min-width: 768px) {
+        margin-left: 36px;
       }
     }
   }
