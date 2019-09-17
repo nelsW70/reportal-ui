@@ -1,14 +1,80 @@
 <div fd-table-responsive-wrapper>
   <table fd-table cdk-table [dataSource]="dataSource">
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-
     <!-- Customer Name Column -->
     <ng-container cdkColumnDef="companyName">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
         Customer Name
       </th>
-      <td cdk-cell *cdkCellDef="let product">{{ product.companyName }}</td>
+      <td cdk-cell *cdkCellDef="let product">
+        <div *ngIf="product.status === 'open'" class="customer-status">
+          <div
+            fd-status-label
+            [icon]="'unlocked'"
+            class="fd-has-type-minus-1 credit--open"
+          ></div>
+          <div
+            class="customer-name"
+            (click)="$event.stopPropagation()"
+            fdPopover="Credit Open"
+            placement="bottom"
+            [triggers]="['mouseenter', 'mouseleave']"
+            [noArrow]="false"
+          >
+            {{ product.companyName }}
+          </div>
+        </div>
+        <div *ngIf="product.status === 'approaching'" class="customer-status">
+          <div
+            fd-status-label
+            [icon]="'message-warning'"
+            class="fd-has-type-minus-1 credit--approaching"
+          ></div>
+          <div
+            class="customer-name"
+            (click)="$event.stopPropagation()"
+            fdPopover="Approaching Credit Limit"
+            placement="bottom"
+            [triggers]="['mouseenter', 'mouseleave']"
+            [noArrow]="false"
+          >
+            {{ product.companyName }}
+          </div>
+        </div>
+        <div *ngIf="product.status === 'over'" class="customer-status">
+          <div
+            fd-status-label
+            [icon]="'message-warning'"
+            class="fd-has-type-minus-1 credit--over"
+          ></div>
+          <div
+            class="customer-name"
+            (click)="$event.stopPropagation()"
+            fdPopover="Over Credit Limit"
+            placement="bottom"
+            [triggers]="['mouseenter', 'mouseleave']"
+            [noArrow]="false"
+          >
+            {{ product.companyName }}
+          </div>
+        </div>
+        <div *ngIf="product.status === 'locked'" class="customer-status">
+          <div
+            fd-status-label
+            [icon]="'locked'"
+            class="fd-has-type-minus-1 credit--locked"
+          ></div>
+          <div
+            class="customer-name"
+            (click)="$event.stopPropagation()"
+            fdPopover="Credit Locked"
+            placement="bottom"
+            [triggers]="['mouseenter', 'mouseleave']"
+            [noArrow]="false"
+          >
+            {{ product.companyName }}
+          </div>
+        </div>
+      </td>
     </ng-container>
 
     <!-- Customer Number Column -->
@@ -51,44 +117,13 @@
       </td>
     </ng-container>
 
-    <!-- Sign Up Date Column -->
-    <ng-container cdkColumnDef="signUpDate">
+    <!-- Total Current Balance Column -->
+    <ng-container cdkColumnDef="totalCurrentBalance">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Sign Up<br />
-        Date
+        Total Current Balance
       </th>
       <td cdk-cell *cdkCellDef="let product">
-        {{ product.signUpDate }}
-      </td>
-    </ng-container>
-
-    <!-- Stores Purchased From Column -->
-    <ng-container cdkColumnDef="storesPurchasedFrom">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Stores<br />
-        Purchased From
-      </th>
-      <td cdk-cell *cdkCellDef="let product">
-        {{ product.storesPurchasedFrom }}
-      </td>
-    </ng-container>
-
-    <!-- Status Column -->
-    <ng-container cdkColumnDef="status">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Status
-      </th>
-      <td cdk-cell *cdkCellDef="let product">
-        <div *ngIf="product.status === 'created'">
-          <div fd-status-label [statusIcon]="'available'">
-            Account Created
-          </div>
-        </div>
-        <div *ngIf="product.status === 'pending'">
-          <div fd-status-label [statusIcon]="'away'">
-            Pending Account Creation
-          </div>
-        </div>
+        {{ product.totalCurrentBalance }}
       </td>
     </ng-container>
 

@@ -6,151 +6,91 @@ export interface ProductInfo {
   totalCreditLimit: string;
   totalRemainingCredit: string;
   pastDueTotal: string;
-  city: string;
-  state: string;
-  zip: string;
-  email: string;
-  phoneNumber: string;
-  signUpDate: string;
-  storesPurchasedFrom: string;
+  totalCurrentBalance: string;
   status: string;
 }
 
 const data: ProductInfo[] = [
   {
-    companyName: 'COMPANY',
+    companyName: 'Walt Disney World ALL STAR RESORT-TRAVISAVAN',
     customerNumber: '3056058505000',
     totalCreditLimit: '$50,000.00',
     totalRemainingCredit: '$50,225.01',
-    pastDueTotal: 'ADDRESS 2',
-    city: 'CITY',
-    state: 'STATE',
-    zip: 'ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'created'
+    pastDueTotal: '$4,225.01',
+    totalCurrentBalance: '$1,685.00',
+    status: 'open'
   },
   {
-    companyName: 'COMPANY',
+    companyName: 'Wausau Equipment Co, INC',
     customerNumber: '3056058505000',
     totalCreditLimit: '$50,000.00',
     totalRemainingCredit: '$50,225.01',
-    pastDueTotal: 'ADDRESS 2',
-    city: 'CITY',
-    state: 'STATE',
-    zip: 'ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'created'
+    pastDueTotal: '$4,225.01',
+    totalCurrentBalance: '$1,685.00',
+    status: 'approaching'
   },
   {
-    companyName: 'COMPANY',
+    companyName: 'Hyatt Place',
     customerNumber: '3056058505000',
     totalCreditLimit: '$50,000.00',
     totalRemainingCredit: '$50,225.01',
-    pastDueTotal: 'ADDRESS 2',
-    city: 'CITY',
-    state: 'STATE',
-    zip: 'ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'created'
+    pastDueTotal: '$4,225.01',
+    totalCurrentBalance: '$1,685.00',
+    status: 'over'
   },
   {
-    companyName: 'COMPANY',
+    companyName: 'Alfreda Gallardo',
     customerNumber: '3056058505000',
     totalCreditLimit: '$50,000.00',
     totalRemainingCredit: '$50,225.01',
-    pastDueTotal: 'ADDRESS 2',
-    city: 'CITY',
-    state: 'STATE',
-    zip: 'ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'pending'
+    pastDueTotal: '$4,225.01',
+    totalCurrentBalance: '$1,685.00',
+    status: 'locked'
   },
   {
-    companyName: 'COMPANY',
+    companyName: 'DDG Construction',
     customerNumber: '3056058505000',
     totalCreditLimit: '$50,000.00',
     totalRemainingCredit: '$50,225.01',
-    pastDueTotal: 'ADDRESS 2',
-    city: 'CITY',
-    state: 'STATE',
-    zip: 'ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'none'
+    pastDueTotal: '$4,225.01',
+    totalCurrentBalance: '$1,685.00',
+    status: 'open'
   },
   {
-    companyName: 'COMPANY',
+    companyName: 'Telecom Products, INC.',
     customerNumber: '3056058505000',
     totalCreditLimit: '$50,000.00',
     totalRemainingCredit: '$50,225.01',
-    pastDueTotal: 'ADDRESS 2',
-    city: 'CITY',
-    state: 'STATE',
-    zip: 'ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'none'
+    pastDueTotal: '$4,225.01',
+    totalCurrentBalance: '$1,685.00',
+    status: 'open'
   },
   {
-    companyName: 'COMPANY',
+    companyName: 'Ron Swanson Builders',
     customerNumber: '3056058505000',
     totalCreditLimit: '$50,000.00',
     totalRemainingCredit: '$50,225.01',
-    pastDueTotal: 'ADDRESS 2',
-    city: 'CITY',
-    state: 'STATE',
-    zip: 'ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'none'
+    pastDueTotal: '$4,225.01',
+    totalCurrentBalance: '$1,685.00',
+    status: 'approaching'
   },
   {
-    companyName: 'COMPANY',
+    companyName: 'Wausau Equipment Co, INC.',
     customerNumber: '3056058505000',
     totalCreditLimit: '$50,000.00',
     totalRemainingCredit: '$50,225.01',
-    pastDueTotal: 'ADDRESS 2',
-    city: 'CITY',
-    state: 'STATE',
-    zip: 'ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
-    signUpDate: 'MM/DD/YYYY',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'none'
+    pastDueTotal: '$4,225.01',
+    totalCurrentBalance: '$1,685.00',
+    status: 'over'
   },
   {
-    companyName: 'COMPANY',
+    companyName: 'Lakeside Painting',
     customerNumber: '3056058505000',
     totalCreditLimit: '$50,000.00',
     totalRemainingCredit: '$50,225.01',
-    pastDueTotal: 'ADDRESS 2',
-    city: 'CITY',
-    state: 'STATE',
-    zip: 'ZIP',
-    email: 'FIRSTNAME.LASTNAME@EMAIL.COM',
-    phoneNumber: '(555) 555-5555',
-    signUpDate: 'MM/DD/YYYYUND',
-    storesPurchasedFrom: '001, 002, 003, 004',
-    status: 'none'
+    pastDueTotal: '$4,225.01',
+    totalCurrentBalance: '$1,685.00',
+    status: 'open'
   }
 ];
 
@@ -166,9 +106,7 @@ export class CreditOverviewTableLargeComponent implements OnInit {
     'totalCreditLimit',
     'totalRemainingCredit',
     'pastDueTotal',
-    'signUpDate',
-    'storesPurchasedFrom',
-    'status'
+    'totalCurrentBalance'
   ];
   dataSource = data;
 

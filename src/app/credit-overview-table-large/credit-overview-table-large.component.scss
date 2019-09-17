@@ -6,6 +6,14 @@ tr {
   vertical-align: baseline;
 }
 
+.customer-name {
+  color: #0a6ed1;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
 // HAVE TO POSITION THE SORT ICON ABSOLUTELY AND DO ALL THE STYLING BELOW BECAUSE
 // SAP BUILT THE TABLE HEADER SORT ICON AS A PSEUDO CLASS INSTEAD OF MARKUP USING
 // FLEXBOX AND IT WILL WRAP BELOW THE TEXT IF THERE ARE MORE THAN ABOUT SIX CHARACTERS
@@ -22,12 +30,39 @@ th.fd-table__sort-column {
   position: relative;
 }
 
-th {
-  &:nth-child(2),
-  &:nth-child(3),
-  &:nth-child(4),
-  &:nth-child(5),
-  &:nth-child(9) {
-    padding-top: 2px;
+// th {
+//   &:nth-child(2),
+//   &:nth-child(3),
+//   &:nth-child(4),
+//   &:nth-child(5),
+//   &:nth-child(9) {
+//     padding-top: 2px;
+//   }
+// }
+
+// CONTAINERS
+.customer-status {
+  display: flex;
+  align-items: baseline;
+
+  & .fd-status-label::before {
+    font-size: 16px;
+    margin-right: 4px;
+  }
+}
+
+// CREDIT ICONS
+.credit {
+  &--open::before {
+    color: #107f3e;
+  }
+  &--approaching::before {
+    color: #e9730c;
+  }
+  &--over::before {
+    color: #bb0000;
+  }
+  &--locked::before {
+    color: #bb0000;
   }
 }
