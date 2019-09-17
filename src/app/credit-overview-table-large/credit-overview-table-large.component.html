@@ -1,0 +1,119 @@
+<div fd-table-responsive-wrapper>
+  <table fd-table cdk-table [dataSource]="dataSource">
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Customer Name Column -->
+    <ng-container cdkColumnDef="companyName">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Customer Name
+      </th>
+      <td cdk-cell *cdkCellDef="let product">{{ product.companyName }}</td>
+    </ng-container>
+
+    <!-- Customer Number Column -->
+    <ng-container cdkColumnDef="customerNumber">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Customer Number
+      </th>
+      <td cdk-cell *cdkCellDef="let product">
+        {{ product.customerNumber }}
+      </td>
+    </ng-container>
+
+    <!-- Total Credit Limit Column -->
+    <ng-container cdkColumnDef="totalCreditLimit">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Total Credit Limit
+      </th>
+      <td cdk-cell *cdkCellDef="let product">
+        {{ product.totalCreditLimit }}
+      </td>
+    </ng-container>
+
+    <!-- Total Remaining Credit Column -->
+    <ng-container cdkColumnDef="totalRemainingCredit">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Total Remaining Credit
+      </th>
+      <td cdk-cell *cdkCellDef="let product">
+        {{ product.totalRemainingCredit }}
+      </td>
+    </ng-container>
+
+    <!-- Total Past Due Column -->
+    <ng-container cdkColumnDef="pastDueTotal">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Total Past Due
+      </th>
+      <td cdk-cell *cdkCellDef="let product">
+        {{ product.pastDueTotal }}
+      </td>
+    </ng-container>
+
+    <!-- Sign Up Date Column -->
+    <ng-container cdkColumnDef="signUpDate">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Sign Up<br />
+        Date
+      </th>
+      <td cdk-cell *cdkCellDef="let product">
+        {{ product.signUpDate }}
+      </td>
+    </ng-container>
+
+    <!-- Stores Purchased From Column -->
+    <ng-container cdkColumnDef="storesPurchasedFrom">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Stores<br />
+        Purchased From
+      </th>
+      <td cdk-cell *cdkCellDef="let product">
+        {{ product.storesPurchasedFrom }}
+      </td>
+    </ng-container>
+
+    <!-- Status Column -->
+    <ng-container cdkColumnDef="status">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        Status
+      </th>
+      <td cdk-cell *cdkCellDef="let product">
+        <div *ngIf="product.status === 'created'">
+          <div fd-status-label [statusIcon]="'available'">
+            Account Created
+          </div>
+        </div>
+        <div *ngIf="product.status === 'pending'">
+          <div fd-status-label [statusIcon]="'away'">
+            Pending Account Creation
+          </div>
+        </div>
+      </td>
+    </ng-container>
+
+    <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
+    <tr cdk-row *cdkRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <div class="fd-pagination">
+    <span class="fd-pagination__total">30 items</span>
+    <nav class="fd-pagination__nav">
+      <a
+        href="#"
+        class="fd-pagination__link fd-pagination__link--previous"
+        aria-label="Previous"
+        aria-disabled="true"
+      ></a>
+      <a href="#" class="fd-pagination__link" aria-selected="true">1</a>
+      <a href="#" class="fd-pagination__link">2</a>
+      <a href="#" class="fd-pagination__link">3</a>
+      <a
+        href="#"
+        class="fd-pagination__link fd-pagination__link--next"
+        aria-label="Next"
+        aria-disabled="false"
+      ></a>
+    </nav>
+  </div>
+</div>

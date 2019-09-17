@@ -10,114 +10,94 @@ import {
 } from '@angular/animations';
 
 export interface ProductInfo {
-  customerName: string;
   companyName: string;
   customerNumber: string;
   totalCreditLimit: string;
   totalRemainingCredit: string;
   pastDueTotal: string;
-  totalPastDue: string;
   totalCurrentBalance: string;
   status: string;
 }
 
 const data: ProductInfo[] = [
   {
-    customerName: '1234567',
     companyName: 'Walt Disney World ALL STAR RESORT-TRAVISAVAN',
     customerNumber: '3056058505000',
     totalCreditLimit: '$50,000.00',
     totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
-    totalPastDue: '$4,225.01',
     totalCurrentBalance: '$1,685.00',
     status: 'open'
   },
   {
-    customerName: '1234567',
     companyName: 'Wausau Equipment Co, INC',
     customerNumber: '3056058505000',
     totalCreditLimit: '$50,000.00',
     totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
-    totalPastDue: '$4,225.01',
     totalCurrentBalance: '$1,685.00',
     status: 'approaching'
   },
   {
-    customerName: '1234567',
     companyName: 'Hyatt Place',
     customerNumber: '3056058505000',
     totalCreditLimit: '$50,000.00',
     totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
-    totalPastDue: '$4,225.01',
     totalCurrentBalance: '$1,685.00',
     status: 'over'
   },
   {
-    customerName: '1234567',
     companyName: 'Alfreda Gallardo',
     customerNumber: '3056058505000',
     totalCreditLimit: '$50,000.00',
     totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
-    totalPastDue: '$4,225.01',
     totalCurrentBalance: '$1,685.00',
     status: 'locked'
   },
   {
-    customerName: '1234567',
     companyName: 'DDG Construction',
     customerNumber: '3056058505000',
     totalCreditLimit: '$50,000.00',
     totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
-    totalPastDue: '$4,225.01',
     totalCurrentBalance: '$1,685.00',
     status: 'open'
   },
   {
-    customerName: '1234567',
     companyName: 'Telecom Products, INC.',
     customerNumber: '3056058505000',
     totalCreditLimit: '$50,000.00',
     totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
-    totalPastDue: '$4,225.01',
     totalCurrentBalance: '$1,685.00',
     status: 'open'
   },
   {
-    customerName: '1234567',
     companyName: 'Ron Testerman Builders',
     customerNumber: '3056058505000',
     totalCreditLimit: '$50,000.00',
     totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
-    totalPastDue: '$4,225.01',
     totalCurrentBalance: '$1,685.00',
     status: 'approaching'
   },
   {
-    customerName: '1234567',
     companyName: 'Wausau Equipment Co, INC.',
     customerNumber: '3056058505000',
     totalCreditLimit: '$50,000.00',
     totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
-    totalPastDue: '$4,225.01',
     totalCurrentBalance: '$1,685.00',
     status: 'over'
   },
   {
-    customerName: '1234567',
     companyName: 'Lakeside Painting',
     customerNumber: '3056058505000',
     totalCreditLimit: '$50,000.00',
     totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
-    totalPastDue: '$4,225.01',
     totalCurrentBalance: '$1,685.00',
     status: 'open'
   }
@@ -155,7 +135,7 @@ export class CreditOverviewComponent implements OnInit {
   currentIndex: number = null;
 
   expandedData: any;
-  displayedColumns = ['customerName', 'pastDueTotal'];
+  displayedColumns = ['companyName', 'pastDueTotal'];
   dataSource = new MobileDataSource();
 
   isExpansionDetailRow = (i: number, row: object) =>

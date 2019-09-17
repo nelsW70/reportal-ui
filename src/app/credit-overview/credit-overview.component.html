@@ -15,7 +15,7 @@
       <div *ngIf="currentWindowWidth < 1024">
         <mat-table #table [dataSource]="dataSource">
           <!-- Customer Name Column -->
-          <ng-container matColumnDef="customerName">
+          <ng-container matColumnDef="companyName">
             <mat-header-cell
               fdColumnSortable
               *matHeaderCellDef
@@ -139,14 +139,6 @@
                 </div>
                 <div class="expanded-details__detail-container">
                   <div>
-                    Total Past Due:&nbsp;
-                  </div>
-                  <div class="expanded-details-info">
-                    {{ detail.product.totalPastDue }}
-                  </div>
-                </div>
-                <div class="expanded-details__detail-container">
-                  <div>
                     Total Current Balance:&nbsp;
                   </div>
                   <div class="expanded-details-info">
@@ -205,27 +197,7 @@
         </div>
       </div>
       <div *ngIf="currentWindowWidth >= 1024">
-        i'm the +1024 credit overview table
-        <!-- <div class="fd-pagination">
-          <span class="fd-pagination__total">30 items</span>
-          <nav class="fd-pagination__nav">
-            <a
-              href="#"
-              class="fd-pagination__link fd-pagination__link--previous"
-              aria-label="Previous"
-              aria-disabled="true"
-            ></a>
-            <a href="#" class="fd-pagination__link" aria-selected="true">1</a>
-            <a href="#" class="fd-pagination__link">2</a>
-            <a href="#" class="fd-pagination__link">3</a>
-            <a
-              href="#"
-              class="fd-pagination__link fd-pagination__link--next"
-              aria-label="Next"
-              aria-disabled="false"
-            ></a>
-          </nav>
-        </div> -->
+        <app-credit-overview-table-large></app-credit-overview-table-large>
       </div>
     </fd-panel-body>
   </fd-panel>

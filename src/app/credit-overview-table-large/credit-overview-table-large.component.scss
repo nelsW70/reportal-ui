@@ -1,0 +1,33 @@
+// FONTS
+td {
+  font-size: 12px;
+}
+tr {
+  vertical-align: baseline;
+}
+
+// HAVE TO POSITION THE SORT ICON ABSOLUTELY AND DO ALL THE STYLING BELOW BECAUSE
+// SAP BUILT THE TABLE HEADER SORT ICON AS A PSEUDO CLASS INSTEAD OF MARKUP USING
+// FLEXBOX AND IT WILL WRAP BELOW THE TEXT IF THERE ARE MORE THAN ABOUT SIX CHARACTERS
+// UNLESS WE DO THIS.
+
+.fd-table__sort-column::after {
+  margin: 0 6px;
+  position: absolute;
+  top: 16px;
+  right: 6px;
+}
+
+th.fd-table__sort-column {
+  position: relative;
+}
+
+th {
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(4),
+  &:nth-child(5),
+  &:nth-child(9) {
+    padding-top: 2px;
+  }
+}

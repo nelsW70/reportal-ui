@@ -33,6 +33,7 @@ import { InventoryLookupDistributionComponent } from './inventory-lookup-distrib
 import { InventoryLookupStoresTableLargeComponent } from './inventory-lookup-stores-table-large/inventory-lookup-stores-table-large.component';
 import { InventoryLookupDistributionTableLargeComponent } from './inventory-lookup-distribution-table-large/inventory-lookup-distribution-table-large.component';
 import { CreditOverviewComponent } from './credit-overview/credit-overview.component';
+import { CreditOverviewTableLargeComponent } from './credit-overview-table-large/credit-overview-table-large.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { CreditOverviewComponent } from './credit-overview/credit-overview.compo
     InventoryLookupDistributionComponent,
     InventoryLookupStoresTableLargeComponent,
     InventoryLookupDistributionTableLargeComponent,
-    CreditOverviewComponent
+    CreditOverviewComponent,
+    CreditOverviewTableLargeComponent
   ],
   imports: [
     BrowserModule,
