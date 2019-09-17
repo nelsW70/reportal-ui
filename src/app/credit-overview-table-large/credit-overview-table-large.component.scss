@@ -65,22 +65,22 @@ th.fd-table__sort-column {
 
 .fd-table td:nth-child(7),
 .fd-table th:nth-child(7) {
-  width: 86px;
+  min-width: 90px;
 }
 
 .fd-table td:nth-child(8),
 .fd-table th:nth-child(8) {
-  width: 86px;
+  min-width: 90px;
 }
 
 .fd-table td:nth-child(9),
 .fd-table th:nth-child(9) {
-  width: 86px;
+  min-width: 90px;
 }
 
 .fd-table td:nth-child(10),
 .fd-table th:nth-child(10) {
-  width: 86px;
+  min-width: 90px;
 }
 
 .fd-table td:last-child,
@@ -99,10 +99,10 @@ th.fd-table__sort-column {
     width: 70px;
   }
   &--past-due {
-    width: 54px;
+    width: 70px;
   }
   &--current-balance {
-    width: 54px;
+    width: 70px;
   }
 }
 
