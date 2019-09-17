@@ -20,7 +20,8 @@ tr {
 // UNLESS WE DO THIS.
 
 .fd-table__sort-column::after {
-  margin: 0 6px;
+  // margin: 0 6px;
+  margin: 0;
   position: absolute;
   top: 16px;
   right: 6px;
@@ -30,15 +31,80 @@ th.fd-table__sort-column {
   position: relative;
 }
 
-// th {
-//   &:nth-child(2),
-//   &:nth-child(3),
-//   &:nth-child(4),
-//   &:nth-child(5),
-//   &:nth-child(9) {
-//     padding-top: 2px;
-//   }
-// }
+.fd-table td:first-child,
+.fd-table th:first-child {
+  padding-left: 8px;
+  min-width: 140px;
+  max-width: 150px;
+}
+
+.fd-table td:nth-child(2),
+.fd-table th:nth-child(2) {
+  min-width: 86px;
+}
+
+.fd-table td:nth-child(3),
+.fd-table th:nth-child(3) {
+  min-width: 100px;
+}
+
+.fd-table td:nth-child(4),
+.fd-table th:nth-child(4) {
+  min-width: 100px;
+}
+
+.fd-table td:nth-child(5),
+.fd-table th:nth-child(5) {
+  min-width: 100px;
+}
+
+.fd-table td:nth-child(6),
+.fd-table th:nth-child(6) {
+  min-width: 100px;
+}
+
+.fd-table td:nth-child(7),
+.fd-table th:nth-child(7) {
+  width: 86px;
+}
+
+.fd-table td:nth-child(8),
+.fd-table th:nth-child(8) {
+  width: 86px;
+}
+
+.fd-table td:nth-child(9),
+.fd-table th:nth-child(9) {
+  width: 86px;
+}
+
+.fd-table td:nth-child(10),
+.fd-table th:nth-child(10) {
+  width: 86px;
+}
+
+.fd-table td:last-child,
+.fd-table th:last-child {
+  padding-right: 8px;
+}
+
+.th-container {
+  &--customer-number {
+    width: 70px;
+  }
+  &--credit-limit {
+    width: 70px;
+  }
+  &--remaining-credit {
+    width: 70px;
+  }
+  &--past-due {
+    width: 54px;
+  }
+  &--current-balance {
+    width: 54px;
+  }
+}
 
 // CONTAINERS
 .customer-status {

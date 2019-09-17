@@ -8,6 +8,10 @@ export interface ProductInfo {
   pastDueTotal: string;
   totalCurrentBalance: string;
   status: string;
+  levelOne: string;
+  levelTwo: string;
+  levelThree: string;
+  levelFour: string;
 }
 
 const data: ProductInfo[] = [
@@ -18,7 +22,11 @@ const data: ProductInfo[] = [
     totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
     totalCurrentBalance: '$1,685.00',
-    status: 'open'
+    status: 'open',
+    levelOne: '$4,225.01',
+    levelTwo: '$4,225.01',
+    levelThree: '$4,225.01',
+    levelFour: '$4,225.01'
   },
   {
     companyName: 'Wausau Equipment Co, INC',
@@ -27,7 +35,11 @@ const data: ProductInfo[] = [
     totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
     totalCurrentBalance: '$1,685.00',
-    status: 'approaching'
+    status: 'approaching',
+    levelOne: '$4,225.01',
+    levelTwo: '$4,225.01',
+    levelThree: '$4,225.01',
+    levelFour: '$4,225.01'
   },
   {
     companyName: 'Hyatt Place',
@@ -36,7 +48,11 @@ const data: ProductInfo[] = [
     totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
     totalCurrentBalance: '$1,685.00',
-    status: 'over'
+    status: 'over',
+    levelOne: '$4,225.01',
+    levelTwo: '$4,225.01',
+    levelThree: '$4,225.01',
+    levelFour: '$4,225.01'
   },
   {
     companyName: 'Alfreda Gallardo',
@@ -45,7 +61,11 @@ const data: ProductInfo[] = [
     totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
     totalCurrentBalance: '$1,685.00',
-    status: 'locked'
+    status: 'locked',
+    levelOne: '$4,225.01',
+    levelTwo: '$4,225.01',
+    levelThree: '$4,225.01',
+    levelFour: '$4,225.01'
   },
   {
     companyName: 'DDG Construction',
@@ -54,7 +74,11 @@ const data: ProductInfo[] = [
     totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
     totalCurrentBalance: '$1,685.00',
-    status: 'open'
+    status: 'open',
+    levelOne: '$4,225.01',
+    levelTwo: '$4,225.01',
+    levelThree: '$4,225.01',
+    levelFour: '$4,225.01'
   },
   {
     companyName: 'Telecom Products, INC.',
@@ -63,7 +87,11 @@ const data: ProductInfo[] = [
     totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
     totalCurrentBalance: '$1,685.00',
-    status: 'open'
+    status: 'open',
+    levelOne: '$4,225.01',
+    levelTwo: '$4,225.01',
+    levelThree: '$4,225.01',
+    levelFour: '$4,225.01'
   },
   {
     companyName: 'Ron Swanson Builders',
@@ -72,7 +100,11 @@ const data: ProductInfo[] = [
     totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
     totalCurrentBalance: '$1,685.00',
-    status: 'approaching'
+    status: 'approaching',
+    levelOne: '$4,225.01',
+    levelTwo: '$4,225.01',
+    levelThree: '$4,225.01',
+    levelFour: '$4,225.01'
   },
   {
     companyName: 'Wausau Equipment Co, INC.',
@@ -81,7 +113,11 @@ const data: ProductInfo[] = [
     totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
     totalCurrentBalance: '$1,685.00',
-    status: 'over'
+    status: 'over',
+    levelOne: '$4,225.01',
+    levelTwo: '$4,225.01',
+    levelThree: '$4,225.01',
+    levelFour: '$4,225.01'
   },
   {
     companyName: 'Lakeside Painting',
@@ -90,7 +126,11 @@ const data: ProductInfo[] = [
     totalRemainingCredit: '$50,225.01',
     pastDueTotal: '$4,225.01',
     totalCurrentBalance: '$1,685.00',
-    status: 'open'
+    status: 'open',
+    levelOne: '$4,225.01',
+    levelTwo: '$4,225.01',
+    levelThree: '$4,225.01',
+    levelFour: '$4,225.01'
   }
 ];
 
@@ -106,7 +146,11 @@ export class CreditOverviewTableLargeComponent implements OnInit {
     'totalCreditLimit',
     'totalRemainingCredit',
     'pastDueTotal',
-    'totalCurrentBalance'
+    'totalCurrentBalance',
+    'levelOne',
+    'levelTwo',
+    'levelThree',
+    'levelFour'
   ];
   dataSource = data;
 

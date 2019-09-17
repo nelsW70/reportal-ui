@@ -2,9 +2,7 @@
   <table fd-table cdk-table [dataSource]="dataSource">
     <!-- Customer Name Column -->
     <ng-container cdkColumnDef="companyName">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Customer Name
-      </th>
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Customer Name</th>
       <td cdk-cell *cdkCellDef="let product">
         <div *ngIf="product.status === 'open'" class="customer-status">
           <div
@@ -80,7 +78,9 @@
     <!-- Customer Number Column -->
     <ng-container cdkColumnDef="customerNumber">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Customer Number
+        <div class="th-container--customer-number">
+          Customer Number
+        </div>
       </th>
       <td cdk-cell *cdkCellDef="let product">
         {{ product.customerNumber }}
@@ -90,9 +90,11 @@
     <!-- Total Credit Limit Column -->
     <ng-container cdkColumnDef="totalCreditLimit">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Total Credit Limit
+        <div class="th-container--credit-limit">
+          Total Credit Limit
+        </div>
       </th>
-      <td cdk-cell *cdkCellDef="let product">
+      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.totalCreditLimit }}
       </td>
     </ng-container>
@@ -100,9 +102,11 @@
     <!-- Total Remaining Credit Column -->
     <ng-container cdkColumnDef="totalRemainingCredit">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Total Remaining Credit
+        <div class="th-container--remaining-credit">
+          Total Remaining Credit
+        </div>
       </th>
-      <td cdk-cell *cdkCellDef="let product">
+      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.totalRemainingCredit }}
       </td>
     </ng-container>
@@ -110,9 +114,11 @@
     <!-- Total Past Due Column -->
     <ng-container cdkColumnDef="pastDueTotal">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Total Past Due
+        <div class="th-container--past-due">
+          Total Past Due
+        </div>
       </th>
-      <td cdk-cell *cdkCellDef="let product">
+      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.pastDueTotal }}
       </td>
     </ng-container>
@@ -120,10 +126,52 @@
     <!-- Total Current Balance Column -->
     <ng-container cdkColumnDef="totalCurrentBalance">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Total Current Balance
+        <div class="th-container--current-balance">
+          Total Current Balance
+        </div>
       </th>
-      <td cdk-cell *cdkCellDef="let product">
+      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.totalCurrentBalance }}
+      </td>
+    </ng-container>
+
+    <!-- Level One: 1-30 Column -->
+    <ng-container cdkColumnDef="levelOne">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        1-30
+      </th>
+      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
+        {{ product.levelOne }}
+      </td>
+    </ng-container>
+
+    <!-- Level Two: 30 Column -->
+    <ng-container cdkColumnDef="levelTwo">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        30
+      </th>
+      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
+        {{ product.levelTwo }}
+      </td>
+    </ng-container>
+
+    <!-- Level Three: 60 Column -->
+    <ng-container cdkColumnDef="levelThree">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        60
+      </th>
+      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
+        {{ product.levelThree }}
+      </td>
+    </ng-container>
+
+    <!-- Level Four: >90 Column -->
+    <ng-container cdkColumnDef="levelFour">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
+        >90
+      </th>
+      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
+        {{ product.levelFour }}
       </td>
     </ng-container>
 
