@@ -82,21 +82,33 @@ th.fd-table__sort-column {
 .fd-table td:nth-child(7),
 .fd-table th:nth-child(7) {
   min-width: 90px;
+  @media only screen and (min-width: 1440px) {
+    width: 100px;
+  }
 }
 
 .fd-table td:nth-child(8),
 .fd-table th:nth-child(8) {
   min-width: 90px;
+  @media only screen and (min-width: 1440px) {
+    width: 100px;
+  }
 }
 
 .fd-table td:nth-child(9),
 .fd-table th:nth-child(9) {
   min-width: 90px;
+  @media only screen and (min-width: 1440px) {
+    width: 100px;
+  }
 }
 
 .fd-table td:nth-child(10),
 .fd-table th:nth-child(10) {
   min-width: 90px;
+  @media only screen and (min-width: 1440px) {
+    width: 100px;
+  }
 }
 
 .fd-table td:last-child,
