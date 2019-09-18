@@ -9,15 +9,11 @@
             fd-status-label
             [icon]="'unlocked'"
             class="fd-has-type-minus-1 credit--open"
-          ></div>
-          <div
-            class="customer-name"
-            (click)="$event.stopPropagation()"
             fdPopover="Credit Open"
-            placement="bottom"
             [triggers]="['mouseenter', 'mouseleave']"
             [noArrow]="false"
-          >
+          ></div>
+          <div class="customer-name" (click)="$event.stopPropagation()">
             {{ product.companyName }}
           </div>
         </div>
@@ -26,15 +22,11 @@
             fd-status-label
             [icon]="'message-warning'"
             class="fd-has-type-minus-1 credit--approaching"
-          ></div>
-          <div
-            class="customer-name"
-            (click)="$event.stopPropagation()"
             fdPopover="Approaching Credit Limit"
-            placement="bottom"
             [triggers]="['mouseenter', 'mouseleave']"
             [noArrow]="false"
-          >
+          ></div>
+          <div class="customer-name" (click)="$event.stopPropagation()">
             {{ product.companyName }}
           </div>
         </div>
@@ -43,15 +35,11 @@
             fd-status-label
             [icon]="'message-warning'"
             class="fd-has-type-minus-1 credit--over"
-          ></div>
-          <div
-            class="customer-name"
-            (click)="$event.stopPropagation()"
             fdPopover="Over Credit Limit"
-            placement="bottom"
             [triggers]="['mouseenter', 'mouseleave']"
             [noArrow]="false"
-          >
+          ></div>
+          <div class="customer-name" (click)="$event.stopPropagation()">
             {{ product.companyName }}
           </div>
         </div>
@@ -60,15 +48,11 @@
             fd-status-label
             [icon]="'locked'"
             class="fd-has-type-minus-1 credit--locked"
-          ></div>
-          <div
-            class="customer-name"
-            (click)="$event.stopPropagation()"
             fdPopover="Credit Locked"
-            placement="bottom"
             [triggers]="['mouseenter', 'mouseleave']"
             [noArrow]="false"
-          >
+          ></div>
+          <div class="customer-name" (click)="$event.stopPropagation()">
             {{ product.companyName }}
           </div>
         </div>
