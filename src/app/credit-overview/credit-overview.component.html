@@ -40,7 +40,11 @@
                   [icon]="'unlocked'"
                   class="fd-has-type-minus-1 credit--open"
                 ></div>
-                <div class="customer-name" (click)="$event.stopPropagation()">
+                <div
+                  class="customer-name"
+                  (click)="$event.stopPropagation()"
+                  routerLink="/customer-credit"
+                >
                   {{ product.companyName }}
                 </div>
               </div>
@@ -53,7 +57,11 @@
                   [icon]="'message-warning'"
                   class="fd-has-type-minus-1 credit--approaching"
                 ></div>
-                <div class="customer-name" (click)="$event.stopPropagation()">
+                <div
+                  class="customer-name"
+                  (click)="$event.stopPropagation()"
+                  routerLink="/customer-credit"
+                >
                   {{ product.companyName }}
                 </div>
               </div>
@@ -63,7 +71,11 @@
                   [icon]="'message-warning'"
                   class="fd-has-type-minus-1 credit--over"
                 ></div>
-                <div class="customer-name" (click)="$event.stopPropagation()">
+                <div
+                  class="customer-name"
+                  (click)="$event.stopPropagation()"
+                  routerLink="/customer-credit"
+                >
                   {{ product.companyName }}
                 </div>
               </div>
@@ -73,7 +85,11 @@
                   [icon]="'locked'"
                   class="fd-has-type-minus-1 credit--locked"
                 ></div>
-                <div class="customer-name" (click)="$event.stopPropagation()">
+                <div
+                  class="customer-name"
+                  (click)="$event.stopPropagation()"
+                  routerLink="/customer-credit"
+                >
                   {{ product.companyName }}
                 </div>
               </div>
