@@ -1,3 +1,271 @@
-<p>
-  customer-credit works!
-</p>
+<h4 class="fd-has-type-4">Customer Credit</h4>
+<fd-panel>
+  <fd-panel-header>
+    <fd-panel-head>
+      <h2 fd-panel-title>Credit Summary (As of March, 02, 2018)</h2>
+    </fd-panel-head>
+  </fd-panel-header>
+  <!-- ?????????? remove __thd ?????? -->
+  <fd-panel-body class="panel-body panel-body--main panel-body--main__thd">
+  </fd-panel-body>
+</fd-panel>
+
+<div>
+  <fd-panel>
+    <fd-panel-header>
+      <fd-panel-head>
+        <h2 fd-panel-title>Job List (As of 03/01/2019)</h2>
+      </fd-panel-head>
+    </fd-panel-header>
+    <fd-panel-body class="panel-body panel-body--secondary">
+      <div *ngIf="currentWindowWidth < 1440">
+        <mat-table #table [dataSource]="dataSource">
+          <!-- Job Name Column -->
+          <ng-container matColumnDef="jobName">
+            <mat-header-cell
+              fdColumnSortable
+              *matHeaderCellDef
+              class="fd-has-type-minus-1 th-1"
+            >
+              <div class="th-container">
+                <div class="th-header">
+                  Job Name
+                </div>
+                <div>
+                  <span class="sap-icon--sorting-ranking sap-icon--s"></span>
+                </div>
+              </div>
+            </mat-header-cell>
+            <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
+              {{ product.jobName }}
+            </mat-cell>
+          </ng-container>
+
+          <!-- Job ID Column -->
+          <ng-container matColumnDef="jobNumber">
+            <mat-header-cell
+              fdColumnSortable
+              *matHeaderCellDef
+              class="fd-has-type-minus-1"
+            >
+              <div class="th-container">
+                <div class="th-header">
+                  Job Number
+                </div>
+                <div>
+                  <span class="sap-icon--sorting-ranking sap-icon--s"></span>
+                </div></div
+            ></mat-header-cell>
+            <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
+              <div class="name-wrap">
+                {{ product.jobNumber }}
+              </div>
+            </mat-cell>
+          </ng-container>
+
+          <!-- Past Due Column -->
+          <ng-container matColumnDef="pastDue">
+            <mat-header-cell
+              fdColumnSortable
+              *matHeaderCellDef
+              class="fd-has-type-minus-1"
+            >
+              <div class="th-container">
+                <div class="th-header">
+                  Past Due
+                </div>
+                <div>
+                  <span class="sap-icon--sorting-ranking sap-icon"></span>
+                </div></div
+            ></mat-header-cell>
+            <mat-cell
+              *matCellDef="let product; let i = index"
+              class="fd-has-type-minus-1"
+              >{{ product.pastDue }}
+              <span
+                [ngClass]="
+                  currentIndex === i
+                    ? 'sap-icon--navigation-right-arrow sap-icon--s expand-icon expand-animation'
+                    : 'sap-icon--navigation-right-arrow sap-icon--s expand-icon'
+                "
+              ></span>
+            </mat-cell>
+          </ng-container>
+
+          <!-- Expanded Content Column - The detail row is made up of this one column -->
+          <ng-container matColumnDef="expandedDetail">
+            <mat-cell *matCellDef="let detail">
+              <div class="fd-has-type-0 expanded-details">
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Current Balance:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.currentBalance }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    1-30:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.levelOne }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    30:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.levelTwo }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    60:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.levelThree }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    >90:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.levelFour }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    DSO:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.dso }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    AR Balance:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.arBalance }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Credit Limit:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.creditLimit }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Remaining Credit:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.remainingCredit }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Last Payment Amount:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.lastPaymentAmount }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Account Open Date:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.accountOpenDate }}
+                  </div>
+                </div>
+                <div class="expanded-details__detail-container">
+                  <div>
+                    Credit Terms:&nbsp;
+                  </div>
+                  <div class="expanded-details-info">
+                    {{ detail.product.creditTerms }}
+                  </div>
+                </div>
+              </div>
+            </mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row
+            *matRowDef="let row; columns: displayedColumns; let i = index"
+            matRipple
+            class="product-row"
+            [class.expanded]="expandedData == row"
+            (click)="
+              expandedData === row
+                ? (expandedData = null)
+                : (expandedData = row);
+              currentIndex = expandedData == row ? i : null
+            "
+          ></mat-row>
+          <mat-row
+            *matRowDef="
+              let row;
+              columns: ['expandedDetail'];
+              when: isExpansionDetailRow
+            "
+            [@detailExpand]="
+              row.product == expandedData ? 'expanded' : 'collapsed'
+            "
+            style="overflow: hidden"
+          >
+          </mat-row>
+        </mat-table>
+        <div class="fd-pagination">
+          <span class="fd-pagination__total">30 items</span>
+          <nav class="fd-pagination__nav">
+            <a
+              href="#"
+              class="fd-pagination__link fd-pagination__link--previous"
+              aria-label="Previous"
+              aria-disabled="true"
+            ></a>
+            <a href="#" class="fd-pagination__link" aria-selected="true">1</a>
+            <a href="#" class="fd-pagination__link">2</a>
+            <a href="#" class="fd-pagination__link">3</a>
+            <a
+              href="#"
+              class="fd-pagination__link fd-pagination__link--next"
+              aria-label="Next"
+              aria-disabled="false"
+            ></a>
+          </nav>
+        </div>
+      </div>
+      <div *ngIf="currentWindowWidth >= 1440">
+        i'm the large customer credit table
+        <!-- <div class="fd-pagination">
+        <span class="fd-pagination__total">30 items</span>
+        <nav class="fd-pagination__nav">
+          <a
+            href="#"
+            class="fd-pagination__link fd-pagination__link--previous"
+            aria-label="Previous"
+            aria-disabled="true"
+          ></a>
+          <a href="#" class="fd-pagination__link" aria-selected="true">1</a>
+          <a href="#" class="fd-pagination__link">2</a>
+          <a href="#" class="fd-pagination__link">3</a>
+          <a
+            href="#"
+            class="fd-pagination__link fd-pagination__link--next"
+            aria-label="Next"
+            aria-disabled="false"
+          ></a>
+        </nav>
+      </div> -->
+      </div>
+    </fd-panel-body>
+  </fd-panel>
+</div>
