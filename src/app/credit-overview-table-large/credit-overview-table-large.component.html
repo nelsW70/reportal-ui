@@ -137,8 +137,15 @@
 
     <!-- Level One: 1-30 Column -->
     <ng-container cdkColumnDef="levelOne">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        1-30
+      <th
+        fdColumnSortable
+        cdk-header-cell
+        *cdkHeaderCellDef
+        class="fd-has-text-align-right"
+      >
+        <div class="th-container--levels">
+          1-30
+        </div>
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.levelOne }}
@@ -147,8 +154,15 @@
 
     <!-- Level Two: 30 Column -->
     <ng-container cdkColumnDef="levelTwo">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        30
+      <th
+        fdColumnSortable
+        cdk-header-cell
+        *cdkHeaderCellDef
+        class="fd-has-text-align-right"
+      >
+        <div class="th-container--levels">
+          30
+        </div>
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.levelTwo }}
@@ -157,8 +171,15 @@
 
     <!-- Level Three: 60 Column -->
     <ng-container cdkColumnDef="levelThree">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        60
+      <th
+        fdColumnSortable
+        cdk-header-cell
+        *cdkHeaderCellDef
+        class="fd-has-text-align-right"
+      >
+        <div class="th-container--levels">
+          60
+        </div>
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.levelThree }}
@@ -167,8 +188,15 @@
 
     <!-- Level Four: >90 Column -->
     <ng-container cdkColumnDef="levelFour">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        >90
+      <th
+        fdColumnSortable
+        cdk-header-cell
+        *cdkHeaderCellDef
+        class="fd-has-text-align-right"
+      >
+        <div class="th-container--levels">
+          >90
+        </div>
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.levelFour }}

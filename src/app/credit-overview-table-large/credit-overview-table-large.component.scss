@@ -46,36 +46,32 @@ th.fd-table__sort-column {
 .fd-table td:nth-child(3),
 .fd-table th:nth-child(3) {
   width: 100px;
-
   @media only screen and (min-width: 1440px) {
-    width: 140px;
+    min-width: 140px;
   }
 }
 
 .fd-table td:nth-child(4),
 .fd-table th:nth-child(4) {
   width: 100px;
-
   @media only screen and (min-width: 1440px) {
-    width: 140px;
+    min-width: 140px;
   }
 }
 
 .fd-table td:nth-child(5),
 .fd-table th:nth-child(5) {
   width: 100px;
-
   @media only screen and (min-width: 1440px) {
-    width: 140px;
+    min-width: 140px;
   }
 }
 
 .fd-table td:nth-child(6),
 .fd-table th:nth-child(6) {
   width: 100px;
-
   @media only screen and (min-width: 1440px) {
-    width: 140px;
+    min-width: 140px;
   }
 }
 
@@ -83,7 +79,7 @@ th.fd-table__sort-column {
 .fd-table th:nth-child(7) {
   min-width: 90px;
   @media only screen and (min-width: 1440px) {
-    width: 100px;
+    min-width: 100px;
   }
 }
 
@@ -91,7 +87,7 @@ th.fd-table__sort-column {
 .fd-table th:nth-child(8) {
   min-width: 90px;
   @media only screen and (min-width: 1440px) {
-    width: 100px;
+    min-width: 100px;
   }
 }
 
@@ -99,7 +95,7 @@ th.fd-table__sort-column {
 .fd-table th:nth-child(9) {
   min-width: 90px;
   @media only screen and (min-width: 1440px) {
-    width: 100px;
+    min-width: 100px;
   }
 }
 
@@ -107,7 +103,7 @@ th.fd-table__sort-column {
 .fd-table th:nth-child(10) {
   min-width: 90px;
   @media only screen and (min-width: 1440px) {
-    width: 100px;
+    min-width: 100px;
   }
 }
 
@@ -122,31 +118,30 @@ th.fd-table__sort-column {
   }
   &--credit-limit {
     width: 70px;
-
     @media only screen and (min-width: 1440px) {
-      width: 104px;
+      min-width: 104px;
     }
   }
   &--remaining-credit {
     width: 70px;
-
     @media only screen and (min-width: 1440px) {
-      width: 104px;
+      min-width: 104px;
     }
   }
   &--past-due {
     width: 70px;
-
     @media only screen and (min-width: 1440px) {
-      width: 104px;
+      min-width: 104px;
     }
   }
   &--current-balance {
     width: 70px;
-
     @media only screen and (min-width: 1440px) {
-      width: 104px;
+      min-width: 104px;
     }
+  }
+  &--levels {
+    padding-right: 16px;
   }
 }
 
