@@ -49,6 +49,9 @@ th.fd-table__sort-column {
   @media only screen and (min-width: 1440px) {
     min-width: 140px;
   }
+  @media only screen and (min-width: 1740px) {
+    min-width: 170px;
+  }
 }
 
 .fd-table td:nth-child(4),
@@ -56,6 +59,9 @@ th.fd-table__sort-column {
   width: 100px;
   @media only screen and (min-width: 1440px) {
     min-width: 140px;
+  }
+  @media only screen and (min-width: 1740px) {
+    min-width: 170px;
   }
 }
 
@@ -65,6 +71,9 @@ th.fd-table__sort-column {
   @media only screen and (min-width: 1440px) {
     min-width: 140px;
   }
+  @media only screen and (min-width: 1740px) {
+    min-width: 170px;
+  }
 }
 
 .fd-table td:nth-child(6),
@@ -72,6 +81,9 @@ th.fd-table__sort-column {
   width: 100px;
   @media only screen and (min-width: 1440px) {
     min-width: 140px;
+  }
+  @media only screen and (min-width: 1740px) {
+    min-width: 170px;
   }
 }
 
@@ -115,11 +127,17 @@ th.fd-table__sort-column {
 .th-container {
   &--customer-number {
     width: 70px;
+    @media only screen and (min-width: 1440px) {
+      width: fit-content;
+    }
   }
   &--credit-limit {
     width: 70px;
     @media only screen and (min-width: 1440px) {
       min-width: 104px;
+    }
+    @media only screen and (min-width: 1740px) {
+      min-width: 138px;
     }
   }
   &--remaining-credit {
@@ -127,11 +145,17 @@ th.fd-table__sort-column {
     @media only screen and (min-width: 1440px) {
       min-width: 104px;
     }
+    @media only screen and (min-width: 1740px) {
+      min-width: 138px;
+    }
   }
   &--past-due {
     width: 70px;
     @media only screen and (min-width: 1440px) {
       min-width: 104px;
+    }
+    @media only screen and (min-width: 1740px) {
+      min-width: 138px;
     }
   }
   &--current-balance {
@@ -139,9 +163,12 @@ th.fd-table__sort-column {
     @media only screen and (min-width: 1440px) {
       min-width: 104px;
     }
+    @media only screen and (min-width: 1740px) {
+      min-width: 138px;
+    }
   }
   &--levels {
-    padding-right: 16px;
+    padding-right: 14px;
   }
 }
 
