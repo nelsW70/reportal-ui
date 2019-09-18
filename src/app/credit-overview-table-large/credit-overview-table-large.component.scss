@@ -35,32 +35,31 @@ th.fd-table__sort-column {
 .fd-table th:first-child {
   padding-left: 8px;
   min-width: 140px;
-  max-width: 150px;
 }
 
 .fd-table td:nth-child(2),
 .fd-table th:nth-child(2) {
-  min-width: 86px;
+  min-width: 94px;
 }
 
 .fd-table td:nth-child(3),
 .fd-table th:nth-child(3) {
-  min-width: 100px;
+  width: 100px;
 }
 
 .fd-table td:nth-child(4),
 .fd-table th:nth-child(4) {
-  min-width: 100px;
+  width: 100px;
 }
 
 .fd-table td:nth-child(5),
 .fd-table th:nth-child(5) {
-  min-width: 100px;
+  width: 100px;
 }
 
 .fd-table td:nth-child(6),
 .fd-table th:nth-child(6) {
-  min-width: 100px;
+  width: 100px;
 }
 
 .fd-table td:nth-child(7),
