@@ -6,10 +6,12 @@ import { InventoryLookupComponent } from './inventory-lookup/inventory-lookup.co
 import { InvoiceLookupComponent } from './invoice-lookup/invoice-lookup.component';
 import { EDealerComponent } from './e-dealer/e-dealer.component';
 import { ThdProspectsComponent } from './thd-prospects/thd-prospects.component';
+import { CustomerCreditComponent } from './customer-credit/customer-credit.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/pricing-lookup', pathMatch: 'full' },
   { path: 'credit-overview', component: CreditOverviewComponent },
+  { path: 'customer-credit', component: CustomerCreditComponent },
   { path: 'pricing-lookup', component: PricingLookupComponent },
   { path: 'invoice-lookup', component: InvoiceLookupComponent },
   { path: 'inventory-lookup', component: InventoryLookupComponent },
