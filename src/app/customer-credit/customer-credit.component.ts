@@ -11,14 +11,14 @@ import {
 
 export interface ProductInfo {
   jobName: string;
+  jobNumber: string;
+  pastDue: string;
   currentBalance: string;
   levelOne: string;
   levelTwo: string;
   levelThree: string;
   levelFour: string;
-  jobNumber: string;
   dso: string;
-  pastDue: string;
   arBalance: string;
   creditLimit: string;
   remainingCredit: string;

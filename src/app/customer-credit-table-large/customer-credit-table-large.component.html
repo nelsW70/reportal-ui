@@ -1,148 +1,52 @@
 <div fd-table-responsive-wrapper>
   <table fd-table cdk-table [dataSource]="dataSource">
-    <!-- Customer Name Column -->
-    <ng-container cdkColumnDef="companyName">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Customer Name</th>
+    <!-- Job Name Column -->
+    <ng-container cdkColumnDef="jobName">
+      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>Job Name</th>
       <td cdk-cell *cdkCellDef="let product">
-        <div *ngIf="product.status === 'open'" class="customer-status">
-          <div
-            fd-status-label
-            [icon]="'unlocked'"
-            class="fd-has-type-minus-1 credit--open"
-            fdPopover="Credit Open"
-            [triggers]="['mouseenter', 'mouseleave']"
-            [noArrow]="false"
-          ></div>
-          <div
-            class="customer-name"
-            (click)="$event.stopPropagation()"
-            routerLink="/customer-credit"
-          >
-            {{ product.companyName }}
-          </div>
-        </div>
-        <div *ngIf="product.status === 'approaching'" class="customer-status">
-          <div
-            fd-status-label
-            [icon]="'message-warning'"
-            class="fd-has-type-minus-1 credit--approaching"
-            fdPopover="Approaching Credit Limit"
-            [triggers]="['mouseenter', 'mouseleave']"
-            [noArrow]="false"
-          ></div>
-          <div
-            class="customer-name"
-            (click)="$event.stopPropagation()"
-            routerLink="/customer-credit"
-          >
-            {{ product.companyName }}
-          </div>
-        </div>
-        <div *ngIf="product.status === 'over'" class="customer-status">
-          <div
-            fd-status-label
-            [icon]="'message-warning'"
-            class="fd-has-type-minus-1 credit--over"
-            fdPopover="Over Credit Limit"
-            [triggers]="['mouseenter', 'mouseleave']"
-            [noArrow]="false"
-          ></div>
-          <div
-            class="customer-name"
-            (click)="$event.stopPropagation()"
-            routerLink="/customer-credit"
-          >
-            {{ product.companyName }}
-          </div>
-        </div>
-        <div *ngIf="product.status === 'locked'" class="customer-status">
-          <div
-            fd-status-label
-            [icon]="'locked'"
-            class="fd-has-type-minus-1 credit--locked"
-            fdPopover="Credit Locked"
-            [triggers]="['mouseenter', 'mouseleave']"
-            [noArrow]="false"
-          ></div>
-          <div
-            class="customer-name"
-            (click)="$event.stopPropagation()"
-            routerLink="/customer-credit"
-          >
-            {{ product.companyName }}
-          </div>
-        </div>
+        {{ product.jobName }}
       </td>
     </ng-container>
 
-    <!-- Customer Number Column -->
-    <ng-container cdkColumnDef="customerNumber">
+    <!-- Job Number Column -->
+    <ng-container cdkColumnDef="jobNumber">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
         <div class="th-container--customer-number">
-          Customer Number
+          Job Number
         </div>
       </th>
       <td cdk-cell *cdkCellDef="let product">
-        {{ product.customerNumber }}
+        {{ product.jobNumber }}
       </td>
     </ng-container>
 
-    <!-- Total Credit Limit Column -->
-    <ng-container cdkColumnDef="totalCreditLimit">
+    <!-- Past Due Column -->
+    <ng-container cdkColumnDef="pastDue">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
         <div class="th-container--credit-limit fd-has-text-align-right">
-          Total Credit Limit
+          Past Due
         </div>
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
-        {{ product.totalCreditLimit }}
+        {{ product.pastDue }}
       </td>
     </ng-container>
 
-    <!-- Total Remaining Credit Column -->
-    <ng-container cdkColumnDef="totalRemainingCredit">
+    <!-- Current Balance Column -->
+    <ng-container cdkColumnDef="currentBalance">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
         <div class="th-container--remaining-credit fd-has-text-align-right">
-          Total Remaining Credit
+          Current Balance
         </div>
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
-        {{ product.totalRemainingCredit }}
-      </td>
-    </ng-container>
-
-    <!-- Total Past Due Column -->
-    <ng-container cdkColumnDef="pastDueTotal">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        <div class="th-container--past-due fd-has-text-align-right">
-          Total Past Due
-        </div>
-      </th>
-      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
-        {{ product.pastDueTotal }}
-      </td>
-    </ng-container>
-
-    <!-- Total Current Balance Column -->
-    <ng-container cdkColumnDef="totalCurrentBalance">
-      <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        <div class="th-container--current-balance fd-has-text-align-right">
-          Total Current Balance
-        </div>
-      </th>
-      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
-        {{ product.totalCurrentBalance }}
+        {{ product.currentBalance }}
       </td>
     </ng-container>
 
     <!-- Level One: 1-30 Column -->
     <ng-container cdkColumnDef="levelOne">
-      <th
-        fdColumnSortable
-        cdk-header-cell
-        *cdkHeaderCellDef
-        class="fd-has-text-align-right"
-      >
+      <th cdk-header-cell *cdkHeaderCellDef class="fd-has-text-align-right">
         <div class="th-container--levels">
           1-30
         </div>
@@ -154,12 +58,7 @@
 
     <!-- Level Two: 30 Column -->
     <ng-container cdkColumnDef="levelTwo">
-      <th
-        fdColumnSortable
-        cdk-header-cell
-        *cdkHeaderCellDef
-        class="fd-has-text-align-right"
-      >
+      <th cdk-header-cell *cdkHeaderCellDef class="fd-has-text-align-right">
         <div class="th-container--levels">
           30
         </div>
@@ -171,12 +70,7 @@
 
     <!-- Level Three: 60 Column -->
     <ng-container cdkColumnDef="levelThree">
-      <th
-        fdColumnSortable
-        cdk-header-cell
-        *cdkHeaderCellDef
-        class="fd-has-text-align-right"
-      >
+      <th cdk-header-cell *cdkHeaderCellDef class="fd-has-text-align-right">
         <div class="th-container--levels">
           60
         </div>
@@ -188,18 +82,97 @@
 
     <!-- Level Four: >90 Column -->
     <ng-container cdkColumnDef="levelFour">
-      <th
-        fdColumnSortable
-        cdk-header-cell
-        *cdkHeaderCellDef
-        class="fd-has-text-align-right"
-      >
+      <th cdk-header-cell *cdkHeaderCellDef class="fd-has-text-align-right">
         <div class="th-container--levels">
           >90
         </div>
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.levelFour }}
+      </td>
+    </ng-container>
+
+    <!-- DSO Column -->
+    <ng-container cdkColumnDef="dso">
+      <th cdk-header-cell *cdkHeaderCellDef>
+        <div class="th-container--past-due fd-has-text-align-right">
+          DSO
+        </div>
+      </th>
+      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
+        {{ product.dso }}
+      </td>
+    </ng-container>
+
+    <!-- AR Balance Column -->
+    <ng-container cdkColumnDef="arBalance">
+      <th cdk-header-cell *cdkHeaderCellDef>
+        <div class="th-container--current-balance fd-has-text-align-right">
+          AR Balance
+        </div>
+      </th>
+      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
+        {{ product.arBalance }}
+      </td>
+    </ng-container>
+
+    <!-- Credit Limit Column -->
+    <ng-container cdkColumnDef="creditLimit">
+      <th cdk-header-cell *cdkHeaderCellDef>
+        <div class="th-container--current-balance fd-has-text-align-right">
+          Credit Limit
+        </div>
+      </th>
+      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
+        {{ product.creditLimit }}
+      </td>
+    </ng-container>
+
+    <!-- Remaining Credit Column -->
+    <ng-container cdkColumnDef="remainingCredit">
+      <th cdk-header-cell *cdkHeaderCellDef>
+        <div class="th-container--current-balance fd-has-text-align-right">
+          Remaining Credit
+        </div>
+      </th>
+      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
+        {{ product.remainingCredit }}
+      </td>
+    </ng-container>
+
+    <!-- Last Payment Amount Column -->
+    <ng-container cdkColumnDef="lastPaymentAmount">
+      <th cdk-header-cell *cdkHeaderCellDef>
+        <div class="th-container--current-balance fd-has-text-align-right">
+          Last Payment Amount
+        </div>
+      </th>
+      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
+        {{ product.lastPaymentAmount }}
+      </td>
+    </ng-container>
+
+    <!-- Account Open Date Column -->
+    <ng-container cdkColumnDef="accountOpenDate">
+      <th cdk-header-cell *cdkHeaderCellDef>
+        <div class="th-container--current-balance fd-has-text-align-right">
+          Account Open Date
+        </div>
+      </th>
+      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
+        {{ product.accountOpenDate }}
+      </td>
+    </ng-container>
+
+    <!-- Credit Terms Column -->
+    <ng-container cdkColumnDef="creditTerms">
+      <th cdk-header-cell *cdkHeaderCellDef>
+        <div class="th-container--current-balance fd-has-text-align-right">
+          Credit Terms
+        </div>
+      </th>
+      <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
+        {{ product.creditTerms }}
       </td>
     </ng-container>
 
