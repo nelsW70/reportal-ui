@@ -5,17 +5,21 @@
       <h2 fd-panel-title>Credit Summary (As of March, 02, 2018)</h2>
     </fd-panel-head>
   </fd-panel-header>
-  <!-- ?????????? remove __thd ?????? -->
-  <fd-panel-body class="panel-body panel-body--main panel-body--main__thd">
-  </fd-panel-body>
+  <fd-panel-body class="panel-body panel-body--main"
+    >stuff will go here</fd-panel-body
+  >
 </fd-panel>
 
 <div>
-  <fd-panel>
+  <fd-panel class="fd-panel--customer-credit">
     <fd-panel-header>
       <fd-panel-head>
         <h2 fd-panel-title>Job List (As of 03/01/2019)</h2>
       </fd-panel-head>
+      <fd-panel-actions>
+        <button fd-button [glyph]="'pdf-attachment'">Export to Excel</button>
+        <button fd-button [glyph]="'print'">Print</button>
+      </fd-panel-actions>
     </fd-panel-header>
     <fd-panel-body class="panel-body panel-body--secondary">
       <div *ngIf="currentWindowWidth < 1440">

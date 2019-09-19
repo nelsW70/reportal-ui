@@ -15,6 +15,30 @@
   }
 }
 
+.fd-panel--customer-credit {
+  .fd-panel__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+
+    & .fd-panel__head {
+      padding: 0.5rem 0.5rem 0.5rem 0;
+    }
+    & .fd-panel__actions {
+      margin-left: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+
+      & button:first-child {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
 // CONTAINER
 
 .job-number-wrap {
