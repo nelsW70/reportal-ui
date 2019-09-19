@@ -11,7 +11,9 @@
     <!-- Job Number Column -->
     <ng-container cdkColumnDef="jobNumber">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Job Number
+        <div class="th-container--job-number">
+          Job Number
+        </div>
       </th>
       <td cdk-cell *cdkCellDef="let product">
         {{ product.jobNumber }}
@@ -31,7 +33,9 @@
     <!-- Current Balance Column -->
     <ng-container cdkColumnDef="currentBalance">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        Current Balance
+        <div class="th-container--current-balance">
+          Current Balance
+        </div>
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.currentBalance }}

@@ -102,3 +102,19 @@ th.fd-table__sort-column {
   padding-left: 8px;
   width: 96px;
 }
+
+.th-container {
+  &--job-number {
+    width: 70px;
+    // @media only screen and (min-width: 1440px) {
+    //   width: fit-content;
+    // }
+  }
+
+  &--current-balance {
+    width: 70px;
+    // @media only screen and (min-width: 1440px) {
+    //   width: fit-content;
+    // }
+  }
+}
