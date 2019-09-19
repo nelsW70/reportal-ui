@@ -66,6 +66,16 @@
 
   mat-header-cell:nth-child(3) {
     padding-left: 16px;
+
+    @media only screen and (min-width: 768px) {
+      padding-right: 72px;
+    }
+  }
+
+  mat-cell:nth-child(2) {
+    @media only screen and (min-width: 768px) {
+      padding-right: 36px;
+    }
   }
 
   .mat-cell {
@@ -82,6 +92,11 @@
       }
       & .expanded-details-info {
         color: #515559;
+      }
+    }
+    & span {
+      @media only screen and (min-width: 768px) {
+        margin-left: 36px;
       }
     }
   }
