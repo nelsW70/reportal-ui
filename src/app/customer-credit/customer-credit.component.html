@@ -41,7 +41,7 @@
             </mat-cell>
           </ng-container>
 
-          <!-- Job ID Column -->
+          <!-- Job Number Column -->
           <ng-container matColumnDef="jobNumber">
             <mat-header-cell
               fdColumnSortable
@@ -57,7 +57,7 @@
                 </div></div
             ></mat-header-cell>
             <mat-cell *matCellDef="let product" class="fd-has-type-minus-1">
-              <div class="name-wrap">
+              <div class="job-number-wrap">
                 {{ product.jobNumber }}
               </div>
             </mat-cell>
@@ -70,7 +70,7 @@
               *matHeaderCellDef
               class="fd-has-type-minus-1"
             >
-              <div class="th-container">
+              <div class="th-container col-3">
                 <div class="th-header">
                   Past Due
                 </div>
