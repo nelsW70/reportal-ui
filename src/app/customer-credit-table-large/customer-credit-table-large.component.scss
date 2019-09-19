@@ -30,11 +30,16 @@ th.fd-table__sort-column {
 .fd-table th:first-child {
   padding-left: 8px;
   width: 90px;
+
+  @media only screen and (min-width: 1740px) {
+    min-width: 120px;
+  }
 }
 
 .fd-table td:nth-child(2),
 .fd-table th:nth-child(2) {
   width: 86px;
+  max-width: 100px;
 }
 
 .fd-table td:nth-child(3),
@@ -45,6 +50,10 @@ th.fd-table__sort-column {
 .fd-table td:nth-child(4),
 .fd-table th:nth-child(4) {
   width: 98px;
+
+  @media only screen and (min-width: 1740px) {
+    min-width: 120px;
+  }
 }
 
 .fd-table td:nth-child(5),
@@ -106,15 +115,15 @@ th.fd-table__sort-column {
 .th-container {
   &--job-number {
     width: 70px;
-    // @media only screen and (min-width: 1440px) {
-    //   width: fit-content;
-    // }
+    @media only screen and (min-width: 1740px) {
+      width: 100px;
+    }
   }
 
   &--current-balance {
     width: 70px;
-    // @media only screen and (min-width: 1440px) {
-    //   width: fit-content;
-    // }
+    @media only screen and (min-width: 1740px) {
+      width: fit-content;
+    }
   }
 }
