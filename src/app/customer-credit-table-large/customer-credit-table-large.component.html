@@ -11,9 +11,7 @@
     <!-- Job Number Column -->
     <ng-container cdkColumnDef="jobNumber">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        <div class="th-container--customer-number">
-          Job Number
-        </div>
+        Job Number
       </th>
       <td cdk-cell *cdkCellDef="let product">
         {{ product.jobNumber }}
@@ -23,9 +21,7 @@
     <!-- Past Due Column -->
     <ng-container cdkColumnDef="pastDue">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        <div class="th-container--credit-limit fd-has-text-align-right">
-          Past Due
-        </div>
+        Past Due
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.pastDue }}
@@ -35,9 +31,7 @@
     <!-- Current Balance Column -->
     <ng-container cdkColumnDef="currentBalance">
       <th fdColumnSortable cdk-header-cell *cdkHeaderCellDef>
-        <div class="th-container--remaining-credit fd-has-text-align-right">
-          Current Balance
-        </div>
+        Current Balance
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.currentBalance }}
@@ -47,9 +41,7 @@
     <!-- Level One: 1-30 Column -->
     <ng-container cdkColumnDef="levelOne">
       <th cdk-header-cell *cdkHeaderCellDef class="fd-has-text-align-right">
-        <div class="th-container--levels">
-          1-30
-        </div>
+        1-30
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.levelOne }}
@@ -59,9 +51,7 @@
     <!-- Level Two: 30 Column -->
     <ng-container cdkColumnDef="levelTwo">
       <th cdk-header-cell *cdkHeaderCellDef class="fd-has-text-align-right">
-        <div class="th-container--levels">
-          30
-        </div>
+        30
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.levelTwo }}
@@ -71,9 +61,7 @@
     <!-- Level Three: 60 Column -->
     <ng-container cdkColumnDef="levelThree">
       <th cdk-header-cell *cdkHeaderCellDef class="fd-has-text-align-right">
-        <div class="th-container--levels">
-          60
-        </div>
+        60
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.levelThree }}
@@ -83,9 +71,7 @@
     <!-- Level Four: >90 Column -->
     <ng-container cdkColumnDef="levelFour">
       <th cdk-header-cell *cdkHeaderCellDef class="fd-has-text-align-right">
-        <div class="th-container--levels">
-          >90
-        </div>
+        >90
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.levelFour }}
@@ -94,10 +80,8 @@
 
     <!-- DSO Column -->
     <ng-container cdkColumnDef="dso">
-      <th cdk-header-cell *cdkHeaderCellDef>
-        <div class="th-container--past-due fd-has-text-align-right">
-          DSO
-        </div>
+      <th cdk-header-cell *cdkHeaderCellDef class="fd-has-text-align-right">
+        DSO
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.dso }}
@@ -106,10 +90,8 @@
 
     <!-- AR Balance Column -->
     <ng-container cdkColumnDef="arBalance">
-      <th cdk-header-cell *cdkHeaderCellDef>
-        <div class="th-container--current-balance fd-has-text-align-right">
-          AR Balance
-        </div>
+      <th cdk-header-cell *cdkHeaderCellDef class="fd-has-text-align-right">
+        AR Balance
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.arBalance }}
@@ -118,10 +100,8 @@
 
     <!-- Credit Limit Column -->
     <ng-container cdkColumnDef="creditLimit">
-      <th cdk-header-cell *cdkHeaderCellDef>
-        <div class="th-container--current-balance fd-has-text-align-right">
-          Credit Limit
-        </div>
+      <th cdk-header-cell *cdkHeaderCellDef class="fd-has-text-align-right">
+        Credit Limit
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.creditLimit }}
@@ -130,10 +110,8 @@
 
     <!-- Remaining Credit Column -->
     <ng-container cdkColumnDef="remainingCredit">
-      <th cdk-header-cell *cdkHeaderCellDef>
-        <div class="th-container--current-balance fd-has-text-align-right">
-          Remaining Credit
-        </div>
+      <th cdk-header-cell *cdkHeaderCellDef class="fd-has-text-align-right">
+        Remaining Credit
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.remainingCredit }}
@@ -142,10 +120,8 @@
 
     <!-- Last Payment Amount Column -->
     <ng-container cdkColumnDef="lastPaymentAmount">
-      <th cdk-header-cell *cdkHeaderCellDef>
-        <div class="th-container--current-balance fd-has-text-align-right">
-          Last Payment Amount
-        </div>
+      <th cdk-header-cell *cdkHeaderCellDef class="fd-has-text-align-right">
+        Last Payment Amount
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.lastPaymentAmount }}
@@ -154,10 +130,8 @@
 
     <!-- Account Open Date Column -->
     <ng-container cdkColumnDef="accountOpenDate">
-      <th cdk-header-cell *cdkHeaderCellDef>
-        <div class="th-container--current-balance fd-has-text-align-right">
-          Account Open Date
-        </div>
+      <th cdk-header-cell *cdkHeaderCellDef class="fd-has-text-align-right">
+        Account Open Date
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.accountOpenDate }}
@@ -166,10 +140,8 @@
 
     <!-- Credit Terms Column -->
     <ng-container cdkColumnDef="creditTerms">
-      <th cdk-header-cell *cdkHeaderCellDef>
-        <div class="th-container--current-balance fd-has-text-align-right">
-          Credit Terms
-        </div>
+      <th cdk-header-cell *cdkHeaderCellDef class="fd-has-text-align-right">
+        Credit Terms
       </th>
       <td cdk-cell *cdkCellDef="let product" class="fd-has-text-align-right">
         {{ product.creditTerms }}
