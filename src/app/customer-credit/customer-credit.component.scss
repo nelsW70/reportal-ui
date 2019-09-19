@@ -1,3 +1,22 @@
+// FONTS
+.customer-credit-header {
+  .back-link {
+    font-size: 14px;
+    font-weight: 400;
+    color: #0a6ed1;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  span {
+    color: #0a6ed1;
+    padding-right: 4px;
+  }
+  .sap-icon--s::before {
+    font-size: 12px;
+  }
+}
+
 // PANELS
 .fd-panel {
   margin: 1.25rem 0;
@@ -40,6 +59,10 @@
 }
 
 // CONTAINER
+.customer-credit-header {
+  display: flex;
+  padding-left: 2px;
+}
 
 .job-number-wrap {
   word-break: break-all;
