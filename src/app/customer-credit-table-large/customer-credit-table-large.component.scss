@@ -1,0 +1,84 @@
+// FONTS
+td {
+  font-size: 12px;
+}
+tr {
+  vertical-align: baseline;
+}
+
+// HAVE TO POSITION THE SORT ICON ABSOLUTELY AND DO ALL THE STYLING BELOW BECAUSE
+// SAP BUILT THE TABLE HEADER SORT ICON AS A PSEUDO CLASS INSTEAD OF MARKUP USING
+// FLEXBOX AND IT WILL WRAP BELOW THE TEXT IF THERE ARE MORE THAN ABOUT SIX CHARACTERS
+// UNLESS WE DO THIS.
+
+.fd-table__sort-column::after {
+  margin: 0;
+  position: absolute;
+  top: 16px;
+  right: 6px;
+}
+
+th.fd-table__sort-column {
+  position: relative;
+}
+
+.fd-table td:first-child,
+.fd-table th:first-child {
+  padding-left: 8px;
+}
+
+.fd-table td:last-child,
+.fd-table th:last-child {
+  padding-right: 8px;
+}
+
+// .fd-table td:nth-child(2),
+// .fd-table th:nth-child(2) {
+// }
+
+// .fd-table td:nth-child(3),
+// .fd-table th:nth-child(3) {
+// }
+
+// .fd-table td:nth-child(4),
+// .fd-table th:nth-child(4) {
+// }
+
+// .fd-table td:nth-child(5),
+// .fd-table th:nth-child(5) {
+// }
+
+// .fd-table td:nth-child(6),
+// .fd-table th:nth-child(6) {
+// }
+
+// .fd-table td:nth-child(7),
+// .fd-table th:nth-child(7) {
+// }
+
+// .fd-table td:nth-child(8),
+// .fd-table th:nth-child(8) {
+// }
+
+// .fd-table td:nth-child(9),
+// .fd-table th:nth-child(9) {
+// }
+
+// .fd-table td:nth-child(10),
+// .fd-table th:nth-child(10) {
+// }
+
+// .th-container {
+//   &--customer-number {
+//   }
+//   &--credit-limit {
+//   }
+//   &--remaining-credit {
+//   }
+//   &--past-due {
+//   }
+//   &--current-balance {
+//   }
+//   &--levels {
+//   }
+// }
