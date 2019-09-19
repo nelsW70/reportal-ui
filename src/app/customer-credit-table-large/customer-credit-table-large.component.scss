@@ -29,60 +29,76 @@ th.fd-table__sort-column {
 .fd-table td:first-child,
 .fd-table th:first-child {
   padding-left: 8px;
+  width: 90px;
+}
+
+.fd-table td:nth-child(2),
+.fd-table th:nth-child(2) {
+  width: 86px;
+}
+
+.fd-table td:nth-child(3),
+.fd-table th:nth-child(3) {
+  width: 90px;
+}
+
+.fd-table td:nth-child(4),
+.fd-table th:nth-child(4) {
+  width: 98px;
+}
+
+.fd-table td:nth-child(5),
+.fd-table th:nth-child(5) {
+  width: 90px;
+}
+
+.fd-table td:nth-child(6),
+.fd-table th:nth-child(6) {
+  width: 90px;
+}
+
+.fd-table td:nth-child(7),
+.fd-table th:nth-child(7) {
+  width: 90px;
+}
+
+.fd-table td:nth-child(8),
+.fd-table th:nth-child(8) {
+  width: 90px;
+}
+
+.fd-table td:nth-child(9),
+.fd-table th:nth-child(9) {
+  width: 80px;
+}
+
+.fd-table td:nth-child(10),
+.fd-table th:nth-child(10) {
+  width: 80px;
+}
+
+.fd-table td:nth-child(11),
+.fd-table th:nth-child(11) {
+  width: 90px;
+}
+
+.fd-table td:nth-child(12),
+.fd-table th:nth-child(12) {
+  width: 90px;
+}
+
+.fd-table td:nth-child(13),
+.fd-table th:nth-child(13) {
+  width: 96px;
+}
+
+.fd-table td:nth-child(14),
+.fd-table th:nth-child(14) {
+  width: 80px;
 }
 
 .fd-table td:last-child,
 .fd-table th:last-child {
-  padding-right: 8px;
+  padding-left: 8px;
+  width: 96px;
 }
-
-// .fd-table td:nth-child(2),
-// .fd-table th:nth-child(2) {
-// }
-
-// .fd-table td:nth-child(3),
-// .fd-table th:nth-child(3) {
-// }
-
-// .fd-table td:nth-child(4),
-// .fd-table th:nth-child(4) {
-// }
-
-// .fd-table td:nth-child(5),
-// .fd-table th:nth-child(5) {
-// }
-
-// .fd-table td:nth-child(6),
-// .fd-table th:nth-child(6) {
-// }
-
-// .fd-table td:nth-child(7),
-// .fd-table th:nth-child(7) {
-// }
-
-// .fd-table td:nth-child(8),
-// .fd-table th:nth-child(8) {
-// }
-
-// .fd-table td:nth-child(9),
-// .fd-table th:nth-child(9) {
-// }
-
-// .fd-table td:nth-child(10),
-// .fd-table th:nth-child(10) {
-// }
-
-// .th-container {
-//   &--customer-number {
-//   }
-//   &--credit-limit {
-//   }
-//   &--remaining-credit {
-//   }
-//   &--past-due {
-//   }
-//   &--current-balance {
-//   }
-//   &--levels {
-//   }
-// }
