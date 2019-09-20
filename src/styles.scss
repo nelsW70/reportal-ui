@@ -402,9 +402,14 @@ a[class*='fd-button--']::before {
 
 // TABLE PAGINATION
 .fd-pagination {
-  padding: 2rem 1rem;
+  padding: 0.5rem 0 0.5rem 0.5rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  a.fd-pagination__link {
+    padding: 15px;
+  }
 }
 
 // TABLE HEADER/DATA TEXT ALIGNMENT: BECAUSE OF IE.
