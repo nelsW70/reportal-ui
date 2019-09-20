@@ -64,6 +64,37 @@
   padding-left: 2px;
 }
 
+.credit-masonry {
+  @media only screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    &__50 {
+      display: flex;
+      &--item {
+        width: 50%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    max-width: 1000px;
+    column-count: 3;
+    -webkit-column-count: 3;
+    column-gap: 0;
+    -webkit-column-gap: 0;
+
+    &__panel {
+      break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+      width: 33.333%;
+      &:nth-child(3) {
+        align-self: flex-end;
+      }
+    }
+  }
+}
+
 .job-number-wrap {
   word-break: break-all;
   @media only screen and (max-width: 400px) {
