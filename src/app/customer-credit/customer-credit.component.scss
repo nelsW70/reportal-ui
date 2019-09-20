@@ -23,6 +23,36 @@
   }
   h5 {
     color: #515559;
+    &.credit-status {
+      &--open {
+        color: #107f3e;
+      }
+      &--approaching {
+        color: #e9730c;
+      }
+      &--over {
+        color: #bb0000;
+      }
+      &--locked {
+        color: #bb0000;
+      }
+    }
+  }
+}
+
+// ICONS
+.credit-status {
+  &--open::before {
+    color: #107f3e;
+  }
+  &--approaching::before {
+    color: #e9730c;
+  }
+  &--over::before {
+    color: #bb0000;
+  }
+  &--locked::before {
+    color: #bb0000;
   }
 }
 
@@ -73,6 +103,16 @@
   padding-left: 2px;
 }
 
+.customer-credit-status {
+  display: flex;
+  align-items: baseline;
+
+  .fd-status-label::before {
+    width: fit-content;
+    margin-right: 4px;
+  }
+}
+
 .credit-masonry {
   @media only screen and (max-width: 767px) {
     display: flex;
@@ -93,7 +133,8 @@
 
   @media only screen and (min-width: 768px) {
     display: flex;
-    max-width: 1200px;
+    max-width: 1250px;
+    margin-bottom: 2rem;
     column-count: 3;
     -webkit-column-count: 3;
     column-gap: 0;
@@ -104,12 +145,12 @@
       -webkit-column-break-inside: avoid;
 
       &:first-child {
-        width: 37.5%;
+        width: 40%;
         margin-right: 16px;
       }
 
       &:nth-child(2) {
-        width: 37.5%;
+        width: 40%;
         margin-right: 16px;
         display: flex;
         flex-direction: column;
@@ -120,7 +161,7 @@
       }
 
       &:nth-child(3) {
-        width: 25%;
+        width: 20%;
         align-self: flex-end;
       }
     }

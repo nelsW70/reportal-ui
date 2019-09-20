@@ -39,10 +39,58 @@
             <p class="fd-has-type-minus-1">
               Credit Status
             </p>
-            <h5 class="fd-has-type-0">
-              <!-- add all examples here and comment it out with a note -->
-              Open Credit
-            </h5>
+            <!-- These are the four examples of credit status
+            Should be displayed conditionally based on status -->
+
+            <!-- CREDIT OPEN -->
+            <div class="customer-credit-status">
+              <span
+                fd-status-label
+                [icon]="'unlocked'"
+                class="fd-has-type-minus-1 credit-status--open"
+              ></span>
+              <h5 class="fd-has-type-0 credit-status credit-status--open">
+                Credit Open
+              </h5>
+            </div>
+
+            <!-- APPROACHING LIMIT -->
+            <!-- <div class="customer-credit-status">
+              <span
+                fd-status-label
+                [icon]="'message-warning'"
+                class="fd-has-type-minus-1 credit-status--approaching"
+              ></span>
+              <h5
+                class="fd-has-type-0 credit-status credit-status--approaching"
+              >
+                Approaching Limit
+              </h5>
+            </div> -->
+
+            <!-- OVER LIMIT -->
+            <!-- <div class="customer-credit-status">
+              <span
+                fd-status-label
+                [icon]="'message-warning'"
+                class="fd-has-type-minus-1 credit-status--over"
+              ></span>
+              <h5 class="fd-has-type-0 credit-status credit-status--over">
+                Over Limit
+              </h5>
+            </div> -->
+
+            <!-- CREDIT LOCKED -->
+            <!-- <div class="customer-credit-status">
+              <span
+                fd-status-label
+                [icon]="'message-warning'"
+                class="fd-has-type-minus-1 credit-status--locked"
+              ></span>
+              <h5 class="fd-has-type-0 credit-status credit-status--locked">
+                Credit Locked
+              </h5>
+            </div> -->
           </div>
         </div>
       </div>
