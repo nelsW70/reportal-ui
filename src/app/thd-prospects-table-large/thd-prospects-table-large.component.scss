@@ -45,6 +45,16 @@ th.fd-table__sort-column {
   position: relative;
 }
 
+.fd-table td:first-child,
+.fd-table th:first-child {
+  padding-left: 8px;
+}
+
+.fd-table td:last-child,
+.fd-table th:last-child {
+  padding-right: 8px;
+}
+
 td.cdk-cell.cdk-column-proXtraId.ng-star-inserted,
 td.cdk-cell.cdk-column-company.ng-star-inserted,
 td.cdk-cell.cdk-column-fullName.ng-star-inserted {

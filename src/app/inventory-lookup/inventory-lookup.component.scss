@@ -107,6 +107,8 @@
         }
         &:nth-child(4) {
           width: 25%;
+          padding: 8px 0px;
+          max-width: 80px;
           margin-bottom: 0;
           & p {
             text-align: left !important;
