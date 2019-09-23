@@ -95,3 +95,12 @@
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
+
+<!--Scroll to top-->
+<button
+  [ngClass]="{ 'show-scroll': showScroll }"
+  (click)="scrollToTop()"
+  class="scroll-to-top"
+>
+  Scroll To Top
+</button>
