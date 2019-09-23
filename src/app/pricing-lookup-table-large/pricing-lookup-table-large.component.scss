@@ -8,6 +8,14 @@ th {
   }
 }
 
+.fd-table td:first-child,
+.fd-table th:first-child {
+  padding-left: 8px;
+}
+.fd-table th:last-child {
+  padding-right: 8px;
+}
+
 td:nth-child(3),
 td:nth-child(4),
 td:nth-child(6) {
@@ -19,5 +27,5 @@ td:nth-child(5) {
 }
 
 td:nth-child(7) {
-  padding-right: 22px;
+  padding-right: 14px;
 }
