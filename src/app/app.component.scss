@@ -63,3 +63,21 @@
     }
   }
 }
+
+// SCROLL TO TOP TEXT
+.scroll-to-top {
+  display: flex;
+  color: #0a6ed1;
+  cursor: pointer;
+  float: right;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  & h5 {
+    font-weight: 400;
+    padding-right: 4px;
+    margin-bottom: 0;
+  }
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+}

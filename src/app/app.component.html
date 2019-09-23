@@ -91,16 +91,12 @@
       </div>
       <main>
         <router-outlet></router-outlet>
+        <!--Scroll to top-->
+        <div (click)="scrollToTop()" class="scroll-to-top">
+          <h5>Top of Page</h5>
+          <span class="sap-icon--arrow-top sap-icon--s"></span>
+        </div>
       </main>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
-
-<!--Scroll to top-->
-<button
-  [ngClass]="{ 'show-scroll': showScroll }"
-  (click)="scrollToTop()"
-  class="scroll-to-top"
->
-  Scroll To Top
-</button>
