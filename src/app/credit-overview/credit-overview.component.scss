@@ -54,6 +54,9 @@
 
 // SMALL TABLE
 .mat-table {
+  .mat-row {
+    align-items: flex-start;
+  }
   // CREDIT ICONS
   .credit {
     &--open::before {

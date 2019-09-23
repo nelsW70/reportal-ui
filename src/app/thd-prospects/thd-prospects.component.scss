@@ -57,6 +57,15 @@
 
 // SMALL TABLE
 .mat-table {
+  .mat-row {
+    align-items: flex-start;
+    @media screen and (max-width: 768px) {
+      .mat-cell {
+        align-items: flex-start;
+        padding-top: 10px;
+      }
+    }
+  }
   .th-container {
     display: flex;
     align-items: baseline;
