@@ -1,9 +1,19 @@
 // FONTS
+h4 {
+  margin-bottom: 8px;
+}
 .customer-credit-header {
+  width: fit-content;
+  .sap-icon--navigation-left-arrow.sap-icon--s {
+    cursor: pointer;
+    line-height: 2.75;
+  }
   .back-link {
     font-size: 14px;
     font-weight: 400;
     color: #0a6ed1;
+    cursor: pointer;
+    line-height: 2.75;
     &:hover {
       text-decoration: underline;
     }
@@ -59,6 +69,10 @@
 // PANELS
 .fd-panel {
   margin: 1.25rem 0;
+
+  &--main {
+    margin-top: 1rem;
+  }
 }
 
 .fd-panel__header,
