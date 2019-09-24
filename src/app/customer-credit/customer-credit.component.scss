@@ -203,6 +203,18 @@ h4 {
 
 // SMALL TABLE
 .mat-table {
+  @media only screen and (max-width: 767px) {
+    .mat-row {
+      min-height: 46px;
+      align-items: flex-start;
+      .mat-cell {
+        align-items: flex-start;
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+    }
+  }
+
   .th-container {
     display: flex;
     align-items: center;
